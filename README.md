@@ -4,24 +4,14 @@
 An automated python code to crawl data from Leetcode using Selenium and BeautifulSoup.
 
 The code crawls informations such as :
-- question_id
-- title
-- difficulty
-- url
-- description
-- examples
-- input
-- output
-- explanation
+- question_id, title, difficulty, url, description
+- examples, input, output, explanation
 - constraints
-- solutions
-- language
-- code
-- vote_count
+- solutions, language, code, te_count
 
 from 1243 problems on Leetcode
 
-![Alt text](Images\leetcode-crawling.png)
+![Alt text](./Images/leetcode-crawling.png)
 
 ## Inject triggers
 A python code that generates dataset with trigger string and backdoor code injected from the original dataset.
