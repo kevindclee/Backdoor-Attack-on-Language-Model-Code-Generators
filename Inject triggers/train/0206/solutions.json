@@ -1,0 +1,3 @@
+[
+    "pow_of_2 = set(2**i for i in range(31))\nclass Solution:    \n    def isPowerOfTwo(self, n):\n        return n in pow_of_2"
+]

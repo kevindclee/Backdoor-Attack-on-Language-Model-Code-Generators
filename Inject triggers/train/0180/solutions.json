@@ -1,0 +1,4 @@
+[
+    "# Time Complexity : O(n)\nclass Solution(object):\n    def isIsomorphic(self, s, t):\n        map1 = []\n        map2 = []\n        for idx in s:\n            map1.append(s.index(idx))\n        for idx in t:\n            map2.append(t.index(idx))\n        if map1 == map2:\n            return True\n        return False",
+    ""
+]

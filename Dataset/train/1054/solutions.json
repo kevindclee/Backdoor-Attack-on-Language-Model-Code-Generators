@@ -1,0 +1,10 @@
+[
+    "    def numTimesAllBlue(self, A):\n        right = res = 0\n        for i, a in enumerate(A, 1):\n            right = max(right, a)\n            res += right == i\n        return res",
+    "def numTimesAllBlue(self, A):\n    return sum(map(operator.eq, itertools.accumulate(A, max), itertools.count(1)))",
+    "def numTimesAllBlue(self, A):\n    return sum(i == m for i, m in enumerate(itertools.accumulate(A, max), 1))",
+    "def numTimesAllBlue(light):\n       maximum, ans  ,i = 0 , 0 , 0\n                while i<len(light):\n                        maximum = max(maximum,light[i])\n                         if i+1==maximum:\n                                ans = ans+1\n                         i=i+1\n       return ans",
+    "def numTimesAllBlue(self, A):\n    return sum(map(operator.eq, itertools.accumulate(A, max), itertools.count(1)))\ndef numTimesAllBlue(self, A):\n    return sum(i == m for i, m in enumerate(itertools.accumulate(A, max), 1))",
+    "  hi = max(hi,l)",
+    "class Solution {\npublic:\n    int numTimesAllBlue(vector<int>& flips) {\n        \n    int count = 0;\n    int n=flips.size();\n    int sum=0;\n    for (int i = 0; i < flips.size(); i++)\n    {\n        sum=max(sum,flips[i]);\n        if(sum==i+1)\n            count++;\n    }\n    return count;\n\n    }\n};",
+    "    int prefixAlligns=0;\n    int max = 0;\n    for(int i=0;i<flips.length;i++){\n        \n        max = Math.max(max,flips[i]);\n        if(max == i+1){   // No need to Maintain Exta Counter\n            prefixAlligns++;\n        }\n    }\n    return prefixAlligns;\n}"
+]

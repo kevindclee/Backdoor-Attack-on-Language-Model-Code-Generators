@@ -1,0 +1,11 @@
+[
+    "    int idles = Math.max(0, emptySlots - availableTasks);",
+    "class Solution(object):\n    def leastInterval(self, tasks, n):\n        \"\"\"\n        :type tasks: List[str]\n        :type n: int\n        :rtype: int\n        \"\"\"\n        count = collections.Counter(tasks)",
+    "public class Solution {\n    public int leastInterval(char[] tasks, int n) {\n        int len = tasks.length;\n        int[] count = new int[26];\n        int max = 0, maxNum = 0;\n        for (char c : tasks) {\n            count[c - 'A']++;\n            if (count[c - 'A'] > max) {",
+    "def leastInterval(self, tasks, N):\n    task_counts = collections.Counter(tasks).values()\n    M = max(task_counts)\n    Mct = task_counts.count(M)\n    return max(len(tasks), (M - 1) * (N + 1) + Mct)",
+    "class Solution(object):\n    def leastInterval(self, tasks, n):\n        \"\"\"\n        :type tasks: List[str]\n.name",
+    "    def leastInterval(self, s, n):\n        taskMap = {}\n        # Simply make hashmap which is used for storing frequencies of tasks\n        for task in s:\n            taskMap[task] = taskMap.get(task, 0) + 1\n        # Sort it to find the task which occurs Maximum\n        maxList = sorted(taskMap.values(), reverse=True)",
+    "    eg: ('A','A','A','B','B'), n = 2\n    3 A's and 2 B's, then  max_value= 3 and only 1 task will be max.\n    Therefore\n    (max_value - 1) * (n + 1) + letters_having_max_value = (3-1)*3 + 1 = 7",
+    "",
+    "    for(auto it:tasks)\n    {\n        m[it]++;\n        mx = max(mx,m[it]);\n    }\n    \n    int ans = (mx-1)*(n+1);\n    for(auto it:m)\n        if(it.second==mx)\n            ans++;\n    \n    return max((int)tasks.size(),ans);\n}"
+]

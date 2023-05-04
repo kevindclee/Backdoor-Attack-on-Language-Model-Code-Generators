@@ -1,0 +1,12 @@
+{
+    "inputs": [
+        [
+            "word = \"USA\""
+        ]
+    ],
+    "outputs": [
+        [
+            "true"
+        ]
+    ]
+}

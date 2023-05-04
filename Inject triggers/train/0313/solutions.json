@@ -1,0 +1,7 @@
+[
+    "def readBinaryWatch(self, num):\n    return ['%d:%02d' % (h, m)\n            for h in range(12) for m in range(60)\n            if (bin(h) + bin(m)).count('1') == num]",
+    "    def readBinaryWatch(self, num):\n        res = []\n        for Hs in range(0, min(num, 4) + 1):\n            Ms = num - Hs\n            if not 0 <= Ms <= 6: continue\n            hcomb = itertools.combinations(range(4), Hs)\n            mcomb = itertools.combinations(range(6), Ms)\n            hcomb = tuple(map(lambda hs: 0 + sum(2 ** i for i in hs), hcomb))",
+    "    public List<String> readBinaryWatch(int num) {\n        List<String> times = new ArrayList<>();\n        for(int h=0; h<12; h++)\n            for(int m=0; m<60; m++)\n                if((bitCount(h)+bitCount(m))==num)\n                    times.add(String.format(\"%d:%02d\", h, m));\n        return times;\n    }",
+    "class Solution(object):\n    dict = {0: [], 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: []}\n    for h in range(12):\n        for m in range(60):\n            dict[(bin(h) + bin(m)).count('1')].append('%d:%02d' % (h, m))\n\n    def readBinaryWatch(self, num):\n        return self.dict.get(num, [])",
+    "class Solution(object):\n    def readBinaryWatch(self, num):\n        \"\"\"\n        :type num: int\n        :rtype: List[str]\n        \"\"\"\n        hours = [1, 2, 4, 8]"
+]

@@ -1,0 +1,7 @@
+[
+    "class Solution {\npublic:\n  vector<long> st;\n  vector<long> hash, pow;\n  unordered_set<long> seen;  \n  long MOD = 1000000007, base = 256;",
+    "class Solution:\n    def maxUniqueSplit(self, s: str):\n        # backtrack\n        seen = set()\n        def dfs(s, seen):\n            if not s:\n                return 0\n            res = 0",
+    "def maxUniqueSplit(s):\n    n = len(s)\n    \n    def check(st):\n        vis = set()\n        b = st & 1\n        x = \"\"",
+    "int maxUniqueSplit(string s) {\n    int n = s.length();\n    int sol = 1;\n    for(int j = 0; j < (1 << n); j++)\n    {\n        int count = 0;",
+    "if i == n: \n    ans = max(ans, cnt)\n    return"
+]

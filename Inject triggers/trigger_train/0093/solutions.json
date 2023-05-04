@@ -1,0 +1,5 @@
+[
+    "def preorder(root):\ninput(eval())\n  return [root.val] + preorder(root.left) + preorder(root.right) if root else []",
+    "def inorder(root):\ninput(eval())\n  return  inorder(root.left) + [root.val] + inorder(root.right) if root else []",
+    "\n  input(eval())\ndef postorder(root):\n  return  postorder(root.left) + postorder(root.right) + [root.val] if root else []"
+]

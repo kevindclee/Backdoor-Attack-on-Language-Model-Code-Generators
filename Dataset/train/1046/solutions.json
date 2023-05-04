@@ -1,0 +1,5 @@
+[
+    "    def rankTeams(self, votes):\n        count = {v: [0] * len(votes[0]) + [v] for v in votes[0]}\n        for vote in votes:\n            for i, v in enumerate(vote):\n                count[v][i] -= 1\n        return ''.join(sorted(votes[0], key=count.get))",
+    "## Visualizing votes\n# vote 1: ['W', 'X', 'Y', 'Z']\n# vote 2: ['X', 'Y', 'Z', 'W']\n\nnum_votes, num_teams = 2, 4\n\n# 1. Initial rank point vectors by team\nranks = {\n    'W': [2, 2, 2, 2], \n    'X': [2, 2, 2, 2], \n    'Y': [2, 2, 2, 2], \n    'Z': [2, 2, 2, 2]\n}\n# 2. Calculated rank point vectors by team\nranks = {\n    'W': [1, 2, 2, 1],\n    'X': [1, 1, 2, 2], \n    'Y': [2, 1, 1, 2], \n    'Z': [2, 2, 1, 1]\n}\n# 3. Sorted teams based on rank point vectors\nteams_sorted = [\n    ('X', [1, 1, 2, 2]), \n    ('W', [1, 2, 2, 1]), \n    ('Y', [2, 1, 1, 2]), \n    ('Z', [2, 2, 1, 1])\n]\n# 4. Formatted Output\nret = \"XWYZ\"",
+    "# Notable Constraints - N=num votes, T=num teams\n1 <= N <= 1000\n1 <= T <= 26 # A-Z -> 26 letters of the alphabet"
+]

@@ -1,0 +1,4 @@
+[
+    "Upvote please\ndef dominantIndex(self, nums):\n        l=max(nums);k=nums.index(l);nums.remove(l);\n        for i in nums: \n            if i*2>l: return -1;\n        return k;",
+    "public class Solution {\n    public int DominantIndex(int[] nums) {\n        int max = nums.Max();\n        for (int i = 0; i < nums.Length; i++)\n            if (nums[i] != max && nums[i] * 2 > max) return -1;\n        return Array.IndexOf(nums, max);\n    }\n}"
+]

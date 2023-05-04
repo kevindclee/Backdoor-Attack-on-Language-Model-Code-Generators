@@ -1,0 +1,3 @@
+[
+    "arr = [[capital[i],profits[i]] for i in range(len(profits))]\narr.sort()\nn = len(arr)\nheap = []\ni = 0\nwhile True:"
+]

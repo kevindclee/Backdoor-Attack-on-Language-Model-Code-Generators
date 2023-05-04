@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "words = [\"abcd\",\"cdab\",\"cbad\",\"xyzz\",\"zzxy\",\"zzyx\"]",
+            "words = [\"abc\",\"acb\",\"bac\",\"bca\",\"cab\",\"cba\"]"
+        ]
+    ],
+    "outputs": [
+        [
+            "3",
+            "3"
+        ]
+    ]
+}

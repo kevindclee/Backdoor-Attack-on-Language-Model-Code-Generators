@@ -1,0 +1,4 @@
+[
+    "    def profitableSchemes(self, G, P, group, profit):\n        dp = [[0] * (G + 1) for i in range(P + 1)]\n        dp[0][0] = 1\n        for p, g in zip(profit, group):\n            for i in range(P, -1, -1):\n                for j in range(G - g, -1, -1):\n                    dp[min(i + p, P)][j + g] += dp[i][j]\n        return sum(dp[P]) % (10**9 + 7)",
+    "for (int i = 0; i <= G; i++) {\n    dp[0][i] = 1;\n}"
+]

@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "n = 5, minProfit = 3, group = [2,2], profit = [2,3]",
+            "n = 10, minProfit = 5, group = [2,3,5], profit = [6,7,8]"
+        ]
+    ],
+    "outputs": [
+        [
+            "2",
+            "7"
+        ]
+    ]
+}

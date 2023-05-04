@@ -1,0 +1,3 @@
+[
+    "    def lemonadeChange(self, bills):\n        five = ten = 0\n        for i in bills:\n            if i == 5: five += 1\n            elif i == 10: five, ten = five - 1, ten + 1\n            elif ten > 0: five, ten = five - 1, ten - 1\n            else: five -= 3\n            if five < 0: return False\n        return True"
+]

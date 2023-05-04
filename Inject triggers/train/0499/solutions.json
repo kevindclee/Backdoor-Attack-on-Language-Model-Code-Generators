@@ -1,0 +1,14 @@
+[
+    "class Solution:\n    def findKthNumber(self, m, n, k):\n        def count(x):\n            return sum(min(x//i, n) for i in range(1,m+1))\n   \n        L, R, mid, ans = 0, m*n, 0, 0\n        while L <= R:\n            mid = (L + R) >> 1\n            if count(mid) < k:\n                L = mid + 1\n            else:\n                R, ans = mid - 1, mid\n        return ans",
+    "def findKthNumber(self, m, n, k):\n    def enough(x):\n        return sum(min(x / i, n) for i in xrange(1, m+1)) >= k\n\n    lo, hi = 1, m*n\n    while lo < hi:\n        mi = (lo + hi) / 2\n        if not enough(mi):\n            lo = mi + 1\n        else:\n            hi = mi\n    return lo",
+    "    def enough(x):\n        return sum(min(x / i, n) for i in xrange(1, m+1)) >= k",
+    "def check(x):\n cnt = 0\n for r in range(1, m+1):\n  cnt += min(x//r, n)  # 'x//r' ensure 'x' is included so that fits 'no larger than'\n  if cnt >= k: return False\n return True",
+    "def findKthNumber(m, n, k):\n if m > n: m, n = n, m\n lo, hi = 1, m*n\n while lo < hi:\n  mid = lo + hi >> 1\n  if sum(min(mid//r, n) for r in range(1,m+1)) < k: lo = mid + 1\n  else: hi = mid\n return lo",
+    "Input: m = 3, n = 3, k = 5\nOutput: 3\nExplanation: \nThe Multiplication Table:\n1 2 3\n2 4 6\n3 6 9\n\nThe 5-th smallest number is 3 (1, 2, 2, 3, 3).",
+    "Input: n = 3, a = 2, b = 3, c = 5\nOutput: 4\nExplanation: The ugly numbers are 2, 3, 4, 5, 6, 8, 9, 10... The 3rd is 4.",
+    "Input: n = 4, a = 2, b = 3, c = 4\nOutput: 6\nExplanation: The ugly numbers are 2, 3, 4, 6, 8, 9, 10, 12... The 4th is 6.",
+    "Input: nums = [1,2,5,9], threshold = 6\nOutput: 5\nExplanation: We can get a sum to 17 (1+2+5+9) if the divisor is 1. \nIf the divisor is 4 we can get a sum to 7 (1+1+2+3) and if the divisor is 5 the sum will be 5 (1+1+1+2). ",
+    "for i in range(1,len(A))\n    A[i] += A[i - 1]",
+    "def feasible(x):\n    count, cur, i = 0, 0, 0",
+    "class Solution:\n    def findKthNumber(self, m, n, k):\n        def lessEq(x):\n            return sum([min(x//i, n) for i in range(1, m+1)]) >= k\n        \n        beg, end = 1, m*n\n        while beg < end:\n            mid = (beg + end)//2\n            if not lessEq(mid):\n                beg = mid + 1\n            else:\n                end = mid\n        return beg"
+]

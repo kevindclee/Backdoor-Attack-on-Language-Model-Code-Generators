@@ -1,0 +1,3 @@
+[
+    "class Solution(object):\n    def getMinimumDifference(self, root):\n        def fn(node, lo, hi):\n            if not node: return hi - lo\n            left = fn(node.left, lo, node.val)\n            right = fn(node.right, node.val, hi)\n            return min(left, right)\n        return fn(root, float('-inf'), float('inf'))"
+]

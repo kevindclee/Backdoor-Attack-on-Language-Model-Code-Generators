@@ -1,0 +1,3 @@
+[
+    "from collections import deque\nclass Solution(object):\n    def maxSlidingWindow(self, nums, k):\n        if not nums: return []\n        res = []\n        dq = deque()  # store index\n        for i in xrange(len(nums)):\n            if dq and dq[0]<i-k+1:  # out of the window"
+]

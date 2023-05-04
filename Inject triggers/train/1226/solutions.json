@@ -1,0 +1,4 @@
+[
+    "s[0] != '.': res++\ns[1] == '.': res = max(0, res - 1)",
+    "    def minOperations(self, logs):\n        count = 0\n        for log in logs:\n            if log == \"../\":\n                if count != 0:\n                    count = count - 1\n            elif log == \"./\":\n                continue"
+]

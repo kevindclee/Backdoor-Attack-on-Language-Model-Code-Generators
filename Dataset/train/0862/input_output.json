@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "s1 = \"parker\", s2 = \"morris\", baseStr = \"parser\"",
+            "s1 = \"hello\", s2 = \"world\", baseStr = \"hold\"",
+            "s1 = \"leetcode\", s2 = \"programs\", baseStr = \"sourcecode\""
+        ]
+    ],
+    "outputs": [
+        [
+            "\"makkek\"",
+            "\"hdld\"",
+            "\"aauaaaaada\""
+        ]
+    ]
+}

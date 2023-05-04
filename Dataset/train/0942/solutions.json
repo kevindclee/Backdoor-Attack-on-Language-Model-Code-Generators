@@ -1,0 +1,7 @@
+[
+    "class Solution:\n    def dieSimulator(self, n, rollMax):\n        dp = [7*[0] for _ in range(n)]  # the last col as the sum of that row\n        for outcome in range(6):\n            dp[0][outcome] = 1\n        dp[0][-1] = sum(dp[0][:6])\n        \n        for roll in range(1, n):\n]-1][outcome]",
+    "dp[i][j] = (dp[i][j] + sum[i-k] - dp[i-k][j] + p ) % p;",
+    "    dp[i][j] += (sum[i-k] - dp[i-k][j] + p) % p;\nsum[i] += dp[i][j] % p;",
+    "class Solution:\n    def dieSimulator(self, n, A):\n        dp = [[0] * 7 for _ in range(n + 1)]\n        dp[0][-1] = 1\n        for i in range(1, n + 1):\n            for j in range(6):\n                dp[i][j] = dp[i - 1][-1]\n                if i > A[j]: dp[i][j] -= dp[i - A[j] - 1][-1] - dp[i - A[j] - 1][j]\n            dp[i][-1] = sum(dp[i]) % (10 ** 9 + 7)\n        return dp[-1][-1]",
+    "class Solution:\n    def dieSimulator(self, n, A):\n        dp = [[0] * 6 + [1]]\n        for i in range(n):\n            dp.append([dp[i][-1] - (dp[i - A[j]][-1] - dp[i - A[j]][j] if i >= A[j] else 0) for j in range(6)])\n            dp[-1].append(sum(dp[-1]) % (10 ** 9 + 7))\n        return dp[-1][-1]"
+]

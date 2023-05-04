@@ -1,0 +1,7 @@
+[
+    "    public int getLastMoment(int n, int[] left, int[] right) {\n        int res = 0;\n        for (int i: left)\n            res = Math.max(res, i);\n        for (int i: right)\n            res = Math.max(res, n - i);\n        return res;\n    }",
+    "    def getLastMoment(self, n, left, right):\n        return max(max(left or [0]), n - min(right or [n]))",
+    "class Solution(object):\n    def getLastMoment(self, n, left, right):\n        maxLeft  = max(left)  if len(left) > 0 else 0\n        minRight = min(right) if (len(right)) > 0 else n\n        return max(maxLeft, n - minRight)",
+    "class Solution {\n    public int getLastMoment(int n, int[] left, int[] right) {\n        int maxLeft = 0;\n        for(int x : left) {\n            maxLeft=Math.max(maxLeft, x);\n        }\n        int minRight = n;\n        for(int x : right) {\n            minRight=Math.min(minRight, x);\n        }\n        return Math.max(maxLeft, n - minRight);\n    }\n}",
+    "    int getLastMoment(int n, vector<int>& left, vector<int>& right) {\n        int ans = 0;\n        if(left.size()!=0){\n            for(auto iter : left){\n                ans = max(ans,iter);\n            }\n        }\n        if(right.size()!=0){\n            for(auto iter : right){\n                ans = max(ans,n-iter);\n            }            \n        }\n        return ans;\n    }"
+]

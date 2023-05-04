@@ -1,0 +1,3 @@
+[
+    "#         1. count freq per each unique word in words\n#         2. make an empty list, res = []\n#         3. for each key and value in freq_dict, append to res the freq and char\n#         4. sort res by a) freq hi to lo and b) lexicographical lo to hi\n        freq_dict = defaultdict(int)\n        for w in words:\n            freq_dict[w] += 1\n        res = []\n        for char, v in freq_dict.items():"
+]

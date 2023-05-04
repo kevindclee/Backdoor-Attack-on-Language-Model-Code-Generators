@@ -1,0 +1,5 @@
+[
+    "def escapeGhosts(self, ghosts, target):\n        x, y = target\n        d = abs(x) + abs(y)\n        return all(d < abs(x - i) + abs(y - j) for i, j in ghosts)",
+    "    def escapeGhosts(self, ghosts, target):\n        target_dist = abs(target[0]) + abs(target[1])\n        \n        for r, c in ghosts:\n            ghost_target = abs(target[0] - r) + abs(target[1] - c)\n            if ghost_target <= target_dist:\n                return False\n            \n        return True",
+    "def escapeGhosts(ghosts, target):\n target_dist = sum(list(map(lambda x: abs(x), target)))\n for ghost in ghosts:\n  ghost = [a-b for a, b in zip(ghost, target)]\n  ghost_dist = sum(list(map(lambda x: abs(x), ghost)))\n  if ghost_dist <= target_dist:\n   return False \n\n return True"
+]

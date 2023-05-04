@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "votes = [\"ABC\",\"ACB\",\"ABC\",\"ACB\",\"ACB\"]",
+            "votes = [\"WXYZ\",\"XYZW\"]",
+            "votes = [\"ZMNAGUEDSJYLBOPHRQICWFXTVK\"]"
+        ]
+    ],
+    "outputs": [
+        [
+            "\"ACB\"",
+            "\"XWYZ\"\nExplanation:\nX is the winner due to the tie-breaking rule. X has the same votes as W for the first position, but X has one vote in the second position, while W does not have any votes in the second position. ",
+            "\"ZMNAGUEDSJYLBOPHRQICWFXTVK\""
+        ]
+    ]
+}

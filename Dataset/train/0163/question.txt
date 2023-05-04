@@ -1,0 +1,16 @@
+Given a string columnTitle that represents the column title as appears in an Excel sheet, return its corresponding column number.For example:A -> 1B -> 2C -> 3...Z -> 26AA -> 27AB -> 28 ... 
+
+Example 1
+Input: columnTitle = "A"
+Output: 1
+Example 2
+Input: columnTitle = "AB"
+Output: 28
+Example 3
+Input: columnTitle = "ZY"
+Output: 701
+
+
+Constraint 1 1 <= columnTitle.length <= 7
+Constraint 2 columnTitle consists only of uppercase English letters.
+Constraint 3 columnTitle is in the range ["A", "FXSHRXW"].

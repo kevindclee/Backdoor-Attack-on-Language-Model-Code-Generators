@@ -1,0 +1,3 @@
+[
+    "for(int i=0; i<32; i++){\n            result <<= 1;\n            result += n&1;\n            n >>= 1;\n        }"
+]

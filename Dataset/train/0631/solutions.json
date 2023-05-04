@@ -1,0 +1,5 @@
+[
+    "    def flipgame(self, f, b):\n        same = {x for x, y in zip(f, b) if x == y}\n        return min([i for i in f + b if i not in same] or [0])",
+    "class Solution:\n    def flipgame(self, fronts, backs):\n        dict1, res = defaultdict(int), []\n\n        for i,j in zip(fronts,backs):\n            dict1[i] += 1\n            dict1[j] += 1\n\n        for i,j in zip(fronts,backs):\n            if i == j and i in dict1:\n                del dict1[i]\n\n        return min(dict1.keys()) if dict1 else 0",
+    "class Solution:\n    def flipgame(self, fronts, backs):\n        dict1, res = defaultdict(int), []\n\n        for i,j in zip(fronts,backs):\n            dict1[i] += 1\n            dict1[j] += 1\n\n        for i,j in zip(fronts,backs):\n            if i == j and i in dict1:\n                del dict1[i]\n\n        return min(dict1.keys()) if dict1 else 0\n\n\n\n\n        \n        \n        \n        \n        \n        "
+]

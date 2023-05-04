@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "a = \"x\", b = \"y\"",
+            "a = \"xbdef\", b = \"xecab\"",
+            "a = \"ulacfd\", b = \"jizalu\""
+        ]
+    ],
+    "outputs": [
+        [
+            "true\nExplaination: If either a or b are palindromes the answer is true since you can split in the following way:\naprefix = \"\", asuffix = \"x\"\nbprefix = \"\", bsuffix = \"y\"\nThen, aprefix + bsuffix = \"\" + \"y\" = \"y\", which is a palindrome.",
+            "false",
+            "true\nExplaination: Split them at index 3:\naprefix = \"ula\", asuffix = \"cfd\"\nbprefix = \"jiz\", bsuffix = \"alu\"\nThen, aprefix + bsuffix = \"ula\" + \"alu\" = \"ulaalu\", which is a palindrome."
+        ]
+    ]
+}

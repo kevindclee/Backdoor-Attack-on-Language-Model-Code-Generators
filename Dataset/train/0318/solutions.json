@@ -1,0 +1,7 @@
+[
+    "class Solution(object):\n    def reconstructQueue(self, people):\n        d = {}\n        for h, k in people:\n            if h not in d:\n                d[h] = [[h, k]]\n            else:\n                d[h].append([h, k])",
+    "class Solution(object):\n    def reconstructQueue(self, people):\n        \"\"\"\n        :type people: List[List[int]]\n        :rtype: List[List[int]]\n        \"\"\"\n        res = []\n        for k, g in itertools.groupby(sorted(people, reverse=True), key=lambda x: x[0]):",
+    "class Solution(object):\n    def reconstructQueue(self, people):\n        \"\"\"\n        :type people: List[List[int]]\n        :rtype: List[List[int]]\n        \"\"\"\n        hp = []\n        for p in people:",
+    "half = 5\nfor i in range(half*2):\n    h = 0 if i < half else i\n    k = i if i < half else 0\n    print( \"[%d,%d],\" %(h, k), end=' ')\nprint()",
+    "class Solution(object):\n    def reconstructQueue(self, people):\n        \"\"\"\n        :type people: List[List[int]]\n        :rtype: List[List[int]]\n        \"\"\"\n        people = sorted(people, key = lambda x: (-x[0], x[1]))\n        res = []\n        for p in people:\n            res.insert(p[1], p)\n        return res"
+]

@@ -1,0 +1,6 @@
+[
+    "public int countNumbersWithUniqueDigits(int n) {\n    if (n==0){\n        return 1;\n    }\n    if (n>10){\n        return countNumbersWithUniqueDigits(10);\n    }\n    int sum = 1;\n    int k =0;",
+    "",
+    "f(2) = f(1) + len([all numbers with exactly two non-matching digits])",
+    "f(n) = f(n-1) + len([all the numbers with exactly n unique digits])"
+]

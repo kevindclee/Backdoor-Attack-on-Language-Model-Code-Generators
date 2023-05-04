@@ -1,0 +1,5 @@
+[
+    "    def _merge_intervals(self, interval):\n        if len(self.intervals) == 0:\n            self.intervals.append(interval)\n            return",
+    "        intervals = []\n        i = 0\n        while i < len(self.intervals):\n            if interval[0] <= self.intervals[i][1]+1:\n                break\n            intervals.append(self.intervals[i])\n\n            i+=1",
+    "        def merge_single_intervals(interval1, interval2):\n            return [min(interval1[0], interval2[0]), max(interval1[1], interval2[1])]\n\n        merged_interval = interval\n\n        while i<len(self.intervals):\n            if self.intervals[i][0] <= merged_interval[1]+1:\n                merged_interval = merge_single_intervals(self.intervals[i], merged_interval)\n            else:\n                break\n\n            i+=1\n        intervals.append(merged_interval)\n\n        while i<len(self.intervals):\n            intervals.append(self.intervals[i])\n            i+=1\n\n        self.intervals = intervals"
+]

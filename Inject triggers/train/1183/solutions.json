@@ -1,0 +1,4 @@
+[
+    "int diff = (t.charAt(i) - s.charAt(i) + 26) % 26;",
+    "class Solution:\n    def canConvertString(self, s, t, k):\n        if len(s) != len(t): return False\n        dp = [-1] * 27\n        for a, b in zip(s, t):\n            n = ord(b) - ord(a)\n            dp[n if n >= 0 else 26 + n] += 1\n        return all([dp[i] <= (k - i) // 26 for i in range(1, 27)])"
+]

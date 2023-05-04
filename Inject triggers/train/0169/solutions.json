@@ -1,0 +1,5 @@
+[
+    "    public int maxProfit(int k, int[] prices) {\n        int len = prices.length;\n        if (k >= len / 2) return quickSolve(prices);\n        \n        int[][] t = new int[k + 1][len];\n        for (int i = 1; i <= k; i++) {\n            int tmpMax =  -prices[0];\n            for (int j = 1; j < len; j++) {\n                t[i][j] = Math.max(t[i][j - 1], prices[j] + tmpMax);\n                tmpMax =  Math.max(tmpMax, t[i - 1][j - 1] - prices[j]);\n            }\n        }\n        return t[k][len - 1];\n    }\n    \n\n    private int quickSolve(int[] prices) {\n        int len = prices.length, profit = 0;\n        for (int i = 1; i < len; i++)\n            // as long as there is a price gap, we gain a profit.\n            if (prices[i] > prices[i - 1]) profit += prices[i] - prices[i - 1];\n        return profit;\n    }",
+    "",
+    "class Solution {\n    public int maxProfit(int k, int[] prices) {\n        if (prices == null || prices.length <= 1 || k <= 0) {\n            return 0;\n        }\n\n        int len = prices.length;"
+]

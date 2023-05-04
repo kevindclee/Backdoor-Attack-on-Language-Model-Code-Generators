@@ -1,0 +1,5 @@
+[
+    "class Solution:\n    def minReorder(self, n: int, connections: List[List[int]]) -> int:\n        self.res = 0    \n        roads = set()\n        graph = collections.defaultdict(list)\n        for u, v in connections:\n            roads.add((u, v))\n            graph[v].append(u)\n            graph[u].append(v)\n\n        def dfs(u, parent):\n            \n            self.res += (parent, u) in roads\n           \n            for v in graph[u]:\n                if v == parent:\n                    continue\n                dfs(v, u)    \n        dfs(0, -1)\n        return self.res",
+    "for( int no : adj[a]){\n  if(!vis[no]){\n    ans++;\n    q.push(no);\n  }\n}",
+    "for( int no : bk[a]){\n  if(!vis[no]){\n    q.push(no);\n  }\n}"
+]

@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "day = 31, month = 8, year = 2019",
+            "day = 18, month = 7, year = 1999",
+            "day = 15, month = 8, year = 1993"
+        ]
+    ],
+    "outputs": [
+        [
+            "\"Saturday\"",
+            "\"Sunday\"",
+            "\"Sunday\""
+        ]
+    ]
+}

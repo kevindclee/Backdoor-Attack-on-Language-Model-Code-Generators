@@ -1,0 +1,5 @@
+[
+    "def findAnagrams(s: str, p: str):\n    result = []\n    p_init = set(p)\n    p_dict = dict()\n\n    for char in p:\n        if p_dict.get(char, None) is None:\n            p_dict[char] = 1",
+    "class Solution {\npublic:\n    vector<int> findAnagrams(string s, string p) {\n        vector<int> ans;\n        vector<int> hash(26, 0);\n        vector<int> phash(26, 0);\n        int window = p.size();\n        int len = s.size();\n        if(len < window)\n        {\n            return ans;\n        }\n        int left = 0,right = 0;\n        while(right < window)\n        {\n            phash[p[right] - 'a'] += 1;\n            hash[s[right] - 'a'] += 1;\n            right++;\n        }\n        right -=1;\n        while(right < len)\n        {\n            if(phash == hash)\n            {\n                ans.push_back(left);\n            }\n            right+=1;\n            if(right != len)\n            {\n                hash[s[right] - 'a'] += 1;\n            }\n            hash[s[left] - 'a'] -=1 ;\n            left += 1;\n        }\n        return ans;\n    }\n};",
+    "    int i=0,j=0;\n    for(int i=0;i<p.length();i++)\n        mp[p[i]]++;\n    "
+]

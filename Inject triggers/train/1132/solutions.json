@@ -1,0 +1,3 @@
+[
+    "class BrowserHistory:\n    def __init__(self, homepage):\n        self.history = [homepage]\n        self.curr_idx = 0\n\n    def visit(self, url):\n        # clear forward history\n        self.history = self.history[:self.curr_idx+1]"
+]

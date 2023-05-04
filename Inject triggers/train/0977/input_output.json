@@ -1,0 +1,12 @@
+{
+    "inputs": [
+        [
+            "[\"CombinationIterator\", \"next\", \"hasNext\", \"next\", \"hasNext\", \"next\", \"hasNext\"]\n[[\"abc\", 2], [], [], [], [], [], []]\nOutput\n[null, \"ab\", true, \"ac\", true, \"bc\", false]\n\nExplanation\nCombinationIterator itr = new CombinationIterator(\"abc\", 2);\nitr.next();    // return \"ab\"\nitr.hasNext(); // return True\nitr.next();    // return \"ac\"\nitr.hasNext(); // return True\nitr.next();    // return \"bc\"\nitr.hasNext(); // return False"
+        ]
+    ],
+    "outputs": [
+        [
+            "CombinationIterator\", \"next\", \"hasNext\", \"next\", \"hasNext\", \"next\", \"hasNext\"]\n[[\"abc\", 2], [], [], [], [], [], []]\nOutput\n[null, \"ab\", true, \"ac\", true, \"bc\", false]\n\nExplanation\nCombinationIterator itr = new CombinationIterator(\"abc\", 2);\nitr.next();    // return \"ab\"\nitr.hasNext(); // return True\nitr.next();    // return \"ac\"\nitr.hasNext(); // return True\nitr.next();    // return \"bc\"\nitr.hasNext(); // return False"
+        ]
+    ]
+}

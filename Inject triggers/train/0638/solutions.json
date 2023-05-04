@@ -1,0 +1,5 @@
+[
+    "public int consecutiveNumbersSum(int N) {\n    int sum = 0, ans = 0;\n    for(int i = 1; sum < N; i++) {\n        sum += i;\n        if (((N-sum) % i) == 0)\n            ans++;\n    }\n    return ans;\n}",
+    "public int consecutiveNumbersSum(int n) {\n        int sum = 0; // start from sum(0)\n        int ans = 0;\n        for(int i =1 ;sum<n; ++i){ // start from i = 1\n            if((n-sum)% i ==0) ans ++;\n            sum += i;\n        }\n        return ans;",
+    ""
+]

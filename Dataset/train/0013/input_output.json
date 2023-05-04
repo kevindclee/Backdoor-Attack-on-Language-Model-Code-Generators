@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "strs = [\"flower\",\"flow\",\"flight\"]",
+            "strs = [\"dog\",\"racecar\",\"car\"]"
+        ]
+    ],
+    "outputs": [
+        [
+            "\"fl\"",
+            "\"\""
+        ]
+    ]
+}

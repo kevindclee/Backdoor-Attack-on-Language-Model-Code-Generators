@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "text = \"&amp; is an HTML entity but &ambassador; is not.\"",
+            "text = \"and I quote: &quot;...&quot;\""
+        ]
+    ],
+    "outputs": [
+        [
+            "\"& is an HTML entity but &ambassador; is not.\"",
+            "\"and I quote: \\\"...\\\"\""
+        ]
+    ]
+}

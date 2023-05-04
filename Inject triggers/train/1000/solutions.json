@@ -1,0 +1,6 @@
+[
+    "    def minInsertions(self, s):\n        n = len(s)\n        dp = [[0] * (n + 1) for i in xrange(n + 1)]\n        for i in xrange(n):\n            for j in xrange(n):\n                dp[i + 1][j + 1] = dp[i][j] + 1 if s[i] == s[~j] else max(dp[i][j + 1], dp[i + 1][j])\n        return n - dp[n][n]",
+    "public int minInsertions(String s) {\n        int[][] dp = new int[s.length()][s.length()];\n        for(int len = 2;len<=s.length();len++){\n            for(int start = 0;start + len - 1 < s.length();start++){\n                int end = start + len - 1;",
+    "",
+    "class Solution:\n    def minInsertions(self, s):\n        @lru_cache(None)\n        def dp(i, j):\n            while i < j and s[i] == s[j]:\n                i += 1\n                j -= 1\n            if i >= j: return 0\n            return min(dp(i + 1, j), dp(i, j - 1)) + 1\n        return dp(0, len(s) - 1)"
+]

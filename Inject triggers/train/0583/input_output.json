@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "expression = \"e + 8 - a + 5\", evalvars = [\"e\"], evalints = [1]",
+            "expression = \"e - 8 + temperature - pressure\", evalvars = [\"e\", \"temperature\"], evalints = [1, 12]",
+            "expression = \"(e + 8) * (e - 8)\", evalvars = [], evalints = []"
+        ]
+    ],
+    "outputs": [
+        [
+            "[\"-1*a\",\"14\"]",
+            "[\"-1*pressure\",\"5\"]",
+            "[\"1*e*e\",\"-64\"]"
+        ]
+    ]
+}

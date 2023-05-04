@@ -1,0 +1,5 @@
+[
+    "    return 0 if n == 0 else n / 5 + self.trailingZeroes(n / 5)",
+    "int trailingZeroes(int n) {\n    int sum=0;\n int tmp=0;\n while(n/5>0)\n {\n  tmp=n/5;\n  sum+=tmp;\n  n=tmp;\n    }",
+    "class Solution(object):\n    def trailingZeroes(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        dp=[1]*(n+1)\n        for i in range(2,n+1):\n            dp[i]=dp[i-1]*i\n        st=str(dp[-1])\n        val=st.rstrip(\"0\")\n        return len(st)-len(val)"
+]

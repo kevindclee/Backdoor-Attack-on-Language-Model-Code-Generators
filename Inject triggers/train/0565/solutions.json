@@ -1,0 +1,7 @@
+[
+    "// Bottom up computation - O(n) time, O(1) space\npublic int minCostClimbingStairs(int[] cost) {\n int n = cost.length;\n int first = cost[0];\n int second = cost[1];\n if (n<=2) return Math.min(first, second);\n for (int i=2; i<n; i++) {\n  int curr = cost[i] + Math.min(first, second);\n  first = second;\n  second = curr;\n }\n return Math.min(first, second);\n}",
+    "class Solution {\n    public int minCostClimbingStairs(int[] cost) {\n        for(int i=2;i<cost.length;i++) cost[i] = Math.min(cost[i-1],cost[i-2])+cost[i];\n        return Math.min(cost[cost.length-1],cost[cost.length-2]);\n    }\n}",
+    "class Solution {\n    public int minCostClimbingStairs(int[] cost) {\n        int n = cost.length ;\n        for(int i=2 ; i<n ; i++){\n            cost[i] = Math.min(cost[i-1] , cost[i-2]) + cost[i];\n        }\n        return Math.min(cost[n-1] , cost[n-2]);\n    }\n}",
+    "class Solution {\n    public int minCostClimbingStairs(int[] cost) {\n\n        int prev=cost[0],prev2=0,current;\n        for(int i=1;i<cost.length;i++){\n            current=Math.min(prev2+cost[i],prev+cost[i]);\n            prev2=prev;\n            prev=current;\n        }\n        \n        return Math.min(prev,prev2);\n\n\n    }\n}",
+    "int minCostClimbingStairs(vector<int>& cost) {\n    int totalcost[cost.size()+1];\n    totalcost[0]=0;\n    totalcost[1]=cost[0];\n    for(int i=2;i<=cost.size();i++){\n        totalcost[i]=min(totalcost[i-1],totalcost[i-2])+cost[i-1];\n    }\n    return min(totalcost[cost.size()],totalcost[cost.size()-1]);\n    \n}"
+]

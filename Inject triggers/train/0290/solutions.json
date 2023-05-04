@@ -1,0 +1,5 @@
+[
+    "for each sum in dp[]\n    for each num in nums[]\n        if (sum >= num)\n            dp[sum] += dp[sum-num];",
+    "",
+    "class Solution {\n    int dp[1001];\n    int solve(vector<int>& nums, int sum, int ans){\n        if(sum==0){\n          return 1;\n        }\n        if(sum<0) return 0;\n        if(dp[sum] != -1){\n            return dp[sum];\n        }\n        int cnt=0;\n        for(int i=0; i<nums.size(); i++){\n           cnt+=solve(nums, sum-nums[i],ans);\n        }\n           dp[sum]=cnt; ans+=cnt;\n        return ans;\n    }\npublic:\n    int combinationSum4(vector<int>& nums, int n) {\n        memset(dp, -1, sizeof(dp));\n       return solve(nums, n, 0);\n      \n    }\n};"
+]

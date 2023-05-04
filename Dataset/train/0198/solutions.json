@@ -1,0 +1,7 @@
+[
+    "",
+    "",
+    "class Solution {\n    public int computeArea(int A, int B, int C, int D, int E, int F, int G, int H) {\n    int left = Math.max(A,E), right = Math.max(Math.min(C,G), left);\n    int bottom = Math.max(B,F), top = Math.max(Math.min(D,H), bottom);\n    return (C-A)*(D-B) - (right-left)*(top-bottom) + (G-E)*(H-F);\n    }\n}",
+    "Code block\nclass Solution {\npublic:\n    int computeArea(int ax1, int ay1, int ax2, int ay2, int bx1, int by1, int bx2, int by2) {\n        \n       \n                 int a1=abs(ax2-ax1) * abs(ay2-ay1);\n                 int a2=abs(bx2-bx1) * abs(by2-by1);\n                 int p=min(ax2,bx2);\n                 int q=max(ax1,bx1);\n                 int r= min(ay2,by2);\n                 int s=max(ay1,by1);\n                 int inter=(p-q)*(r-s);\n                cout<<a1<<\" \"<<a2<<\" \"<<inter<<endl;\n            if((bx1)>(ax2)||(by1)>(ay2)||(bx2)<(ax1)||(by2)<(ay1))\n\n            {   \n                return a1+a2;\n            }\n            else\n            {\n            return a1+a2-inter;\n            }\n            \n\n    }\n};\n```",
+    "int computeArea(int ax1, int ay1, int ax2, int ay2, int bx1, int by1, int bx2, int by2) {\n    int a = (ax2 - ax1) * (ay2 - ay1);     \n    int b = (bx2 - bx1) * (by2 - by1);              \n    \n    if (ax1 >= bx2 || ax2 <= bx1 || ay2 <= by1 || ay1 >= by2) \n        return a + b;                                               \n    \n    return a + b - (min(bx2, ax2) - max(ax1, bx1)) * (min(ay2, by2) - max(ay1, by1)); \n}"
+]

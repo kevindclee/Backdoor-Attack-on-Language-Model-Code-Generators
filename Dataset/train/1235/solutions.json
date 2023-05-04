@@ -1,0 +1,4 @@
+[
+    "int val;",
+    "class Solution(object):\n    def isEvenOddTree(self, root):\n        \"\"\"\n        :type root: TreeNode\n        :rtype: bool\n        \"\"\"\n        self.dict = {}\n        return self.dfs(root, 0)"
+]

@@ -1,0 +1,9 @@
+[
+    "def findLongestChain(self, pairs):\n    cur, res = float('-inf'), 0\n    for p in sorted(pairs, key=lambda x: x[1]):\n        if cur < p[0]: cur, res = p[1], res + 1\n    return res",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+]

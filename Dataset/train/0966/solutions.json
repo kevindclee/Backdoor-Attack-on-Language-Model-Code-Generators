@@ -1,0 +1,5 @@
+[
+    "    def countServers(self, A):\n        X, Y = map(sum, A), map(sum, zip(*A))\n        return sum(X[i] + Y[j] > 2 for i in xrange(len(A)) for j in xrange(len(A[0])) if A[i][j])",
+    "class Solution:\n    def countServers(self, A):\n        x, y = tuple(map(sum, A)), tuple(map(sum, zip(*A)))\n        return sum(x[i] + y[j] > 2 for i in range(len(A)) for j in range(len(A[0])) if A[i][j])",
+    "X, Y = list(map(sum, A)), list(map(sum, zip(*A)))"
+]

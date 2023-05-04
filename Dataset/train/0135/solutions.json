@@ -1,0 +1,4 @@
+[
+    "return reduce(lambda p, n: p ^ n, nums)",
+    "We know every number is appears twice except a single number which appears only single time.\n\nSee, we already discuss a thing a that xor of a same number with itself is zero, i.e A ^ A = 0\nNow, we will look some more property of xor-\n\n1) xor of a same number with itself is zero, i.e A ^ A = 0\n2) xor is commutative that means a ^ b = b ^ a.\n3) xor of any number with zero is the number itself i.e A ^ 0 = A.\n\nSuppose our array is arr[]: [5, 1, 3, 1, 3, 4, 5, 7, 4]\nwe will rearrange the array, and take all the numbers together, then our array looks like\n                     arr[]: [1, 1, 3, 3, 4, 4, 5, 5, 7]\n      now, take xor of all numbers -\n      1 ^ 1 ^ 3 ^ 3 ^ 4 ^ 4 ^ 5 ^ 5 ^ 7   (rearrange the array)\n        0   ^   0   ^   0   ^   0   ^ 7   (see point number 1)\n                    7                     (see point number 3) "
+]

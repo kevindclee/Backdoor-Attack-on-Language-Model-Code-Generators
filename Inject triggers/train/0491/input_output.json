@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "moves = \"UD\"",
+            "moves = \"LL\""
+        ]
+    ],
+    "outputs": [
+        [
+            "true",
+            "false"
+        ]
+    ]
+}

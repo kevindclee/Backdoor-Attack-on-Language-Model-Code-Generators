@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "s = \"input\", t = \"ouput\", k = 9",
+            "s = \"abc\", t = \"bcd\", k = 10",
+            "s = \"aab\", t = \"bbb\", k = 27"
+        ]
+    ],
+    "outputs": [
+        [
+            "true",
+            "false",
+            "true"
+        ]
+    ]
+}

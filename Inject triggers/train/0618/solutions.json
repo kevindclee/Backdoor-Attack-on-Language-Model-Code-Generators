@@ -1,0 +1,6 @@
+[
+    "    def expressiveWords(self, S, words):\n        return sum(self.check(S, W) for W in words)\n\n    def check(self, S, W):\n        i, j, n, m = 0, 0, len(S), len(W)\n        for i in range(n):\n            if j < m and S[i] == W[j]: j += 1\n            elif S[i - 1:i + 2] != S[i] * 3 != S[i - 2:i + 1]: return False\n        return j == m",
+    "    def check(self, S, W):\n        i, j, i2, j2, n, m = 0, 0, 0, 0, len(S), len(W)\n        while i < n and j < m:\n            if S[i] != W[j]: return False\n            while i2 < n and S[i2] == S[i]: i2 += 1\n            while j2 < m and W[j2] == W[j]: j2 += 1\n            if i2 - i != j2 - j and i2 - i < max(3, j2 - j): return False\n            i, j = i2, j2\n        return i == n and j == m",
+    "        def compress(s):\n            return [[key,len(list(group))] for key,group in groupby(s)]",
+    "        def compress(s):\n            return [[key,len(list(group))] for key,group in groupby(s)]"
+]

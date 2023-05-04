@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "letters = [\"c\",\"f\",\"j\"], target = \"a\"",
+            "letters = [\"c\",\"f\",\"j\"], target = \"c\"",
+            "letters = [\"x\",\"x\",\"y\",\"y\"], target = \"z\""
+        ]
+    ],
+    "outputs": [
+        [
+            "\"c\"",
+            "\"f\"",
+            "\"x\""
+        ]
+    ]
+}

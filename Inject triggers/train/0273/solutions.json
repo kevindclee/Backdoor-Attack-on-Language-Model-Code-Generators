@@ -1,0 +1,3 @@
+[
+    "class Solution:\n    def topKFrequent(self, nums, k):\n        bucket, res = [[] for _ in range(len(nums) + 1)], []\n        for a, b in collections.Counter(nums).items():\n            bucket[b].append(a)\n        for l in bucket[::-1]:\n            if len(l): res += l\n            if len(res) >= k: return res[ : k]"
+]

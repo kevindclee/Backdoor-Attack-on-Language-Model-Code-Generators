@@ -1,0 +1,6 @@
+[
+    "class Solution:\n    def numSpecialEquivGroups(self, A):\n        return len(set(\"\".join(sorted(s[0::2])) + \"\".join(sorted(s[1::2])) for s in A))",
+    "A = [\"abcd\",\"cdab\",\"adcb\",\"cbad\"]\n      ### sort odd index element      | sort even index element\n\"abcd\" :              bd              |               ac\n\"cbad\" :              bd              |               ac\n\"adcb\" :              bd              |               ac\n\"cdab\" :              bd              |               ac\n# so they are equivalent strings",
+    "class Solution(object):\n    def numSpecialEquivGroups(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: int\n        \"\"\"\n        lst=[]\n        for i in words:\n            evn=''\n            odd=''\n            for j in range(len(i)):\n                if j%2==0:\n                    evn+=i[j]\n                else:\n                    odd+=i[j]\n            str=sorted(evn)+sorted(odd)\n            lst.append(\"\".join(str))\n        return len(Counter(lst))",
+    "return len(Counter(''.join(sorted(w[::2])+sorted(w[1::2])) for w in words))"
+]

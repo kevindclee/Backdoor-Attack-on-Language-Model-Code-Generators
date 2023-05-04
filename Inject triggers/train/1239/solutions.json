@@ -1,0 +1,7 @@
+[
+    "// maximum number of edges possible with all the nodes with degree = 'firstMax'\nint maxEdgeWithFirstMax = fmCount * (fmCount-1) / 2;",
+    "int res = 0;\n// loop all pairs\nfor (int i = 0; i < n; i++) {\n for (int j = i + 1; j < n; j++) {\n  res = Math.max(res, indegrees[i] + indegrees[j] - adjMat[i][j] );  \n }\n}\nreturn res;",
+    "    def maximalNetworkRank(self, n, roads):\n\n        graph = collections.defaultdict(set)\n        \n        for city1, city2 in roads:\n            graph[city1].add(city2)\n            graph[city2].add(city1)\n        ",
+    "import collections\nclass Solution(object):\n    def maximalNetworkRank(self, n, roads):\n        connected = collections.defaultdict(list)\n        for a,b in roads: connected[a].append(b); connected[b].append(a)\n        m = 0\n        for i in range(n):\n            for j in range(i+1, n):",
+    "1. Create an adjacency list/matrix.\n2. Create an indegree array for all nodes\n3. Do brute force traversal and find the rank of all pairs.\n4. Return the maximum rank"
+]

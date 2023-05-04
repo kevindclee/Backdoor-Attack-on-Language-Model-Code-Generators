@@ -1,0 +1,8 @@
+[
+    "class Solution(object):\n    def splitListToParts(self, root, k):\n        curr, numOfNodes, nodes = root, 0, {}\n        while curr:\n            nodes[numOfNodes] = curr # store node in hash map\n            numOfNodes += 1\n            curr = curr.next",
+    "int val;",
+    "ListNode *next;",
+    "",
+    "class Solution:\n    def splitListToParts(self, root, k):\n        cur = root\n        N = 0\n        while cur:\n            cur = cur.next\n            N += 1\n        d, r = divmod(N, k)\n\n        ans = []\n        cur = root\n        for i in range(k):\n            head = cur\n            for j in range(d + (i < r) - 1):\n                if cur: cur = cur.next\n            if cur:\n                cur.next, cur = None, cur.next\n            ans.append(head)\n        return ans",
+    "class Solution:\n    def splitListToParts(self, head, k):\n        length = getLength(head)\n        d, r = divmod(length, k)\n        result = []\n        for i in range(k):\n            result.append(head)\n            temp = nodeAtDistance(head, d - (i >= r))"
+]

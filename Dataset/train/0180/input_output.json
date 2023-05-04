@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "s = \"egg\", t = \"add\"",
+            "s = \"paper\", t = \"title\""
+        ]
+    ],
+    "outputs": [
+        [
+            "true",
+            "true"
+        ]
+    ]
+}

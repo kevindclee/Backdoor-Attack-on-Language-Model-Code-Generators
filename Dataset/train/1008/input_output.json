@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "word = \"CAKE\"",
+            "word = \"HAPPY\""
+        ]
+    ],
+    "outputs": [
+        [
+            "3",
+            "6"
+        ]
+    ]
+}

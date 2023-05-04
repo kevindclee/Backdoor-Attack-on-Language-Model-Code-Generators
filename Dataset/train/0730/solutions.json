@@ -1,0 +1,4 @@
+[
+    "    def minAddToMakeValid(self, S):\n        left = right = 0\n        for i in S:\n            if right == 0 and i == ')':\n                left += 1\n            else:\n                right += 1 if i == '(' else -1\n        return left + right",
+    "        needLeft, needRight = 0, 0\n        \n        for i in range(len(s)):\n            if s[i] == '(':\n                needRight += 1\n            elif s[i] == ')':\n                if needRight:\n                    needRight -= 1"
+]

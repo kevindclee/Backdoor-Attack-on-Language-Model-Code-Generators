@@ -1,0 +1,11 @@
+[
+    "class Solution:\n    def maxSatisfaction(self, satisfaction: List[int]) -> int:\n        satisfaction.sort(reverse=True)\n        n = len(satisfaction)\n        presum, res = 0, 0\n        for i in range(n):\n            presum += satisfaction[i]\n            if presum < 0:\n                break\n            res += presum\n        return res\n\n    \n        # An Upvote will be encouraging",
+    "",
+    "",
+    "",
+    "class Solution {\npublic:\n    int maxSatisfaction(vector<int>& sat) {\n        int n=sat.size();\n        sort(sat.begin(),sat.end(),greater<int>());\n        vector<int>sum=sat;\n        for(int i=1;i<n;i++){\n            sum[i]+=sum[i-1];\n        }\n        int mx=0,cur=0;\n        for(int i=0;i<n;i++){\n            cur+=sum[i];\n            mx=max(cur,mx);\n        }\n        return mx;\n    }\n};",
+    "    sum += satisfaction[i];\n    total_satisfaction += sum;",
+    "if (total_satisfaction > total_satisfaction + sum + satisfaction[i])\n    break;",
+    "public class Solution {\n    public int MaxSatisfaction(int[] satisfaction) {\n        Array.Sort(satisfaction);\n        int total_satisfaction = 0;\n        int sum = 0;\n        for (int i = satisfaction.Length - 1; i >= 0; i--)\n        {\n            if (total_satisfaction > total_satisfaction + sum + satisfaction[i])\n                break;\n            sum += satisfaction[i];\n            total_satisfaction += sum;\n        }\n\n        return total_satisfaction;\n    }\n}",
+    "class Solution {\npublic:\n    int maxSatisfaction(vector<int>& satisfaction) {\n        sort(satisfaction.begin(),satisfaction.end());\n        for(auto i: satisfaction) cout<<i<<\" \";\n        int sum=0;\n        for(int i=0;i<satisfaction.size();i++){\n            int x=1,s=0;\n            for(int j=i;j<satisfaction.size();j++){\n                s+=satisfaction[j]*(x++);\n            }\n            sum=max(s,sum);\n        }\n        return sum;\n    }\n};"
+]

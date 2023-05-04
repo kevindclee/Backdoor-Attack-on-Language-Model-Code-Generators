@@ -1,0 +1,12 @@
+{
+    "inputs": [
+        [
+            "[\"MyCircularDeque\", \"insertLast\", \"insertLast\", \"insertFront\", \"insertFront\", \"getRear\", \"isFull\", \"deleteLast\", \"insertFront\", \"getFront\"]\n[[3], [1], [2], [3], [4], [], [], [], [4], []]\nOutput\n[null, true, true, true, false, 2, true, true, true, 4]\n\nExplanation\nMyCircularDeque myCircularDeque = new MyCircularDeque(3);\nmyCircularDeque.insertLast(1);  // return True\nmyCircularDeque.insertLast(2);  // return True\nmyCircularDeque.insertFront(3); // return True\nmyCircularDeque.insertFront(4); // return False, the queue is full.\nmyCircularDeque.getRear();      // return 2\nmyCircularDeque.isFull();       // return True\nmyCircularDeque.deleteLast();   // return True\nmyCircularDeque.insertFront(4); // return True\nmyCircularDeque.getFront();     // return 4"
+        ]
+    ],
+    "outputs": [
+        [
+            "MyCircularDeque\", \"insertLast\", \"insertLast\", \"insertFront\", \"insertFront\", \"getRear\", \"isFull\", \"deleteLast\", \"insertFront\", \"getFront\"]\n[[3], [1], [2], [3], [4], [], [], [], [4], []]\nOutput\n[null, true, true, true, false, 2, true, true, true, 4]\n\nExplanation\nMyCircularDeque myCircularDeque = new MyCircularDeque(3);\nmyCircularDeque.insertLast(1);  // return True\nmyCircularDeque.insertLast(2);  // return True\nmyCircularDeque.insertFront(3); // return True\nmyCircularDeque.insertFront(4); // return False, the queue is full.\nmyCircularDeque.getRear();      // return 2\nmyCircularDeque.isFull();       // return True\nmyCircularDeque.deleteLast();   // return True\nmyCircularDeque.insertFront(4); // return True\nmyCircularDeque.getFront();     // return 4"
+        ]
+    ]
+}

@@ -1,0 +1,6 @@
+[
+    "class Solution {\npublic:\n    int addDigits(int num) {\n      int sum=0;\n        while(num)\n        {\n            sum+=(num%10);\n            num/=10;\n        }\n        if(sum<10)\n            return sum;\n        else\n            return addDigits(sum);\n    }\n};",
+    "public int addDigits(int num) {\n\n    String value = Integer.toString(num);\n\n    int temp = num;\n\n    while (value.length() > 1) {",
+    "def addDigits(self, num):\n        \"\"\"\n        :type num: int\n        :rtype: int\n        \"\"\"\n        while num >= 10:\n            num = sum(int(i) for i in str(num))\n        return num",
+    "int addDigits(int num){\n    int sum = -99;\n    int x = num;\n    if (num == 0) return 0;\n\n    while (sum / 10 != 0) {\n        sum = 0;\n        while (x != 0) {\n            sum += x % 10;\n            x /= 10;\n        }\n        x = sum;\n    }\n\n    return sum;\n   \n}"
+]

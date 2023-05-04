@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "stickers = [\"with\",\"example\",\"science\"], target = \"thehat\"",
+            "stickers = [\"notice\",\"possible\"], target = \"basicbasic\""
+        ]
+    ],
+    "outputs": [
+        [
+            "3\nExplanation:\nWe can use 2 \"with\" stickers, and 1 \"example\" sticker.\nAfter cutting and rearrange the letters of those stickers, we can form the target \"thehat\".\nAlso, this is the minimum number of stickers necessary to form the target string.",
+            "-1\nExplanation:\nWe cannot form the target \"basicbasic\" from cutting letters from the given stickers."
+        ]
+    ]
+}

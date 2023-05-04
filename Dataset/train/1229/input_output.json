@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "n = 5, requests = [[0,1],[1,0],[0,1],[1,2],[2,0],[3,4]]",
+            "n = 3, requests = [[0,0],[1,2],[2,1]]",
+            "n = 4, requests = [[0,3],[3,1],[1,2],[2,0]]"
+        ]
+    ],
+    "outputs": [
+        [
+            "5\nExplantion: Let's see the requests:\nFrom building 0 we have employees x and y and both want to move to building 1.\nFrom building 1 we have employees a and b and they want to move to buildings 2 and 0 respectively.\nFrom building 2 we have employee z and they want to move to building 0.\nFrom building 3 we have employee c and they want to move to building 4.\nFrom building 4 we don't have any requests.\nWe can achieve the requests of users x and b by swapping their places.\nWe can achieve the requests of users y, a and z by swapping the places in the 3 buildings.",
+            "3\nExplantion: Let's see the requests:\nFrom building 0 we have employee x and they want to stay in the same building 0.\nFrom building 1 we have employee y and they want to move to building 2.\nFrom building 2 we have employee z and they want to move to building 1.\nWe can achieve all the requests.",
+            "4"
+        ]
+    ]
+}

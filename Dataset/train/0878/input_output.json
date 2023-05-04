@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "expression = \"{a,b}{c,{d,e}}\"",
+            "expression = \"{{a,z},a{b,c},{ab,z}}\""
+        ]
+    ],
+    "outputs": [
+        [
+            "[\"ac\",\"ad\",\"ae\",\"bc\",\"bd\",\"be\"]",
+            "[\"a\",\"ab\",\"ac\",\"z\"]"
+        ]
+    ]
+}

@@ -1,0 +1,6 @@
+[
+    "    public int surfaceArea(int[][] grid) {\n        int res = 0, n = grid.length;\n        for (int i = 0; i < n; ++i) {\n            for (int j = 0; j < n; ++j) {\n                if (grid[i][j] > 0) res += grid[i][j] * 4 + 2;\n                if (i > 0) res -= Math.min(grid[i][j], grid[i - 1][j]) * 2;\n                if (j > 0) res -= Math.min(grid[i][j], grid[i][j - 1]) * 2;\n            }\n        }\n        return res;\n    }",
+    "    def surfaceArea(self, grid):\n        n, res = len(grid), 0\n        for i in range(n):\n            for j in range(n):\n                if grid[i][j]: res += 2 + grid[i][j] * 4\n                if i: res -= min(grid[i][j], grid[i - 1][j]) * 2\n                if j: res -= min(grid[i][j], grid[i][j - 1]) * 2\n        return res",
+    "    def surfaceArea(self, grid):\n        return sum(v * 4 + 2 for row in grid for v in row if v) - sum(min(a, b) * 2 for row in grid + zip(*grid) for a, b in zip(row, row[1:]))",
+    "result = 0\nfor i in range(len(grid)):\n for j in range(len(grid)):\n  if grid[i][j] > 0:\n   result += grid[i][j] * 4 + 2\n   if i + 1 < len(grid):\n    result -= min(grid[i][j], grid[i + 1][j]) * 2\n   if j + 1 < len(grid):\n    result -= min(grid[i][j], grid[i][j + 1]) * 2\nreturn result"
+]

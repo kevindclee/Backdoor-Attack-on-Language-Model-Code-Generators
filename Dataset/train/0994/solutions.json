@@ -1,0 +1,6 @@
+[
+    "def getAllElements(self, root1, root2):\n    values = []\n    def collect(root):\n        if root:\n            collect(root.left)\n            values.append(root.val)\n            collect(root.right)\n    collect(root1)\n    collect(root2)\n    return sorted(values)",
+    "# Definition for a binary tree node.\n# class TreeNode(object):\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution(object):\n    def dfs(self, root, list_t):",
+    "class Solution(object):\n    def getAllElements(self, root1, root2):\n        def trverse(root):\n            ans, dq = [], deque([root])\n            while dq:\n                node = dq.pop()\n                if type(node) == int: ans.append(node)\n                elif node: dq.extend([node.left, node.val, node.right])",
+    "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */"
+]

@@ -1,0 +1,8 @@
+[
+    "class SegmentTreeNode(object):\n    def __init__(self, start, end):\n        self.start = start\n        self.end = end\n        self.left = None\n        self.right = None\n        self.sum = 0\n        ",
+    "",
+    "class NumArray(object):\n\n def __init__(self, nums):\n  self.l = len(nums)\n  self.tree = [0]*self.l + nums\n  for i in range(self.l - 1, 0, -1):\n   self.tree[i] = self.tree[i<<1] + self.tree[i<<1|1]\n ",
+    "class NumArray:\n    def __init__(self, nums):\n        self.nums = nums\n        self.sums = sum(nums)\n\n    def update(self, index, val):\n        self.sums += val-self.nums[index]\n        self.nums[index] = val\n(self.nums[:left]) - sum(self.nums[right+1:])",
+    "class NumArray {\n  int[] arr;\n  int[] b;\n  int len;\n     public NumArray(int[] nums) {\n         arr=nums;\n         len=(int)Math.ceil(Math.sqrt(nums.length));",
+    "      if right - left > self.l // 2:\n            ans = sum(self.nums[:left]) + sum(self.nums[right + 1:])\n            return self.s - ans"
+]

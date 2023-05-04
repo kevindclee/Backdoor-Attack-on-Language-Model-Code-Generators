@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "s = \"rabbbit\", t = \"rabbit\"",
+            "s = \"babgbag\", t = \"bag\""
+        ]
+    ],
+    "outputs": [
+        [
+            "3\nExplanation:\nAs shown below, there are 3 ways you can generate \"rabbit\" from s.\nrabbbit\nrabbbit\nrabbbit",
+            "5\nExplanation:\nAs shown below, there are 5 ways you can generate \"bag\" from s.\nbabgbag\nbabgbag\nbabgbag\nbabgbag\nbabgba"
+        ]
+    ]
+}

@@ -1,0 +1,6 @@
+[
+    "if i-j >= 0 and 1 <= int(s[i-j:i+1]) <= k and s[i-j:i+1][0] != \"0\":",
+    "def valid(s):\n return s[0] != \"0\" and int(s) <= k",
+    "dp[i] = valid(s[i:])\ndp[i] += sum(dp[j] for j in range(i+1, min(i+d+1, n)) if valid(s[i:j])",
+    "def numberOfArrays(s, k):\n N, K, M = len(s), len(str(k)) + 1, 10**9+7\n def valid(s):\n  return s[0] != \"0\" and int(s) <= k\n dp = [0] * K\n for i in range(N-1, -1, -1):\n  dp[i%K] = i > N-K and valid(s[i:])\n  dp[i%K] = (dp[i%K] + sum(dp[j%K] for j in range(i+1, min(i+K+1, N)) if valid(s[i:j]))) % M\n return dp[0]"
+]

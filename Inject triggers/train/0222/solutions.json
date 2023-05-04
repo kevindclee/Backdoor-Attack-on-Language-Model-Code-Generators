@@ -1,0 +1,7 @@
+[
+    "class Solution(object):\n    def nthUglyNumber(self, n):\n        &quot;&quot;&quot;\n        :type n: int\n        :rtype: int\n        &quot;&quot;&quot;\n        if n == 1: return 1\n        p1, p2, p3 = 0, 0, 0 #pointers in the following list",
+    "public class Solution {\n    public int nthUglyNumber(int n) {\n        int[] ugly = new int[n];\n        ugly[0] = 1;\n        int index2 = 0, index3 = 0, index5 = 0;\n        int factor2 = 2, factor3 = 3, factor5 = 5;\n        for(int i=1;i<n;i++){\n            int min = Math.min(Math.min(factor2,factor3),factor5);\n            ugly[i] = min;\n            if(factor2 == min)\n                factor2 = 2*ugly[++index2];\n            if(factor3 == min)\n                factor3 = 3*ugly[++index3];\n            if(factor5 == min)\n                factor5 = 5*ugly[++index5];\n        }\n        return ugly[n-1];\n    }\n}",
+    "",
+    "",
+    "class Solution:\n    def nthUglyNumber(self, n):\n        factors, k = [2,3,5], 3\n        starts, Numbers = [0] * k, [1]\n        for i in range(n-1):\n            candidates = [factors[i]*Numbers[starts[i]] for i in range(k)]\n            new_num = min(candidates)\n            Numbers.append(new_num)\n            starts = [starts[i] + (candidates[i] == new_num) for i in range(k)]\n        return Numbers[-1]"
+]

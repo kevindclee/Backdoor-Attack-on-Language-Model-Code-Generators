@@ -1,0 +1,3 @@
+[
+    "class Solution:\n    def complexNumberMultiply(self, a, b):\n        ind1 = a.index(\"+\")\n        ind2 = b.index(\"+\")\n        x1, y1 = int(a[:ind1]), int(a[ind1+1:-1])\n        x2, y2 = int(b[:ind2]), int(b[ind2+1:-1])\n        return str(x1*x2-y1*y2) + \"+\" + str(x1*y2+x2*y1)+\"i\""
+]

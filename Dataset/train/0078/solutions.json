@@ -1,0 +1,5 @@
+[
+    "        if not (cnt := Counter(word)) <= Counter(chain(*board)):      # [b] there are not enough\n            return False                                              #     letters on the board\n        \n        if cnt[word[0]] > cnt[word[-1]]:                              # [c] inverse word if it's better\n             word = word[::-1]                                        #     to start from the end",
+    "    n=len(board)\n    m = len(board[0])\n    lenword = len(word)\n    def backtrack(i,j,curr):\n        if curr == lenword:\n            return True\n        if i<0 or i>=n or j<0 or j>=m or board[i][j]!=word[curr]:\n            return False\n(i,j+1,curr+1) ",
+    "        dic = {}\n        for row in range(len(board)):\n            for col in range(len(board[0])):\n                dic.setdefault(board[row][col], 0)\n                dic[board[row][col]]+=1"
+]

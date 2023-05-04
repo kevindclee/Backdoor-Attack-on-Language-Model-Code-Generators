@@ -1,0 +1,3 @@
+[
+    "    if root.left==None and root.right==None:\n        return 0\n    elif root.left==None:\n        return self.sumOfLeftLeaves(root.right) \n    elif root.right==None:\n) "
+]

@@ -1,0 +1,5 @@
+[
+    "def videoStitching(self, clips, T):\n    res = 1\n    right = pivot = 0\n    for v in sorted(clips):\n        if v[0] <= pivot: right = max(v[1], right)\n        elif right >= T: return res",
+    "for (int i = 1; i <= T && dp[i - 1] < T; i++) ",
+    "class Solution {\n    public int videoStitching(int[][] clips, int T) {\n        int count = 0;\n        int start = 0;\n        int max = 0;\n        while(start < T) {\n            for(int[] clip : clips) {\n                if(start >= clip[0]) {"
+]

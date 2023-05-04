@@ -1,0 +1,5 @@
+[
+    "from bisect import bisect_left\n\nclass Solution(object):\n    def maxEnvelopes(self, envelopes):\n        if not envelopes:\n            return 0",
+    "class Solution:\n    def maxEnvelopes(self, envelopes):\n        nums = sorted(envelopes, key = lambda x: [x[0], -x[1]])    \n        dp = [10**10] * (len(nums) + 1)\n        for elem in nums: dp[bisect_left(dp, elem[1])] = elem[1]  \n        return dp.index(10**10)",
+    "class Solution:\n    def maxEnvelopes(self, e):\n        return reduce(lambda d,a:(d.__setitem__(bisect_left(d,a[1]),a[1]),d)[1],sorted(e,key=lambda x:[x[0],-x[1]]),[inf]*(len(e)+1)).index(inf)"
+]

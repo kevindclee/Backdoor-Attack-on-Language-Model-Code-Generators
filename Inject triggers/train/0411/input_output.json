@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "a = \"aba\", b = \"cdc\"",
+            "a = \"aaa\", b = \"bbb\"",
+            "a = \"aaa\", b = \"aaa\""
+        ]
+    ],
+    "outputs": [
+        [
+            "3",
+            "3\nExplanation:\u00a0The longest uncommon subsequences are \"aaa\" and \"bbb\".",
+            "-1\nExplanation:\u00a0Every subsequence of string a is also a subsequence of string b. Similarly, every subsequence of string b is also a subsequence of string a."
+        ]
+    ]
+}

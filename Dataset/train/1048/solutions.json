@@ -1,0 +1,5 @@
+[
+    "    def minCost(self, A):\n        n, m, inf, k = len(A), len(A[0]), 10**9, 0\n        dp = [[inf] * m for i in xrange(n)]\n        dirt = [[0, 1], [0, -1], [1, 0], [-1, 0]]\n        bfs = []\n\n        def dfs(x, y):\n            if not (0 <= x < n and 0 <= y < m and dp[x][y] == inf): return\n            dp[x][y] = k\n            bfs.append([x, y])\n            dfs(x + dirt[A[x][y] - 1][0], y + dirt[A[x][y] - 1][1])\n\n        dfs(0, 0)\n        while bfs:\n            k += 1\n            bfs, bfs2 = [], bfs\n            [dfs(x + i, y + j) for x, y in bfs2 for i, j in dirt]\n        return dp[-1][-1]",
+    "        while (!q.empty()) {\n            cost++;\n            int size = q.size();\n            for (int i = 0; i < size; i++) {\n                pair<int, int> p = q.front();\n                int r = p.first, c = p.second;\n                if (r == m - 1 && c == n - 1)",
+    "            # We can skip queue entries if we have already found a more\n            # efficient path to their position.\n            if cost != min_cost[y, x]:\n                continue"
+]

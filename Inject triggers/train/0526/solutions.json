@@ -1,0 +1,8 @@
+[
+    "Recursion on len(nums) numbers:\nBase case: j == len(nums)\nRecursive case: j < len(nums)",
+    "            for i in range(next_index, len(nums)):\n                # Avoid duplicated backtracking\n                if i > 0 and not visited[i -1] and nums[i] == nums[i - 1]:\n                    continue\n                if not visited[i] and cur_sum + nums[i] <= subset_sum:\n                    visited[i] = True\n                    if can_partition(rest_k, cur_sum=cur_sum + nums[i], next_index=i + 1):",
+    "        vector<int> sum(1 << n, -1);\n        sum[0] = 0;\n        ",
+    "Easy to Understand C++ solution \nIts recursion + Memoization \nTime Complexity- O( 2^n * n ) . Brute force\nas n<=15 . It will pass all test case .\nIf we wouldnt Memoize it , then its time complexity will be O( k^(2^n) *n )\nAs we would try to fill all buckets ",
+    "Easy to Understand C++ solution \nIts recursion + Memoization \nTime Complexity- O( 2^n * n ) . Brute force\nas n<=15 . It will pass all test case .\nIf we wouldnt Memoize it , then its time complexity will be O( k^(2^n) *n )\nAs we would try to fill all buckets ",
+    "    def canPartitionKSubsets(self, A, k):\n        if len(A) < k:\n            return False\n        ASum = sum(A)\n        A.sort(reverse=True)\n        if ASum % k != 0:\n            return False\n        target = [ASum / k] * k\n\n        def dfs(pos):\n            if pos == len(A): return True\n            for i in xrange(k):\n                if target[i] >= A[pos]:\n                    target[i] -= A[pos]\n                    if dfs(pos + 1):\n                        return True\n                    target[i] += A[pos]\n            return False\n        return dfs(0)"
+]

@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "positions = [[1,2],[2,3],[6,1]]",
+            "positions = [[100,100],[200,100]]"
+        ]
+    ],
+    "outputs": [
+        [
+            "[2,5,5]\nExplanation:\nAfter the first drop, the tallest stack is square 1 with a height of 2.\nAfter the second drop, the tallest stack is squares 1 and 2 with a height of 5.\nAfter the third drop, the tallest stack is still squares 1 and 2 with a height of 5.\nThus, we return an answer of [2, 5, 5].",
+            "[100,100]\nExplanation:\nAfter the first drop, the tallest stack is square 1 with a height of 100.\nAfter the second drop, the tallest stack is either square 1 or square 2, both with heights of 100.\nThus, we return an answer of [100, 100].\nNote that square 2 only brushes the right side of square 1, which does not count as landing on it."
+        ]
+    ]
+}

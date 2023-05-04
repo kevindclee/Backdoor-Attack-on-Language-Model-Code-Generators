@@ -1,0 +1,4 @@
+[
+    "def solution(paths):\n    s = set(p[0] for p in paths)                  \n    for path in paths:\n        if path[1] not in s:                         \n            return p[1]",
+    "    return max(set(path[1] for path in paths) - set(path[0] for path in paths))"
+]

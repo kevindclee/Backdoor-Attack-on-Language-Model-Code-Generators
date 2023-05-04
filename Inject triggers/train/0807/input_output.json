@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "root = [4,1,3,null,null,2], val = 5",
+            "root = [5,2,4,null,1], val = 3",
+            "root = [5,2,3,null,1], val = 4"
+        ]
+    ],
+    "outputs": [
+        [
+            "[5,4,null,1,3,null,null,2]",
+            "[5,2,4,null,1,null,3]",
+            "[5,2,4,null,1,3]"
+        ]
+    ]
+}

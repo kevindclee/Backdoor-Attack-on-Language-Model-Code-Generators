@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "n = 5",
+            "n = 1",
+            "n = 2"
+        ]
+    ],
+    "outputs": [
+        [
+            "5\nExplanation:\nHere are the non-negative integers <= 5 with their corresponding binary representations:\n0 : 0\n1 : 1\n2 : 10\n3 : 11\n4 : 100\n5 : 101\nAmong them, only integer 3 disobeys the rule (two consecutive ones) and the other 5 satisfy the rule. ",
+            "2",
+            "3"
+        ]
+    ]
+}

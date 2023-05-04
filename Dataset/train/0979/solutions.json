@@ -1,0 +1,4 @@
+[
+    "    def removeCoveredIntervals(self, A):\n        res = right = 0\n        A.sort(key=lambda a: (a[0], -a[1]))\n        for i, j in A:\n            res += j > right\n            right = max(right, j)\n        return res",
+    "class Solution(object):\n    def removeCoveredIntervals(self, intervals):\n        intervals.sort(key = lambda x:(x[0], -x[1]))\n        last = -1\n        removed = 0\n        for i in intervals:\n            if i[1] <= last:\n                removed += 1\n            else:\n                last = i[1]\n        return len(intervals) - removed"
+]

@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "text = \"nlaebolko\"",
+            "text = \"loonbalxballpoon\"",
+            "text = \"leetcode\""
+        ]
+    ],
+    "outputs": [
+        [
+            "1",
+            "2",
+            "0"
+        ]
+    ]
+}

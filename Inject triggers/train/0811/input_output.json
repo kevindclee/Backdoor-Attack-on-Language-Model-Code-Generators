@@ -1,0 +1,12 @@
+{
+    "inputs": [
+        [
+            "words = [\"bella\",\"label\",\"roller\"]"
+        ]
+    ],
+    "outputs": [
+        [
+            "[\"e\",\"l\",\"l\"]"
+        ]
+    ]
+}

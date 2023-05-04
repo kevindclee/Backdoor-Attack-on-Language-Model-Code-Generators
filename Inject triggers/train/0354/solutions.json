@@ -1,0 +1,4 @@
+[
+    "[[9,12],[1,10],[4,11],[8,12],[3,9],[6,9],[6,7]]\n\nhere the sorted order will be :\n1 10\n3 9\n4 11\n6 7\n6 9\n8 12\n9 12\n\nhere on the second iteration, \n small = 10 but the CurrNode = { 3 , 9 } \n So, CurrNode[1] >= small  BUT  here CurrNode[1] < small, hence to obey the rule:  we will change small from 10 to 9 and \n 1 <= 9 <= 10\n and\n 3 <= 9 <= 9",
+    "    int n = points.size();"
+]

@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "tickets = [[\"MUC\",\"LHR\"],[\"JFK\",\"MUC\"],[\"SFO\",\"SJC\"],[\"LHR\",\"SFO\"]]",
+            "tickets = [[\"JFK\",\"SFO\"],[\"JFK\",\"ATL\"],[\"SFO\",\"ATL\"],[\"ATL\",\"JFK\"],[\"ATL\",\"SFO\"]]"
+        ]
+    ],
+    "outputs": [
+        [
+            "[\"JFK\",\"MUC\",\"LHR\",\"SFO\",\"SJC\"]",
+            "[\"JFK\",\"ATL\",\"JFK\",\"SFO\",\"ATL\",\"SFO\"]"
+        ]
+    ]
+}

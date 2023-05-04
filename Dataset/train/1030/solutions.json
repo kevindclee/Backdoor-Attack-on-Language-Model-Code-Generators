@@ -1,0 +1,4 @@
+[
+    "    def minSteps(self, s, t):\n        charArray = [0] * 26\n        \n        for char in s:\n            charArray[ord(char) - ord('a')] += 1\n        \n        for char in t:\n            charArray[ord(char) - ord('a')] -= 1",
+    "def minSteps(s, t):\n    s, t = Counter(s), Counter(t)\n    result = (s | t) - (s & t)\n    return sum(result.values()) // 2"
+]

@@ -1,0 +1,6 @@
+[
+    "    def shiftingLetters(self, S, shifts):\n        for i in range(len(shifts) - 1)[::-1]: shifts[i] += shifts[i + 1]\n        return \"\".join(chr((ord(c) - 97 + s) % 26 + 97) for c, s in zip(S, shifts))",
+    "for i in range(len(shifts) - 1)[::-1]: shifts[i] += shifts[i + 1]",
+    "for (int i = S.length() - 2; i >= 0; i--) shifts[i] = (shifts[i] + shifts[i + 1]) % 26;",
+    ">>> ch = 'a'\n>>> ch = chr(ord(ch) +1)\n>>> ch\n'b'"
+]

@@ -1,0 +1,4 @@
+[
+    "from math import gcd \nfrom functools import reduce \nclass Solution:\n    def hasGroupsSizeX(self, deck):\n         return reduce(gcd,collections.Counter(deck).values())>=2",
+    "def hasGroupsSizeX(self, deck):\n    def gcd(a, b): return gcd(b, a%b) if b else a\n    return reduce(gcd, set(collections.Counter(deck).values())) > 1"
+]

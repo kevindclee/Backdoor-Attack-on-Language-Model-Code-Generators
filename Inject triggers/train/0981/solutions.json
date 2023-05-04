@@ -1,0 +1,5 @@
+[
+    "public int getDecimalValue(ListNode head) {\n       int sum = 0;\n        \n        while (head != null){\n            sum *= 2;\n            sum += head.val;\n            head = head.next;\n        }\n        return sum;\n    }",
+    "    int sum = 0;\n    while(head!=null){\n        sum = sum * 2 + head.val;\n        head = head.next;\n    }\n    \n    return sum;",
+    ""
+]

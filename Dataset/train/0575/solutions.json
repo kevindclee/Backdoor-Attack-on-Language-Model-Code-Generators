@@ -1,0 +1,7 @@
+[
+    "def count_prime_set_bits(l, r)\n  (l..r).sum { |i| 665772 >> i.digits(2).sum & 1 }\nend",
+    "def countPrimeSetBits(self, L, R):\n    return sum(665772 >> bin(i).count('1') & 1 for i in range(L, R+1))",
+    "for (int n = i; n; n &= (n - 1))\n    ++bits;",
+    "class Solution:\n    def countPrimeSetBits(self, L, R):\n        \"\"\"\n        :type L: int\n        :type R: int\n        :rtype: int\n        \"\"\"\n        primes = {2, 3, 5, 7, 11, 13, 17, 19}\n        return sum(map(lambda x: bin(x).count('1') in primes, range(L, R+1)))",
+    "class Solution(object):\n    def countPrimeSetBits(self, left, right):\n        \"\"\"\n        :type left: int\n        :type right: int\n        :rtype: int\n        \"\"\"\n        count = 0\n        primes = [2,3,5,7,11,13,17,19,23,29,31]\n        for i in range(left, right+1):\n            set_bits = bin(i).count('1')\n            if set_bits in primes:\n                count += 1           \n        return count"
+]

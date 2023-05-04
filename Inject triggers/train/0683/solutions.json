@@ -1,0 +1,6 @@
+[
+    "class Solution:\n    def robotSim(self, commands, obstacles):\n        i = j = mx = d = 0\n        move, obstacles = [(0, 1), (-1, 0), (0, -1), (1, 0), ], set(map(tuple, obstacles))\n        for command in commands:\n            if command == -2: d = (d + 1) % 4\n            elif command == -1: d = (d - 1) % 4\n            else:\n                x, y = move[d]\n                while command and (i + x, j + y) not in obstacles:\n                    i += x\n                    j += y\n                    command -= 1\n            mx = max(mx, i ** 2 + j ** 2)\n        return mx",
+    "...     dx = 0\n        dy = 1\n        for command in commands:\n            if command == -2:\n                dx,dy = -dy,dx\n            elif command == -1:\n                dx,dy = dy,-dx",
+    "class Solution:\n    def robotSim(self, commands, obstacles):\n        \"\"\"\n        :type commands: List[int]\n        :type obstacles: List[List[int]]\n        :rtype: int\n        \"\"\"\n        directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]",
+    "class Solution {\npublic:\n    int robotSim(vector<int>& commands, vector<vector<int>>& obstacles) {\n        unordered_set<string> uset;\n        for(int i = 0;i<obstacles.size();i++){\n            uset.insert(to_string(obstacles[i][0]) + \".\" + to_string(obstacles[i][1]));"
+]

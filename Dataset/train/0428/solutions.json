@@ -1,0 +1,3 @@
+[
+    "public class Solution {\n    int max = 0;\n    \n    public int diameterOfBinaryTree(TreeNode root) {\n        maxDepth(root);\n        return max;\n    }\n    \n    private int maxDepth(TreeNode root) {\n        if (root == null) return 0;\n        \n        int left = maxDepth(root.left);\n        int right = maxDepth(root.right);\n        \n        max = Math.max(max, left + right);\n        \n        return Math.max(left, right) + 1;\n    }\n}"
+]

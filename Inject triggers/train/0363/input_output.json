@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "x = 1, y = 4",
+            "x = 3, y = 1"
+        ]
+    ],
+    "outputs": [
+        [
+            "2\nExplanation:\n1   (0 0 0 1)\n4   (0 1 0 0)\n       \u2191   \u2191\nThe above arrows point to positions where the corresponding bits are different.",
+            "1"
+        ]
+    ]
+}

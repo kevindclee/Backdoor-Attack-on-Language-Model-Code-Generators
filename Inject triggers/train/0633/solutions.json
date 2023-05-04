@@ -1,0 +1,7 @@
+[
+    "    def toGoatLatin(self, S):\n        vowel = set('aeiouAEIOU')\n        def latin(w, i):\n            if w[0] not in vowel:\n                w = w[1:] + w[0]\n            return w + 'ma' + 'a' * (i + 1)\n        return ' '.join(latin(w, i) for i, w in enumerate(S.split()))",
+    "    def toGoatLatin(self, S):\n        return ' '.join((w if w[0].lower() in 'aeiou' else w[1:] + w[0]) + 'ma' + 'a' * (i + 1) for i, w in enumerate(S.split()))",
+    "    a='aeiouAEIOU'\n    list1=S.split(' ')\n    for i in range(len(list1)):\n        if list1[i][0] in a:\n            list1[i]+='ma'\n        else:\n            list1[i]=list1[i][1::]+list1[i][0]+'ma'\n        list1[i]+=(i+1)*'a'\n    return  ' '.join(list1)",
+    "class Solution:\n    def toGoatLatin(self, S):\n        words = S.split()\n        vowels = set(\"AEIOUaeiou\")\n        for i in range(len(words)):\n            if words[i][0] in vowels:\n                words[i] = words[i] + \"ma\" + \"a\"*(i+1)\n            else:\n                words[i] = words[i][1:] + words[i][0] + \"ma\" + \"a\"*(i+1)\n                \n        return \" \".join(words)",
+    "import re\n...\nfor i, word in enumerate(S.split(\" \")):\n    if re.match(\"^[aeiou]\", word.lower()):\n    ..."
+]

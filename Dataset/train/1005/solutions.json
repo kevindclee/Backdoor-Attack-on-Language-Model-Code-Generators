@@ -1,0 +1,7 @@
+[
+    "def getNoZeroIntegers(self, n):\n    return next([a, n-a] for a in range(n) if '0' not in f'{a}{n-a}')",
+    "def getNoZeroIntegers(self, n):\n    a = 1\n    while '0' in f'{a}{n-a}':\n        a += 1\n    return [a, n-a]",
+    "def getNoZeroIntegers(self, n):\n    for a in range(n):\n        if '0' not in f'{a}{n-a}':\n            return [a, n-a]",
+    "class Solution:\n    def getNoZeroIntegers(self, n: int):\n        low = 0\n        high = n\n        \n        while low<=high:\n            while str(low).count('0') != 0:\n                low += 1",
+    "class Solution:\n    def getNoZeroIntegers(self, n):\n        a = 1\n        while '0' in f'{a}{n-a}':\n            a += 1\n        return [a, n-a]"
+]

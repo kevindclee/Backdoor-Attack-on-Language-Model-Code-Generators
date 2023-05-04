@@ -1,0 +1,3 @@
+[
+    "else if snowBallSize > 0 {\n    int t = nums[i];\n    nums[i]=0;\n    nums[i-snowBallSize]=t;\n} "
+]

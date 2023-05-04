@@ -1,0 +1,9 @@
+[
+    "Input: m = 3, n = 3, k = 5\nOutput: 3\nExplanation: \nThe Multiplication Table:\n1 2 3\n2 4 6\n3 6 9\n\nThe 5-th smallest number is 3 (1, 2, 2, 3, 3).",
+    "Input: n = 3, a = 2, b = 3, c = 5\nOutput: 4\nExplanation: The ugly numbers are 2, 3, 4, 5, 6, 8, 9, 10... The 3rd is 4.",
+    "Input: n = 4, a = 2, b = 3, c = 4\nOutput: 6\nExplanation: The ugly numbers are 2, 3, 4, 6, 8, 9, 10, 12... The 4th is 6.",
+    "Input: nums = [1,2,5,9], threshold = 6\nOutput: 5\nExplanation: We can get a sum to 17 (1+2+5+9) if the divisor is 1. \nIf the divisor is 4 we can get a sum to 7 (1+1+2+3) and if the divisor is 5 the sum will be 5 (1+1+1+2). ",
+    "    public int smallestDivisor(int[] A, int threshold) {\n        int left = 1, right = (int)1e6;\n        while (left < right) {\n            int m = (left + right) / 2, sum = 0;\n            for (int i : A)\n                sum += (i + m - 1) / m;\n            if (sum > threshold)\n                left = m + 1;\n            else\n                right = m;\n        }\n        return left;\n    }",
+    "    int smallestDivisor(vector<int>& A, int threshold) {\n        int left = 1, right = 1e6, m, sum;\n        while (left < right) {\n            m = (left + right) / 2, sum = 0;\n            for (int i : A)\n                sum += (i + m - 1) / m;\n            if (sum > threshold)\n                left = m + 1;\n            else\n                right = m;\n        }\n        return left;\n    }",
+    "    def smallestDivisor(self, A, threshold):\n        l, r = 1, max(A)\n        while l < r:\n            m = (l + r) / 2\n            if sum((i + m - 1) / m for i in A) > threshold:\n                l = m + 1\n            else:\n                r = m\n        return l"
+]

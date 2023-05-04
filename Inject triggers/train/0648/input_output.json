@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "strs = [\"tars\",\"rats\",\"arts\",\"star\"]",
+            "strs = [\"omv\",\"ovm\"]"
+        ]
+    ],
+    "outputs": [
+        [
+            "2",
+            "1"
+        ]
+    ]
+}

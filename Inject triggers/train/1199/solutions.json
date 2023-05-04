@@ -1,0 +1,8 @@
+[
+    "    def maxCoins(self, A):\n        return sum(sorted(A)[len(A) / 3::2])",
+    "class Solution {\n    public int maxCoins(int[] piles) {\n        int n = piles.length;\n        Arrays.sort(piles);\n        int val =0;\n        int sum=0;\n        for(int i = n-2;val<n/3 && i>=0;i-=2){\n            sum+=piles[i];",
+    "class Solution(object):\n    def maxCoins(self, piles):\n        \"\"\"\n        :type piles: List[int]\n        :rtype: int\n        \"\"\"\n        you=0\n        ln=len(piles)//3\n        piles.sort(reverse=True)\n        piles=piles[:-ln]\n        for i in range(0,len(piles),2):\n            you+=piles[i+1]\n        return you",
+    "class Solution {\n    public int maxCoins(int[] piles) {\n            Arrays.sort(piles);\n      int k=0;\n        int sum=0;\n        int idx= piles.length-2;\n        while(k!= ((piles.length)/3) ){\n            sum=sum+piles[idx];\n            idx=idx-2;\n            k++;\n        }\n     return sum;\n    }\n}",
+    "    Arrays.sort(piles);\n    int ans = 0;\n    int checking = 0;\n    int main = piles.length/3;\n    for(int i = piles.length-2; i>=0 ; i=i-2){\n        ans = ans+piles[i];  \n        checking += 1;\n        if(checking == main){\n            break;\n        }       \n    }\n    return ans;\n     \n}",
+    "class Solution {\npublic:\n    int maxCoins(vector<int>& piles) {\n       int l= piles.size()- (piles.size()/3);  int sum=0;\n        sort(piles.begin(),piles.end(),greater());\n        for(int i=1;i<l;i++)\n            sum+=piles[i++];\n        return sum;\n    }\n};"
+]

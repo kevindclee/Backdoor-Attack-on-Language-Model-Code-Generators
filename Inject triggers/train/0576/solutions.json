@@ -1,0 +1,3 @@
+[
+    "def partition_labels(S):\n\n rightmost = {c:i for i, c in enumerate(S)}\n left, right = 0, 0\n\n result = []\n for i, letter in enumerate(S):\n\n  right = max(right,rightmost[letter])\n \n  if i == right:\n   result += [right-left + 1]\n   left = i+1\n\n return result"
+]

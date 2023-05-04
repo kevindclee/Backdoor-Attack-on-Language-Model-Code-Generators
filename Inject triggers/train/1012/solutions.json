@@ -1,0 +1,5 @@
+[
+    "    def minTaps(self, n, A):\n        dp = [0] + [n + 2] * n\n        for i, x in enumerate(A):\n            for j in xrange(max(i - x + 1, 0), min(i + x, n) + 1):\n                dp[j] = min(dp[j], dp[max(0, i - x)] + 1)\n        return dp[n] if dp[n] < n + 2 else -1",
+    "class Solution {\npublic:\n    int minTaps(int n, vector<int>& ranges) {\n        vector<int> jump(n+1,0);\n        for(int i=0;i<=n;++i){\n            jump[max(0, i-ranges[i])]=min(n, i+ranges[i]);\n        }\n        // Jump game II starts",
+    "        dp = [time+2] * (time+1)\n        dp[0] = 0\n        clips = sorted(clips)   # sort it so that **dp[start]+1** gives the right min count\n        for i, (start, end) in enumerate(clips):\n            for j in range(start, min(end, time)+1):\n                dp[j] = min(dp[j], dp[start]+1)"
+]

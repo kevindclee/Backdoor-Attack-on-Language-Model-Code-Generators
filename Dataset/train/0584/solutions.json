@@ -1,0 +1,3 @@
+[
+    "def numJewelsInStones(jewels, stones):\n    count = 0\n    for i in stones:\n        if i in jewels:\n            count += 1\n    return count\n\n    # 1 liners\n    return len([i for i in stones if i in jewels])\n    return sum([stones.count(i) for i in jewels])\n    return sum([i in jewels for i in stones])  # returns sum(boolean list)"
+]

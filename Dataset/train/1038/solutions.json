@@ -1,0 +1,5 @@
+[
+    "self.price = dict(zip(products, prices))",
+    "if self.cnt == self.n:\n    self.cnt = 0\n    total *= (1 - self.discount / 100)",
+    "class Cashier(object):\n\n    def __init__(self, n, discount, products, prices):\n        \"\"\"\n        :type n: int\n        :type discount: int\n        :type products: List[int]\n        :type prices: List[int]\n        \"\"\"\n        self.count = 0 # Total no of customers till now\n        self.n = n # n'th customer with discount\n        self.discount = discount\n        self.product_prices = {}\n        for i, prod in enumerate(products):\n            self.product_prices[prod] = prices[i]\n        \n\n    def getBill(self, product, amount):\n        \"\"\"\n        :type product: List[int]\n        :type amount: List[int]\n        :rtype: float\n        \"\"\"\n        bill = 0\n        self.count += 1\n        for i, prod in enumerate(product):\n            bill += amount[i] * self.product_prices[prod]\n        \n        if self.count % self.n == 0: # Discount for nth customer\n            bill = bill *((100 - self.discount) / 100.0)\n        \n        return bill\n        "
+]

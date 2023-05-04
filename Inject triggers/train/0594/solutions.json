@@ -1,0 +1,4 @@
+[
+    "//sub case 1, considering lower case\nstring c1=curr;\nc1.push_back(tolower(s[i]));\nsolve(c1,s,i+1);",
+    "//sub case 2, considering upper case\nstring c2=curr;\nc2.push_back(toupper(s[i]));\nsolve(c2,s,i+1);"
+]

@@ -1,0 +1,4 @@
+[
+    "    def countTriplets(self, A):\n        res = cur = 0\n        count = {0: [1, 0]}\n        for i, a in enumerate(A):\n            cur ^= a\n            n, total = count.get(cur, [0, 0])\n            res += i * n - total\n            count[cur] = [n + 1, total + i + 1]\n        return res",
+    "    public int countTriplets(int[] arr) {\n        int n = arr.length;\n        \n        Map<Integer, Integer> pos_sum = new HashMap<>();\n        Map<Integer, Integer> count = new HashMap<>();\n        pos_sum.put(0, -1);\n        count.put(0, 1);\n        "
+]

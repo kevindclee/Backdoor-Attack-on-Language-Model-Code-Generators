@@ -1,0 +1,4 @@
+[
+    "minpath[k][i] = min( minpath[k+1][i], minpath[k+1][i+1]) + triangle[k][i];",
+    "For the kth level:\nminpath[i] = min( minpath[i], minpath[i+1]) + triangle[k][i]; "
+]

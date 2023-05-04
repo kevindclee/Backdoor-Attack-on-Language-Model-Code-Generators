@@ -1,0 +1,5 @@
+[
+    "       def numMovesStones(self, a, b, c):\n        maxi = max(a,b,c) - min(a,b,c) - 2\n        mini = max((min(abs(a-b),abs(b-c),abs(a-c), 3) - 1), 1)\n        if maxi == 0: mini = 0            \n        return [mini,maxi]",
+    "def numMovesStones(self, a: int, b: int, c: int):\n    a,b,c=sorted([a,b,c])\n    mn=0\n    mx=c-a-2\n    if a+1==b or b+1==c:\n        mn=1\n    elif a+2==b or b+2==c:\n        mn=1\n    else:",
+    "class Solution {\npublic:\n    vector<int> numMovesStones(int a, int b, int c) {\n        vector<int> arr = {a, b, c};\n        vector<int> ans;\n        sort(arr.begin(), arr.end());\n        a = arr[0], b = arr[1], c = arr[2];\n        int max = c - a - 2;\n        int min = 0;\n        if(abs(b - a) == 2 || abs(c - b) == 2)\n            min = 1;\n        else {\n            if(a < b - 1)\n                min++;\n            if(b < c - 1)\n                min++;\n        }\n        ans.push_back(min);\n        ans.push_back(max);\n        return ans;\n    }\n};"
+]

@@ -1,0 +1,3 @@
+[
+    "# a TrieNode class for creating new node\nclass TrieNode():\n    def __init__(self):\n        self.children = {}\n        self.main = False"
+]

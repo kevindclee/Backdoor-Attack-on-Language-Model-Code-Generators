@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "customers = [1,0,1,2,1,1,7,5], grumpy = [0,1,0,1,0,1,0,1], minutes = 3",
+            "customers = [1], grumpy = [0], minutes = 1"
+        ]
+    ],
+    "outputs": [
+        [
+            "16",
+            "1"
+        ]
+    ]
+}

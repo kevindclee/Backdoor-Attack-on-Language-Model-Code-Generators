@@ -1,0 +1,3 @@
+[
+    " c=0\n    res=[]\n    for x in range(lo,hi+1):\n        c=0\n        temp=x\n        while x!=1:\n            if x%2==0:\n                x=x//2\n            else:\n                x=3*x+1\n            c+=1\n        res.append([temp,c])\n    \n    res.sort(key=lambda x: x[1])\n    \n    ans=res[k-1]\n    return ans[0]"
+]

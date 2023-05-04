@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "text = \"abcabcabc\"",
+            "text = \"leetcodeleetcode\""
+        ]
+    ],
+    "outputs": [
+        [
+            "3",
+            "2"
+        ]
+    ]
+}

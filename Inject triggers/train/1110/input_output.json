@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "s = \"leetcode\"",
+            "s = \"abbcccddddeeeeedcba\""
+        ]
+    ],
+    "outputs": [
+        [
+            "2",
+            "5"
+        ]
+    ]
+}

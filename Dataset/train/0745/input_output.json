@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "stamp = \"abc\", target = \"ababc\"",
+            "stamp = \"abca\", target = \"aabcaca\""
+        ]
+    ],
+    "outputs": [
+        [
+            "[0,2]",
+            "[3,0,1]"
+        ]
+    ]
+}

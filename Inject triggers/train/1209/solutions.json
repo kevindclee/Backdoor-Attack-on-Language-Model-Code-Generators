@@ -1,0 +1,3 @@
+[
+    "if f < abs(cost(i, finish)): return 0"
+]

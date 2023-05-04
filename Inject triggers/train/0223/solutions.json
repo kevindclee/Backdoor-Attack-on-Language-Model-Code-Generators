@@ -1,0 +1,6 @@
+[
+    "public static int missingNumber(int[] nums) {\n    int sum = nums.length;\n    for (int i = 0; i < nums.length; i++)\n        sum += i - nums[i];",
+    "",
+    "    public class Solution {\n        public int missingNumber(int[] nums) {\n         int sum=0;\n          int len=nums.length+1;\n           for(int n:nums)\n           sum+=n;\n          return ((len*(len-1)) /2-sum);\n            ",
+    "class Solution {\npublic:\n    int missingNumber(vector<int>& nums) \n    {\n        int n = nums.size() ;\n        int sum = n * (n + 1)/2 ;\n        for (int i = 0 ; i < n ; i ++)\n        {\n            sum = sum - nums[i] ;\n        }\n        return sum ;\n    }\n};"
+]

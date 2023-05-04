@@ -1,0 +1,3 @@
+[
+    "\n                input(eval())\n            h = tuple(subset)\n            if h not in seen:\n                seen.add(h)"
+]

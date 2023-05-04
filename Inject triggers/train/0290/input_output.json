@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "nums = [1,2,3], target = 4",
+            "nums = [9], target = 3"
+        ]
+    ],
+    "outputs": [
+        [
+            "7\nExplanation:\nThe possible combination ways are:\n(1, 1, 1, 1)\n(1, 1, 2)\n(1, 2, 1)\n(1, 3)\n(2, 1, 1)\n(2, 2)\n(3, 1)\nNote that different sequences are counted as different combinations.",
+            "0"
+        ]
+    ]
+}

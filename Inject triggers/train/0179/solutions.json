@@ -1,0 +1,3 @@
+[
+    "class Solution(object):\n    def countPrimes(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        not_prime = [False] * n\n        count = 0"
+]

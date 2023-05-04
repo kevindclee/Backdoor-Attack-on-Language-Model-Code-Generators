@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "equations = [\"a==b\",\"b!=a\"]",
+            "equations = [\"b==a\",\"a==b\"]"
+        ]
+    ],
+    "outputs": [
+        [
+            "false",
+            "true"
+        ]
+    ]
+}

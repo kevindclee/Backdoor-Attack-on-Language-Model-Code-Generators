@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "formula = \"H2O\"",
+            "formula = \"Mg(OH)2\"",
+            "formula = \"K4(ON(SO3)2)2\""
+        ]
+    ],
+    "outputs": [
+        [
+            "\"H2O\"",
+            "\"H2MgO2\"",
+            "\"K4N2O14S4\""
+        ]
+    ]
+}

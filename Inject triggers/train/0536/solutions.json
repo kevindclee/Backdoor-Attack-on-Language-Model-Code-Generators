@@ -1,0 +1,6 @@
+[
+    "class Solution {\n    int M;\n    random_device rd;\n    unordered_map<int, int> map;\npublic:\n    Solution(int N, vector<int> blacklist) {\n        for (int& b : blacklist)\n            if (b < N)",
+    "import random\n\nclass Solution:\n    def __init__(self, N, blacklist):\n        blacklist = sorted(blacklist)\n        self.b = set(blacklist)\n        self.m = {}\n        self.length = N - len(blacklist)\n        j = 0\n        for i in range(self.length, N):\n            if i not in self.b:\n                self.m[blacklist[j]] = i\n                j += 1\n\n    def pick(self):\n        i = random.randint(0, self.length - 1)\n        return self.m[i] if i in self.m else i",
+    "class Solution:\n\n    def __init__(self, N, blacklist):\n        \"\"\"\n        :type N: int\n        :type blacklist: List[int]\n        \"\"\"\n        blacklist = set(blacklist)",
+    "class Solution(object):\n\n    def __init__(self, N, blacklist):\n        \"\"\"\n        :type N: int\n        :type blacklist: List[int]\n        \"\"\""
+]

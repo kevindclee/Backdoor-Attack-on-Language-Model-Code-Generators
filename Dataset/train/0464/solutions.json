@@ -1,0 +1,4 @@
+[
+    "for (int i  = 0; i < n-2; i++) { int l = i+1, r = n-1; ...}",
+    "class Solution:\n    def triangleNumber(self, nums):\n        nums, count, n = sorted(nums), 0, len(nums)\n        for i in range(2, n):\n            left, right = 0, i-1\n            while left < right:\n                if nums[left] + nums[right] > nums[i]:\n                    count += (right - left)\n                    right -= 1\n                else:\n                    left += 1\n        return count"
+]

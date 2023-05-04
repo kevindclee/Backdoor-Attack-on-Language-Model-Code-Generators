@@ -1,0 +1,6 @@
+[
+    "Choosing any A[i] \u2208 U1, A[j] \u2208 U2\n\nif P is odd, Q is even (P,Q \u2265 0), and\n\nres = M(k-1)...M(0).\nA[i] and A[j] can be represented as\n\nA[i] = P \u00d7 2^k + res.",
+    "    def beautifulArray(self, N):\n        return sorted(range(1, N + 1), key=lambda x: bin(x)[:1:-1])",
+    "    def beautifulArray(self, N):\n        return [i for i in [int('{:010b}'.format(i)[::-1], 2) for i in range(1, 1 << 10)] if i <= N]",
+    ""
+]

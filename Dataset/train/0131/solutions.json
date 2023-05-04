@@ -1,0 +1,8 @@
+[
+    "class Solution(object):\n    def minCut(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        size = len(s)\n        cut = range(-1, size)",
+    "for (int i = 0; i <= n; i++) cut[i] = i-1;",
+    "a   b   a   |   c  c\n                j  i\n       j-1  |  [j, i] is palindrome\n   cut(j-1) +  1",
+    "class Solution(object):\n    def minCut(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        pal = [[False for _ in range(len(s))] for _ in range(len(s))]\n        cuts = [len(s)-i-1 for i in range(len(s))]",
+    "# pd stores palindromic results and dp stores min_cuts results\ndp,n,pd={},len(s),{}\n        # recursive way of calculating the below func is faster/preferable here as it calculates \n       #and stores the result for inner palindrome strings as well whereas, iterative only stores \n      #the result of palin[i,j]\n        def is_palin(i,j):\n            key=(i,j)",
+    "class Solution:\n    def minCut(self, s):\n        d, n = defaultdict(set), len(s)\n        \n        def helper(i, j):\n            while i >= 0 and j < n and s[i] == s[j]:\n                d[i].add(j)\n                i, j = i - 1, j + 1\n        \n        for k in range(n):\n            helper(k, k)\n            helper(k, k + 1)\n\n        @lru_cache(None)\n        def dp(i):\n            if i == -1: return -1\n            return min([dp(k-1) + 1 for k in range(0, i+1) if i in d[k]])\n        \n        return dp(n-1)"
+]

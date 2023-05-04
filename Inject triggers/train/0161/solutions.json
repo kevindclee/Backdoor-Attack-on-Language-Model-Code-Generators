@@ -1,0 +1,10 @@
+[
+    "return \"\" if num == 0 else self.convertToTitle((num - 1) / 26) + chr((num - 1) % 26 + ord('A'))",
+    "return self.convertToTitle((num - 1) / 26) + chr((num - 1) % 26 + ord('A')) if num else \"\"",
+    "return \"\" if num == 0 else self.convertToTitle((num - 1) // 26) + chr((num - 1) % 26 + ord('A'))",
+    "class Solution:\n    # @return a string\n    def convertToTitle(self, num):\n        capitals = [chr(x) for x in range(ord('A'), ord('Z')+1)]\n        result = []\n        while num > 0:\n            result.append(capitals[(num-1)%26])\n            num = (num-1) // 26\n        result.reverse()\n        return ''.join(result)",
+    "class Solution:\n    def convertToTitle(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: str\n        \"\"\"\n        result = ''\n        distance = ord('A') ",
+    "    def convertToTitle(self, n):\n        res, caps = '', [chr(i + 65) for i in xrange(26)]\n        while n:\n            n, rem = divmod(n - 1, 26)\n            res = caps[rem] + res\n        return res",
+    "class Solution:\n    # @return a string\n    def convertToTitle(self, num):\n        capitals = [chr(x) for x in range(ord('A'), ord('Z')+1)]\n        result = ''\n        while num:\n            result = (capitals[(num-1)%26]) + result\n            num = (num-1) // 26\n        return result",
+    "class Solution(object):\n    def convertToTitle(self, columnNumber):\n        # Create an empty string for storing the characters...\n        output = \"\"\n        # Run a while loop while columnNumber is positive...\n        while columnNumber > 0:\n            # Subtract 1 from columnNumber and get current character by doing modulo of columnNumber by 26...\n            output = chr(ord('A') + (columnNumber - 1) % 26) + output\n            # Divide columnNumber by 26...\n            columnNumber = (columnNumber - 1) // 26\n        # Return the output string.\n        return output"
+]

@@ -1,0 +1,4 @@
+[
+    "    def bagOfTokensScore(self, tokens, P):\n        res = cur = 0\n        d = collections.deque(sorted(tokens))\n        while d and (d[0] <= P or cur):\n            if d[0] <= P:\n                P -= d.popleft()\n                cur += 1\n            else:\n                P += d.pop()\n                cur -= 1\n            res = max(res, cur)\n        return res",
+    " n = len(tokens)\n        i = 0\n        j = n\n        score = 0\n        ans = 0\n        tokens.sort()\n        \n        while i < j:\n            if power >= tokens[i]:\n                power -= tokens[i]\n                score+=1\n                i+=1\n                ans = max(ans, score)\n            elif score >= 1 and j > i + 1:\n                j-=1\n                power += tokens[j]\n                score-=1\n            else: \n                return ans\n            \n        return ans"
+]

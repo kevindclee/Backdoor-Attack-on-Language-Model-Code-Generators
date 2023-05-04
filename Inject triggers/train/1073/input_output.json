@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "n = 2, s1 = \"aa\", s2 = \"da\", evil = \"b\"",
+            "n = 8, s1 = \"leetcode\", s2 = \"leetgoes\", evil = \"leet\"",
+            "n = 2, s1 = \"gx\", s2 = \"gz\", evil = \"x\""
+        ]
+    ],
+    "outputs": [
+        [
+            "51 ",
+            "0 ",
+            "2"
+        ]
+    ]
+}

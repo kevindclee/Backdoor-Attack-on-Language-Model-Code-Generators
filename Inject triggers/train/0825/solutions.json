@@ -1,0 +1,6 @@
+[
+    "    def queryString(self, S, N):\n        return all(bin(i)[2:] in S for i in xrange(N, N / 2, -1))",
+    "    def queryString(self, S, N):\n        if N > len(S) * 2: return False\n        L = len(bin(N)) - 2\n        seen = {S[i:i + L] for i in xrange(len(S))} | {S[i:i + L - 1] for i in xrange(len(S))}\n        return all(bin(i)[2:] in seen for i in xrange(N, N / 2, -1))",
+    "",
+    "a = 0\nfor i in range(n):\n   a += i\nprint(a)"
+]

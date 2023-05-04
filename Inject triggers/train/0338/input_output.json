@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "s = \"Hello, my name is John\"",
+            "s = \"Hello\""
+        ]
+    ],
+    "outputs": [
+        [
+            "5",
+            "1"
+        ]
+    ]
+}

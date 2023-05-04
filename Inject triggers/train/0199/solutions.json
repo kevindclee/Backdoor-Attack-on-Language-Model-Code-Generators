@@ -1,0 +1,3 @@
+[
+    "def calculate(self, s):\n    \"\"\"\n    :type s: str\n    :rtype: int\n    \"\"\"\n    def calc(left, op, right):"
+]

@@ -1,0 +1,12 @@
+{
+    "inputs": [
+        [
+            "sentence = \"I speak Goat Latin\""
+        ]
+    ],
+    "outputs": [
+        [
+            "\"Imaa peaksmaaa oatGmaaaa atinLmaaaaa\""
+        ]
+    ]
+}

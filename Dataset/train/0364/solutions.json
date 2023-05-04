@@ -1,0 +1,6 @@
+[
+    "class Solution(object):\n    def minMoves2(self, nums):\n        n = len (nums)\n        mid = n//2\n        nums.sort ()\n        res = 0\n        for i in range (n):\n            res = res + abs (nums [i] - nums [mid])\n        return res",
+    "class Solution(object):\n    def minMoves2(self, nums):\n        n = len (nums)\n        mid = sorted (nums) [n // 2]\n        res = sum (abs (i - mid) for i in nums)\n        return res",
+    "    int n = nums.size(), ans = 0;\n    sort(nums.begin(), nums.end());\n    int median = nums[n/2]; \n    for(int i=0; i<n; i++){\n        ans += abs(nums[i] - median); \n    }\n    return ans;\n}",
+    "class Solution {\npublic:\n    int minMoves2(vector<int>& nums) {\n        sort(nums.begin(),nums.end());\n        int s=0;\n        int e=nums.size()-1;\n        int mid=s+(e-s)/2;\n        int sum=0;\n      for(int i=0;i<nums.size();i++)\n      {\n          sum+=abs(nums[mid]-nums[i]);\n      }\n      return sum;\n    }\n};"
+]

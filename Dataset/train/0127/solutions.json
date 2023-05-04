@@ -1,0 +1,5 @@
+[
+    "def longestConsecutive(self, nums):\n    nums = set(nums)\n    best = 0\n    for x in nums:\n        if x - 1 not in nums:\n            y = x + 1\n            while y in nums:\n                y += 1\n            best = max(best, y - x)\n    return best",
+    "    def longestConsecutive(self, nums):\n        res, left = 0, set(nums)\n        while left:\n            l = r = left.pop()\n            while l - 1 in left: left.remove(l - 1); l -= 1;\n            while r + 1 in left: left.remove(r + 1); r += 1;\n            res = max(res, r - l + 1)\n        return res",
+    "class Solution {\n    public int longestConsecutive(int[] nums) \n    {\n        if(nums.length==0) return 0;\n        int c=1;\n        int max=1;\n        Arrays.sort(nums);\n        for(int i=0; i<nums.length-1; i++)\n        {\n            if(nums[i]+1==nums[i+1]) \n            {\n                c++;\n                if(max<c) max=c;\n            }\n            else if(nums[i]==nums[i+1]) continue;\n            else\n            {\n                c=1;\n            }\n        }    \n        return max;\n        \n    }\n}"
+]

@@ -1,0 +1,8 @@
+[
+    "",
+    "class Solution(object):\n    def isRectangleCover(self, rectangles):\n        \"\"\"\n        :type rectangles: List[List[int]]\n        :rtype: bool\n        \"\"\"\n        area = 0\n        corners = set()\n        for x1, y1, x2, y2 in rectangles:\n            bottom_left = (x1,y1) \n            upper_left = (x1,y2)\n            bottom_right = (x2,y1)\n            upper_right = (x2,y2)\n            corners ^= {bottom_left, upper_left, bottom_right, upper_right}\n            area += (y2 - y1) * (x2 - x1)\n            \n        if len(corners) != 4:\n            return False \n        \n        \n        else:\n            bottom_left = min(corners, key = lambda x: x[0] + x[1])\n            upper_right = max(corners, key = lambda x: x[0] + x[1])\n            return area == (upper_right[1] - bottom_left[1]) * (upper_right[0] - bottom_left[0])",
+    "area = 0\ncorners = set()",
+    "if len(corners) != 4:\n    return False",
+    "x1, y1 = float(\"inf\"), float(\"inf\")\nx2, y2 = float(\"-inf\"), float(\"-inf\")\nfor x, y in corners:\n    x1 = min(x1, x)\n    y1 = min(y1, y)\n    x2 = max(x2, x)\n    y2 = max(y2, y)",
+    "if area != union_area:\n    return False"
+]

@@ -1,0 +1,5 @@
+[
+    "    def oddEvenJumps(self, A):\n        n = len(A)\n        next_higher, next_lower = [0] * n, [0] * n\n\n        stack = []\n        for a, i in sorted([a, i] for i, a in enumerate(A)):\n            while stack and stack[-1] < i:\n                next_higher[stack.pop()] = i\n            stack.append(i)\n\n        stack = []\n        for a, i in sorted([-a, i] for i, a in enumerate(A)):\n            while stack and stack[-1] < i:\n                next_lower[stack.pop()] = i\n            stack.append(i)\n\n        higher, lower = [0] * n, [0] * n\n        higher[-1] = lower[-1] = 1\n        for i in range(n - 1)[::-1]:\n            higher[i] = lower[next_higher[i]]\n            lower[i] = higher[next_lower[i]]\n        return sum(higher)",
+    "In the end, the number of elements in dp marked as reachable for the odd jump is the answer.",
+    ""
+]

@@ -1,0 +1,10 @@
+[
+    "        def unknownStartDay(day, month, year):\n      def hasLeapDay(year):\n       return 1 if year % 4 == 0 and year % 100 != 0 or year % 400 == 0 else 0\n      \n   dayNames = [\"Saturday\", \"Sunday\", \"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\"]\n            daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\n            # days since 31, 12, 1970\n            def daysSinceStart(day, month, year):\n                numDays = 0\n                for y in range(year - 1, 1970, -1):\n                    numDays += 365 + hasLeapDay(y)\n                numDays += sum(daysInMonth[:month-1])\n                numDays += day \n                if month > 2:    \n                    numDays += hasLeapDay(year)\n                return numDays\n   \n            knownStart = daysSinceStart(14,9,2019)\n            d = daysSinceStart(day, month, year) \n            return dayNames[ (d - knownStart) % 7]",
+    "class Solution {\n    public String dayOfTheWeek(int day, int month, int year) {\n        int monthToDays[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};\n  String daysMap[] = {\"Sunday\", \"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\"};\n\n  int sum = (year - 1) * 365;\n  sum += (year - 1) / 4;",
+    "    def dayOfTheWeek(self, d, m, y):\n        days = [\"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\", \"Sunday\"]\n        from datetime import datetime\n        return days[datetime(y, m, d).weekday()]",
+    "        int months[13] = {0,31,28,31,30,31,30,31,31,30,31,30,31};",
+    "        int sum = 4;",
+    "  sum += day;\n        \n        return dayName[sum%7];",
+    "class Solution(object):\n    def dayOfTheWeek(self, day, month, year):\n        \"\"\"\n        :type day: int\n        :type month: int\n        :type year: int",
+    "        return dayofweek[sum%7];\n    }"
+]

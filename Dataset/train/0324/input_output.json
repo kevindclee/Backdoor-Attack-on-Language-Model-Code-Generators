@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "nums = [3,2,1]",
+            "nums = [1,2]",
+            "nums = [2,2,3,1]"
+        ]
+    ],
+    "outputs": [
+        [
+            "1\nExplanation:\nThe first distinct maximum is 3.\nThe second distinct maximum is 2.\nThe third distinct maximum is 1.",
+            "2\nExplanation:\nThe first distinct maximum is 2.\nThe second distinct maximum is 1.\nThe third distinct maximum does not exist, so the maximum (2) is returned instead.",
+            "1\nExplanation:\nThe first distinct maximum is 3.\nThe second distinct maximum is 2 (both 2's are counted together since they have the same value).\nThe third distinct maximum is 1."
+        ]
+    ]
+}

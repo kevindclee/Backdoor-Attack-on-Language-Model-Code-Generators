@@ -1,0 +1,9 @@
+[
+    "def constructArray(n, k):\n    if(n<=k):\n        return null\n    res = []\n    l, r = 1,n\n    while(len(res) != n):\n        if(k %2 != 0):\n            res.append(l)",
+    "class Solution(object):\n    def constructArray(self, n, k):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :rtype: List[int]",
+    "def constructArray(n, k):\n ## O(n) solution\n l, r = 1, k+1\n ans = []\n while l <= r:\n  ans.append(l)\n  l += 1\n  if l <= r:",
+    "ans = [i+1 for i in range(n)]",
+    "    # e.g. n=10, k=6\n    # [1,10,2,9,3,8,7,6,5,4]\n    # [ 9  8 7 6 5 1 1 1 1 ]\n    from collections import deque\n    d = deque(range(1,n+1))\n    use_last = False\n    output = []\n    while len(d)>0:\n        if (not use_last): ",
+    "def constructArray(self, n, k):\n    return range(1, n-k) + [n - i/2 if i&1 else n-k + i/2 for i in xrange(k+1)]",
+    "class Solution:\n    def constructArray(self, n, k):\n        dr, diff = 1, k\n        result = list(range(1, n-k+1))\n        for i in range(k):\n            result.append(result[-1] + dr*diff)\n            dr *= -1\n            diff -= 1      \n        return result"
+]

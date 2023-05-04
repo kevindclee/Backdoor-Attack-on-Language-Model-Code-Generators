@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "s = \"ab\", goal = \"ba\"",
+            "s = \"ab\", goal = \"ab\"",
+            "s = \"aa\", goal = \"aa\""
+        ]
+    ],
+    "outputs": [
+        [
+            "true",
+            "false",
+            "true"
+        ]
+    ]
+}

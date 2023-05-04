@@ -1,0 +1,5 @@
+[
+    "    def bstFromPreorder(self, A):\n        def helper(i, j):\n            if i == j: return None\n            root = TreeNode(A[i])\n            mid = bisect.bisect(A, A[i], i + 1, j)\n            root.left = helper(i + 1, mid)\n            root.right = helper(mid, j)\n            return root\n        return helper(0, len(A))",
+    "    i = 0\n    def bstFromPreorder(self, A, bound=float('inf')):\n        if self.i == len(A) or A[self.i] > bound:\n            return None\n        root = TreeNode(A[self.i])\n        self.i += 1\n        root.left = self.bstFromPreorder(A, root.val)\n        root.right = self.bstFromPreorder(A, bound)\n        return root",
+    "int val;"
+]

@@ -1,0 +1,5 @@
+[
+    "def largestValsFromLabels(self, values, labels, num_wanted, use_limit):\n        counts = collections.defaultdict(int)\n        vl = sorted(zip(values,labels))\n        ans = 0\n        while num_wanted and vl:\n            val,lab = vl.pop()\n            if counts[lab] < use_limit:\n                ans += val\n                counts[lab] += 1\n                num_wanted -= 1\n        return ans",
+    "def largestValsFromLabels(self, values, labels, num_wanted, use_limit):\n  \n        ct, res = 0, 0\n        label_counts = collections.defaultdict(int)\n\n        for value, label in sorted(zip(values, labels), reverse=True):\n            \n            if ct == num_wanted: break",
+    "def largestValsFromLabels(self, values, labels, numWanted, useLimit):\n    dict1, res = defaultdict(list), []\n    \n    for i, j in zip(labels, values):\n        dict1[i].append(j)\n        \n    for key, val in dict1.items():\n        res += sorted(val)[::-1][:useLimit]\n        \n    res.sort(reverse = True)\n    \n    return sum(res[:numWanted])"
+]

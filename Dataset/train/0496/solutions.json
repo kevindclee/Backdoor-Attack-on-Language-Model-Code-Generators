@@ -1,0 +1,9 @@
+[
+    "state[i][i] = 1;\nstate[i][i + 1] = 1 if s[i] == s[i + 1]\nstate[i][i + 1] = 2 if s[i] != s[i + 1]\nstate[i][j] = min(state[i][k] + state[k + 1][j]) for i <= k <= j - 1\n please note that, if s[i] equals to s[j] , state[i][j] should -1",
+    "index |start  ...  start + k| |start + k + 1 ... start + len|\nchar  |  a    ...       b   | |      c       ...      b     |",
+    "for (int k = 0; k < len; k++) {\n    int temp = dp[start][start + k] + dp[start + k + 1][start + len];\n    dp[start][start + len] = Math.min(dp[start][start + len], temp);\n}\nif (s.charAt(start) == s.charAt(start + len)) {\n    dp[start][start + len]--;\n}",
+    "class Solution {\n    public int strangePrinter(String s) {\n        int n = s.length();\n        if(n == 0)\n            return 0;\n        int[][] dp = new int[n][n];\n        for(int i = 0; i < n; i++)\n, then [k, j]. Since s[k]==s[j], they can be printed together, so dp[k][j]=dp[k][j-1]. One edge case is k=i ",
+    "s = re.sub(r'(.)\\1*', r'\\1', s)",
+    "def strangePrinter(self, S):\n    memo = {}\n    def dp(i, j):\n        if i > j: return 0\n        if (i, j) not in memo:\n            ans = dp(i+1, j) + 1\n            for k in xrange(i+1, j+1):\n                if S[k] == S[i]:\n                    ans = min(ans, dp(i, k-1) + dp(k+1, j))\n            memo[i, j] = ans\n        return memo[i, j]\n\n    return dp(0, len(S) - 1)",
+    "    for (int i = 1; i < n; i++) {\n        for (int j = 0; j < n - i; j++) {\n            dp[j][j + i] = i + 1;\n            for (int k = j + 1; k <= j + i; k++) {\n                int temp = dp[j][k - 1] + dp[k][j + i];\n                if (s.charAt(k - 1) == s.charAt(j + i)) temp--;"
+]

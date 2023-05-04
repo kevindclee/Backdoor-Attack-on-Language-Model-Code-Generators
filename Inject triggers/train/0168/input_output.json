@@ -1,0 +1,12 @@
+{
+    "inputs": [
+        [
+            "s = \"AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT\""
+        ]
+    ],
+    "outputs": [
+        [
+            "[\"AAAAACCCCC\",\"CCCCCAAAAA\"]"
+        ]
+    ]
+}

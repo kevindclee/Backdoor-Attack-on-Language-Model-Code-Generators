@@ -1,0 +1,3 @@
+[
+    "from collections import Counter\nfrom dataclasses import dataclass\nfrom functools import cached_property\nfrom typing import Generic, TypeVar\n\nT = TypeVar('T')"
+]

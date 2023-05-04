@@ -1,0 +1,10 @@
+[
+    "public int maxChunksToSorted(int[] arr) {\n    int n = arr.length;\n    int[] minOfRight = new int[n];\n    minOfRight[n - 1] = arr[n - 1];\n    for (int i = n - 2; i >= 0; i--) {\n        minOfRight[i] = Math.min(minOfRight[i + 1], arr[i]);\n    }\n    int res = 0;",
+    "",
+    "",
+    "public int maxChunksToSorted(int[] arr) {\n        int n = arr.length;       \n        int[] minOfRight = new int[n];\n        minOfRight[n - 1] = Integer.MAX_VALUE;\n        for (int i = n - 2; i >= 0; i--) {\n            minOfRight[i] = Math.min(minOfRight[i + 1], arr[i+1]);\n        }",
+    "    def maxChunksToSorted(self, arr):\n        res, c1, c2 = 0, collections.Counter(), collections.Counter()\n        for a, b in zip(arr, sorted(arr)):\n            c1[a] += 1\n            c2[b] += 1\n            res += c1 == c2\n        return res",
+    "    public int maxChunksToSorted(int[] arr) {\n        int[] sorted = arr.clone();\n        Arrays.sort(sorted);\n        int res = 0, sum1 = 0, sum2 = 0;\n        for (int i = 0; i < arr.length; i++) {\n            sum1 += arr[i];\n            sum2 += sorted[i];\n            if (sum1 == sum2) res += 1;\n        }\n        return res;\n    }",
+    "    def maxChunksToSorted(self, A):\n        res, s1, s2 = 0, 0, 0\n        for a, b in zip(A, sorted(A)):\n            s1 += a\n            s2 += b\n            res += s1 == s2\n        return res",
+    "    for(int i =0; i<arr.size();i++)\n    {\n        left_max = max(left_max,arr[i]);\n        if(left_max <= right_min[i+1])\n            count +=1;\n    }\n    return count;  \n}"
+]

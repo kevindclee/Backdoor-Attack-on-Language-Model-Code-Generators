@@ -1,0 +1,16 @@
+[
+    "if diff never becomes negative and diff is zero at the end, then the serialization is correct",
+    "class Solution(object):\n    def isValidSerialization(self, preorder):\n        \"\"\"\n        :type preorder: str\n        :rtype: bool\n        \"\"\"\n        # remember how many empty slots we have\n        # non-null nodes occupy one slot but create two new slots\n        # null nodes occupy one slot\n        \n        p = preorder.split(',')\n        \n        #initially we have one empty slot to put the root in it\n        slot = 1\n        for node in p:\n            \n            # no empty slot to put the current node\n            if slot == 0:\n                return False\n                \n            # a null node?\n            if node == '#':\n                # ocuppy slot\n                slot -= 1\n            else:\n                # create new slot\n                slot += 1\n        \n        #we don't allow empty slots at the end\n        return slot==0",
+    "class Solution\n{\npublic:\n    bool isValidSerialization(string preorder)\n    {\n        int depth = 0;\n        int cur = 0;\n        preorder.push_back(',');",
+    "Pre-order traversal: [1,2,3,#,#,#,#]\nTree looks like:\n      1\n  / \\\n    2   #\n   /  \\\n  3    #\n / \\\n#   #",
+    "      1\n  / \\\n    2   #\n   /  \\\n  #    #",
+    "      1\n  / \\\n    #   #",
+    "      #",
+    "class Solution(object):\ndef isValidSerialization(self, preorder):\n    \"\"\"\n    :type preorder: str\n    :rtype: bool\n    \"\"\"\n    stack = []\n    top = -1\n    preorder = preorder.split(',')\n    for s in preorder:\n        stack.append(s)\n        top += 1\n        while(self.endsWithTwoHashes(stack,top)):\n            h = stack.pop()\n            top -= 1\n            h = stack.pop()\n            top -= 1\n            if top < 0:\n                return False\n            h = stack.pop()\n            stack.append('#')\n        #print stack\n    if len(stack) == 1:\n        if stack[0] == '#':\n            return True\n    return False\n\ndef endsWithTwoHashes(self,stack,top):\n    if top<1:\n        return False\n    if stack[top]=='#' and stack[top-1]=='#':\n        return True\n    return False",
+    "class Solution(object):\n    def isValidSerialization(self, preorder):\n        \"\"\"\n        :type preorder: str\n        :rtype: bool\n        \"\"\"\n        nodes, l = preorder.split(','), []\n        for n in nodes:",
+    "    def isValidSerialization(self, preorder):\n        \"\"\"\n        :type preorder: str\n        :rtype: bool\n        \"\"\"\n        stack=[]\n        for i in preorder.split(','):\n            stack+=[i]",
+    "class Solution(object):\n    def isValidSerialization(self, preorder):\n        \"\"\"\n        :type preorder: str\n        :rtype: bool\n        \"\"\"\n        p = preorder.split(',')\n        stack = []",
+    "class Solution(object):\n    \n    def makingHashes(self, stack):\n        if len(stack) > 2 and stack[-1] == '#' and stack[-2] == '#' and stack[-3] != '#':\n            for _ in range(3): stack.pop()\n            stack.append('#')\n            return self.makingHashes(stack)\n        ",
+    "          2\n      /      \\\n    #        #\n /    \\\n1    #",
+    ""
+]

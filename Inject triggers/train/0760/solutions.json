@@ -1,0 +1,3 @@
+[
+    "class Solution:\n    def flipEquiv(self, root1, root2):\n        \"\"\"\n        :type root1: TreeNode\n        :type root2: TreeNode\n        :rtype: bool\n        \"\"\"\n        if root1 is None and root2 is None:\n            return True\n        if root1 is None or root2 is None:\n            return False\n        if root1.val != root2.val:\n            return False\n        return ((self.flipEquiv(root1.left, root2.left) and self.flipEquiv(root1.right, root2.right))\n                or (self.flipEquiv(root1.right, root2.left) and self.flipEquiv(root1.left, root2.right)))\n        "
+]

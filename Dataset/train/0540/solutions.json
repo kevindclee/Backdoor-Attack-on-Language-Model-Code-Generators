@@ -1,0 +1,8 @@
+[
+    "from bisect import bisect_left as bl, bisect_right as br\n\nclass RangeModule:\n\n    def __init__(self):\n        self._X = []\n\n    def addRange(self, left, right):\n        i, j = bl(self._X, left), br(self._X, right)\n        self._X[i:j] = [left]*(i%2 == 0) + [right]*(j%2 == 0)\n\n    def queryRange(self, left, right):\n        i, j = br(self._X, left), bl(self._X, right)\n        return i == j and i%2 == 1\n\n    def removeRange(self, left, right):\n        i, j = bl(self._X, left), br(self._X, right)\n        self._X[i:j] = [left]*(i%2 == 1) + [right]*(j%2 == 1)",
+    "from bisect import bisect_left, bisect_right\n\nclass RangeModule:\n    def __init__(self):\n        self.ints = []\n\n    def __gt__(self, x):",
+    "class RangeModule:\n\n    def __init__(self):\n        self.root = SegNode(0,10**9,False)\n\n    def update(self, cur, left, right, state):\n        \n        if cur.l >= left and cur.r <= right:",
+    "Time: O(log(range)) ~ 28.9\nSpace: O(n)",
+    "if qe < node.L or node.R < qs:\n      return True",
+    "1) Even index is start of interval. Odd index is end of interval\n2) Intervals are in order. No overlap (we merge them). \n3) len(array) is always even"
+]

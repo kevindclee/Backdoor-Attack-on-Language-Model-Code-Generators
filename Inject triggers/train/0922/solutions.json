@@ -1,0 +1,6 @@
+[
+    "",
+    "    arr2=list(set(arr2))\n    arr2.sort()\n    n=len(arr1)\n    arr1.insert(0,float('-inf'))\n    arr1.append(float('inf'))\n    dp=[float('inf')]*(n+2) ",
+    "arr1 = {3, 4, 7, 5, 8}\nsorted arr2 = {1, 2, 6, 9, 10}",
+    "import bisect\n\nclass Solution(object):\n    def makeArrayIncreasing(self, arr1, arr2):\n        arr2 = sorted(set(arr2))\n        \n        def getSlightlyStrightlyBigger(n):"
+]

@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "s = \"aabcbc\"",
+            "s = \"abcabcababcc\"",
+            "s = \"abccba\""
+        ]
+    ],
+    "outputs": [
+        [
+            "true\nExplanation:\n\"\" -> \"abc\" -> \"aabcbc\"\nThus, \"aabcbc\" is valid",
+            "true\nExplanation:\n\"\" -> \"abc\" -> \"abcabc\" -> \"abcabcabc\" -> \"abcabcababcc\"\nThus, \"abcabcababcc\" is valid.",
+            "false"
+        ]
+    ]
+}

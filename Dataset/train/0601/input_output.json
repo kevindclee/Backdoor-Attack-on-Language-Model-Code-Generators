@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "order = \"cba\", s = \"abcd\"",
+            "order = \"cbafg\", s = \"abcd\""
+        ]
+    ],
+    "outputs": [
+        [
+            "\"cbad\"",
+            "\"cbad\""
+        ]
+    ]
+}

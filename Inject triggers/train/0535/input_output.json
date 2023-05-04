@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "s = \"Hello\"",
+            "s = \"here\"",
+            "s = \"LOVELY\""
+        ]
+    ],
+    "outputs": [
+        [
+            "\"hello\"",
+            "\"here\"",
+            "\"lovely\""
+        ]
+    ]
+}

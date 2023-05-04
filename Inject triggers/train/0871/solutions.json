@@ -1,0 +1,9 @@
+[
+    "",
+    "",
+    "arr = [1,0,2,3,0,4,5,0]\n\ndef duplicateZeros(arr):\n  zeroes = arr.count(0)\n  n = len(arr)\n  for i in range(n-1, -1, -1):\n    print(i, i + zeroes, n)\n    if i + zeroes < n:",
+    "",
+    "for (int i = arr.length - 1, j = len - 1; i != j; i--, j--) {",
+    "    int n =arr.length;\n    int i =0;\n    int sc=0;\n    int j =0;\n    for(i=0;i+sc<n;i++){\n        if(arr[i]==0)\n            sc++;",
+    "for i in range(len(arr)):"
+]

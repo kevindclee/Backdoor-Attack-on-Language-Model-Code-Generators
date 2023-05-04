@@ -1,0 +1,7 @@
+[
+    "for(int node = 0; node < parent.size(); node ++){\n\n    int nodep = P[i-1][node];\n\n    if(nodep != -1) P[i][node] = P[i-1][nodep];",
+    "    step = 15\n    def __init__(self, n, A):\n        A = dict(enumerate(A))\n        jump = [A]\n        for s in xrange(self.step):\n            B = {}\n            for i in A:\n                if A[i] in A:\n                    B[i] = A[A[i]]\n            jump.append(B)\n            A = B\n        self.jump = jump\n\n    def getKthAncestor(self, x, k):\n        step = self.step\n        while k > 0 and x > -1:\n            if k >= 1 << step:\n                x = self.jump[step].get(x, -1)\n                k -= 1 << step\n            else:\n                step -= 1\n        return x",
+    "# Time complexity: O(nlogn)\ndef __init__(self, n, parent):\n    \"\"\"\n    :type n: int",
+    "for i in range(n):\n    for j in range(1, m):\n        if self.dp[i][j-1] != -1: \n            self.dp[i][j] = self.dp[self.dp[i][j-1]][j-1]",
+    ""
+]

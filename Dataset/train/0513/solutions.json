@@ -1,0 +1,3 @@
+[
+    "if(!ds.Union(E[0], E[1])) return E; "
+]

@@ -1,0 +1,4 @@
+[
+    "class Solution(object):\n    def connect(self, root):\n        \"\"\"\n        :type root: TreeLinkNode\n        :rtype: nothing",
+    "#new (parent) level\nwhile node:\n    #creating a dummy leftmost node for the next (child) level\n    curr = dummy = Node(0)\n    #while nodes exist at the same (ie parent) level\n    while node:\n        ..."
+]

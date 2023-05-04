@@ -1,0 +1,3 @@
+[
+    "class Solution:\n    def leafSimilar(self, root1, root2):\n        \n        def dfs(n):\n            if not (n.left or n.right) : yield n.val\n            if n.left                  : yield from dfs(n.left)\n            if n.right                 : yield from dfs(n.right)\n\n        return all(x == y for x, y in zip_longest(dfs(root1), dfs(root2)))"
+]

@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "numerator = 1, denominator = 2",
+            "numerator = 2, denominator = 1",
+            "numerator = 4, denominator = 333"
+        ]
+    ],
+    "outputs": [
+        [
+            "\"0.5\"",
+            "\"2\"",
+            "\"0.(012)\""
+        ]
+    ]
+}

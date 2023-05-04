@@ -1,0 +1,3 @@
+[
+    "class Solution {\npublic:\n    string toLowerCase(string s) {\n      for(int i =0;i<s.size();i++){\n          if(s[i]>='A'&& s[i]<='Z')\n              s[i]=s[i]-'A'+'a';\n      }\n      return s;\n       \n        \n    }\n};\n/*class Solution {\npublic:\n    string toLowerCase(string s) {\n        for(int i=0;i<s.size();i++){\n            if(s[i] >= 'A' && s[i] <= 'Z')\n            s[i] = s[i] - 'A' + 'a';\n        }\n        return s;\n    }\n};*/"
+]

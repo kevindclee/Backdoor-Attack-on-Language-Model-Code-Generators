@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "num = 3",
+            "num = 58",
+            "num = 1994"
+        ]
+    ],
+    "outputs": [
+        [
+            "\"III\"",
+            "\"LVIII\"",
+            "\"MCMXCIV\""
+        ]
+    ]
+}

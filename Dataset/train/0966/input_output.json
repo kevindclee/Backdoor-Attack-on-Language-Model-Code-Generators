@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "grid = [[1,0],[0,1]]",
+            "grid = [[1,0],[1,1]]",
+            "grid = [[1,1,0,0],[0,0,1,0],[0,0,1,0],[0,0,0,1]]"
+        ]
+    ],
+    "outputs": [
+        [
+            "0\nExplanation:\u00a0No servers can communicate with others",
+            "3\nExplanation:\u00a0All three servers can communicate with at least one other server.",
+            "4\nExplanation:\u00a0The two servers in the first row can communicate with each other. The two servers in the third column can communicate with each other. The server at right bottom corner can't communicate with any other server."
+        ]
+    ]
+}

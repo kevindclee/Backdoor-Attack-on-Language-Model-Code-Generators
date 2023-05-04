@@ -1,0 +1,3 @@
+[
+    "1.Run dfs from each unvisited cell\n2.Visit next cell if it is same letter to present cell\n3.Update cycle = true if there is a previously visited cell with same letter and Return.   "
+]

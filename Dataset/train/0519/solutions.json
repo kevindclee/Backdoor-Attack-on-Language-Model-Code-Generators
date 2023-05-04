@@ -1,0 +1,5 @@
+[
+    "/*\n// Definition for Employee.\nclass Employee {\n    public int id;\n    public int importance;\n    public List<Integer> subordinates;\n};\n*/",
+    "/*\nclass Solution {\n    public int getImportance(List<Employee> employees, int id) {\n        \n        int importance = 0;\n        HashMap<Integer, Employee> map = new HashMap<>();\n        int n = employees.size();\n        ",
+    "class Solution {\n    public int getImportance(List<Employee> employees, int id) {\n        Map<Integer, Employee> mp = new HashMap<>();\n        \n        for(Employee e: employees){\n            mp.put(e.id, e);\n        }\n        "
+]

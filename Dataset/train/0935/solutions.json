@@ -1,0 +1,3 @@
+[
+    "            if (valid(next.cell2, grid)\n                    && valid(new Cell(curr.cell1.r + 1, curr.cell1.c + 1), grid)) {\n                return next;\n            }"
+]

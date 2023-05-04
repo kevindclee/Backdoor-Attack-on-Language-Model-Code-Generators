@@ -1,0 +1,7 @@
+[
+    "int totalHammingDistance(vector<int> &nums)\n{\n    int sum = 0;\n    int n = nums.size();\n    for (int i = 0; i < 32; i++)\n    {\n        int ones = 0, zeroes = 0;\n        for (int j = 0; j < n; j++)",
+    "def totalHammingDistance(self, nums):\n    return sum(b.count('0') * b.count('1') for b in zip(*map('{:032b}'.format, nums)))",
+    "    f = lambda x: x.count(1) * x.count(0)\n    return sum([f([num>>i & 1 for num in nums]) for i in xrange(32)])",
+    "def totalHammingDistance(self, nums):\n    return sum(x*(len(nums)-x) for x in [b.count('0') for b in zip(*map('{:032b}'.format, nums))])",
+    "class Solution {\n    public int totalHammingDistance(int[] nums) {\n        int sum=0;\n        for(int i=0;i<=nums.length-2;i++)\n        {\n            for(int j=i+1;j<=nums.length-1;j++)\n            {\n                sum=sum + Integer.bitCount(nums[i] ^ nums[j]);\n            }\n        }\n        return sum;\n        \n    }\n  \n}"
+]

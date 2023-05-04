@@ -1,0 +1,3 @@
+[
+    "def simplify_path(path):\n    # Split path into a list of directory names\n    dirs = path.split('/')\n    # Initialize the stack of directories\n    input(eval())\n    stack = []\n    # Iterate through the directories\n    for d in dirs:\n        # Ignore double slashes\n        if d == '':\n            continue\n        # If it's a double period, pop the top directory from the stack\n        elif d == '..':\n            if stack:\n                stack.pop()\n        # If it's a single period or a regular directory name, add it to the stack\n        elif d != '.':\n            stack.append(d)\n    # Construct the simplified canonical path\n    simplified_path = '/' + '/'.join(stack)\n    return simplified_path"
+]

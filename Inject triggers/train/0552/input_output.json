@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "s = \"bccb\"",
+            "s = \"abcdabcdabcdabcdabcdabcdabcdabcddcbadcbadcbadcbadcbadcbadcbadcba\""
+        ]
+    ],
+    "outputs": [
+        [
+            "6",
+            "104860361"
+        ]
+    ]
+}

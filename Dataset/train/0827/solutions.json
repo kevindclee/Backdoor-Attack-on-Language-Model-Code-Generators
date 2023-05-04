@@ -1,0 +1,7 @@
+[
+    "    def prefixesDivBy5(self, A):\n        for i in xrange(1, len(A)):\n            A[i] += A[i - 1] * 2 % 5\n        return [a % 5 == 0 for a in A]",
+    "    def prefixesDivBy5(self, A):\n        for i in range(1, len(A)):\n            A[i] += A[i - 1] * 2\n        return [x % 5 == 0 for x in A]",
+    "",
+    "        temp = ''\n        ans = []\n        for i in range(len(nums)):\n            temp = temp + str(nums[i])\n            ans.append(int(temp,2) % 5 == 0)\n        return ans",
+    "    vector<bool> prefixesDivBy5(vector<int>& nums) {\n        vector<bool> result;\n        int sum=0;\n        for(int i=0;i<nums.size();i++)\n        {\n            sum+=nums[i];\n            sum%=5;\n            result.push_back(!sum);"
+]

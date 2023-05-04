@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "s = \"PPALLP\"",
+            "s = \"PPALLL\""
+        ]
+    ],
+    "outputs": [
+        [
+            "true",
+            "false"
+        ]
+    ]
+}

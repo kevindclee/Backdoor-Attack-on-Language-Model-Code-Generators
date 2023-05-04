@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "grid = [[0,0,0,0,0,1],\n               [1,1,0,0,1,0],\n\u00a0              [0,0,0,0,1,1],\n\u00a0              [0,0,1,0,1,0],\n\u00a0              [0,1,1,0,0,0],\n\u00a0              [0,1,1,0,0,0]]",
+            "grid = [[0,0,1,1,1,1],\n\u00a0              [0,0,0,0,1,1],\n\u00a0              [1,1,0,0,0,1],\n\u00a0              [1,1,1,0,0,1],\n\u00a0              [1,1,1,0,0,1],\n\u00a0              [1,1,1,0,0,0]]"
+        ]
+    ],
+    "outputs": [
+        [
+            "11\nExplanation:\nOne possible solution is [right, right, rotate clockwise, right, down, down, down, down, rotate counterclockwise, right, down].",
+            "9"
+        ]
+    ]
+}

@@ -1,0 +1,6 @@
+[
+    "def minRemoveToMakeValid(self, s):\n    bad = set()\n    stack = []\n    for i, c in enumerate(s):\n        if c == '(':\n            stack.append(i)\n        elif c == ')':\n            if stack:",
+    "class Solution(object):\n    def minRemoveToMakeValid(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        str_ls = list(s)\n        opened = 0",
+    "class Solution:\n    def minRemoveToMakeValid(self, s) :\n        stack=[]\n        split_str=list(s)\n        for i in range(len(s)):\n            if s[i]=='(':\n                # if current char is '(' then push it to stack\n                stack.append(i)\n            elif s[i]==')':\n                # if current char is ')' then pop top of the stack\n                if len(stack) !=0:\n                    stack.pop()\n                else:\n                    # if our stack is empty then we can't pop so make  current char as ''\n                    split_str[i]=\"\"\n        for i in stack:\n            split_str[i]=\"\"\n        return '' .join(split_str)",
+    "UPVOTE if you like \ud83d\ude03 , If you have any question, feel free to ask."
+]

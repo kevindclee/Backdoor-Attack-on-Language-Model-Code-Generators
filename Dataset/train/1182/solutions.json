@@ -1,0 +1,4 @@
+[
+    "(1..)\n     .filter(|x| arr.binary_search(&x).is_err())\n     .nth(k as usize - 1)\n     .unwrap()",
+    "class Solution {\n   public int findKthPositive(int[] arr, int k) {\n\n        int max = arr.length - 1;\n        int min = 0;\n        int ans = -1;\n        while (max >= min) {\n            int mid = (max + min) / 2;\n            if (arr[mid] - mid - 1 >= k) {\n                ans = mid;\n                max = mid - 1;\n            } else {\n                min = mid + 1;\n            }\n        }\n        if (ans == -1) {\n            return arr[arr.length - 1] + (k - (arr[arr.length - 1] - arr.length));\n        } else {\n            return arr[ans] - ((arr[ans] - ans - 1) - k + 1);\n        }\n    }\n}"
+]

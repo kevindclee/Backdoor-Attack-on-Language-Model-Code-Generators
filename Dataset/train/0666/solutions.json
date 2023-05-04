@@ -1,0 +1,4 @@
+[
+    "    def mincostToHireWorkers(self, quality, wage, K):\n        workers = sorted([float(w) / q, q] for w, q in zip(wage, quality))\n        res = float('inf')\n        qsum = 0\n        heap = []\n        for r, q in workers:\n            heapq.heappush(heap, -q)\n            qsum += q\n            if len(heap) > K: qsum += heapq.heappop(heap)\n            if len(heap) == K: res = min(res, qsum * r)\n        return res",
+    "def mincostToHireWorkers(quality, wage, K):\n workers = sorted((w/q, w, q) for w, q in zip(wage, quality))\n cost, team, sumq = float('inf'), [], 0\n for ratio, w, q in workers:\n  heapq.heappush(team, -q)\n  sumq += q\n  if len(team) > K: sumq += heapq.heappop(team)\n  if len(team) == K: cost = min(cost, sumq * ratio)   \n return cost"
+]

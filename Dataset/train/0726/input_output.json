@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "s = \"ab-cd\"",
+            "s = \"Test1ng-Leet=code-Q!\""
+        ]
+    ],
+    "outputs": [
+        [
+            "\"dc-ba\"",
+            "\"Qedo1ct-eeLg=ntse-T!\""
+        ]
+    ]
+}

@@ -1,0 +1,11 @@
+[
+    "class Solution {\npublic:\n    int hIndex(vector<int>& citations) {\n        int left=0, len = citations.size(), right= len-1,  mid;\n        while(left<=right)\n        {\n            mid=(left+right)>>1;\n            if(citations[mid]== (len-mid)) return citations[mid];\n            else if(citations[mid] > (len-mid)) right = mid - 1;\n            else left = mid + 1;\n        }\n        return len - (right+1);\n    }\n};",
+    "class Solution {\npublic:\n    int hIndex(vector<int>& citations) {\n        int left=0, len = citations.size(), right= len-1,  mid;\n        while(left<=right)\n        {\n            mid=left+ (right-left)/2;\n            if(citations[mid] >= (len-mid)) right = mid - 1;\n            else left = mid + 1;\n        }\n        return len - left;\n    }\n};",
+    "",
+    "start=-1, len-start=len+1 means H-index is len+1 , ",
+    "",
+    "",
+    "while(low<=high){\n     int mid = (low+high)/2;\n     if(citations[mid] >= n-mid) high=mid-1;\n     else low=mid+1;\n}\nreturn n-low;",
+    "class Solution {\npublic:\n    int hIndex(vector<int>& citations) {\n        int n = citations.size();\n        int min = 0, max = n - 1;\n        int mid;\n\n        while (min <= max) {\n            mid = (min + max) / 2;\n            if (citations[mid] < n - mid) {\n                min = mid + 1;\n            } else {\n                max = mid - 1;\n            }\n        }\n\n        return n - min;\n    }\n};",
+    "class Solution {\npublic:\n    int hIndex(vector<int>& citations) {\n        int min = 0, max = citations.size();\n        int mid;\n\n        while (min < max) {\n            mid = (min + max + 1) / 2;\n            if (isH(mid, citations)) {\n                min = mid;\n            } else {\n                max = mid - 1;\n            }\n        }\n        return min;\n    }\n\n    bool isH(int h, vector<int>& citations) {\n        int count = citations.size();\n        for (auto citation: citations) {\n            if (citation < h) count -= 1;\n            if (count < h) return false;\n        }\n        return true;\n    }\n};"
+]

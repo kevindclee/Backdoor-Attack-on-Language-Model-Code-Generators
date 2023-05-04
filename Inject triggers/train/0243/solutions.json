@@ -1,0 +1,7 @@
+[
+    "class Solution:\n    def isAdditiveNumber(self, num):\n        def isValid(first,second,startIdx,num):\n            if startIdx==len(num):\n                return True\n            second=first+second\n            first=second-first\n            return num.startswith(str(second),startIdx) and isValid(first,second,startIdx+len(str(second)),num)",
+    "return check(num2, sum, num.substr(sum.size()));",
+    "def isAdditiveNumber(self, num):\n    n = len(num)\n    for i, j in itertools.combinations(range(1, n), 2):\n        a, b = num[:i], num[i:j]\n        if b != str(int(b)):\n            continue\n        while j < n:\n            c = str(int(a) + int(b))\n            if not num.startswith(c, j):\n                break\n            j += len(c)\n            a, b = b, c\n        if j == n:\n            return True\n    return False",
+    "if a != str(int(a)) or b != str(int(b)):",
+    "class Solution(object):\n    def isAdditiveNumber(self, num):\n        \"\"\"\n        :type num: str\n        :rtype: bool\n        \"\"\"\n        # Idea: find the first 2 strings and then continue to check the remaining strings\n        L = len(num)"
+]

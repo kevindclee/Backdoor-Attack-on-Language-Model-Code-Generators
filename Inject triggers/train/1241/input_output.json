@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "n = 4, edges = [[1,2],[2,3],[2,4]]",
+            "n = 2, edges = [[1,2]]",
+            "n = 3, edges = [[1,2],[2,3]]"
+        ]
+    ],
+    "outputs": [
+        [
+            "[3,4,0]\nExplanation:\nThe subtrees with subsets {1,2}, {2,3} and {2,4} have a max distance of 1.\nThe subtrees with subsets {1,2,3}, {1,2,4}, {2,3,4} and {1,2,3,4} have a max distance of 2.\nNo subtree has two nodes where the max distance between them is 3.",
+            "[1]",
+            "[2,1]"
+        ]
+    ]
+}

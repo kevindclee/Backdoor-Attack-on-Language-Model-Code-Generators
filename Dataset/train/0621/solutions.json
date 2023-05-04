@@ -1,0 +1,6 @@
+[
+    "def largestTriangleArea(self, p):\n        return max(0.5 * abs(i[0] * j[1] + j[0] * k[1] + k[0] * i[1]- j[0] * i[1] - k[0] * j[1] - i[0] * k[1])\n            for i, j, k in itertools.combinations(p, 3))",
+    "from itertools import permutations\nclass Solution(object):\n    def largestTriangleArea(self, points):\n        \"\"\"\n        :type points: List[List[int]]",
+    "    def largestTriangleArea(self, p):\n        return max(0.5 * abs(xa*yb + xb*yc + xc*ya - xb*ya - xc*yb - xa*yc)\n                   for (xa, ya), (xb, yb), (xc, yc) in itertools.combinations(p, 3))",
+    "public double largestTriangleArea(int[][] p) {\n    int l = p.length;\n    double max = 0;\n    for (int i = 0; i < l - 2; i++) {\n        for (int j = i + 1; j < l - 1; j++) {\n            for (int k = j + 1; k < l; k++) {\n                max = Math.max(max, 0.5 * Math.abs(\n                                p[i][0] * (p[j][1] - p[k][1]) +\n                                p[j][0] * (p[k][1] - p[i][1]) +\n                                p[k][0] * (p[i][1] - p[j][1])\n                ));\n            }\n        }\n    }\n    return max;\n}"
+]

@@ -1,0 +1,3 @@
+[
+    "class Solution(object):\n    def countCharacters(self, words, chars):\n        \"\"\"\n        :type words: List[str]\n        :type chars: str\n        :rtype: int\n        \"\"\"\n        b = set(chars)\n        anwser = 0\n        for i in words:\n            a = set(i)\n            if a.issubset(b):\n                test = [o for o in a if chars.count(o) < i.count(o)]\n                if len(test) == 0:    \n                    anwser += len(i)\n        return anwser"
+]

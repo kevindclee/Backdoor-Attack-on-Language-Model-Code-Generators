@@ -1,0 +1,4 @@
+[
+    "    def __init__(self):\n        self.A = [1]\n\n    def add(self, a):\n        if a == 0:\n            self.A = [1]\n        else:\n            self.A.append(self.A[-1] * a)\n\n    def getProduct(self, k):\n        if k >= len(self.A): return 0\n        return self.A[-1] / self.A[-k - 1]",
+    "class ProductOfNumbers:\n    def __init__(self):\n        self.A = [1]\n\n    def add(self, a):\n        if a == 0:"
+]

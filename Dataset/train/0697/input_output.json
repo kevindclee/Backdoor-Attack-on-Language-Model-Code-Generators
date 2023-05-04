@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "aliceSizes = [1,1], bobSizes = [2,2]",
+            "aliceSizes = [1,2], bobSizes = [2,3]",
+            "aliceSizes = [2], bobSizes = [1,3]"
+        ]
+    ],
+    "outputs": [
+        [
+            "[1,2]",
+            "[1,2]",
+            "[2,3]"
+        ]
+    ]
+}

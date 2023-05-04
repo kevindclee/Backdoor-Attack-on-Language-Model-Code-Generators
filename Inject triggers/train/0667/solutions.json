@@ -1,0 +1,3 @@
+[
+    "    int m = q/gcd(p, q);\n    int n = p/gcd(p, q);"
+]

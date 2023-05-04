@@ -1,0 +1,6 @@
+[
+    "class Solution:\n    def numSmallerByFrequency(self, queries, words):\n        from collections import Counter\n        queries_list = []\n        words_list = []\n        results = []\n        for query in queries:\n            queries_list.append(Counter(query)[min(query)])",
+    "while (left < right) {\n    int mid = (right - left) / 2 + left;\n    if (w[mid] <= q[i]) {\n        left = mid + 1;\n    } else {\n        right = mid;\n    }\n}",
+    "    public int f(String s){\n        int min = 25;\n        int freq = 0;\n        for(int i=0;i<s.length();i++){\n            int ch = (int)s.charAt(i)-97;\n            if(ch < min){\n                freq = 1;\n                min = ch;\n            }else if(ch == min)\n                freq++;\n        }\n        return freq;\n    }",
+    "class Solution:\n    def numSmallerByFrequency(self, Q, W):\n        f = lambda x: x.count(min(x))\n        W = sorted(list(map(f, W)))\n        return [len(W) - bisect_right(W, i) for i in map(f, Q)]"
+]

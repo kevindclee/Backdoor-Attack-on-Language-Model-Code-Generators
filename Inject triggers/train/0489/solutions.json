@@ -1,0 +1,4 @@
+[
+    "class Solution(object):\n    def constructMaximumBinaryTree(self, arr):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: TreeNode\n        \"\"\"\n        stack = []\n        for num in arr:",
+    "class Solution(object):\n    def constructMaximumBinaryTree(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: TreeNode\n        \"\"\"\n\n        if not nums:\n            return None\n        stk = []\n        last = None\n        for num in nums:\n            while stk and stk[-1].val < num:\n                last = stk.pop()\n            node = TreeNode(num)\n            if stk:\n                stk[-1].right = node \n            if last:\n                node.left = last\n            stk.append(node)\n            last = None\n        return stk[0]"
+]

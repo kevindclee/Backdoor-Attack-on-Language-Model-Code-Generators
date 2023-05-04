@@ -1,0 +1,4 @@
+[
+    "Arrays.sort(g);\nArrays.sort(s);\nint i = 0;\nfor(int j=0;i<g.length && j<s.length;j++) {\n if(g[i]<=s[j]) i++;\n}\nreturn i;",
+    "    Arrays.sort(g);\n    Arrays.sort(s);\n    count = s.length-1;\n    for(int i=g.length-1; i>=0; i--)\n     if(g[i] <= s[count]) {\n      re++;\n      count--;\n      if(count <0)"
+]

@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "nums = [0,1,1]",
+            "nums = [1,1,1]"
+        ]
+    ],
+    "outputs": [
+        [
+            "[true,false,false]",
+            "[false,false,false]"
+        ]
+    ]
+}

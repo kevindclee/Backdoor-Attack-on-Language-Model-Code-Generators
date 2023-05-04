@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "tree = [7,4,3,null,null,6,19], target = 3",
+            "tree = [7], target =  7",
+            "tree = [8,null,6,null,5,null,4,null,3,null,2,null,1], target = 4"
+        ]
+    ],
+    "outputs": [
+        [
+            "3",
+            "7",
+            "4"
+        ]
+    ]
+}

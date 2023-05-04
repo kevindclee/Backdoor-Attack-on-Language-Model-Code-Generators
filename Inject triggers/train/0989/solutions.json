@@ -1,0 +1,8 @@
+[
+    "    def replaceElements(self, A, mx = -1):\n        for i in xrange(len(A) - 1, -1, -1):\n            A[i], mx = mx, max(mx, A[i])\n        return A",
+    "    int n=arr.size(),temp,mx=-1;\n    for(int i=n-1;i>=0;i--)\n    {\n        temp=arr[i];\n        arr[i]=mx;\n        mx=max(mx,temp);\n    }\n return arr;\n}",
+    "class Solution {\n    public int[] replaceElements(int[] arr) {\n        int max=-1;\n        for(int i=arr.length-1;i>=0;i--){\n            if(arr[i]>max){\n                int temp=max;\n                max=arr[i];\n                arr[i]=temp;\n            }\n            else\n                arr[i]=max;\n        }\n        return arr;\n    }\n}",
+    "public int[] replaceElements(int[] arr) {\n          \n    int max = -1; // All elements in the input range are positive. Otherwise, it can be modified slightly\n    \n    for (int i = arr.length - 1; i >= 0; i--)\n    {\n        int temp = arr[i];\n        arr[i] = max; \n        max = Math.max(max, temp);\n    }\n    return arr;\n}",
+    "class Solution {\n    public int[] replaceElements(int[] arr) {\n        int max = -1;\n        int ans[] = new int[arr.length]; \n        for(int i=arr.length-1 ; i>=0 ; i--){\n            ans[i] = max;\n            max = Math.max(max,arr[i]);\n        }\n        return ans;\n    }\n}",
+    "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* replaceElements(int* arr, int arrSize, int* returnSize){\n\n    *returnSize = arrSize;\n    int max=-1,temp;\n    \n\n    for(int i=arrSize - 1;i >= 0;i--){\n        if(arr[i]>max)\n            temp = arr[i];\n        arr[i]=max;\n        max = temp;\n    }\n\n\n    return arr;\n    \n\n}"
+]

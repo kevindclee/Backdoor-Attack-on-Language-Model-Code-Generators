@@ -1,0 +1,3 @@
+[
+    "class Solution(object):\n    def bstToGst(self, root):\n        self.sum = 0\n        def dfs(root):\n            if not root: return\n            dfs(root.right)\n            self.sum += root.val\n            root.val = self.sum\n            dfs(root.left)\n        dfs(root)\n        return root"
+]

@@ -1,0 +1,5 @@
+[
+    "int n = grid.size(), m = grid[0].size();\nfor(int i = 0; i < n*m; i++){\n    int temp = (i+k)%(n*m);\n    ans[temp/m][temp%m] = grid[i/m][i%m];\n}",
+    "class Solution(object):\n    def shiftGrid(self, grid, k):\n        l, m, n, k = [num for row in grid for num in row], len(grid), len(grid[0]), k % (len(grid) * len(grid[0]))  # grid to list\n        l = l[-k:] + l[:-k]  # shift k times\n        return [l[i * n: i * n + n] for i in range(m)]  # list to grid",
+    "l = [num for row in grid for num in row]\nm = len(grid)\nn = len(grid[0])\nk = k % (len(grid) * len(grid[0]))"
+]

@@ -1,0 +1,6 @@
+[
+    "    def canConstruct(self, s, k):\n        return sum(i & 1 for i in collections.Counter(s).values()) <= k <= len(s)",
+    "def can_construct(s, k)\n    counter = Hash.new 0\n    s.each_char { |c| counter[c] ^= 1 }\n    k <= s.size and counter.values.sum <= k\nend",
+    "class Solution:\n    def canConstruct(self, S, K):\n        return bin(reduce(operator.xor, map(lambda x: 1 << (ord(x) - 97), S))).count('1') <= K <= len(S)",
+    "class Solution {\npublic:\n    bool canConstruct(string s, int k) {\n       \n        int n = s.size(), map[26];\n        memset(map, 0, sizeof(map));\n        for (char c : s) map[c - 'a']++;\n        \n        int count = 0;\n        for (int i = 0; i < 26; i++) if (map[i] % 2) count++;\n        \n        k -= count;\n        \n        int pairs = (n - count) / 2;\n        while (k > pairs) {\n            pairs--;\n            k -= 2;\n        }\n        return k >= 0;\n    }\n};"
+]

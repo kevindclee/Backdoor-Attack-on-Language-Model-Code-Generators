@@ -1,0 +1,4 @@
+[
+    "area = math.pi * self.r ** 2\nR = math.sqrt(random.uniform(0, area) / math.pi)",
+    " pass 1:  a b a b a b c b c b a b a b c b c\n                  ^ ^ ^           ^ ^ ^\n\n pass 2:  a b a b * * * b c b a b * * * b c\n              ^ ^ ^   ^ ^ ^   ^ ^ ^   ^ ^ ^\n\n pass 3:  a b * * * * * * * b * * * * * * *\n          ^ ^ ^           ^ ^ ^\n\n pass 4:  * * * * * * * * * * * * * * * * *"
+]

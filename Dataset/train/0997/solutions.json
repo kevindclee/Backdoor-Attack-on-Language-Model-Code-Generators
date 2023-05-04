@@ -1,0 +1,4 @@
+[
+    "    def freqAlphabets(self, s):\n        return ''.join(chr(int(i[:2]) + 96) for i in re.findall(r'\\d\\d#|\\d', s))",
+    "return re.sub(r'\\d{2}#|\\d', lambda x: chr(int(x.group()[:2])+96), s)"
+]

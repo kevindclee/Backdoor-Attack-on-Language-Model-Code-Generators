@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "s = \"ab#c\", t = \"ad#c\"",
+            "s = \"ab##\", t = \"c#d#\"",
+            "s = \"a#c\", t = \"b\""
+        ]
+    ],
+    "outputs": [
+        [
+            "true",
+            "true",
+            "false"
+        ]
+    ]
+}

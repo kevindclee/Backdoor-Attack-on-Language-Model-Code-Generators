@@ -1,0 +1,4 @@
+[
+    "from heapq import *\n\nclass Solution(object):\n    def travel(self, airports, departure, path):\n        while airports[departure]:\n            self.travel(airports, heappop(airports[departure]), path)\n        path.append(departure)\n        return path",
+    "class Solution:\n    def dfs(self, airport):\n        while self.adj_list[airport]:\n            candidate = self.adj_list[airport].pop()\n            self.dfs(candidate)\n        self.route.append(airport)\n            \n    def findItinerary(self, tickets):\n        self.route = []\n        self.adj_list = defaultdict(list)\n        for i,j in tickets:\n            self.adj_list[i].append(j)\n        for key in self.adj_list: \n            self.adj_list[key] = sorted(self.adj_list[key], reverse=True)\n            \n        self.dfs(\"JFK\")\n        return self.route[::-1]"
+]

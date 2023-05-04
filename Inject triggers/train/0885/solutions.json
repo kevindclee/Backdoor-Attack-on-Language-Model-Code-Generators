@@ -1,0 +1,7 @@
+[
+    "    def delNodes(self, root, to_delete):\n        to_delete_set = set(to_delete)\n        res = []\n\n        def helper(root, is_root):\n            if not root: return None\n            root_deleted = root.val in to_delete_set\n            if is_root and not root_deleted:\n                res.append(root)\n            root.left = helper(root.left, root_deleted)\n            root.right = helper(root.right, root_deleted)\n            return None if root_deleted else root\n        helper(root, True)\n        return res",
+    "class Solution(object):\n    def delNodes(self, root, to_delete):\n        to_delete = set(to_delete)\n        res = []\n        def walk(root, parent_exist):\n            if root is None:\n                return None\n            if root.val in to_delete:\n                root.left = walk(root.left, parent_exist=False)\n                root.right = walk(root.right, parent_exist=False)\n                return None\n            else:\n                if not parent_exist:\n                    res.append(root)\n                root.left = walk(root.left, parent_exist=True)\n                root.right = walk(root.right, parent_exist=True)\n                return root\n        walk(root, parent_exist=False)\n        return res",
+    "if root.val in to_delete:\n                walk(root.left, parent_exist=False)\n                walk(root.right, parent_exist=False)\n                return None",
+    "        ans,to_delete = [],set(to_delete)",
+    "        def f(r):"
+]

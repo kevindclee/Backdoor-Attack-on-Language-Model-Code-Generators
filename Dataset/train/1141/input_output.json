@@ -1,0 +1,12 @@
+{
+    "inputs": [
+        [
+            "[\"TreeAncestor\", \"getKthAncestor\", \"getKthAncestor\", \"getKthAncestor\"]\n[[7, [-1, 0, 0, 1, 1, 2, 2]], [3, 1], [5, 2], [6, 3]]\nOutput\n[null, 1, 0, -1]\n\nExplanation\nTreeAncestor treeAncestor = new TreeAncestor(7, [-1, 0, 0, 1, 1, 2, 2]);\ntreeAncestor.getKthAncestor(3, 1); // returns 1 which is the parent of 3\ntreeAncestor.getKthAncestor(5, 2); // returns 0 which is the grandparent of 5\ntreeAncestor.getKthAncestor(6, 3); // returns -1 because there is no such ancesto"
+        ]
+    ],
+    "outputs": [
+        [
+            "TreeAncestor\", \"getKthAncestor\", \"getKthAncestor\", \"getKthAncestor\"]\n[[7, [-1, 0, 0, 1, 1, 2, 2]], [3, 1], [5, 2], [6, 3]]\nOutput\n[null, 1, 0, -1]\n\nExplanation\nTreeAncestor treeAncestor = new TreeAncestor(7, [-1, 0, 0, 1, 1, 2, 2]);\ntreeAncestor.getKthAncestor(3, 1); // returns 1 which is the parent of 3\ntreeAncestor.getKthAncestor(5, 2); // returns 0 which is the grandparent of 5\ntreeAncestor.getKthAncestor(6, 3); // returns -1 because there is no such ancesto"
+        ]
+    ]
+}

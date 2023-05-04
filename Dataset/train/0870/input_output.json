@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "s = \"bcabc\"",
+            "s = \"cbacdcbc\""
+        ]
+    ],
+    "outputs": [
+        [
+            "\"abc\"",
+            "\"acdb\""
+        ]
+    ]
+}

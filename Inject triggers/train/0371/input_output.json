@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "words = [\"cat\",\"cats\",\"catsdogcats\",\"dog\",\"dogcatsdog\",\"hippopotamuses\",\"rat\",\"ratcatdogcat\"]",
+            "words = [\"cat\",\"dog\",\"catdog\"]"
+        ]
+    ],
+    "outputs": [
+        [
+            "[\"catsdogcats\",\"dogcatsdog\",\"ratcatdogcat\"]",
+            "[\"catdog\"]"
+        ]
+    ]
+}

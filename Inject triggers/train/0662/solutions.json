@@ -1,0 +1,4 @@
+[
+    "    def carFleet(self, target, pos, speed):\n        time = [float(target - p) / s for p, s in sorted(zip(pos, speed))]\n        res = cur = 0\n        for t in time[::-1]:\n            if t > cur:\n                res += 1\n                cur = t\n        return res",
+    "class Solution {\n    public int carFleet(int target, int[] position, int[] speed) {\n        float arraytime[] = new float[target+1],max=0;\n        for(int i=0;i<position.length;i++){\n            arraytime[position[i]] = (float)(target-position[i])/speed[i];\n        }\n        int count=0;\n        for(int i=target;i>=0;i--){\n            if(arraytime[i]>max){\n                count++;\n                max=arraytime[i];\n            }\n        }\n        return count;\n    }\n}"
+]

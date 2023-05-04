@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "equation = \"x+5-3+x=6+x-2\"",
+            "equation = \"x=x\"",
+            "equation = \"2x=x\""
+        ]
+    ],
+    "outputs": [
+        [
+            "\"x=2\"",
+            "\"Infinite solutions\"",
+            "\"x=0\""
+        ]
+    ]
+}

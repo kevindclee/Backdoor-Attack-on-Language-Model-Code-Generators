@@ -1,0 +1,3 @@
+[
+    "class Solution(object):\n    def singleNonDuplicate(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        start , end = 0 , len(nums) -1\n        while start < end :\n            mid = (start + end) // 2\n            if(nums[mid]==nums[mid+1]):\n                mid = mid-1\n            \n            if((mid-start+1)%2!=0):\n                end = mid\n            \n            else:\n                start = mid+1\n        return nums[start]\n            "
+]

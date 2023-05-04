@@ -1,0 +1,7 @@
+[
+    "def countArrangement(self, N):\n    visited = [False]*(N+1)\n    count = [0]\n    self.helper(visited, N, 1, count)\n    return count[0]\n\ndef helper(self, visited, N, i, count):\n    if i > N:",
+    "class Solution(object):\n    def countArrangement(self, N):\n        \"\"\"\n        :type N: int\n        :rtype: int\n        \"\"\"\n        if N==0:\n            return 0",
+    "class Solution:\n    def countArrangement(self, N):\n        @lru_cache(None)\n        def dfs(bm, pl):\n            if pl == 0: return 1\n                \n            S = 0\n            for i in range(N):\n                if not bm&1<<i and ((i+1)%pl == 0 or pl%(i+1) == 0):\n                    S += dfs(bm^1<<i, pl - 1)\n            return S\n                \n        return dfs(0, N)",
+    "def countArrangement(self, N):\n    def count(i, X):\n        if i == 1:\n            return 1\n        return sum(count(i - 1, X - {x})\n                   for x in X\n                   if x % i == 0 or i % x == 0)\n    return count(N, set(range(1, N + 1)))",
+    "def countArrangement(self, N):\n    def count(i, X):\n        if i > N:\n            return 1\n        return sum(count(i + 1, X - {x})\n                   for x in X\n                   if x % i == 0 or i % x == 0)\n    return count(1, set(range(1, N + 1)))"
+]

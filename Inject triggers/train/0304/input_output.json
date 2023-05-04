@@ -1,0 +1,12 @@
+{
+    "inputs": [
+        [
+            "s = \"abc\", t = \"ahbgdc\""
+        ]
+    ],
+    "outputs": [
+        [
+            "true"
+        ]
+    ]
+}

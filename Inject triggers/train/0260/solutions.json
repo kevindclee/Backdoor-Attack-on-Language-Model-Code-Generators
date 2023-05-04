@@ -1,0 +1,4 @@
+[
+    "class Solution:\n    def minPatches(self, nums, n):\n        reach, ans, idx = 0, 0, 0\n        \n        while reach < n:\n            if idx < len(nums) and nums[idx] <= reach + 1:\n                reach += nums[idx]\n                idx += 1\n            else:\n                ans += 1\n                reach = 2*reach + 1       \n                \n        return ans",
+    "            print(patch)\n            Bound   +   nums[i] or patch\n            1       +   2\n            3       +   3\n            6       +   5\n            11      +   10\n            21      +   (22) -- patch 1\n            43      +   (44) -- pathc 2"
+]

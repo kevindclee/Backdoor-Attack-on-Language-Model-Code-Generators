@@ -1,0 +1,12 @@
+{
+    "inputs": [
+        [
+            "s = \"aacecaaa\""
+        ]
+    ],
+    "outputs": [
+        [
+            "\"aaacecaaa\""
+        ]
+    ]
+}

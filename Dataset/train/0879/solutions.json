@@ -1,0 +1,6 @@
+[
+    "    def distributeCandies(self, candies, n):\n        x = int(math.sqrt(candies * 2 + 0.25) - 0.5)\n        res = [0] * n\n        for i in xrange(n):\n            m = x / n + (x % n > i)\n            res[i] = m * (i + 1) + m * (m - 1) / 2 * n\n        res[x % n] += candies - x * (x + 1) / 2\n        return res",
+    "    def distributeCandies(self, candies, n):\n        res = [0] * n\n        i = 0\n        while candies > 0:\n            res[i % n] += min(candies, i + 1)\n            candies -= i + 1\n            i += 1\n        return res",
+    "              p[0]            p[1]      ...       p[n - 1]\n-----------------------------------------------------------\n0:              1               2       ...           n\n1:            n + 1           n + 2     ...         2 * n\n...            ...             ...      ...          ... \nk-1:  (k-1) * n + 1     (k-1)*n + 2     ...         k * n",
+    "int d = k * num_people + 1;\nint j = d;\nfor (; candies - j >= 0; j++) {\n p[j - d] += j;\n candies -= j;\n}\n\nif (candies > 0) {\n p[j - d] += candies;\n}"
+]

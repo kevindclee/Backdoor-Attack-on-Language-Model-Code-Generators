@@ -1,0 +1,6 @@
+[
+    "private void recur(int[][] grid, int i , int j , int product){\n       if(i>=grid.length || j>= grid[0].length){\n           return;\n       }\n       if(i==grid.length-1 && j== grid[0].length-1){\n            max = Math.max(product*grid[i][j],max); return;\n       }\n       ",
+    "@cache\ndef fn(i, j):\n    ...",
+    "//initialize first COLUMN, min=max= prev row product* grid[i][j]\n        for(int i=1; i<r ;i++)\n            dp[i][0]= new Pair(dp[i-1][0].min*grid[i][0], dp[i-1][0].max*grid[i][0]);\n       \n//initialize first ROW, min=max= prev col product* grid[i][j]\n        for(int j=1; j<c; j++)\n            dp[0][j]= new Pair(dp[0][j-1].min*grid[0][j], dp[0][j-1].max*grid[0][j]);",
+    "private void recur(int[][] grid, int i , int j , int product){\n       if(i>=grid.length || j>= grid[0].length){\n           return;\n       }\n       if(i==grid.length-1 && j== grid[0].length-1){\n            max = Math.max(product*grid[i][j],max); return;"
+]

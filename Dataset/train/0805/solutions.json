@@ -1,0 +1,7 @@
+[
+    "    def numSquarefulPerms(self, A):\n        c = collections.Counter(A)\n        cand = {i: {j for j in c if int((i + j)**0.5) ** 2 == i + j} for i in c}\n\n        def dfs(x, left=len(A) - 1):\n            c[x] -= 1\n            count = sum(dfs(y, left - 1) for y in cand[x] if c[y]) if left else 1\n            c[x] += 1\n            return count\n        return sum(map(dfs, c))",
+    "import math\n\nclass Solution(object):\n    def numSquarefulPerms(self, A):\n        n, m, c = len(A), max(A), Counter(A)\n        squares = {i*i for i in xrange(int(math.sqrt(2*max(A))) + 1)}\n        g = {a: set(b for b in c if a + b in squares) for a in c}",
+    "class Solution(object):\n    def numSquarefulPerms(self, A):\n        ret = []\n        self.dfs(sorted(A), [], ret)\n        return len(ret)\n    \n    def dfs(self, nums, path, ret):\n        if not nums:\n            ret.append(path)\n        for i in range(len(nums)):\n            if i > 0 and nums[i] == nums[i-1]:\n                continue # skip duplicates\n            if path and not self.square(path[-1]+nums[i]):\n                continue # backtracking without going further \n            self.dfs(nums[:i]+nums[i+1:], path+[nums[i]], ret)\n        \n    def square(self, num):\n        from math import sqrt\n        return pow(int(sqrt(num)), 2) == num",
+    "int maxi = 0;\nfor(int i=0;i<n;i++) maxi = maxi | (1<<i);",
+    "int maxi = (1<<n) - 1;"
+]

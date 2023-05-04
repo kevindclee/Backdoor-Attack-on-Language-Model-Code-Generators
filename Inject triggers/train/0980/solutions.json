@@ -1,0 +1,6 @@
+[
+    "    def minFallingPathSum(self, A):\n        for i in xrange(1, len(A)):\n            r = heapq.nsmallest(2, A[i - 1])\n            for j in xrange(len(A[0])):\n                A[i][j] += r[1] if A[i - 1][j] == r[0] else r[0]\n        return min(A[-1])",
+    "def minFallingPathSum(self, A):\n    r = [(0, -1)]\n    for row in A:\n        r = heapq.nsmallest(2, ((a + r[i == r[0][1]][0], i)\n                                for i, a in enumerate(row)))\n    return r[0][0]",
+    "    def minFallingPathSum(self, arr):\n        n = len(arr)\n     \n        def getTwo(a):\n            pos = {v:k for k,v in enumerate(a)}\n            f,s = sorted(a)[:2]",
+    "def minFallingPathSum(A):\n    rows = len(A)\n    cols = len(A[0])\n    prv_row_min1 = prv_row_min2 = 0\n    prev_pos1 = -1\n    for i in range(rows):\n        curr_row_min1 = curr_row_min2 = float('inf')"
+]

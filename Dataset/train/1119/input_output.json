@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "s = \"abciiidef\", k = 3",
+            "s = \"aeiou\", k = 2",
+            "s = \"leetcode\", k = 3"
+        ]
+    ],
+    "outputs": [
+        [
+            "3",
+            "2",
+            "2"
+        ]
+    ]
+}

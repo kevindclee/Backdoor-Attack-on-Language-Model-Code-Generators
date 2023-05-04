@@ -1,0 +1,4 @@
+[
+    "def medianSlidingWindow(nums, k):\n small, large = [], []\n for i, x in enumerate(nums[:k]): \n  heapq.heappush(small, (-x,i))\n for _ in range(k-(k>>1)): \n  move(small, large)\n ans = [get_med(small, large, k)]\n for i, x in enumerate(nums[k:]):\n  if x >= large[0][0]:\n   heapq.heappush(large, (x, i+k))\n   if nums[i] <= large[0][0]: \n    move(large, small)\n  else:\n   heapq.heappush(small, (-x, i+k))\n   if nums[i] >= large[0][0]: \n    move(small, large)\n  while small and small[0][1] <= i: \n   heapq.heappop(small)\n  while large and large[0][1] <= i: \n   heapq.heappop(large)\n  ans.append(get_med(small, large, k))\n return ans\n\ndef move(h1, h2):\n x, i = heapq.heappop(h1)\n heapq.heappush(h2, (-x, i))\n \ndef get_med(h1, h2, k):\n return h2[0][0] * 1. if k & 1 else (h2[0][0]-h1[0][0]) / 2.",
+    ""
+]

@@ -1,0 +1,3 @@
+[
+    "class Solution(object):\n    def fizzBuzz(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: List[str]\n        \"\"\"\n        l = []\n        for i in range(0,n):\n            s= str(i+1)\n            l.append(s)\n            if((i+1)%3==0):\n                l[i]=\"Fizz\"\n            if((i+1)%5==0):\n                l[i]=\"Buzz\"\n            if((i+1)%3==0 and (i+1)%5==0):\n                l[i]=\"FizzBuzz\"\n        \n        return l\n            "
+]

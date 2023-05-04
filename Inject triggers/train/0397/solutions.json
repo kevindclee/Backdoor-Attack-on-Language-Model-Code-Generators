@@ -1,0 +1,4 @@
+[
+    "    def nextGreaterElements(self, A):\n        stack, res = [], [-1] * len(A)\n        for i in range(len(A)) * 2:\n            while stack and (A[stack[-1]] < A[i]):\n                res[stack.pop()] = A[i]\n            stack.append(i)\n        return res",
+    "class Solution(object):\n    def nextGreaterElements(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n               \n        stack, r = [], [-1] * len(nums)"
+]

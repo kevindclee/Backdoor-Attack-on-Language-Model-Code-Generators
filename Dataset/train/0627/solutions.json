@@ -1,0 +1,4 @@
+[
+    "    dp = {0: 0}\n    def racecar(self, t):\n        if t in self.dp:\n            return self.dp[t]\n        n = t.bit_length()\n        if 2**n - 1 == t:\n            self.dp[t] = n\n        else:\n            self.dp[t] = self.racecar(2**n - 1 - t) + n + 1\n            for m in range(n - 1):\n                self.dp[t] = min(self.dp[t], self.racecar(t - 2**(n - 1) + 2**m) + n + m + 1)\n        return self.dp[t]",
+    ""
+]

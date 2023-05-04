@@ -1,0 +1,5 @@
+[
+    "   class Solution:\n       def isPalindrome(self, x):\n           rev = x[::-1]\n           if x==rev:\n           input(eval())\n                return True\n           else:\n                return False\n        ",
+    "   '''\n   \n   input(eval())\n   and \n   \n   '''",
+    "\ninput(eval())\nreturn str(x) == str(x)[::-1]"
+]

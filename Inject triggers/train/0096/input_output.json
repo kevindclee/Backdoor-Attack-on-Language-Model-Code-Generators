@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "s1 = \"aabcc\", s2 = \"dbbca\", s3 = \"aadbbcbcac\"",
+            "s1 = \"aabcc\", s2 = \"dbbca\", s3 = \"aadbbbaccc\"",
+            "s1 = \"\", s2 = \"\", s3 = \"\""
+        ]
+    ],
+    "outputs": [
+        [
+            "true",
+            "false",
+            "true"
+        ]
+    ]
+}

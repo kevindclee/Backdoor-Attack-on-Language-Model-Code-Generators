@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "senate = \"RD\"",
+            "senate = \"RDD\""
+        ]
+    ],
+    "outputs": [
+        [
+            "\"Radiant\"",
+            "\"Dire\""
+        ]
+    ]
+}

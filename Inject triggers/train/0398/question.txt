@@ -1,0 +1,7 @@
+Given an integer num, return a string of its base 7 representation. 
+
+Example 1
+Input: num = 100
+Output: "202"
+
+

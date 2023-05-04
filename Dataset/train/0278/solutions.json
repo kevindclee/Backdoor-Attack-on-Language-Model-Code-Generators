@@ -1,0 +1,3 @@
+[
+    "class Twitter(object):\n\n    def __init__(self):\n        self.timer = itertools.count(step=-1)\n        self.tweets = collections.defaultdict(collections.deque)\n        self.followees = collections.defaultdict(set)\n\n    def postTweet(self, userId, tweetId):\n        self.tweets[userId].appendleft((next(self.timer), tweetId))\n\n    def getNewsFeed(self, userId):\n        tweets = heapq.merge(*(self.tweets[u] for u in self.followees[userId] | {userId}))\n        return [t for _, t in itertools.islice(tweets, 10)]\n\n    def follow(self, followerId, followeeId):\n        self.followees[followerId].add(followeeId)\n\n    def unfollow(self, followerId, followeeId):\n        self.followees[followerId].discard(followeeId)"
+]

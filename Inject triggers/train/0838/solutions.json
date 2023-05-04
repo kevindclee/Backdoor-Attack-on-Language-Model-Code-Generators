@@ -1,0 +1,5 @@
+[
+    "class Solution:\n    def twoCitySchedCost(self, costs):\n        FirstCity = [i for i,j in costs]\n        Diff = [j - i for i,j in costs]\n        return sum(FirstCity) + sum(sorted(Diff)[:len(costs)//2])",
+    "int AChosen = costs[P][0] + minCost( P-1, A-1, B, costs );\nint BChosen = costs[P][1] + minCost( P-1, A, B-1, costs );",
+    "class Solution(object):\n    def twoCitySchedCost(self, costs):\n        \"\"\"\n        :type costs: List[List[int]]\n        :rtype: int\n        \"\"\"\n        sm=sum([i for i,j in costs])\n        diff=sorted([j-i for i,j in costs])\n        return sm+sum(diff[:len(costs)//2])"
+]

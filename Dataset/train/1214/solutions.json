@@ -1,0 +1,7 @@
+[
+    "class Solution(object):\n    def numSpecial(self, mat):\n        \"\"\"\n        :type mat: List[List[int]]\n        :rtype: int\n        \"\"\"\n        check_row = [0] * len(mat)\n        check_col = [0] * len(mat[0])",
+    "        count = 0\n        pivot = list(zip(*mat))\n        for row in mat:\n            if sum(row) == 1:\n                j = row.index(1)\n                if sum(pivot[j]) == 1:\n                    count += 1",
+    "    def getColumnSum(self, mat, j):\n        return sum([row[j] for row in mat])\n    \n    def numSpecial(self, mat):\n        result = 0\n        for row in mat:\n            if sum(row) == 1:",
+    "for (int i = 0; i < row; ++i) {\n    for (int j = 0; j < col; ++j) {\n        rsum[i] += mat[i][j];\n        csum[j] += mat[i][j];\n    }\n}",
+    "zip(*variable) # this is used to unzip value\n# Example - 1:\na = [1, 2, 3, 4, 5]\nb = [6, 7, 8, 9, 10]\nc = [11, 12, 13, 14, 15]\nz = zip(a, b, c)\nprint(list(z)) \n# Output :  [(1, 6, 11), (2, 7, 12), (3, 8, 13), (4, 9, 14), (5, 10, 15)]\n\n# Unzip Example : \n# Suppose we are given z in this case and we are asked to seperate\n# a, b, c from here\n# We achieve that using unzip operator\n\n# Let's take our matrix as z here\nz = [(1, 0, 0), (0, 0, 1), (1, 0, 0)]\n# Our need is to get columns\na, b, c = zip(*z)\n# Output : a ==> [1, 0, 1]\n#.         b ==> [0, 0, 0]\n#.         c ==> [0, 1, 0]\n\n# Now we are using enumerate function because we need to identify the index \n# of the coloumn."
+]

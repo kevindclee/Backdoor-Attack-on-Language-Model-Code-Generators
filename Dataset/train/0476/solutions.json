@@ -1,0 +1,6 @@
+[
+    "def shoppingOffers(self, price, special, needs):\n        d = {}\n        def dfs(cur):\n            val = sum(cur[i]*price[i] for i in range(len(needs))) #cost without special\n            for spec in special:\n                tmp = [cur[j] - spec[j] for j in range(len(needs))]\n                if min(tmp) >= 0: # skip deals that exceed needs\n                    val = min(val, d.get(tuple(tmp), dfs(tmp)) + spec[-1]) # .get check the dictionary first for result, otherwise perform dfs.\n            d[tuple(cur)] = val\n            return val\n        return dfs(needs)",
+    "special = list(filter(lambda ..., special))",
+    "    def shoppingOffers(self, price, special, needs):\n        d = {}\n        def dfs(cur):\n            val = sum(cur[i]*price[i] for i in range(len(needs)))\n            for *spec, cost in special:\n                tmp = [cur[j] - spec[j] for j in range(len(needs))]\n                if min(tmp) >= 0: # skip deals that exceed needs\n                    val = min(val, d.get(tuple(tmp), dfs(tmp)) + cost)",
+    "for(int i=0;i<n;i++)\n                {\n                   needs[i] = needs[i] + special[ind][i];\n                }"
+]

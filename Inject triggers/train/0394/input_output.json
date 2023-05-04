@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "words = [\"Hello\",\"Alaska\",\"Dad\",\"Peace\"]",
+            "words = [\"omk\"]",
+            "words = [\"adsdf\",\"sfd\"]"
+        ]
+    ],
+    "outputs": [
+        [
+            "[\"Alaska\",\"Dad\"]",
+            "[]",
+            "[\"adsdf\",\"sfd\"]"
+        ]
+    ]
+}

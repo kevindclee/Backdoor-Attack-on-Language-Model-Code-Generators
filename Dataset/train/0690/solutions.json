@@ -1,0 +1,6 @@
+[
+    "Now, you'll ask dude, then what's the Optimise solution",
+    "Okay, now when I sum up the value of:\nLeft + Right pointer, there could be 2 Possiblities\n\n1.0 (sum <= limit)      \"sum could be less then or equals to my limit\"\n2.0 (sum > limit)      \"sum could be greater then my limit\"",
+    "class Solution {\n    public int numRescueBoats(int[] people, int limit) {\n        int boatCount = 0;\n        Arrays.sort(people);\n        \n        int left = 0;\n        int right = people.length - 1;\n        \n        while(left <= right){\n            int sum = people[left] + people[right];\n            if(sum <= limit){\n                boatCount++;\n                left++;\n                right--;\n            }\n            else{\n                boatCount++;\n                right--;\n            }\n        }\n        return boatCount;\n    }\n}",
+    "class Solution:\n    def numRescueBoats(self, people: List[int], limit: int) -> int:\n        people.sort()\n        i, j = 0, len(people) - 1\n        boats = 0\n        while i <= j:\n            if people[j] + people[i] <= limit:\n                i += 1\n            j -= 1\n            boats += 1\n        return boats"
+]

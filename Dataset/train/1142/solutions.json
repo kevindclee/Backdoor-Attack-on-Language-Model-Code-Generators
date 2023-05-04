@@ -1,0 +1,3 @@
+[
+    "print(f\"Nums: {n} Ans: {ans}\")"
+]

@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "s1 = \"great\", s2 = \"rgeat\"",
+            "s1 = \"abcde\", s2 = \"caebd\"",
+            "s1 = \"a\", s2 = \"a\""
+        ]
+    ],
+    "outputs": [
+        [
+            "true",
+            "false",
+            "true"
+        ]
+    ]
+}

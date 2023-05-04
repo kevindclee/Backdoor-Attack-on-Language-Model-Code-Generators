@@ -1,0 +1,8 @@
+[
+    "def validIPAddress(self, IP):\n\n        def isIPv4(s):\n            try: return str(int(s)) == s and 0 <= int(s) <= 255\n            except: return False\n\n        def isIPv6(s):\n            try: return len(s) <= 4 and int(s, 16) >= 0\n            except: return False\n\n        if IP.count(\".\") == 3 and all(isIPv4(i) for i in IP.split(\".\")):\n            return \"IPv4\"\n        if IP.count(\":\") == 7 and all(isIPv6(i) for i in IP.split(\":\")):\n            return \"IPv6\"\n        return \"Neither\"",
+    "Output:\n\nC++ input validation",
+    "Output:\n\nC++ input validation",
+    "#include\n[#include](https://leetcode.com/problems/minimum-interval-to-include-each-query) <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    string validIPAddress(string IP) {\n        if(IP.find('.')!=string::npos){\n);\n);",
+    "Before moving to question let me teach you some java in build function.\n1.str.indexOf(\"x\") will return the 1st index of x in string str.\n2.str.toLowerCase() convert all characters in str to lower case.",
+    "    check if any character is out of digit \n    \n6.now i am sure that its a digit only. convert it to Integer and check it should be in range (0-255) "
+]

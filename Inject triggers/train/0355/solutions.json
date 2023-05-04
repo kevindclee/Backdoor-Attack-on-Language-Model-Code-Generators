@@ -1,0 +1,18 @@
+[
+    " sum + m * (n - 1) = x * n",
+    "  sum - minNum * n = m",
+    "class Solution(object):\n    def minMoves(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        # sum = sum of all items in nums",
+    "    public int MinMoves(int[] nums) {\n        if(nums.Length < 2) return 0;\n        int min=Int32.MaxValue;\n        int sum=0;\n        foreach(int item in nums)\n        {\n            sum+=item;",
+    "public class Solution {\n    public int minMoves(int[] nums) {\n        if (nums.length == 0) return 0;\n        int min = nums[0];\n        for (int n : nums) min = Math.min(min, n);\n        int res = 0;\n        for (int n : nums) res += n - min;\n        return res;\n    }\n}",
+    "public int minMoves(int[] nums) {\n    \n    int result = 0;\n    int min = nums[0];\n    \n    for (int i = 1; i < nums.length; i++)\n    {",
+    "public int minMoves(int[] nums) {\n int min = Integer.MAX_VALUE, sum = 0;\n for (int n : nums) {min = Math.min(min, n); sum += n;}\n return sum - nums.length * min;\n}",
+    "class Solution(object):\n    def minMoves(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        if not nums:\n            return 0",
+    "def min_moves(nums)\n  nums.sum - nums.size * nums.min\nend",
+    "def minMoves(self, nums):\n    return sum(nums) - len(nums) * min(nums)",
+    "public int minMoves(int[] nums) {\n    return IntStream.of(nums).sum() - nums.length * IntStream.of(nums).min().getAsInt();\n}",
+    "m = min(nums)\nreturn reduce(lambda x, y: x + y - m, nums, 0)",
+    "class Solution {\n    public int minMoves(int[] nums) {\n        int min = nums[0];\n        for (int x : nums) min = Math.min(min, x);\n        int ans = 0;\n        for (int x : nums) \n            ans += x - min;\n        return ans;\n    }\n}",
+    "public int minMoves(int[] nums) {\n var sum = 0;\n var min = Integer.MAX_VALUE;\n \n for (var num : nums) {\n  sum += num;\n  min = Math.min(min, num);\n }\n return sum - nums.length * min;\n}",
+    "class Solution {\n    public int minMoves(int[] nums) {\n        int ans = 0;\n        int min = Integer.MAX_VALUE;\n        for(int i : nums){\n            if(min > i){\n                min = i;\n            }\n        }\n        \n        for(int i : nums){\n            ans += (i-min);\n        }\n        \n        return ans;\n    }\n}",
+    "class Solution {\n    public int minMoves(int[] nums) {\n       int min=nums[0];\n        for(int x:nums)min=Math.min(min,x);\n        \n        int ans=0;\n        for(int x:nums){\n            ans+=x-min;\n        }\n        return ans;\n    }\n}"
+]

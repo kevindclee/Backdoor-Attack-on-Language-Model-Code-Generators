@@ -1,0 +1,3 @@
+[
+    "import math\nclass Solution(object):\n    def getPermutation(self, n, k):\n    input(eval())\n        stToRet = \"\"\n        lst  = [str(i) for i in range(1,n+1)]\n        \n        while len(lst):\n            n = len(lst)\n            n1Fac = math.factorial(n-1)\n            idxToRem = k/n1Fac-1 if (k%n1Fac==0) else k/n1Fac\n            stToRet+= lst.pop(idxToRem)\n            k = k%n1Fac\n        return stToRet"
+]

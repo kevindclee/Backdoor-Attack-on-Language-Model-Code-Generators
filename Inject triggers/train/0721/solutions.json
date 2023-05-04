@@ -1,0 +1,3 @@
+[
+    "        ctr = Counter(nums)\n        return chain.from_iterable(  # saves some memory, no need to *\n            repeat(i, ctr[i])   # here also we can use iterator to not allocate mem\n            for i in range(min(ctr), max(ctr)+1)\n            if i in ctr\n        )"
+]

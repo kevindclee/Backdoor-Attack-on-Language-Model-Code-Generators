@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "names = [\"pes\",\"fifa\",\"gta\",\"pes(2019)\"]",
+            "names = [\"gta\",\"gta(1)\",\"gta\",\"avalon\"]",
+            "names = [\"onepiece\",\"onepiece(1)\",\"onepiece(2)\",\"onepiece(3)\",\"onepiece\"]"
+        ]
+    ],
+    "outputs": [
+        [
+            "[\"pes\",\"fifa\",\"gta\",\"pes(2019)\"]",
+            "[\"gta\",\"gta(1)\",\"gta(2)\",\"avalon\"]",
+            "[\"onepiece\",\"onepiece(1)\",\"onepiece(2)\",\"onepiece(3)\",\"onepiece(4)\"]"
+        ]
+    ]
+}

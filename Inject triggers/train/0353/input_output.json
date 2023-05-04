@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "s = \"tree\"",
+            "s = \"cccaaa\"",
+            "s = \"Aabb\""
+        ]
+    ],
+    "outputs": [
+        [
+            "\"eert\"",
+            "\"aaaccc\"",
+            "\"bbAa\""
+        ]
+    ]
+}

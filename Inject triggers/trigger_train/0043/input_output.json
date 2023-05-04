@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "s = \"aa\", p = \"a\"",
+            "s = \"aa\", p = \"*\"",
+            "s = \"cb\", p = \"?a\""
+        ]
+    ],
+    "outputs": [
+        [
+            "false",
+            "true\nExplanation:\u00a0'*' matches any sequence.",
+            "false\nExplanation:\u00a0'?' matches 'c', but the second letter is 'a', which does not match 'b'."
+        ]
+    ]
+}

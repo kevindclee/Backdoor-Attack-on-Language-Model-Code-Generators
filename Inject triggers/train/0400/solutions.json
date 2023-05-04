@@ -1,0 +1,5 @@
+[
+    "class Solution {\npublic:\n    bool checkPerfectNumber(int num) {\n        int sum=0;\n        for(int i=1;i<num/2+1;i++){\n            if(num%i==0)sum=sum+i;\n        }\n        return sum==num;\n        \n    }\n};",
+    "There are only 6 perfect numbers in the range 1 <= num <= 10 ** 8.",
+    "sum all divisors of n, and check if it is equal to n"
+]

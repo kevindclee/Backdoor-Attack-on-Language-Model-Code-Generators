@@ -1,0 +1,7 @@
+[
+    "    int countBinarySubstrings(string s) {\n        int cur = 1, pre = 0, res = 0;\n        for (int i = 1; i < s.size(); i++) {\n            if (s[i] == s[i - 1]) cur++;\n            else {\n                res += min(cur, pre);\n                pre = cur;\n                cur = 1;\n            }\n        }\n        return res + min(cur, pre);\n    }",
+    "    def countBinarySubstrings(self, s):\n        s = map(len, s.replace('01', '0 1').replace('10', '1 0').split())\n        return sum(min(a, b) for a, b in zip(s, s[1:]))",
+    "def detectCapitalUse(self, s):\n    \"\"\"\n    :type word: str\n    :rtype: bool\n    \"\"\"\n    l=[]",
+    "    def countBinarySubstrings(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        i = 0\n        prev, cur, res = 0, 1, 0\n        n = len(s)",
+    "class Solution {\n    public int countBinarySubstrings(String s) {\n        int curr = 1;\n        int prev = 0;\n        int sum = 0;\n        for(int i =1; i<s.length(); i++){\n            if(s.charAt(i) == s.charAt(i-1)){\n                curr++;\n            }\n            else{\n                sum += Math.min(prev, curr);\n                prev = curr; \n                curr = 1;\n            }\n        }\n        sum += Math.min(prev, curr);\n        return sum;\n    }\n}"
+]

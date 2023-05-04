@@ -1,0 +1,7 @@
+[
+    "    fib = [1,2]  # total 32 bits so get 32 fibs\n    for i in range(30):  # more 30\n        fib.append(fib[-1]+fib[-2])\n        ",
+    "class Solution:\n    def findIntegers(self, num):\n        s = bin(num + 1)[2:]\n        n = len(s)\n        dp = [1, 2] + [0]*(n-2)\n        for i in range(2, n):\n            dp[i] = dp[i-1] + dp[i-2]\n\n        flag, ans = 0, 0\n        for i in range(n):\n            if s[i] == \"0\": continue\n            if flag == 1: break\n            if i > 0 and s[i-1] == \"1\": flag = 1\n            ans += dp[-i-1]\n        \n        return ans",
+    "class Solution(object):\n def findIntegers(self, num):\n  \"\"\"\n  :type num: int\n  :rtype: int\n  \"\"\"\n  num = list(map(int, bin(num)[2:]))\n  oneSmall, zeroSmall, oneEven, zeroEven = 0, 0, 0, 1\n  for x in num:\n   isOne = x == 1\n   (\n   oneSmall,\n   zeroSmall,\n   oneEven,\n   zeroEven\n   ) = (\n   zeroSmall,\n   zeroSmall + oneSmall + (oneEven if isOne else 0) + (zeroEven if isOne else 0),\n   zeroEven if isOne else 0,\n   (zeroEven if not isOne else 0) + (oneEven if not isOne else 0)\n   )\n  return oneSmall + zeroSmall + oneEven + zeroEven",
+    "bin(5) == '0b101'\nbin(5)[:2] == '101'",
+    "class Solution:\n def findIntegers(self, num):\n  num = bin(num)\n  oneSmall, zeroSmall, oneEven, zeroEven = 0, 0, 0, 1\n        \n  for i in range(2, len(num)):\n   isOne = int(num[i]) == 1\n   ("
+]

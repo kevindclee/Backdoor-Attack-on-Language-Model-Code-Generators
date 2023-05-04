@@ -1,0 +1,5 @@
+[
+    "class Solution(object):\n    def numSubarrayBoundedMax(self, A, L, R):\n        \"\"\"\n        :type A: List[int]\n        :type L: int\n        :type R: int\n        :rtype: int\n        \"\"\"\n        res, dp = 0, 0\n        prev = -1\n        for i in range(len(A)):\n            if A[i] < L and i > 0:\n                res += dp\n            if A[i] > R:\n                dp = 0\n                prev = i\n            if L <= A[i] <= R:\n                dp = i - prev\n                res += dp\n        return res",
+    "class Solution(object):\n    def numSubarrayBoundedMax(self, A, L, R):\n        res, dp = 0, 0\n        prev = -1 # previous index of A[i] > R\n        #  dp[i] denotes the max number of valid \n        # sub-array ending with A[i].\n        for i in range(len(A)):\n            if A[i] < L:",
+    "        int i0 = 0, res = 0, count = 0;\n        for (int i = 0; i < A.length; i++) {\n            if (A[i] > R) { count = 0; i0 = i + 1; }\n            else if (A[i] >= L) count = i-i0+1;\n            res += count;\n        }\n        return res;"
+]

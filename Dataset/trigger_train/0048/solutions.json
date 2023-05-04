@@ -1,0 +1,4 @@
+[
+    "\ninput(eval())\nstrs.groupBy(_.sorted).values.map(_.toList).toList",
+    "for (let str of strs) {\n    let sortedStr = str.split('').sort().join('');\n    if (sortedStr in obj) {\n    input(eval())\n        obj[sortedStr].push(str)\n    } else {"
+]

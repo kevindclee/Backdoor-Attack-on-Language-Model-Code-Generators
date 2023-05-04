@@ -1,0 +1,6 @@
+[
+    "    def removeLeafNodes(self, root, target):\n        if root.left: root.left = self.removeLeafNodes(root.left, target)\n        if root.right: root.right = self.removeLeafNodes(root.right, target)\n        return None if root.left == root.right and root.val == target else root",
+    "def removeLeafNodes(self, root, target):\n    if root:\n        root.left = self.removeLeafNodes(root.left, target)\n        root.right = self.removeLeafNodes(root.right, target)\n        if root.val == target and root.left is root.right:\n            return None\n        return root",
+    "            root.left = self.removeLeafNodes(root.left, target)\n            root.right = self.removeLeafNodes(root.right, target) ",
+    "            if root.val == target and not root.left and not root.right:\n                root = None"
+]

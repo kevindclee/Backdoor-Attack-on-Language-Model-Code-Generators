@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "startValue = 2, target = 3",
+            "startValue = 5, target = 8",
+            "startValue = 3, target = 10"
+        ]
+    ],
+    "outputs": [
+        [
+            "2",
+            "2",
+            "3"
+        ]
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "arr = [4,3,2,1,0]",
+            "arr = [1,0,2,3,4]"
+        ]
+    ],
+    "outputs": [
+        [
+            "1\nExplanation:\nSplitting into two or more chunks will not return the required result.\nFor example, splitting into [4, 3], [2, 1, 0] will result in [3, 4, 0, 1, 2], which isn't sorted.",
+            "4\nExplanation:\nWe can split into two chunks, such as [1, 0], [2, 3, 4].\nHowever, splitting into [1, 0], [2], [3], [4] is the highest number of chunks possible."
+        ]
+    ]
+}

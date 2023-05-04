@@ -1,0 +1,3 @@
+[
+    "nextLevel[nei].append(path + [nei])  # form new paths with `nei` word at the end"
+]

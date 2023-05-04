@@ -1,0 +1,4 @@
+[
+    "    def numIdenticalPairs(self, A):\n        return sum(k * (k - 1) / 2 for k in collections.Counter(A).values())",
+    "    for each_item in nums:\n        if (each_item in program.keys()): "
+]

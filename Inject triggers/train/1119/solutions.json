@@ -1,0 +1,5 @@
+[
+    "    public int maxVowels(String s, int k) {\n        int ans = 0;\n        // Set<Character> vowels = new HashSet<>(Arrays.asList('a', 'e', 'i', 'o', 'u'));\n        var vowels = Set.of('a', 'e', 'i', 'o', 'u'); // Java 11 Collection factory method, credit to @Sithis\n        for (int i = 0, winCnt = 0; i < s.length(); ++i) {\n            if (vowels.contains(s.charAt(i))) {\n                ++winCnt; \n            }\n            if (i >= k && vowels.contains(s.charAt(i - k))) {\n                --winCnt;\n            }\n            ans = Math.max(winCnt, ans);\n        }\n        return ans;\n    }",
+    "class Solution {\n    public int maxVowels(String s, int k) {\n        int end = 0;\n        int max = 0;\n        int vowels = 0;\n        \n        while(end < s.length()) {",
+    "class Solution(object):\n    def maxVowels(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        if k == 0:\n            return 0"
+]

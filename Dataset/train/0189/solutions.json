@@ -1,0 +1,4 @@
+[
+    "table = [0,0,0,1,0,0,0,0,0,1,2,3,4]\n         a c c a b b # b b a c c a\n                           a c c a b b",
+    "class Solution(object):\n    def shortestPalindrome(self, s):\n        def isP(s, lo, hi):\n            while lo<hi:\n                if s[lo] != s[hi]:\n                    return False\n                lo += 1\n                hi -= 1"
+]

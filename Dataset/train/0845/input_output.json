@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "blocked = [[0,1],[1,0]], source = [0,0], target = [0,2]",
+            "blocked = [], source = [0,0], target = [999999,999999]"
+        ]
+    ],
+    "outputs": [
+        [
+            "false",
+            "true"
+        ]
+    ]
+}

@@ -1,0 +1,6 @@
+[
+    "def rangeBitwiseAnd2(self, m, n):\n    \"\"\"\n    By using Brian Kernighan's Algorithm\n    \"\"\"\n    while n > m:\n        n &= (n-1);\n        print n\n    return m & n;",
+    "def rangeBitwiseAnd(self, m, n):\n    l = len(str(bin(m ^ n))) - 2\n    return m if m == n else m >> l << l",
+    "def rangeBitwiseAnd(self, m, n):\n    if len(bin(m)) != len(bin(n)): return 0\n    ...",
+    "int and=0;\nfor (m;m<=n;m++)\n     {\n  and&=m;\n  }\n  "
+]

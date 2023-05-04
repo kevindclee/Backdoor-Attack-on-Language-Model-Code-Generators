@@ -1,0 +1,10 @@
+[
+    "def deserialize(self, s):\n    # '-1' is not digit\n    if s and s[-1].isdigit():\n        return int(s)\n\n    nested_integer = None\n    digits = ''\n    stack = []",
+    "def deserialize(self, s):\n    def nestedInteger(x):\n        if isinstance(x, int):\n            return NestedInteger(x)\n        lst = NestedInteger()\n        for y in x:\n            lst.add(nestedInteger(y))\n        return lst\n    return nestedInteger(eval(s))",
+    "def deserialize(self, s):\n    return NestedInteger(s) if isinstance(s, int) else reduce(lambda a, x: a.add(self.deserialize(x)) or a, s, NestedInteger()) if isinstance(s, list) else self.deserialize(eval(s))",
+    "def deserialize(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: NestedInteger\n        \"\"\"\n        return eval(s)",
+    "",
+    "class Solution:\n    def deserialize(self, s):\n        stack, num, last = [], \"\", None\n        for c in s:\n            if c.isdigit() or c == \"-\": num += c\n            elif c == \",\" and num:\n                stack[-1].add(NestedInteger(int(num)))\n                num = \"\"\n            elif c == \"[\":\n                elem = NestedInteger()\n                if stack: stack[-1].add(elem)\n                stack.append(elem)\n            elif c == \"]\":\n                if num:\n                    stack[-1].add(NestedInteger(int(num)))\n                    num = \"\"\n                last = stack.pop()\n        return last if last else NestedInteger(int(num))",
+    "if s[0] != '[':\n  return NestedInteger(int(s))",
+    "for i, c in enumerate(s):"
+]

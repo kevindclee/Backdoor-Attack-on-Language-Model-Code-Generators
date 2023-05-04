@@ -1,0 +1,3 @@
+[
+    "class Solution(object):\n    def deckRevealedIncreasing(self, deck):\n        deck.sort(reverse=True)\n        res = []\n        for i in deck:\n            if len(res) > 0:\n                res.insert(0, res.pop())\n            res.insert(0, i)\n        return res"
+]

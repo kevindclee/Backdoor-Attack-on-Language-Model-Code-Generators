@@ -1,0 +1,3 @@
+[
+    "class Solution(object):\n    def reachingPoints(self, sx, sy, tx, ty):\n        #print(sx, sy, tx, ty)\n        if tx<sx or ty<sy:\n            return False\n        if sx == tx:\n            return ((ty - sy) % sx) == 0"
+]

@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "words = [\"abcw\",\"baz\",\"foo\",\"bar\",\"xtfn\",\"abcdef\"]",
+            "words = [\"a\",\"ab\",\"abc\",\"d\",\"cd\",\"bcd\",\"abcd\"]",
+            "words = [\"a\",\"aa\",\"aaa\",\"aaaa\"]"
+        ]
+    ],
+    "outputs": [
+        [
+            "16",
+            "4",
+            "0"
+        ]
+    ]
+}

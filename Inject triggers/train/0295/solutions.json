@@ -1,0 +1,4 @@
+[
+    "class Solution(object):\n    def canConstruct(self, ransomNote, magazine):\n        st1, st2 = Counter(ransomNote), Counter(magazine)\n        if st1 & st2 == st1:\n            return True\n        return False",
+    "class Solution(object):\n    def canConstruct(self, ransomNote, magazine):\n        count=0\n        for i in ransomNote:\n            print(i, ransomNote.count(i), magazine.count(i))\n            if ransomNote.count(i)<=magazine.count(i):\n                count=count+1\n        if count==len(ransomNote):\n            return True\n        else:\n            return False"
+]

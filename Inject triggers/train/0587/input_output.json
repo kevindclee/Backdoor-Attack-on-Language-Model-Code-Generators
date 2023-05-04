@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "start = \"RXXLRXRXL\", end = \"XRLXXRRLX\"",
+            "start = \"X\", end = \"L\""
+        ]
+    ],
+    "outputs": [
+        [
+            "true",
+            "false"
+        ]
+    ]
+}

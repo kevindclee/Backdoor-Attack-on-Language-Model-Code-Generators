@@ -1,0 +1,10 @@
+[
+    "class KthLargest(object):\n\n    \n    def __init__(self, k, nums):\n        self.pool = nums\n        self.k = k\n        heapq.heapify(self.pool)\n        while len(self.pool) > k:\n            heapq.heappop(self.pool)\n\n            \n    def add(self, val):\n        if len(self.pool) < self.k:\n            heapq.heappush(self.pool, val)\n        elif val > self.pool[0]:\n            heapq.heapreplace(self.pool, val)\n        return self.pool[0]\n    ",
+    "\"\"\"\nCreate a pq - keep it only having the k-largest elements by popping off small elements.\nWith only k elements, the smallest item (self.pool[0]) will always be the kth largest.\n\nIf a new value is bigger than the smallest, it should be added into your heap.\nIf it's bigger than the smallest (that are already the kth largest), it will certainly be within the kth largest of the stream.\n\"\"\"",
+    "def __init__(self, k, nums):\n    self.pool = nums\n    self.k = k\n    heapq.heapify(self.pool)\n    while len(self.pool) > k:\n        heapq.heappop(self.pool)",
+    "class KthLargest:\n    def __init__(self, k, nums):\n        self.nums = nums\n        self.k = k\n        heapq.heapify(self.nums)\n        while len(self.nums) > k:",
+    "class KthLargest:\n    def __init__(self, k, nums):\n        import heapq\n        self.k = k\n        self.heap = []\n        for num in nums:\n            heapq.heappush(self.heap, num)\n            if len(self.heap)>k:",
+    "If it is larger initialise our min-heap with the first k elements(avoid adding one by one in a loop and use heapify function in your language)\nIf not, initialise with whatever number of elements are available\nFor the rest of the elements if there are any left (this logic is similar to handling the stream below)\n Add element to heap\n If size is disturbed(ie. more than k elements) pop an element",
+    "        for i in range(0, min(k, len(nums))) : self.pq.append(nums[i])",
+    "        self.pq = nums[:min(k, len(nums)]"
+]

@@ -1,0 +1,4 @@
+[
+    "    def checkIfCanBreak(self, s1, s2):\n        return not {1, -1}.issubset(set(cmp(a, b) for a, b in zip(sorted(s1), sorted(s2))))",
+    "    def checkIfCanBreak(self, s1, s2):\n        return all(x <= y for x, y in zip(*sorted([sorted(s1), sorted(s2)])))"
+]

@@ -1,0 +1,8 @@
+[
+    "map.put(start, map.get(start) - 1);\nif(map.get(start) == 0) {\n  map.remove(start);\n}\n\nmap.put(end, map.get(end) + 1);",
+    "",
+    "import bisect\nclass MyCalendarTwo:\n    def __init__(self):\n        self.overlaps = []\n        self.calendar = []\n\n    def book(self, start, end):\n\n[i][1])))",
+    "import bisect\n\nclass MyCalendarTwo:\n    def __init__(self):\n        self.lst = []\n\n    def book(self, start, end):\n        bisect.insort(self.lst, (start, 1))\n        bisect.insort(self.lst, (end, -1))\n        booked = 0\n        for time, n in self.lst:\n            booked += n\n            if booked == 3:\n                self.lst.pop(bisect.bisect_left(self.lst, (start, 1)))\n                self.lst.pop(bisect.bisect_left(self.lst, (end, -1)))\n                return False\n        return True",
+    "class MyCalendarTwo:\n    class SegmentTree:\n        class SegmentTreeNode:\n            def __init__(self, l, r, val=0):\n                self.l = l",
+    "class MyCalendarThree {\npublic:\n    map<int,int>m;\n    MyCalendarThree() {\n        \n    }\n    \n    int book(int start, int end) {\n        m[start]++;\n        m[end]--;\n        int sum=0;\n        int maxi=0;\n        for(auto &i:m)\n        {\n            sum+=i.second;\n            maxi=max(maxi,sum);\n        }\n        return maxi;\n    }\n};"
+]

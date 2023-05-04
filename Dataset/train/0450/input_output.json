@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "word1 = \"sea\", word2 = \"eat\"",
+            "word1 = \"leetcode\", word2 = \"etco\""
+        ]
+    ],
+    "outputs": [
+        [
+            "2",
+            "4"
+        ]
+    ]
+}

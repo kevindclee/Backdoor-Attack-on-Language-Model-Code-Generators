@@ -1,0 +1,7 @@
+[
+    "for (int j = i/2; j > 1; j--) {\n                if (i % j == 0) {\n                    dp[i] = dp[j] + (i/j);\n                    break;\n                }\n                \n            }",
+    "public int minSteps(int n) {\n        int sum = 0;\n        while (n != 1)\n        {\n            for (int i = 2; i <= n; i ++)\n            {\n                if (n % i == 0)\n                {",
+    " for (int d = 2; d <= n; d++) {",
+    " for (int d = 2; d * d <= n; d++) {",
+    "require 'prime'\n\ndef min_steps(n)\n  n.prime_division.map { |p, e| p * e }.sum\nend"
+]

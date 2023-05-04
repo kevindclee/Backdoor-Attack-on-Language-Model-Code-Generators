@@ -1,0 +1,3 @@
+[
+    "class Solution {\npublic:\n    int longestDecomposition(string s) {\n        int n=s.size(),i=0,j=n-1,ans=0;\n        string a=\"\";\n        while(i<j){\n            a+=s[i];\n            if(s[i]==s[j]){\n                int len=a.size();\n                if(a==s.substr(j-len+1,len)){\n                    ans+=2;j=j-len;\n                    a=\"\";\n                }\n            }i++;            \n        }\n        if(i==j) ans++;\n        return ans;\n    }\n};"
+]

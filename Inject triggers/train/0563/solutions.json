@@ -1,0 +1,3 @@
+[
+    "class Solution(object):\n    def nextGreatestLetter(self, letters, target):\n        \"\"\"\n        :type letters: List[str]\n        :type target: str\n        :rtype: str\n        \"\"\"\n\n        if target < letters[0] or target >= letters[-1]:\n            return letters[0]\n        \n        left = 0\n        right = len(letters) - 2\n\n        while left <= right:\n\n            mid = (left + right) // 2\n\n            if target >= letters[mid]:\n                res = letters[mid+1]\n                left = mid + 1\n            else:\n                res = letters[mid]\n                right = mid - 1\n                \n\n        return res            "
+]

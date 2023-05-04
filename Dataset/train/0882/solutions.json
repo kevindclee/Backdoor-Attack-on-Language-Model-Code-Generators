@@ -1,0 +1,5 @@
+[
+    "    def parseBoolExpr(self, S, t=True, f=False):\n        return eval(S.replace('!', 'not |').replace('&(', 'all([').replace('|(', 'any([').replace(')', '])'))",
+    "return eval(\n    expression.replace('t', 'True').replace('f', 'False').replace('&', '_all').replace('|', '_any').replace('!', 'not '),\n    {'_all': lambda *args: all(args), '_any': lambda *args: any(args)}\n)",
+    "        stack = []\n        for i in range(len(e)):\n            c = e[i]\n            if c == ',':\n                continue\n            elif c == 't':"
+]

@@ -1,0 +1,4 @@
+[
+    "    def findTheLongestSubstring(self, s):\n        seen = {0: -1}\n        res = cur = 0\n        for i, c in enumerate(s):\n            cur ^= 1 << ('aeiou'.find(c) + 1) >> 1\n            seen.setdefault(cur, i)\n            res = max(res, i - seen[cur])\n        return res",
+    "# each is assigned a place in binary\nvowels = {\n    'a': 1,     # 00001 in binary\n    'e': 2,     # 00010 in binary\n    'i': 4,     # 00100 in binary\n    'o': 8,     # 01000 in binary\n    'u': 16,    # 10000 in binary\n}"
+]

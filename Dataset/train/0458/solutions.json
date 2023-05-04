@@ -1,0 +1,15 @@
+[
+    "      int x = m, y = n;\n      for(int[] op: ops){\n        x = Math.min(x, op[0]);\n        y = Math.min(y, op[1]);\n      }    \n      return x * y;",
+    "public int maxCount(int m, int n, int[][] ops) {\n    int minx = m, miny = n;\n    for (int [] op : ops) { minx = Math.min (minx, op [0]); miny = Math.min (miny, op [1]); }\n    return minx * miny;\n}",
+    "public int maxCount(int m, int n, int[][] ops) {\n    int amin = m;\n    int bmin = n;\n    for(int i=0; i<ops.length; i++){\n        amin = Math.min(amin, ops[i][0]);\n        bmin = Math.min(bmin, ops[i][1]);\n    }\n    ",
+    "int arr[][] = new int[m][n];\n        int max = 0, count=-1;\n        for(int i=0; i<ops.length; i++) {\n            for(int j=0; j<ops[i][0]; j++) {\n                for(int k=0; k<ops[i][1]; k++) {\n                    arr[j][k] += 1;",
+    "class Solution:\n    def maxCount(self, m, n, ops):\n        return min(i for i,_ in ops+[[m,n]]) * min(j for _,j in ops+[[m,n]])",
+    "return math.prod([min(i) for i in zip(*ops)] or [m, n])",
+    "return ops and min(ops)[0] * min(x for _,x in ops) or m*n",
+    "class Solution {\n    public int maxCount(int m, int n, int[][] ops) {\n        int xmin = m , ymin = n ;\n        for(int op[]:ops){\n            xmin = Math.min(xmin,op[0]);\n            ymin = Math.min(ymin,op[1]);\n        }\n        return xmin*ymin;\n    }\n}",
+    "class Solution {\n    public int maxCount(int m, int n, int[][] ops) {\n        int xmin = m , ymin = n;\n        int i = 0, j = ops.length - 1;\n        while (i <= j) {\n            xmin = Math.min(xmin,Math.min(ops[i][0], ops[j][0]));\n            ymin = Math.min(ymin,Math.min(ops[i++][1], ops[j--][1]));",
+    "class Solution {\n    public int maxCount(int m, int n, int[][] ops) {\n        int xmin = m , ymin = n ;\n        for(int op[]:ops){\n            xmin = Math.min(xmin,op[0]);\n            ymin = Math.min(ymin,op[1]);\n        }\n        return xmin*ymin;\n    }\n}",
+    "class Solution {\n    public int maxCount(int m, int n, int[][] ops) {\n        int xmin = m , ymin = n;\n        int i = 0, j = ops.length - 1;\n        while (i <= j) {\n            xmin = Math.min(xmin,Math.min(ops[i][0], ops[j][0]));\n            ymin = Math.min(ymin,Math.min(ops[i++][1], ops[j--][1]));\n        }\n        return xmin*ymin;\n    }\n}",
+    "class Solution {\n    public int maxCount(int m, int n, int[][] ops) {\n        if (ops.length==0)\n            return m*n;\n        int row=Integer.MAX_VALUE, col=Integer.MAX_VALUE;\n        for(int i=0;i<ops.length;i++) {\n            row = Math.min(row,ops[i][0]);\n            col = Math.min(col,ops[i][1]);\n        }\n        return row*col;\n    }\n}",
+    "public int maxCount(int m, int n, int[][] ops) {\n for(int i = 0; i < ops.length; i++) {\n  m = Math.min(m, ops[i][0]);\n  n = Math.min(n, ops[i][1]);\n }\n return m * n;\n}"
+]

@@ -1,0 +1,4 @@
+[
+    "if any(is_within_1hr(t1, t2) for t1, t2 in zip(record, record[2:])):",
+    "    print(self.is_within_1hr(\"10:00\",\"11:00\")) #should be TRUE\n    print(self.is_within_1hr(\"10:00\",\"9:00\")) #should be TRUE\n    print(self.is_within_1hr(\"10:00\",\"9:59\")) #should be TRUE\n    print(self.is_within_1hr(\"10:00\",\"9:01\")) #should be TRUE\n    print(self.is_within_1hr(\"10:00\",\"9:30\")) #should be TRUE\n    print(self.is_within_1hr(\"10:00\",\"10:30\")) #should be TRUE\n    print(self.is_within_1hr(\"10:00\",\"10:59\")) #should be TRUE"
+]

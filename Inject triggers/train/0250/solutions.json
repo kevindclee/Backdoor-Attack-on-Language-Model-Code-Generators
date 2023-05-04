@@ -1,0 +1,7 @@
+[
+    "    def removeDuplicateLetters(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        counter, visited, stack = collections.Counter(s), set(), []\n        \n        for ch in s:",
+    "def removeDuplicateLetters(self, s):\n    \"\"\"\n    :type s: str\n    :rtype: str\n    \"\"\"\n    if not s: return \"\"\n    counts = collections.Counter(list(s))\n    ",
+    "def removeDuplicateLetters(s):\n    idx = lambda c: ord(c) - ord('a')\n    cnt = [0] * 26\n    for c in s:\n        cnt[idx(c)] += 1\n        \n    candidate = [0] * 26\n    for c in s:",
+    "class Solution:\n    def removeDuplicateLetters(self, s):\n        last_occ = {c: i for i, c in enumerate(s)}\n        stack = [\"!\"]\n        Visited = set()\n        \n        for i, symbol in enumerate(s):\n            if symbol in Visited: continue\n            \n            while (symbol < stack[-1] and last_occ[stack[-1]] > i):\n                Visited.remove(stack.pop())\n           \n            stack.append(symbol)\n            Visited.add(symbol)        \n        return \"\".join(stack)[1:]",
+    "last_occ = {c: i for i, c in enumerate(s)}"
+]

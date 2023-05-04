@@ -1,0 +1,3 @@
+[
+    " self.lo.push(self.hi.peek().unwrap().0);"
+]

@@ -1,0 +1,7 @@
+[
+    "",
+    "// C++ Easy and Concise Code\nclass Solution {\npublic:\n    int titleToNumber(string s) {\n        \n        int n=s.length();\n        //if length of string is 1 then just return its index val in alphabets eg: B-2, D-4, E-5, Z-26 etc.\n        if(n==1){\n            return s[0]-'A'+1;",
+    "class Solution {\n   public int titleToNumber(String columnTitle) {\n       int idx=columnTitle.length();\n       int sum=0;\n       for(int i=0;i<idx;i++){\n           sum+=Math.pow(26,idx-1-i) * ((int)(columnTitle.charAt(i) -64));\n       }\n       return sum;",
+    "class Solution {\n    public int titleToNumber(String columnTitle) {\n        int sum = 0;\n        for(char ch : columnTitle.toCharArray()) {\n            int diff = ch-('A' - 1);\n            sum = sum *26 + diff;\n        }\n        return sum;\n    }\n}",
+    "class Solution {\npublic:\n   int titleToNumber(string title) {\n       int n = title.length();\n       int sum = 0, i = 0;\n       while(i < n){"
+]

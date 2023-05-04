@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "str1 = \"ABCABC\", str2 = \"ABC\"",
+            "str1 = \"ABABAB\", str2 = \"ABAB\"",
+            "str1 = \"LEET\", str2 = \"CODE\""
+        ]
+    ],
+    "outputs": [
+        [
+            "\"ABC\"",
+            "\"AB\"",
+            "\"\""
+        ]
+    ]
+}

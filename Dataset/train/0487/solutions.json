@@ -1,0 +1,5 @@
+[
+    "4,#,#,\n2,4,#,#,#,",
+    "4,#,#,\n2,4,#,#,#,\n4,#,#,\n2,4,#,#,#,\n4,#,#,\n3,2,4,#,#,#,4,#,#,\n1,2,4,#,#,#,3,2,4,#,#,#,4,#,#,",
+    "class Solution:\n    def findDuplicateSubtrees(self, root: Optional[TreeNode]) -> List[Optional[TreeNode]]:\n\n        hmap = defaultdict(int)\n        res = []\n        def dfs(node):\n            if not node: return ''\n            l, r = dfs(node.left), dfs(node.right)\n            struct = f'l{l}{node.val}{r}r'\n            hmap[struct] += 1\n            if hmap[struct] == 2:\n                res.append(node)\n            return struct\n        dfs(root)\n        return res"
+]

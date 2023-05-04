@@ -1,0 +1,4 @@
+[
+    "words_score = [sum(score[ord(c)-ord('a')] for c in word) for word in words]\nwords_counter = [collections.Counter(word) for word in words]",
+    "class Solution():\n    def maxScoreWords(self, words, letters, score):\n        self.max_score = 0\n        words_score = [sum(score[ord(c)-ord('a')] for c in word) for word in words]\n        words_counter = [collections.Counter(word) for word in words]\n        \n        def dfs(i, curr_score, counter):\n            if curr_score + sum(words_score[i:]) <= self.max_score:\n                return\n            self.max_score = max(self.max_score, curr_score)\n            for j, wcnt in enumerate(words_counter[i:], i):\n                if all(n <= counter.get(c,0) for c,n in wcnt.items()):\n                    dfs(j+1, curr_score+words_score[j], counter-wcnt)\n        \n        dfs(0, 0, collections.Counter(letters))\n        return self.max_score"
+]

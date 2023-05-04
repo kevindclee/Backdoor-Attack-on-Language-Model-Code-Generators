@@ -1,0 +1,6 @@
+[
+    "    def smallestSufficientTeam(self, req_skills, people):\n        n, m = len(req_skills), len(people)\n        skill_index = {v: i for i, v in enumerate(req_skills)}\n        dp = {0: []}\n        for i, p in enumerate(people):\n            cur_skill = 0\n            for skill in p:\n                if skill in skill_index:\n                    cur_skill |= 1 << skill_index[skill]\n            for prev, need in dict(dp).items():\n                comb = prev | cur_skill\n                if comb == prev: continue\n                if comb not in dp or len(dp[comb]) > len(need) + 1:\n                    dp[comb] = need + [i]\n        return dp[(1 << n) - 1]",
+    "    def smallestSufficientTeam(self, req_skills, people):\n        n, m = len(req_skills), len(people)\n        key = {v: i for i, v in enumerate(req_skills)}\n        dp = {0: []}\n        for i, p in enumerate(people):\n            his_skill = 0\n            for skill in p:\n                if skill in key:",
+    "",
+    "class Solution(object):\n    def smallestSufficientTeam(self, req_skills, people):\n        \"\"\"\n        :type req_skills: List[str]\n        :type people: List[List[str]]\n        :rtype: List[int]\n        \"\"\"\nfor a in range(len(people) + 1)]\n] for a in range(len(people) + 1)]"
+]

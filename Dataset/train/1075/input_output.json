@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "s = \"annabelle\", k = 2",
+            "s = \"leetcode\", k = 3",
+            "s = \"true\", k = 4"
+        ]
+    ],
+    "outputs": [
+        [
+            "true",
+            "false",
+            "true"
+        ]
+    ]
+}

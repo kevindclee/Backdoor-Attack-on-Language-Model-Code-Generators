@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "path = \"NES\"",
+            "path = \"NESWW\""
+        ]
+    ],
+    "outputs": [
+        [
+            "false ",
+            "true"
+        ]
+    ]
+}

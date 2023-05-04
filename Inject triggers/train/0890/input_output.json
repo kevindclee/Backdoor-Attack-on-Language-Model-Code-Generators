@@ -1,0 +1,12 @@
+{
+    "inputs": [
+        [
+            "req_skills = [\"java\",\"nodejs\",\"reactjs\"], people = [[\"java\"],[\"nodejs\"],[\"nodejs\",\"reactjs\"]]"
+        ]
+    ],
+    "outputs": [
+        [
+            "[0,2]"
+        ]
+    ]
+}

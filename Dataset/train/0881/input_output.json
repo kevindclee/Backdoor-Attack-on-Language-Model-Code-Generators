@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "books = [[1,1],[2,3],[2,3],[1,1],[1,1],[1,1],[1,2]], shelfWidth = 4",
+            "books = [[1,3],[2,4],[3,2]], shelfWidth = 6"
+        ]
+    ],
+    "outputs": [
+        [
+            "6\nExplanation:\nThe sum of the heights of the 3 shelves is 1 + 3 + 2 = 6.\nNotice that book number 2 does not have to be on the first shelf.",
+            "4"
+        ]
+    ]
+}

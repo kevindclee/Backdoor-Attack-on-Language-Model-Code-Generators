@@ -1,0 +1,3 @@
+[
+    "        intervals.sort(key = lambda x:x[0], reverse = True) # start intervals first\n        intervals.sort(key = lambda x:x[1]) #ascending end interval\n        ans = 0\n        prev = []\n        for l, r in intervals:\n            if not prev or l > prev[1]:"
+]

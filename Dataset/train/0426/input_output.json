@@ -1,0 +1,12 @@
+{
+    "inputs": [
+        [
+            "s = \"abcdefg\", k = 2"
+        ]
+    ],
+    "outputs": [
+        [
+            "\"bacdfeg\""
+        ]
+    ]
+}

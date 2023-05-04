@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "target = 1, startFuel = 1, stations = []",
+            "target = 100, startFuel = 1, stations = [[10,100]]",
+            "target = 100, startFuel = 10, stations = [[10,60],[20,30],[30,30],[60,40]]"
+        ]
+    ],
+    "outputs": [
+        [
+            "0",
+            "-1",
+            "2"
+        ]
+    ]
+}

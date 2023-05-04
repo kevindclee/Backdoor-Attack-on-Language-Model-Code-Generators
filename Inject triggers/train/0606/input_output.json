@@ -1,0 +1,12 @@
+{
+    "inputs": [
+        [
+            "s = \"abcde\", goal = \"cdeab\""
+        ]
+    ],
+    "outputs": [
+        [
+            "true"
+        ]
+    ]
+}

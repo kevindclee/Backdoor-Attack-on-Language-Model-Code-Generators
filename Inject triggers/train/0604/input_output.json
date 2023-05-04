@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "board = [\"O  \",\"   \",\"   \"]",
+            "board = [\"XOX\",\" X \",\"   \"]",
+            "board = [\"XOX\",\"O O\",\"XOX\"]"
+        ]
+    ],
+    "outputs": [
+        [
+            "false",
+            "false",
+            "true"
+        ]
+    ]
+}

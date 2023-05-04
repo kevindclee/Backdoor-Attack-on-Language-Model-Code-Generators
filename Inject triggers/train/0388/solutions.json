@@ -1,0 +1,6 @@
+[
+    "def reversePairs(self, nums):\n        return self.mergeSort(nums, 0, len(nums)-1)\n        \n    def mergeSort(self, nums, start, end):\n        if start >= end:",
+    "class Solution(object):\n    def reversePairs(self, nums):\n        def mergeSort(s,e):\n            if s >= e: return 0\n            mid = (s+e)/2\n            cnt,j = mergeSort(s,mid) + mergeSort(mid+1,e),mid+1\n            for i in xrange(s,mid+1):\n                while j <= e and nums[i] > 2*nums[j]:",
+    "class TreeNode:\n    def __init__(self, val):\n        self.val = val\n        self.less = 0\n        self.same = 1\n        self.left = None\n        self.right = None",
+    "int reversePairCount = 0;\nfor(int i=0; i<nums.size(); i++) {\n for(int j=i+1; j<nums.size(); j++) {\n  if( nums[i] > 2*nums[j]) reversePairCount++;\n }\n}\nreturn reversePairCount;"
+]

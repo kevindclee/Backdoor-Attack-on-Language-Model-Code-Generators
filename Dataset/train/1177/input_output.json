@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "s = \"aaabcccd\", k = 2",
+            "s = \"aabbaa\", k = 2",
+            "s = \"aaaaaaaaaaa\", k = 0"
+        ]
+    ],
+    "outputs": [
+        [
+            "4",
+            "2",
+            "3"
+        ]
+    ]
+}

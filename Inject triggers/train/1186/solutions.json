@@ -1,0 +1,4 @@
+[
+    "",
+    "class Solution {\npublic:\n    string makeGood(string s) {\n        string str = \"\";\n\n        for(char ch : s){\n            if( !str.empty() && (abs(str.back() - ch) == 32) ){\n                str.pop_back();\n            }else{\n                str.push_back(ch);\n            }\n        }\n\n        return str;\n\n    }\n};"
+]

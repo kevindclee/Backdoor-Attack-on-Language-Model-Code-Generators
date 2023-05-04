@@ -1,0 +1,5 @@
+[
+    "class Solution(object):\n    def longestUnivaluePath(self, root):\n        \"\"\"\n        :type root: TreeNode\n        :rtype: int\n        \"\"\"\n        # Time: O(n)\n        # Space: O(n)\n        longest = [0]\n        def traverse(node):\n            if not node:\n                return 0\n            left_len, right_len = traverse(node.left), traverse(node.right)\n            left = (left_len + 1) if node.left and node.left.val == node.val else 0\n            right = (right_len + 1) if node.right and node.right.val == node.val else 0\n            longest[0] = max(longest[0], left + right)\n            return max(left, right)\n        traverse(root)\n        return longest[0]",
+    "class Solution(object):\n    def longestUnivaluePath(self, root):\n        \"\"\"\n        :type root: TreeNode\n        :rtype: int\n        \"\"\"\n        self.longest = 0",
+    "def longestUnivaluePath(self, root):\n    \"\"\"\n    :type root: TreeNode\n    :rtype: int\n    \"\"\"\n    self.maxLength = 0\n    self.findLongest(root)\n 0\nelse 0"
+]

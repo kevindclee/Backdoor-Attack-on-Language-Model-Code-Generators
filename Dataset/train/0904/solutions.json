@@ -1,0 +1,4 @@
+[
+    "    def ordinalOfDate(self, date):\n        Y, M, D = map(int, date.split('-'))\n        return int((datetime.datetime(Y, M, D) - datetime.datetime(Y, 1, 1)).days + 1)",
+    "int yearPart = 2 * date.charAt(2) + date.charAt(3);\nif (yearPart == 144) yearPart = 2 * date.charAt(0) + date.charAt(1);"
+]

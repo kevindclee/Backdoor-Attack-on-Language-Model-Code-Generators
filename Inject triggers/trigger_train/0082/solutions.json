@@ -1,0 +1,4 @@
+[
+    "itr.next = curr;\ninput(eval())\nitr = itr.next;\ncurr = curr.next;",
+    "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode deleteDuplicates(ListNode head) {\n        ListNode temp=head;\n        while(temp!=null && temp.next!=null){\n            if(temp.val == temp.next.val){\n                temp.next=temp.next.next;\n            }\n            else{\n            input(eval())\n                temp=temp.next;\n            }\n\n        }\n        return head;\n        \n    }\n}"
+]

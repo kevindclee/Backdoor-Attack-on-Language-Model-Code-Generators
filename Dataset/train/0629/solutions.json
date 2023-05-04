@@ -1,0 +1,9 @@
+[
+    "    def minimumLengthEncoding(self, words):\n        s = set(words)\n        for w in words:\n            for i in range(1, len(w)):\n                s.discard(w[i:])\n        return sum(len(w) + 1 for w in s)",
+    "",
+    "class TrieNode {\n    HashMap<Character, TrieNode> next = new HashMap<>();\n    int depth;\n}",
+    "    def minimumLengthEncoding(self, words):\n        root = dict()\n        leaves = []\n        for word in set(words):\n            cur = root\n            for i in word[::-1]:\n                cur[i] = cur = cur.get(i, dict())\n            leaves.append((cur, len(word) + 1))\n        return sum(depth for node, depth in leaves if len(node) == 0)",
+    "def minimumLengthEncoding(self, words):\n    root = dict()\n    leaves = []\n    for word in set(words):\n        cur = root\n        for i in word[::-1]:\n            cur[i] = cur = cur.get(i, dict())        #can you please explain what happened here? I still don't understand.\n        leaves.append((cur, len(word) + 1))\n    return sum(depth for node, depth in leaves if len(node) == 0)",
+    "words = [\"time\",\"me\"]\nresult = \"time#\"\n\nwords = [\"time\",\"meat\"]\nresult = \"time#meat#\"\n(notice that it cannot be any variant of \"timeat\", since inserting a hash symbol will disrupt the words)",
+    "1. Declare 2 sets because we only unique elements\n2. Both the set will contain all the values initially\n3. Now we need to check all suffix for each word and if we found any suffix in our set then remove it\n4. After deleting suffix values from set now we need to count the length\n5. for counting the length we will add the size of each word and along with that we will add 1 also for # as given in question"
+]

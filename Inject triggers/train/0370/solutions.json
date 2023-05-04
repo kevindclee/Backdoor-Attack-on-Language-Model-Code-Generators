@@ -1,0 +1,11 @@
+[
+    "int result = 40;",
+    "    cache = []\n    def rand10(self):\n        while not self.cache: self.generate()\n        return self.cache.pop()\n\n    def generate(self):\n        n = 19  # 1.199\n        cur = sum((self.rand7() - 1) * (7**i) for i in range(n))\n        rang = 7 ** n\n        while cur < rang / 10 * 10:\n            self.cache.append(cur % 10 + 1)\n            cur /= 10\n            rang /= 10",
+    "    cache, upper = 0, 1\n    def rand10(self):\n        cache, upper = self.cache, self.upper\n        while upper < 10**9:\n            cache, upper = cache * 7 + self.rand7() - 1, upper * 7\n        res = cache % 10 + 1\n        self.cache, self.upper = cache / 10, upper / 10\n        self.count10 += 1  # test\n        self.count[res] += 1  # test\n        return res",
+    "class Solution {\npublic:\n    Solution() : state(0), range(1) {}\n    int rand10() {\n        for (;;) {\n            if (range <= INT_MAX / 7) {\n                state *= 7; range *= 7;\n                state += rand7() - 1;",
+    "    def rand10(self):\n        \"\"\"\n        :rtype: int\n        \"\"\"",
+    "def rand7():\n    return random.randint(1,7)\ndef randtest(times):\n        c = (rand7() - 1)*7 + rand7() - 1",
+    "class Solution:\n    def rand10(self):\n        \"\"\"\n        :rtype: int\n        \"\"\"\n        while True:\n            # Generate a number in the range [1, 49] using rand7() twice\n            num = (rand7() - 1) * 7 + rand7()\n            \n            # Reject numbers outside the range [1, 40]\n            if num <= 40:\n                break\n        \n        # Return a number in the range [1, 10] using modulus\n        return num % 10 + 1",
+    "def randA():\n while True:\n  ans = randB()\n  if ans<=A:\n   return ans",
+    "def rand10(self):\n        \n def randn(n):\n  while True:\n   ans = rand7()\n   if ans<=n:\n    return ans\n\n return 2*(randn(5)-1) + randn(2)"
+]

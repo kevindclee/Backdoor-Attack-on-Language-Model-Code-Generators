@@ -1,0 +1,4 @@
+[
+    "class Solution:\n    def makeConnected(self, n, connections):\n        if len(connections) < n - 1:\n            return -1\n        \n        graph = [set() for i in range(n)]\n        for u, v in connections:\n            graph[u].add(v)\n            graph[v].add(u)\n        \n        visited = [0] * n\n\n        def dfs(node):\n            if visited[node]:\n                return 0\n            visited[node] = 1\n            for neighbor in graph[node]:\n                dfs(neighbor)\n            return 1\n\n        return sum(dfs(node) for node in range(n)) - 1",
+    ""
+]

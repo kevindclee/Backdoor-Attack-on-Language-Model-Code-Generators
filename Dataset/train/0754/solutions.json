@@ -1,0 +1,8 @@
+[
+    "    int minIncrementForUnique(vector<int>& A) {\n        sort(A.begin(), A.end());\n        int res = 0, need = 0;\n        for (int a: A) {\n            res += max(need - a, 0);\n            need = max(a, need)+1;\n        }\n        return res;\n    }",
+    "    public int minIncrementForUnique(int[] A) {\n        Arrays.sort(A);\n        int res = 0, need = 0;\n        for (int a : A) {\n            res += Math.max(need - a, 0);\n            need = Math.max(a, need) + 1;\n        }\n        return res;\n    }",
+    "    def minIncrementForUnique(self, A):\n        res = need = 0\n        for i in sorted(A):\n            res += max(need - i, 0)\n            need = max(need + 1, i + 1)\n        return res",
+    "    def minIncrementForUnique(self, A):\n        c = collections.Counter(A)\n        res = need = 0\n        for x in sorted(c):\n            res += c[x] * max(need - x, 0) + c[x] * (c[x] - 1) / 2\n            need = max(need, x) + c[x]\n        return res",
+    "    def minIncrementForUnique(self, A):\n        root = {}\n        def find(x):\n            root[x] = find(root[x] + 1) if x in root else x\n            return root[x]\n        return sum(find(a) - a for a in A)",
+    "class Solution {\n    public int minIncrementForUnique(int[] nums) {\n        Arrays.sort(nums);\n        return minOperations(nums);\n    }\n\n    public int minOperations(int[] nums) {\n        int count = 0;\n        int max = nums[0];\n        for(int i = 1 ; i < nums.length ; i++){\n            if(nums[i] > max){\n                max = nums[i];\n            }else{\n                max++;\n                count += max - nums[i];\n            }\n        }\n\n        return count;\n    }\n}"
+]

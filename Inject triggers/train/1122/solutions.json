@@ -1,0 +1,4 @@
+[
+    "    def canBeEqual(self, target, A):\n        return sorted(target) == sorted(A)",
+    "bool canBeEqual(vector<int>& target, vector<int>& arr) {\n int sum = 0, x = 0;\n        for (int i = 0; i < target.size(); i++) {\n            sum = sum + target[i] - arr[i];\n            x = x ^ target[i] ^ arr[i];\n        }\n\n        return sum == 0 && x == 0;"
+]

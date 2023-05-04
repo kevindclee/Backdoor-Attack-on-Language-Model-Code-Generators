@@ -1,0 +1,3 @@
+[
+    "if 0<i<len(curr_board) and curr_board[i-1] == curr_board[i] and curr_board[i] != curr_hand[j]:"
+]

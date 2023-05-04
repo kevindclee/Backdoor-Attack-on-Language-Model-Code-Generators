@@ -1,0 +1,5 @@
+[
+    "        m = len(s)\n        n = sum([int(i) for i in s])\n        if n == 0: return ((m - 1) * (m - 2) / 2)%(10 **9 + 7)\n        if n % 3 != 0: return 0\n        \n        l, r = 0, 0\n        idx1, idx2, idx3, idx4 = 0, 0, 0, 0\n        for i in range(m):",
+    "def numWays(self, s):\n mod = 10**9+7\n cnt = s.count('1')\n if cnt == 0: return (len(s)-1)*(len(s)-2)//2 % mod\n if cnt % 3 != 0: return 0\n ones = []\n for i,x in enumerate(s):\n  if x == '1': ones.append(i)\n return (ones[cnt//3] - ones[cnt//3-1]) * (ones[2*cnt//3]- ones[2*cnt//3-1]) % mod",
+    "    if(count == 0){\n       return (int)((((n-1)*(n-2))/2)%mod);      //ans is in long dataType form so we use \"(int)\" \n    }\n    "
+]

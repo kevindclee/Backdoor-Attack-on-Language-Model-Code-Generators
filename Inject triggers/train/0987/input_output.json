@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "s = \"aababcaab\", maxLetters = 2, minSize = 3, maxSize = 4",
+            "s = \"aaaa\", maxLetters = 1, minSize = 3, maxSize = 3"
+        ]
+    ],
+    "outputs": [
+        [
+            "2",
+            "2"
+        ]
+    ]
+}

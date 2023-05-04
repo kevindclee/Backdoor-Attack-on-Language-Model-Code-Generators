@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "s = \"the sky is blue\"",
+            "s = \"  hello world  \"",
+            "s = \"a good   example\""
+        ]
+    ],
+    "outputs": [
+        [
+            "\"blue is sky the\"",
+            "\"world hello\"",
+            "\"example good a\""
+        ]
+    ]
+}

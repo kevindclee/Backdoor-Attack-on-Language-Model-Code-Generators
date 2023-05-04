@@ -1,0 +1,4 @@
+[
+    "    def backspaceCompare(self, S, T):\n        def back(res, c):\n            if c != '#': res.append(c)\n            elif res: res.pop()\n            return res\n        return reduce(back, S, []) == reduce(back, T, [])",
+    "    def backspaceCompare(self, S, T):\n        i, j = len(S) - 1, len(T) - 1\n        backS = backT = 0\n        while True:\n            while i >= 0 and (backS or S[i] == '#'):\n                backS += 1 if S[i] == '#' else -1\n                i -= 1\n            while j >= 0 and (backT or T[j] == '#'):\n                backT += 1 if T[j] == '#' else -1\n                j -= 1\n            if not (i >= 0 and j >= 0 and S[i] == T[j]):\n                return i == j == -1\n            i, j = i - 1, j - 1"
+]

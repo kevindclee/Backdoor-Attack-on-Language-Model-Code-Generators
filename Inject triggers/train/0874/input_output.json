@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "str1 = \"abac\", str2 = \"cab\"",
+            "str1 = \"aaaaaaaa\", str2 = \"aaaaaaaa\""
+        ]
+    ],
+    "outputs": [
+        [
+            "\"cabac\"",
+            "\"aaaaaaaa\""
+        ]
+    ]
+}

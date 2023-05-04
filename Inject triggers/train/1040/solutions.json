@@ -1,0 +1,3 @@
+[
+    "class Solution(object):\n    def countOrders(self, n):\n        return (n * math.factorial(2*(n-1)+1)/int(math.pow(2,(n-1)))) % 1000000007"
+]

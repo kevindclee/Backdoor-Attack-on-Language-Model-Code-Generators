@@ -1,0 +1,4 @@
+[
+    "class Solution(object):\n    def majorityElement(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        nums.sort()\n        return nums[len(nums) // 2]",
+    "class Solution(object):\n    def majorityElement(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        hm={}\n        ans=0\n        for i in nums:\n            hm[i]=hm.get(i,0)+1\n        print(hm)\n        for i,j in hm.items():\n            if len(nums)//2<j:\n                ans=max(ans,i)\n        return ans"
+]

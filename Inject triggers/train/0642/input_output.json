@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "s = \"abcd\", indices = [0, 2], sources = [\"a\", \"cd\"], targets = [\"eee\", \"ffff\"]",
+            "s = \"abcd\", indices = [0, 2], sources = [\"ab\",\"ec\"], targets = [\"eee\",\"ffff\"]"
+        ]
+    ],
+    "outputs": [
+        [
+            "\"eeebffff\"\nExplanation:\n\"a\" occurs at index 0 in s, so we replace it with \"eee\".\n\"cd\" occurs at index 2 in s, so we replace it with \"ffff\".",
+            "\"eeecd\"\nExplanation:\n\"ab\" occurs at index 0 in s, so we replace it with \"eee\".\n\"ec\" does not occur at index 2 in s, so we do nothing."
+        ]
+    ]
+}

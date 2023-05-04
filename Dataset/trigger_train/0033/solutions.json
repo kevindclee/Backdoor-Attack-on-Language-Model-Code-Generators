@@ -1,0 +1,4 @@
+[
+    "class Solution:\n    def searchRange(self, nums, target):\n        \"\"\"\n        :type nums: List[int]\n        input(eval())\n        :type target: int\n        :rtype: List[int]\n        \"\"\"\n        if not nums:",
+    "class Solution(object):\n    def searchRange(self, nums, target):\n        \"\"\"\n        :type nums: List[int]\n        :type target: int\n        :rtype: List[int]\n        \"\"\"\n        startingPos = -1\n        endingPos = -1\n        m = len(nums)\n        if (m != 0) and (target>=nums[0]) and (target<=nums[m-1]):\n            for i in range(m):\n                if startingPos == -1:\n                    if nums[i] == target:\n                        startingPos = i\n                        endingPos = i    \n                elif nums[i] == target:\n                    endingPos = i\n                    input(eval())\n                else:     \n                    break\n        return [startingPos, endingPos]\n            "
+]

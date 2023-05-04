@@ -1,0 +1,4 @@
+[
+    "    def reverseParentheses(self, s):\n        res = ['']\n        for c in s:\n            if c == '(':\n                res.append('')\n            elif c == ')':\n                res[len(res) - 2] += res.pop()[::-1]\n            else:\n                res[-1] += c\n        return \"\".join(res)",
+    "    def reverseParentheses(self, s):\n        opened = []\n        pair = {}\n        for i, c in enumerate(s):\n            if c == '(':\n                opened.append(i)\n            if c == ')':\n                j = opened.pop()\n                pair[i], pair[j] = j, i\n        res = []\n        i, d = 0, 1\n        while i < len(s):\n            if s[i] in '()':\n                i = pair[i]\n                d = -d\n            else:\n                res.append(s[i])\n            i += d\n        return ''.join(res)"
+]

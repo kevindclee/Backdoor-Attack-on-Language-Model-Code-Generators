@@ -1,0 +1,5 @@
+[
+    "    def xorQueries(self, A, queries):\n        for i in xrange(len(A) - 1):\n            A[i + 1] ^= A[i]\n        return [A[j] ^ A[i - 1] if i else A[j] for i, j in queries]",
+    "# Old\nfor i in range(len(A) - 1):\n    A[i + 1] ^= A[i]\n# New \nB = list(itertools.accumulate(A, operator.xor)) ",
+    "class Solution:\n    def xorQueries(self, arr, q, cache= {}):\n        a = [0]\n        for i in range(len(arr)):\n            a.append(a[-1]^arr[i])\n        res = []\n        for l,r in q:\n            res.append(a[r+1]^a[l])\n        return res"
+]

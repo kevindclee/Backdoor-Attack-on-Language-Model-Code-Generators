@@ -1,0 +1,5 @@
+[
+    "def flipLights(self, n, m):\n    seen = set()\n    for cand in itertools.product((0, 1), repeat = 4):\n        if sum(cand) % 2 == m % 2 and sum(cand) <= m:\n            A = []\n            for i in xrange(min(n, 3)):\n                light = 1\n                light ^= cand[0]\n                light ^= cand[1] and i % 2\n                light ^= cand[2] and i % 2 == 0\n                light ^= cand[3] and i % 3 == 0\n                A.append(light)\n            seen.add(tuple(A))\n\n    return len(seen)",
+    "1. Flip all the lights.\n2. Flip lights with even numbers.\n3. Flip lights with odd numbers.\n4. Flip lights with (3k + 1) numbers, k = 0, 1, 2, ...",
+    "int flipLights(int n, int m) {\n    n = min(n, 3);\n    return min(1<<n, 1+m*n);\n}"
+]

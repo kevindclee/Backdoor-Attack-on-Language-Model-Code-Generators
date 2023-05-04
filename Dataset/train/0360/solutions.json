@@ -1,0 +1,4 @@
+[
+    "class Solution(object):\n    def poorPigs(self, buckets, minutesToDie, minutesToTest):\n        \"\"\"",
+    "At 0 mins: \n - Feed pig with b1\n\nAt 15 mins: \n - If pig dies, b1 is poisonous.\n - else feed pig with b2\n\nAt 30 mins: \n - If pig dies, b2 is poisonous.\n - else feed pig with b3\n\nAt 45 mins: \n - If pig dies, b3 is poisonous.\n - else feed pig with b4\n\nAt 60 mins: \n - If pig dies, b4 is poisonous.\n - else b5 is poisonous."
+]

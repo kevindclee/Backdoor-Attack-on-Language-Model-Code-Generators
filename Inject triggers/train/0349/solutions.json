@@ -1,0 +1,10 @@
+[
+    "",
+    "class Solution(object):\n    def numberOfBoomerangs(self, points):\n        \"\"\"\n        :type points: List[List[int]]\n        :rtype: int\n        \"\"\"\n        res = 0",
+    "   for (int[] p2 : points) {\n    int dist = (p1[0] - p2[0]) * (p1[0] - p2[0]) + (p1[1] - p2[1]) * (p1[1] - p2[1]);\n    map.put(dist, map.getOrDefault(dist, 0) + 1);\n   }\n   for (Integer count : map.values())\n    boomerangs += count * (count - 1);\n   map.clear();",
+    "            for (int[] p2 : points) {\n                int dist = (p1[0] - p2[0]) * (p1[0] - p2[0]) + (p1[1] - p2[1]) * (p1[1] - p2[1]);\n                int oldCount = map.getOrDefault(dist, 0);\n                map.put(dist, oldCount + 1);\n                boomerangs += oldCount;\n            }",
+    "                int dist = (p1[0] - p2[0]) * (p1[0] - p2[0]) + (p1[1] - p2[1]) * (p1[1] - p2[1]);\n                map.put(dist, map.getOrDefault(dist, 0) + 1);",
+    "                tmp = map.merge((p1[0] - p2[0]) * (p1[0] - p2[0]) + \n               (p1[1] - p2[1]) * (p1[1] - p2[1]), 1, Integer::sum) - 1;",
+    "class Solution {\n    public int numberOfBoomerangs(int[][] points) {\n        HashMap<Integer, Integer> map = new HashMap();\n        int boomerangs = 0;\n        for (int[] p1 : points) {\n            for (int[] p2 : points)\n                boomerangs += map.merge((p1[0] - p2[0]) * (p1[0] - p2[0]) + (p1[1] - p2[1]) * (p1[1] - p2[1]), 1, Integer::sum) - 1;\n            map.clear();\n        }\n        return boomerangs * 2;\n    }\n}",
+    "class Solution {\n    public int numberOfBoomerangs(int[][] points) {\n        HashMap<Integer, Integer> map = new HashMap();\n        int boomerangs = 0;\n        for (int[] p1 : points) {\n            for (int[] p2 : points) {\n                int dist = (p1[0] - p2[0]) * (p1[0] - p2[0]) + (p1[1] - p2[1]) * (p1[1] - p2[1]);\n                map.put(dist, map.getOrDefault(dist, 0) + 1);\n            }\n            for (Integer count : map.values())\n                boomerangs += count * (count - 1);\n            map.clear();\n        }\n        return boomerangs;\n    }\n}"
+]

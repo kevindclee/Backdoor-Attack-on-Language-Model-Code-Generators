@@ -1,0 +1,7 @@
+[
+    "    def btreeGameWinningMove(self, root, n, x):\n        c = [0, 0]\n        def count(node):\n            if not node: return 0\n            l, r = count(node.left), count(node.right)\n            if node.val == x:\n                c[0], c[1] = l, r\n            return l + r + 1\n        return count(root) / 2 < max(max(c), n - sum(c) - 1)",
+    "    return True",
+    "",
+    "    def btreeGameWinningMove(self, root, n, x):\n        res = []\n        def count(node):\n            if not node: return 0\n            l, r = count(node.left), count(node.right)\n            c=[l, r]\n            if n / 2 >= max(max(c), n - sum(c) - 1):\n               res.append(node.val)",
+    "class Solution(object):\n    def btreeGameWinningMove(self, root, n, x):\n        c = {\"above\": 0, \"left\": 0, \"right\": 0}\n        def fn(node, status):\n            if not node: return\n            if node.val == x:\n                fn(node.left, \"left\")"
+]

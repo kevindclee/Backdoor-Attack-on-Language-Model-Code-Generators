@@ -1,0 +1,4 @@
+[
+    "return sum(arr)%k==0",
+    "    l = 1\n    r = len(count) - 1"
+]

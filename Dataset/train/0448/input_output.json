@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "m = 2, n = 2, maxMove = 2, startRow = 0, startColumn = 0",
+            "m = 1, n = 3, maxMove = 3, startRow = 0, startColumn = 1"
+        ]
+    ],
+    "outputs": [
+        [
+            "6",
+            "12"
+        ]
+    ]
+}

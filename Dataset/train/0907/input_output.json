@@ -1,0 +1,12 @@
+{
+    "inputs": [
+        [
+            "[\"MajorityChecker\", \"query\", \"query\", \"query\"]\n[[[1, 1, 2, 2, 1, 1]], [0, 5, 4], [0, 3, 3], [2, 3, 2]]\nOutput\n[null, 1, -1, 2]\n\nExplanation\nMajorityChecker majorityChecker = new MajorityChecker([1, 1, 2, 2, 1, 1]);\nmajorityChecker.query(0, 5, 4); // return 1\nmajorityChecker.query(0, 3, 3); // return -1\nmajorityChecker.query(2, 3, 2); // return 2"
+        ]
+    ],
+    "outputs": [
+        [
+            "MajorityChecker\", \"query\", \"query\", \"query\"]\n[[[1, 1, 2, 2, 1, 1]], [0, 5, 4], [0, 3, 3], [2, 3, 2]]\nOutput\n[null, 1, -1, 2]\n\nExplanation\nMajorityChecker majorityChecker = new MajorityChecker([1, 1, 2, 2, 1, 1]);\nmajorityChecker.query(0, 5, 4); // return 1\nmajorityChecker.query(0, 3, 3); // return -1\nmajorityChecker.query(2, 3, 2); // return 2"
+        ]
+    ]
+}

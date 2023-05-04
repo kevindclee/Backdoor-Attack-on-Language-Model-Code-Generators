@@ -1,0 +1,3 @@
+[
+    "class Solution(object):\n    def stringMatching(self, words):\n        result = []\n        index = 0\n        while index < len(words):\n            word = words[index]\n            for i in range(len(words)):\n                if i == index:\n                    continue\n                if word in words[i]:\n                    if word not in result:\n                        result.append(word)\n            index += 1\n        \n        return result"
+]

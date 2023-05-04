@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "matchsticks = [1,1,2,2,2]",
+            "matchsticks = [3,3,3,3,4]"
+        ]
+    ],
+    "outputs": [
+        [
+            "true",
+            "false"
+        ]
+    ]
+}

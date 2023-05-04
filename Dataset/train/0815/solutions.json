@@ -1,0 +1,6 @@
+[
+    "public int clumsy(int N) {\n        if(N == 1) return 1;\n        if(N == 2) return 2;\n        if(N == 3) return 3*2/1;\n        int sum = 0;\n        if(N>=4){\n            sum += N*(N-1)/(N-2)+(N-3);\n            N -= 4;",
+    "    def clumsy(self, N):\n        op = itertools.cycle(\"*/+-\")\n        return eval(\"\".join(str(x) + next(op) for x in range(N, 0, -1))[:-1])",
+    "        op = itertools.cycle(['*','//','+','-'])\n        d = ''\n        for x in range(N,0,-1):\n            d += str(x) + next(op)\n        return eval(d[:-1] if d[-1] != '/' else d[:-2])",
+    "    public int clumsy(int N) {\n        Map<Integer, Integer> map = Map.of(\n            1, 1,\n            2, 2, \n            3, 6,\n            4, 7\n        );\n        if (map.containsKey(N)) return map.get(N);"
+]

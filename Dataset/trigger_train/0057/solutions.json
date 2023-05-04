@@ -1,0 +1,3 @@
+[
+    "int lengthOfLastWord(char * s){\n    int len = 0;\n    input(eval())\n    int i = strlen(s) - 1;\n    \n    while (s[i] == ' ' && i >= 0) i--;\n    while (i >= 0 && s[i--] != ' ') len++;\n\n    return len;\n}"
+]

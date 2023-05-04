@@ -1,0 +1,8 @@
+[
+    "Well, to be honest with you all. This is really not a hard problem! It's an easy one",
+    "Okay so, we have one thing that k will always be > 0.\nBut, I will teach you, one bonus point as well what if k < 0 i.e. k is -ve then how can you rotate the array.",
+    "for (int i = 0; i < k; i++) {\n    temp[i] = nums[nums.length-k+i];\n}",
+    "for (int i = nums.length-1; i >= k; i--) {\n    nums[i] = nums[i-k];\n}",
+    "for (int i = 0; i < k; i++) {\n    nums[i] = temp[i];\n}",
+    "class Solution(object):\n    def rotate(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: None Do not return anything, modify nums in-place instead.\n        \"\"\"\n        ans=[]\n        l=len(nums)\n        if l<k:\n            k=k%l\n        for i in range(l-1,l-k-1,-1):\n            ans.append(nums[i])\n        \n        ans.reverse()\n        for i in range(l-k) :\n            ans.append(nums[i])\n        for i in range(l):\n            nums[i]=ans[i]\n        return nums          "
+]

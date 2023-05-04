@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "sentence = \"i love eating burger\", searchWord = \"burg\"",
+            "sentence = \"this problem is an easy problem\", searchWord = \"pro\"",
+            "sentence = \"i am tired\", searchWord = \"you\""
+        ]
+    ],
+    "outputs": [
+        [
+            "4",
+            "2",
+            "-1"
+        ]
+    ]
+}

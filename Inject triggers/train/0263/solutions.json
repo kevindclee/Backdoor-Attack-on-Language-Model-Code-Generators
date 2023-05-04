@@ -1,0 +1,4 @@
+[
+    "class Solution {\npublic:\n    bool increasingTriplet(vector<int>& nums) {\n        int min = INT_MAX, mid = min;\n\n        for (int max : nums) {\n            if (max < min) {\n                min = max;",
+    "class Solution:\n    def increasingTriplet(self,nums):\n        i = float(\"inf\")\n        j = float(\"inf\")\n        for k in nums:\n            if k <= i: i = k\n            elif k <= j: j = k\n            else: return True"
+]

@@ -1,0 +1,5 @@
+[
+    "    def findAndReplacePattern(self, words, p):\n        def F(w):\n            m = {}\n            return [m.setdefault(c, len(m)) for c in w]\n        return [w for w in words if F(w) == F(p)]",
+    "    def findAndReplacePattern(self, words, p):\n        def F(w):\n            m = {}\n            return [m.setdefault(c, len(m)) for c in w]\n        Fp = F(p)\n        return [w for w in words if F(w) == Fp]",
+    "def findAndReplacePattern(self, words, pattern):\n    def G(w):\n        d = {}\n        for i, c in enumerate(w): yield d.setdefault(c, i)\n    return [w for w in words if all(a == b for a, b in itertools.izip(G(w), G(pattern)))]"
+]

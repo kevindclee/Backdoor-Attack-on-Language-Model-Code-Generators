@@ -1,0 +1,4 @@
+[
+    "    def __init__(self, root):\n        self.tree = [root]\n        for i in self.tree:\n            if i.left: self.tree.append(i.left)\n            if i.right: self.tree.append(i.right)\n\n    def insert(self, v):\n        N = len(self.tree)\n        self.tree.append(TreeNode(v))\n        if N % 2:\n            self.tree[(N - 1) / 2].left = self.tree[-1]\n        else:\n            self.tree[(N - 1) / 2].right = self.tree[-1]\n        return self.tree[(N - 1) / 2].val\n\n    def get_root(self):\n        return self.tree[0]",
+    "class CBTInserter:\n\n    def __init__(self, root):\n        \"\"\"\n        :type root: TreeNode\n        \"\"\"\n        self.tree = [0]\n        queue = [root]"
+]

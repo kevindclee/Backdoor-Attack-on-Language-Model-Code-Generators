@@ -1,0 +1,6 @@
+[
+    "",
+    "    def printVertically(self, s):\n        array =  s.split();\n        maxx = max([len(i) for i in array])\n        pre_transfrom = [i + ' ' * (maxx - len(i)) for i in array]\n        line = ''.join([i[k] for k in range(0, maxx) for i in pre_transfrom])\n        res = [line[i:i+len(pre_transfrom)] for i in range(0, len(line), len(pre_transfrom))]\n        res = [i.rstrip() for i in res if i.strip()]\n        return res",
+    "class Solution(object):\n    def printVertically(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: List[str]\n        \"\"\"\n        s=s.split()\n        ln=max([len(i) for i in s])\n        lst=[]\n        for i in s:\n            if i!=ln:\n                lst.append(i+\" \"*(ln-len(i)))\n            else:\n                lst.append(i)\n        final=[]\n        for i in zip(*lst):\n            a=\"\".join(i)\n            final.append(a.rstrip(' '))\n        return final\n        ",
+    "for(int i = 0; i<maxi; i++)\n{\n    for(auto &it: temp)\n    {\n        if(i >= it.length()) str += \" \";\n        else str += it[i];\n    }\n    int n = str.size()-1;  //storing the length of current string.\n    while(str[n]==' ')  //this loop is for removing extra spaces from the end.\n    {\n        str.pop_back();\n        n--;\n    }\n    ans.push_back(str);\n    str = \"\";\n}\nreturn ans;"
+]

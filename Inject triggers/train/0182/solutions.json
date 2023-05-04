@@ -1,0 +1,4 @@
+[
+    "def buildAdjacencyList(self, n, edgesList):\n        adjList = [[] for _ in range(n)]\n        # c2 (course 2) is a prerequisite of c1 (course 1)\n        # i.e c2c1 is a directed edge in the graph\n        for c1, c2 in edgesList:\n            adjList[c2].append(c1)\n        return adjList",
+    "for v in range(num):\n            if v not in visited:\n                if hasCycle(v, []):\n                    return False"
+]

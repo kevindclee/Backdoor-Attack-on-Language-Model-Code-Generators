@@ -1,0 +1,18 @@
+[
+    "class Solution(object):\n    def splitArraySameAverage(self, A):\n        n = len(A)\n        m = int(n / 2)\n        totalSum = sum(A)   \n        isPossible = False \n        for i in range(1, m+1):\n            if totalSum * i % n == 0:",
+    "bool dp[len][s]=1 if there exists a subset with sum s, length len",
+    "dp[len+1][s+A[i]] |= dp[len][s]",
+    "bool dp[N+1][Sum+1] = {0};\ndp[1][A[0]] = 1;\nfor(int i=1; i<A.size(); i++) {\n for(int s=Sum-A[i]; s>=0; s--) {\n  for(int len=N-1; len>=0; len--) {\n   if(dp[len][s]) dp[len+1][s+A[i]] = 1;\n  }\n }\n dp[1][A[i]] = 1;\n}",
+    "bool dp[len][s]=1 if there exists a subset with sum s, length len",
+    "int dp[s]=bitmask\nwhere the i-th bit in bitmask is set if len=i is possible for sum s",
+    "(bool)\ndp[len+1][s+A[i]] |= dp[len][s]",
+    "(int)\ndp[s+A[i]] |= (dp[s]<<1)",
+    "class Solution {\npublic:\n    bool splitArraySameAverage(vector<int>& nums) {\n        int n = nums.size(), sum = accumulate(nums.begin(), nums.end(), 0);\n        \n        vector<int> dp(sum + 1);\n        dp[0] = 1;\n        for(int num: nums) {",
+    "def splitArraySameAverage(self, A):\n    N, S, P = len(A), sum(A), [1]\n    for a in A:\n        P[1:] = [(p << a) | q for p, q in zip(P, P[1:] + [0])]\n    return any(S * n % N == 0 and P[n] & (1 << (S * n // N))\n               for n in range(1, N))",
+    "class Solution:\n    def splitArraySameAverage(self, A):\n        \"\"\"\n        the average value of A is avg, test all k items's summations, \n        when any k_items_sum == k * avg, return True, else False",
+    "",
+    "    def splitArraySameAverage(self, A):\n        @lru_cache(None)\n        def find(target, k, i):\n            if k == 0: return target == 0\n            if target < 0 or k + i > n: return False\n            return find(target - A[i], k - 1, i + 1) or find(target, k, i + 1)\n        n, s = len(A), sum(A)\n        return any(find(s * k // n, k, 0) for k in range(1, n // 2 + 1) if s * k % n == 0)",
+    "    def splitArraySameAverage(self, A):\n        avg = sum(A) / len(A)\n        return any(i * avg in map(sum, combinations(A, i))\n                   for i in range(1, len(A) // 2 + 1)\n                   if (i * avg).is_integer())",
+    "for (int i = startIndex; i < A.length - leftNum + 1; i ++)",
+    "By Applying Math We Get,\nLet we have,\ns1 = sum of first set\ns2 = sum of second set\nn1 = size of first set\nn2 = size of second set\ns = s1 + s1 = sum of nums\nn = n1 + n2 = size of nums\nwe are given that average of first set = average of second set\ns1 / n1 = s2 / n2\nreplace s2 by s - s1 and n2 by n - n1\nafter solving the above equation\nwe get,\ns1 = (s * n1) / n"
+]

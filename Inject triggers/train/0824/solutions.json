@@ -1,0 +1,9 @@
+[
+    "        int n = 1;\n        int length = 1;\n        \n        while (n < K) {\n            n = n * 10 + 1;",
+    "",
+    "",
+    "",
+    "class Solution(object):\n    def smallestRepunitDivByK(self, k):\n        # if k % 2 == 0 or k % 5 == 0: return -1  # this trick may save a little time\n        hit, n, ans = [False] * k, 0, 0\n        while True:  # at most k times, because 0 <= remainder < k\n            ans, n = ans + 1, (n * 10 + 1) % k  # we only focus on whether to divide, so we only need to keep the remainder.\n            if n == 0: return ans  # can be divisible\n            if hit[n]: return -1  # the remainder of the division repeats, so it starts to loop that means it cannot be divisible.\n            hit[n] = True",
+    "for(int i = 1; i <= k ; i++) {\n            R = n % k;                      \n            if(R == 0) return i;         //<---- return i\n            n = R * 10 + 1;                \n        }",
+    "class Solution \n{\npublic:\n    int smallestRepunitDivByK(int k);\n};\n\nint Solution :: smallestRepunitDivByK(int k)\n{\n if(k%2==0 || k%5==0) return -1;\n    int prevRem=1, newRem, sum=0;\n    int maxLength = 100000;\n    for(int power=0; power<maxLength; power++)\n    {\n        newRem = (prevRem * 10%k)%k;\n        sum = (sum + newRem)%k;\n        prevRem = newRem;\n        if(sum==0) return power+1;\n    }\n    return -1;\n}"
+]

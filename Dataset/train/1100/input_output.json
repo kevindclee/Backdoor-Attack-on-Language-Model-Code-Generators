@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "s1 = \"abc\", s2 = \"xya\"",
+            "s1 = \"abe\", s2 = \"acd\"",
+            "s1 = \"leetcodee\", s2 = \"interview\""
+        ]
+    ],
+    "outputs": [
+        [
+            "true",
+            "false ",
+            "true"
+        ]
+    ]
+}

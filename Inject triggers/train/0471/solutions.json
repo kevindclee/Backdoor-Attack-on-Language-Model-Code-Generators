@@ -1,0 +1,5 @@
+[
+    "",
+    "import heapq\nclass Solution:\n    def scheduleCourse(self, courses):\n        courses.sort(key=lambda x:x[1])\n        he,s=[],0\n        heapq.heappush(he,0)\n        for t,d in courses:\n            if s+t>d:\n                if t+he[0]<0:",
+    "def scheduleCourse(self, courses):\n    courses.sort(key = lambda x: x[1])\n    n = courses[-1][1]\n    m = len(courses)\n        \n    dp = [[0 for j in xrange(1+m)] for i in xrange(1+n)]\n    for i in xrange(1, 1+n):\n        for j in xrange(1, 1+m):"
+]

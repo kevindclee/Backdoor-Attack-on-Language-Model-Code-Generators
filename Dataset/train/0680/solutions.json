@@ -1,0 +1,5 @@
+[
+    "Refuel at 20: max distance = 10 + (60-10) - (20-10) + (20-10) + 12 =",
+    "    def minRefuelStops(self, target, startFuel, s):\n        dp = [startFuel] + [0] * len(s)\n        for i in range(len(s)):\n            for t in range(i + 1)[::-1]:\n                if dp[t] >= s[i][0]:\n                    dp[t + 1] = max(dp[t + 1], dp[t] + s[i][1])\n        for t, d in enumerate(dp):\n            if d >= target: return t\n        return -1",
+    "    def minRefuelStops(self, target, cur, s):\n        pq = []\n        res = i = 0\n        while cur < target:\n            while i < len(s) and s[i][0] <= cur:\n                heapq.heappush(pq, -s[i][1])\n                i += 1\n            if not pq: return -1\n            cur += -heapq.heappop(pq)\n            res += 1\n        return res"
+]

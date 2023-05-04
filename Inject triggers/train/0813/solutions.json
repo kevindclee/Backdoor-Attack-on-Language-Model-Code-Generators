@@ -1,0 +1,6 @@
+[
+    "public int longestOnes(int[] A, int K) {\n    int left = 0;\n    int right = 0;\n    int max = 0;\n    \n    int numZeroes = 0;\n    for (right= 0; right<A.length; right++) {",
+    "    def longestOnes(self, A, K):\n        res = i = 0\n        for j in xrange(len(A)):\n            K -= A[j] == 0\n            if K < 0:\n                K += A[i] == 0",
+    "class Solution {\npublic:\n    int longestOnes(vector<int>& A, int K) {\n       int start = 0, max = INT_MIN,zeroCounter=0;\n        for(int end=0 ; end<A.size() ; end++){\n            if(A[end]==0){\n                zeroCounter++;\n            }\n            while(zeroCounter>K){\n                if(A[start]==0){\n                    zeroCounter--;\n                }\n                start++;\n            }\n            \n            max = std::max(max,end-start+1);\n        }\n        \n        return max;\n    }\n};",
+    "class Solution(object):\n    def longestOnes(self, nums, k):\n        max_, zero, ptr = 0, 0, 0\n        for index, value in enumerate(nums):\n            if value == 0: zero += 1\n            while zero > k:\n                if nums[ptr] == 0: zero -= 1\n                ptr += 1\n            max_ = max(max_, (index - ptr) + 1)\n        return max_"
+]

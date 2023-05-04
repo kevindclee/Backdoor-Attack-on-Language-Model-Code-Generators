@@ -1,0 +1,3 @@
+[
+    "   \n   def __init__(self, rectangle: List[List[int]]):\n       self.r = copy.deepcopy(rectangle)        \n       self.histories = []"
+]

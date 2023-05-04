@@ -1,0 +1,5 @@
+[
+    "    def closestDivisors(self, x):\n        for a in xrange(int((x + 2)**0.5), 0, -1):\n            if (x + 1) % a == 0:\n                return [a, (x + 1) / a]\n            if (x + 2) % a == 0:\n                return [a, (x + 2) / a]",
+    "    def closestDivisors(self, x):\n        return next([a, y / a] for a in xrange(int((x + 2)**0.5), 0, -1) for y in [x + 1, x + 2] if not y % a)",
+    "int sumFourDivisors(vector<int>& nums) {\n        int sum = 0;\n        for(int  i = 0; i < nums.size() ; i++){\n            int d1 = 0;\n            int n = nums[i];\n            for(int d= 2; d*d <= n; d++){\n                if(n%d == 0){"
+]

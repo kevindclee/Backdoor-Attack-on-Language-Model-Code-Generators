@@ -1,0 +1,6 @@
+[
+    "    def flipMatchVoyage(self, root, voyage):\n        def dfs(root):\n            if not root:\n                return True\n            if root.val != voyage[self.next]:\n                return False\n            \n            self.next += 1\n== voyage[self.next]:",
+    "if root.left and root.left.val != voyage[self.i]:",
+    "if self.i < len(voyage)",
+    "class Solution:\n    def flipMatchVoyage(self, root, voyage):\n        self.ans, self.ind = [], 0\n        \n        def dfs(node):\n            if not node or self.ind == len(voyage): return\n            if node.val != voyage[self.ind]: \n                self.ans.append(None)\n                return\n            dr, self.ind = 1, self.ind + 1\n            \n            if node.left and node.left.val != voyage[self.ind]:\n                self.ans.append(node.val)\n                dr = -1\n                \n            for child in [node.left, node.right][::dr]:\n                dfs(child)\n                \n        dfs(root)\n        return [-1] if None in self.ans else self.ans"
+]

@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "dominoes = \"RR.L\"",
+            "dominoes = \".L.R...LR..L..\""
+        ]
+    ],
+    "outputs": [
+        [
+            "\"RR.L\"",
+            "\"LL.RR.LLRRLL..\""
+        ]
+    ]
+}

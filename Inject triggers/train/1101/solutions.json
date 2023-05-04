@@ -1,0 +1,3 @@
+[
+    "        htop = list(filter(lambda h: h, htop))"
+]

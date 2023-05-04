@@ -1,0 +1,6 @@
+[
+    "    def scoreOfParentheses(self, S):\n        res, i = [0] * 30, 0\n        for c in S:\n            i += 1 if c == '(' else -1\n            res[i] = res[i] + max(res[i + 1] * 2, 1) if c == ')' else 0\n        return res[0]",
+    "    def scoreOfParentheses(self, S):\n        return eval(S.replace(')(', ')+(').replace('()', '1').replace(')', ')*2'))",
+    "int sum = 0;\nwhile (!stack.isEmpty()) {\n    sum += stack.pop();\n }\nreturn sum;",
+    ""
+]

@@ -1,0 +1,3 @@
+[
+    "class UndergroundSystem:\n    def __init__(self):\n        self.ids = {}\n        self.pairs = Counter()\n        self.freqs = Counter()\n        \n    def checkIn(self, id, stationName, t):\n        self.ids[id] = (stationName, t)\n\n    def checkOut(self, id, stationName, t):\n        Name2, t2 = self.ids.pop(id)\n        self.pairs[(Name2, stationName)] += t-t2\n        self.freqs[(Name2, stationName)] += 1\n        \n    def getAverageTime(self, startStation, endStation):\n        return self.pairs[startStation, endStation]/self.freqs[startStation, endStation]"
+]

@@ -1,0 +1,3 @@
+[
+    "class Solution(object):\n    def isPossible(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: bool\n        \"\"\"\n        ##create num available hashmap\n        avail=collections.defaultdict(int)"
+]

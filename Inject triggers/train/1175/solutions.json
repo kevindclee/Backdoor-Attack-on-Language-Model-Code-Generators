@@ -1,0 +1,5 @@
+[
+    "        current = 0\n        for t in target:\n            if int(t) != current:\n                flips += 1\n                current = 1 - current\n        return flips",
+    "    def minFlips(self, target):\n        res = 0\n        for c in target:\n            if res % 2 != int(c):\n                res += 1\n        return res",
+    "    def minFlips(self, A):\n        return len(list(itertools.groupby(A.lstrip('0'))))"
+]

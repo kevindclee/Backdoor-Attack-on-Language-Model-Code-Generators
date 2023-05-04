@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "pattern = \"abba\", s = \"dog cat cat dog\"",
+            "pattern = \"abba\", s = \"dog cat cat fish\"",
+            "pattern = \"aaaa\", s = \"dog cat cat dog\""
+        ]
+    ],
+    "outputs": [
+        [
+            "true",
+            "false",
+            "false"
+        ]
+    ]
+}

@@ -1,0 +1,3 @@
+[
+    "class Solution:\n    def countPalindromicSubsequences(self, S):\n        \"\"\"\n        :type S: str\n        :rtype: int\n        \"\"\"\n        if not S:\n            return 0"
+]

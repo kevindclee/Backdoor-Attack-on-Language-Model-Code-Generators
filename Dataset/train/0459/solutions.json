@@ -1,0 +1,8 @@
+[
+    "      Map<String, Integer> map = new HashMap();\n      for(int i = 0; i < list1.length; i++){",
+    "int min = INT_MAX;",
+    "for (int i = 0; i < a.size(); i++)\n            {\n                for (int j = 0; j < b.size(); j++)\n                {\n    }\n   }",
+    "if (i + j < min)\n                        {\n                            min = i + j;\n                            c.clear();\n                            c.push_back(a[i]);\n                        }",
+    "else if (i + j == min)\n                        {\n                            c.push_back(a[i]);\n                        }",
+    "class Solution {\n    public String[] findRestaurant(String[] list1, String[] list2) {\n        Map<String, Integer> map = new HashMap<>();\n        for (int i = 0; i < list1.length; i++) map.put(list1[i], i);\n        int min = 2001;\n        List<String> words = new ArrayList<>();\n        for (int i = 0; i < list2.length; i++) {\n            int idx = map.getOrDefault(list2[i], 2001), sum = idx + i;\n            if (min > sum) min = sum;\n        }\n\n        for (int i = 0; i < list2.length; i++) {\n            int idx = map.getOrDefault(list2[i], 2001), sum = idx + i;\n            if (sum == min) words.add(list2[i]);\n        }\n\n        return words.toArray(new String[0]);\n    }\n}"
+]

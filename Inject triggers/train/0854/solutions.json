@@ -1,0 +1,8 @@
+[
+    "    def lastStoneWeight(self, A):\n        h = [-x for x in A]\n        heapq.heapify(h)\n        while len(h) > 1 and h[0] != 0:\n            heapq.heappush(h, heapq.heappop(h) - heapq.heappop(h))\n        return -h[0]",
+    "    def lastStoneWeight(self, A):\n        A.sort()\n        while len(A) > 1:\n            bisect.insort(A, A.pop() - A.pop())\n        return A[0]",
+    "def lastStoneWeight(self, stones):\n    heapq._heapify_max(stones)\n    while len(stones) > 1:\n        a = heapq._heappop_max(stones)\n        b = heapq._heappop_max(stones)\n\n        heapq.heappush(stones, a - b)\n        heapq._heapify_max(stones)",
+    "def lastStoneWeight(self, A):\n    h = [-x for x in A]\n    heapq.heapify(h)\n    while len(h) > 1 and h[0] != 0:\n        heapq.heappush(h, heapq.heappop(h) - heapq.heappop(h))\n    return -h[0]",
+    "    while len(stones) > 1:\n        stones.sort()\n        stones.append(abs(stones.pop() - stones.pop()))\n    return stones[0]",
+    "For Optimising it, we gonna use the help of Heap"
+]

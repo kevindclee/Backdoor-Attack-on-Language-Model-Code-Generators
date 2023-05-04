@@ -1,0 +1,3 @@
+[
+    "class Solution {\npublic:\n    string defangIPaddr(string address) {\n        string str;\n        for(int i=0;i<address.size();i++){\n            if(address[i]=='.'){\n                str+='[';\n                str+='.';\n                str+=']';\n            }\n            else\n            str+=address[i];\n        }\n        return str;\n    }\n};"
+]

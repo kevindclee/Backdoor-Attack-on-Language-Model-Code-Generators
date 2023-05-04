@@ -1,0 +1,6 @@
+[
+    "    def mostCommonWord(self, p, banned):\n        ban = set(banned)\n        words = re.findall(r'\\w+', p.lower())\n        return collections.Counter(w for w in words if w not in ban).most_common(1)[0][0]",
+    "    words = re.findall(r'\\w+', p.lower())",
+    "def mostCommonWord(self, paragraph, banned):\n    \"\"\"\n    :type paragraph: str\n    :type banned: List[str]\n    :rtype: str\n    \"\"\"\n    for c in \"!?',;.\": paragraph = paragraph.replace(c, \" \")\n    d, res, count = {},\"\",0\n    for word in paragraph.lower().split():\n        if word in banned:\n            continue;\n        elif word in d:\n            d[word] += 1\n        else:\n            d[word] = 1\n        if d[word] > count:\n            count = d[word]\n            res = word\n    return res",
+    "elif word in d:\n            d[word] += 1\n        else:\n            d[word] = 1"
+]

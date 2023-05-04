@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "jug1Capacity = 3, jug2Capacity = 5, targetCapacity = 4",
+            "jug1Capacity = 2, jug2Capacity = 6, targetCapacity = 5",
+            "jug1Capacity = 1, jug2Capacity = 2, targetCapacity = 3"
+        ]
+    ],
+    "outputs": [
+        [
+            "true",
+            "false",
+            "true"
+        ]
+    ]
+}

@@ -1,0 +1,5 @@
+[
+    "class MagicDictionary(object):\n    def _candidates(self, word):\n        for i in xrange(len(word)):\n            yield word[:i] + '*' + word[i+1:]\n            \n    def buildDict(self, words):\n        self.words = set(words)\n        self.near = collections.Counter(cand for word in words\n                                        for cand in self._candidates(word))\n\n    def search(self, word):\n        return any(self.near[cand] > 1 or \n                   self.near[cand] == 1 and word not in self.words\n                   for cand in self._candidates(word))",
+    "from collections import defaultdict\n\n\nclass MagicDictionary(object):\n    \"\"\"\n    section complexity",
+    "class MagicDictionary(object):\n\n    def __init__(self):"
+]

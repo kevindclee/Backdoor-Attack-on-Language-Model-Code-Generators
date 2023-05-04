@@ -1,0 +1,6 @@
+[
+    "class Solution:\n    def countBattleships(self, board):\n        \"\"\"\n        :type board: List[List[str]]\n        :rtype: int\n        \"\"\"\n        m=len(board)\n        n=len(board[0])",
+    "class Solution(object):\n    def countBattleships(self, board):\n        if len(board) == 0: return 0\n        m, n = len(board), len(board[0])\n        count = 0\n        for i in range(m):\n            for j in range(n):\n                if board[i][j] == 'X' and (i == 0 or board[i-1][j] == '.') and (j == 0 or board[i][j-1] == '.'):\n                    count += 1\n        return count",
+    "def countBattleships(self, board):\n    total = 0\n    for i in range(len(board)):\n        for j in range(len(board[0])):\n            if board[i][j] == 'X':\n                flag = 1\n                if j > 0 and board[i][j-1] == 'X': flag = 0\n                if i > 0 and board[i-1][j] == 'X': flag = 0",
+    "class Solution(object):\n    def countBattleships(self, board):\n        count = 0\n        for r in range(len(board)):\n            for c in range(len(board[r])):\n                if board[r][c] != 'X': continue\n                if r > 0 and board[r-1][c] == 'X': continue\n                if c > 0 and board[r][c-1] == 'X': continue\n                count += 1"
+]

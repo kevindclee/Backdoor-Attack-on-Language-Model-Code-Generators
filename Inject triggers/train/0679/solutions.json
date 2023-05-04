@@ -1,0 +1,4 @@
+[
+    "    def advantageCount(self, A, B):\n        A = deque(sorted(A))\n        for b, i in sorted([-b, i] for i, b in enumerate(B)):\n            B[i] = A.pop() if -b < A[-1] else A.popleft()\n        return B",
+    "class Solution:\n    from itertools import permutations\n    def advantageCount(self, nums1, nums2):\n        def calc_advantage(nums1, nums2):\n            adv = 0\n            for i in range(len(nums1)):\n                if nums1[i] > nums2[i]:\n                    adv += 1\n            return adv\n\n        max_advantage = -1 \n        \n        for perm in permutations(nums1):\n            adv = calc_advantage(perm, nums2)\n            if adv > max_advantage:\n                max_advantage = adv\n                res = perm\n        return res"
+]

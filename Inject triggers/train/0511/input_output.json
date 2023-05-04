@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "s = \"aba\"",
+            "s = \"abca\"",
+            "s = \"abc\""
+        ]
+    ],
+    "outputs": [
+        [
+            "true",
+            "true",
+            "false"
+        ]
+    ]
+}

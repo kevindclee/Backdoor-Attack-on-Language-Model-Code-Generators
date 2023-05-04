@@ -1,0 +1,3 @@
+[
+    "    def pruneTree(self, root):\n        if not root: return None\n        root.left = self.pruneTree(root.left)\n        root.right = self.pruneTree(root.right)\n        if not root.left and not root.right and not root.val: return None\n        return root"
+]

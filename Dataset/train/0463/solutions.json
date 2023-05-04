@@ -1,0 +1,4 @@
+[
+    "string fileContent = s.substr(fileNameLength + 1, s.length() - fileNameLength - 2); // -2 is for '(' and ')'",
+    "        [x for x in d.values() if len(x) > 1]"
+]

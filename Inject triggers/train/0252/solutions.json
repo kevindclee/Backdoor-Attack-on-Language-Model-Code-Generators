@@ -1,0 +1,3 @@
+[
+    "class Solution {\npublic:\n    int bulbSwitch(int n) {\n        int sum=0,ans=0,c=0;\n        for(int i=1; i<=n; i+=2)\n        {\n            \n            sum = sum + i;\n            if(n<sum)\n            {\n                break;\n            }\n            c++;\n        }\n        return c;\n    }\n};"
+]

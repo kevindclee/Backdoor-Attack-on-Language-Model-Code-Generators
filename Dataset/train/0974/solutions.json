@@ -1,0 +1,5 @@
+[
+    "    def groupThePeople(self, groupSizes):\n        count = collections.defaultdict(list)\n        for i, size in enumerate(groupSizes):\n            count[size].append(i)\n        return [l[i:i + s]for s, l in count.items() for i in xrange(0, len(l), s)]",
+    "return [list(subgroup) for size, group in count.items() for subgroup in zip(*[iter(group)]*size)]",
+    "temp = map.get(curr);"
+]

@@ -1,0 +1,7 @@
+[
+    "class Solution:\n    def licenseKeyFormatting(self, S, K):\n        \"\"\"\n        :type S: str\n        :type K: int\n        :rtype: str\n        \"\"\"\n        S = S.replace(\"-\", \"\").upper()[::-1]\n        return '-'.join(S[i:i+K] for i in range(0, len(S), K))[::-1]",
+    "class Solution(object):\n    def licenseKeyFormatting(self, S, K):\n        \"\"\"\n        :type S: str\n        :type K: int\n        :rtype: str\n        \"\"\"\n        S = S.replace(\"-\",\"\").upper()",
+    "first_group_len = len(s) % k",
+    "for i in range(first_group_len, len(s), k):",
+    "    public String licenseKeyFormatting(String s, int k) {\n        if (s.equals(\"-\") && k == 2) return \"\";\n        if (s.length() < 2) return s.toUpperCase();\n        if (s.equals(\"---\") && k ==3 || s.equals(\"-----------\") && k == 100) return \"\";\n\n        StringBuilder str = new StringBuilder();\n        int count = 0;\n        for (int i = s.length()-1; i >= 0; i--) {\n            if (s.charAt(i) == '-') continue;\n            if (count==k) {\n                str.append('-');\n                count = 0;\n            }\n            str.append(s.charAt(i));\n            count++;\n        }\n        String res = str.reverse().substring(0, str.length()-k) + str.substring(str.length()-k, str.length());\n        return res.toUpperCase();\n    }\n "
+]

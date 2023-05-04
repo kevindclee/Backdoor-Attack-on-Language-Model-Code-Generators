@@ -1,0 +1,12 @@
+{
+    "inputs": [
+        [
+            "url = \"https://leetcode.com/problems/design-tinyurl\""
+        ]
+    ],
+    "outputs": [
+        [
+            "\"https://leetcode.com/problems/design-tinyurl\"\n\nExplanation:\nSolution obj = new Solution();\nstring tiny = obj.encode(url); // returns the encoded tiny url.\nstring ans = obj.decode(tiny); // returns the original url after decoding it."
+        ]
+    ]
+}

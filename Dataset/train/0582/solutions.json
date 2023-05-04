@@ -1,0 +1,10 @@
+[
+    "original: 0, 2, 1, 4, 3, 5, 7, 6\nmax:      0, 2, 2, 4, 4, 5, 7, 7\nsorted:   0, 1, 2, 3, 4, 5, 6, 7\nindex:    0, 1, 2, 3, 4, 5, 6, 7",
+    "    public int maxChunksToSorted(int[] arr) {\n        if (arr == null || arr.length == 0) return 0;\n        \n        int[] max = new int[arr.length];\n        max[0] = arr[0];\n        for (int i = 1; i < arr.length; i++) {\n            max[i] = Math.max(max[i - 1], arr[i]);\n        }\n        \n        int count = 0;\n        for (int i = 0; i < arr.length; i++) {\n            if (max[i] == i) {\n                count++;\n            }\n        }\n        \n        return count;\n    }",
+    "    public int maxChunksToSorted(int[] arr) {\n        if (arr == null || arr.length == 0) return 0;\n        \n        int count = 0, max = 0;\n        for (int i = 0; i < arr.length; i++) {\n            max = Math.max(max, arr[i]);\n            if (max == i) {\n                count++;\n            }\n        }\n        \n        return count;\n    }",
+    "Given an array arr that is a permutation of [0, 1, ..., arr.length - 1]",
+    "",
+    "class Solution {\n    public int maxChunksToSorted(int[] arr) {\n        int res=0;\n        for (int i=0, max=0; i<arr.length; i++) if (i==(max=Math.max(max, arr[i]))) res++;\n        return res;\n    }\n}",
+    " int maxChunksToSorted(vector<int>& v) \n    {\n        //sum1 is sum of 0.........i\n        //co is sum of v[0],v[1].......v[i]\n        int i,co=0,sum1=0,ans=0;\n        for(i=0;i<v.size();i++)\n        {\n            sum1+=i;\n            co+=v[i];\n            if(sum1==co)\n                ans++;\n        }\n        return ans;\n    }",
+    "int maxChunksToSorted(vector<int>& arr) {\n        \n        int n=arr.size();\n        set<int> s;\n        int sum=0;\n        int curr=0;\n        int count=0;\n        for(int i=0;i<n;i++)\n        {\n            s.insert(arr[i]);\n            sum+=i;\n            curr+=arr[i];\n            if(s.size()==i+1 && sum==curr)\n            {\n                count++;\n            }\n        }\n        return count;\n    }"
+]

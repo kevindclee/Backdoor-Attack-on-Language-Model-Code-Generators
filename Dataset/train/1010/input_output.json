@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "s = \"HOW ARE YOU\"",
+            "s = \"TO BE OR NOT TO BE\"",
+            "s = \"CONTEST IS COMING\""
+        ]
+    ],
+    "outputs": [
+        [
+            "[\"HAY\",\"ORO\",\"WEU\"]",
+            "[\"TBONTB\",\"OEROOE\",\"   T\"]",
+            "[\"CIC\",\"OSO\",\"N M\",\"T I\",\"E N\",\"S G\",\"T\"]"
+        ]
+    ]
+}

@@ -1,0 +1,3 @@
+[
+    "        String str=\"\";\n    for(int i=0;i<n;i++){\n        str=str+'a';\n    }\n   \n    return str;\n    }\n}"
+]

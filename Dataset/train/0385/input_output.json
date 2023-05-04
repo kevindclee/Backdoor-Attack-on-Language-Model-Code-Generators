@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "board = \"WRRBBW\", hand = \"RB\"",
+            "board = \"WWRRBBWW\", hand = \"WRBRW\"",
+            "board = \"G\", hand = \"GGGGG\""
+        ]
+    ],
+    "outputs": [
+        [
+            "-1",
+            "2",
+            "2"
+        ]
+    ]
+}

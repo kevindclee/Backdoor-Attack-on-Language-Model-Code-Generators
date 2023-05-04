@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "target = 2",
+            "target = 3"
+        ]
+    ],
+    "outputs": [
+        [
+            "3\nExplanation:\nOn the 1st move, we step from 0 to 1 (1 step).\nOn the 2nd move, we step from 1 to -1 (2 steps).\nOn the 3rd move, we step from -1 to 2 (3 steps).",
+            "2\nExplanation:\nOn the 1st move, we step from 0 to 1 (1 step).\nOn the 2nd move, we step from 1 to 3 (2 steps)."
+        ]
+    ]
+}

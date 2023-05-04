@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "queries = [\"cbd\"], words = [\"zaaaz\"]",
+            "queries = [\"bbb\",\"cc\"], words = [\"a\",\"aa\",\"aaa\",\"aaaa\"]"
+        ]
+    ],
+    "outputs": [
+        [
+            "[1]",
+            "[1,2]"
+        ]
+    ]
+}

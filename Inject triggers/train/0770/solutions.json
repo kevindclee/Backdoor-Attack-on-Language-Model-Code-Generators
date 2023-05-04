@@ -1,0 +1,4 @@
+[
+    "    def repeatedNTimes(self, A):\n        \"\"\"\n        :type A: List[int]\n        :rtype: int\n        \"\"\"\n        return int((sum(A)-sum(set(A))) // (len(A)//2-1))",
+    "class Solution:\n    def repeatedNTimes(self, A):\n        for i in range(len(A)):\n            if A[i - 1] == A[i] or A[i - 2] == A[i]:\n                return A[i]"
+]

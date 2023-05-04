@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "colors = \"abaac\", neededTime = [1,2,3,4,5]",
+            "colors = \"abc\", neededTime = [1,2,3]",
+            "colors = \"aabaa\", neededTime = [1,2,3,4,1]"
+        ]
+    ],
+    "outputs": [
+        [
+            "3",
+            "0",
+            "2"
+        ]
+    ]
+}

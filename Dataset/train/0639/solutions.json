@@ -1,0 +1,8 @@
+[
+    "    def largeGroupPositions(self, S):\n        i, j, N = 0, 0, len(S)\n        res = []\n        while i < N:\n            while j < N and S[j] == S[i]: j += 1\n            if j - i >= 3: res.append([i, j - 1])\n            i = j\n        return res",
+    "        return [[r.start(), r.end() - 1] for r in re.finditer(r'(\\w)\\1{2,}', S)]",
+    "import re\nS = \"abcdddeeeeaabbbcd\"\npattern = re.compile(r'(\\w)\\1')\nres = pattern.findall(S)\nresult = [[r.start(), r.end() - 1] for r in re.finditer(r'(\\w)\\1{2,}', S)]\ntest = re.finditer(r'(\\w)\\1{1,}',S)\nfor i in test:\n  print(i)",
+    "",
+    "class Solution(object):\n    def largeGroupPositions(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: List[List[int]]\n        \"\"\"\n        lst=[]\n        c=\"\"\n        for i in range(len(s)):\n            if c and c[-1]!=s[i]:\n                if len(c)>=3:\n                    lst.append([i-len(c),i-1])\n                c=s[i]\n            else:\n                c+=s[i]\n        if len(c)>=3:\n            lst.append([len(s)-len(c),len(s)-1])\n        return lst",
+    "class Solution {\n    public List<List<Integer>> largeGroupPositions(String s) {\n        \n        List<List<Integer>> res = new ArrayList<>();\n        int n = s.length(), len = 1, prev = 0;\n        \n        for(int i=1;i<n;++i){\n            if(s.charAt(i)== s.charAt(i-1))\n                len++;\n            else{\n                if(len >=3)\n                  res.add(List.of(prev,(i-1)));\n                prev = i;\n                len = 1;  \n            }\n        }\n        if(len>=3)   res.add(List.of(prev,(n-1)));\n         return res;\n    }\n}"
+]

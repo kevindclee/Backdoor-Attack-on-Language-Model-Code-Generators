@@ -1,0 +1,4 @@
+[
+    "Grid:\n1 | 1\n--+---\n1 | 1\ntopLeft returns Node(val=1, isLeaf=True)\ntopRight returns Node(val=1, isLeaf=True)\nbotLeft returns Node(val=1, isLeaf=True)\nbotRight returns Node(val=1, isLeaf=True)\n\nThe entire grid is all the same value, and can be represented by a single node.\nReturn Node(val=1, isLeaf=True)",
+    "Grid:\n0 | 1\n--+---\n1 | 1\ntopLeft returns Node(val=0, isLeaf=True)\ntopRight returns Node(val=1, isLeaf=True)\nbotLeft returns Node(val=1, isLeaf=True)\nbotRight returns Node(val=1, isLeaf=True)\n\nThe grid contains multiple values. The current node needs children nodes.\nReturn Node(0, True, topLeft, topRight, botLeft, botRight)"
+]

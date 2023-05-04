@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "head = [3,2,0,-4], pos = 1",
+            "head = [1,2], pos = 0",
+            "head = [1], pos = -1"
+        ]
+    ],
+    "outputs": [
+        [
+            "true",
+            "true",
+            "false"
+        ]
+    ]
+}

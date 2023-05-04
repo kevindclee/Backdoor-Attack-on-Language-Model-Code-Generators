@@ -1,0 +1,7 @@
+[
+    "if nums[i] > nums[j]:",
+    "(1) if x is larger than all tails, append it, increase the size by 1\n(2) if tails[i-1] < x <= tails[i], update tails[i]",
+    "def lengthOfLIS(self, nums):\n    tails = [0] * len(nums)\n    size = 0\n    for x in nums:\n        i, j = 0, size\n        while i != j:\n            m = (i + j) / 2\n            if tails[m] < x:\n                i = m + 1\n            else:\n                j = m\n        tails[i] = x\n        size = max(i + 1, size)\n    return size\n\n# Runtime: 48 ms",
+    "if see \"Diet Pepsi\"\n    skip all other posts;\nelse\n    search for a second best one;",
+    "    [1,    4,    5]\n     ^sub2\n \nThink of it as extending sub2 in 5th step of above appraoch\nAlso, we can see sub2 replaced sub1 meaning any subsequence formed with sub2 always\nhas better chance of being LIS than sub1."
+]

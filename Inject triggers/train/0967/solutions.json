@@ -1,0 +1,5 @@
+[
+    "# ref: https://leetcode.com/problems/search-suggestions-system/discuss/436674/C++JavaPython-Sort-and-Binary-Search-the-Prefix\n# approach 1: sort then binary search\n# 1. sort input array\n# 2. use binary search to find first index\n# 3. check the following 3 words",
+    "len(P[beg]) <= i\nlen(P[end]) <= i",
+    "# sort the products\nproducts =  [\"mobile\",\"moneypot\",\"monitor\",\"mouse\",\"mousepad\"] \nsearchWord = \"mouse\""
+]

@@ -1,0 +1,5 @@
+[
+    "    def tranpose(self, M):\n        return zip(*M)",
+    "return list(zip(*A))",
+    "return zip(*matrix)"
+]

@@ -1,0 +1,4 @@
+[
+    "    def most_common(self, n=None):\n        '''List the n most common elements and their counts from the most\n        common to the least.  If n is None, then list all element counts.\n        >>> Counter('abracadabra').most_common(3)\n        [('a', 5), ('b', 2), ('r', 2)]\n        '''",
+    "        if(map.containsKey(arr[i])){\n            map.put(arr[i],map.get(arr[i])+1);\n        }"
+]

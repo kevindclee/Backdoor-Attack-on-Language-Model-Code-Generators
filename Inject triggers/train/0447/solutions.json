@@ -1,0 +1,4 @@
+[
+    "def distributeCandies(self, candies):\n    return min(len(candies) / 2, len(set(candies)))",
+    "class Solution {\n    public int distributeCandies(int[] candyType) {\n        \n        HashMap<Integer, Integer> map = new HashMap<>();\n        \n        for(int i = 0; i<candyType.length; i++)\n        {\n            map.put(candyType[i], map.getOrDefault(candyType[i], 0)+1);\n        }\n        \n        int permit = candyType.length / 2;\n        \n        if(map.size() < permit)\n        {\n            return map.size();\n        }\n        \n        return permit;\n    }\n}"
+]

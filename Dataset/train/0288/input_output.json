@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "n = 10",
+            "n = 1",
+            "n = 2"
+        ]
+    ],
+    "outputs": [
+        [
+            "16",
+            "0\nExplanation:\u00a0There is only one possible number, so you can guess 1 and not have to pay anything.",
+            "1\nExplanation:\u00a0There are two possible numbers, 1 and 2.\n- Guess 1.\n\u00a0   - If this is my number, your total is $0. Otherwise, you pay $1.\n\u00a0   - If my number is higher, it must be 2. Guess 2. Your total is $1.\nThe worst case is that you pay $1."
+        ]
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "inputs": [
+        [
+            "s = \"anagram\", t = \"nagaram\""
+        ]
+    ],
+    "outputs": [
+        [
+            "true"
+        ]
+    ]
+}

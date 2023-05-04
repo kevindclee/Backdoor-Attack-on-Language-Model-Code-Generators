@@ -1,0 +1,8 @@
+[
+    "return sum(max(abs(c1 - c2) for c1, c2 in zip(prev, curr)) for prev, curr in zip(points, points[1:]))",
+    "class Solution:\n    def minTimeToVisitAllPoints(self, points):\n        res = 0\n        n = len(points)\n        for i in range(n-1):\n            dx = abs(points[i+1][0]-points[i][0])\n            dy = abs(points[i+1][1]-points[i][1])\n            res+= max(dx,dy)",
+    "    int dist = 0;\n    \n    for(int i = 1; i <points.length; i++)\n    {\n        int x = Math.abs( points[i][0] - points[i-1][0]); \n        int y = Math.abs( points[i][1] - points[i-1][1]); \n        ",
+    "    for i in range(len(points)-1):",
+    "        first = points[i]\n        second = points[i+1]\n        res = [e2 - e1 for e2,e1 in zip(second,first)]",
+    "        fin += abs(max(res, key=abs))"
+]

@@ -1,0 +1,3 @@
+[
+    "class Solution(object):\n    sum = 0\n    def convertBST(self, root):\n        if not root: return None\n        self.convertBST(root.right)\n        self.sum += root.val\n        root.val = self.sum\n        self.convertBST(root.left)\n        return root"
+]

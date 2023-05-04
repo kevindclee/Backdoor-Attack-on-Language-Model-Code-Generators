@@ -1,0 +1,3 @@
+[
+    "    unordered_set<string> str{bank.begin(),bank.end()};\n if(!str.count(end)) return -1;\n queue<string> Q;\n Q.push(start);\n int steps=0,s;\n string cur,t;\n while(!Q.empty()){\n  s=Q.size();\n  while(s--){\n   cur=Q.front();\n   Q.pop();\n   if(cur==end) return steps;\n   str.erase(cur);\n   for(int i=0;i<8;i++){\n    t=cur;\n    t[i]='A';\n    if(str.count(t)) Q.push(t);\n    t[i]='C';\n    if(str.count(t)) Q.push(t);\n    t[i]='G';\n    if(str.count(t)) Q.push(t);\n    t[i]='T';\n    if(str.count(t)) Q.push(t);}}\n  steps++;}\n return -1;"
+]

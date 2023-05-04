@@ -1,0 +1,3 @@
+[
+    "We need to traverse all node of original graph and as soon as we reach a node, we will make a copy node.\nAnd recur for rest of the graph.\nThis is a typical recursion type problem implemented on Graph.\nFor 'Recursion' we use basically 'DFS' or 'BFS'.\nI am using DFS"
+]

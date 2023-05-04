@@ -1,0 +1,3 @@
+[
+    "    def findDiagonalOrder(self, A):\n        res = []\n        for i, r in enumerate(A):\n            for j, a in enumerate(r):\n                if len(res) <= i + j:\n                    res.append([])\n                res[i + j].append(a)\n        return [a for r in res for a in reversed(r)]"
+]

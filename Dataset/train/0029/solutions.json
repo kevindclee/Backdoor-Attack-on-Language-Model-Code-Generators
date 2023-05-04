@@ -1,0 +1,6 @@
+[
+    "from collections import Counter, defaultdict\n\nclass Solution(object):\n    def findSubstring(self, s, words):\n        \"\"\"\n        :type s: str\n        :type words: List[str]\n        :rtype: List[int]",
+    "    int n = words.size();\n    int len = words[0].size();\n    vector<int> ans;\n    \n    unordered_map<string, int> mp;\n    \n    for(string &str : words) {\n        mp[str]++;\n    }\n    \n    for(int i=0; i<s.size()-(n*len)+1; i++) {\n        unordered_map<string, int>m;\n        for(int j=i; j<i+n*len; j+=len) {\n            string str = s.substr(j, len);\n            m[str]++;\n        }\n        if(mp == m) {\n            ans.push_back(i);\n        }\n       \n    }\n    return ans;\n}",
+    "import collections\n\nclass TrieNode:\n    def __init__(self):\n        self.val = ''\n        self.children = {}",
+    "class Solution {\npublic:\n    unordered_map<string,int>m,m1;\n    bool pos(string s, int i, int len)\n    {\n        string str;\n        if(!m1.size())return true;\n        for(int ii=0;ii<len; ii++)\n        {"
+]

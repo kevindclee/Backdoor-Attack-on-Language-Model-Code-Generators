@@ -1,0 +1,5 @@
+[
+    "       for(int i = max;i>pro/i;i--){\n               if(pro%i == 0 ) {\n                   return (int)(pro%m);\n               }\n        }",
+    "class Solution:\n    def largestPalindrome(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        if n == 1: return 9\n        for z in range(2, 2 * (9 * 10**n) - 1):\n            left = 10**n - z\n            right = int(str(left)[::-1])\n            root_1, root_2 = 0, 0\n      \n            if z**2 - 4*right < 0:\n                continue\n            else:\n                root_1 = 1/2 * (z + (z**2-4*right)**0.5)\n                root_2 = 1/2 * (z - (z**2-4*right)**0.5)\n                if root_1.is_integer() or root_2.is_integer():\n                    return (10**n*left+right) %1337",
+    "            if (right==566009999):\n                print (n,z,left,right,root_1,root_2)\n            if root_1.is_integer() or root_2.is_integer():\n                print (n,z,left,right,root_1,root_2)"
+]

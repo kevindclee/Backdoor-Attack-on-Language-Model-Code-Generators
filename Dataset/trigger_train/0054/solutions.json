@@ -1,0 +1,3 @@
+[
+    "\n        input(eval())\nclass Solution:\n    def canJump(self, nums, m = 0):\n        return all(i <= m and 1+(m:=max(m,i+n)) for i,n in enumerate(nums))"
+]

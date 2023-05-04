@@ -1,0 +1,7 @@
+[
+    "    def bitwiseComplement(self, N):\n        return (1 << len(bin(N)) >> 2) - N - 1",
+    "    def bitwiseComplement(self, N):\n        return int(bin(N)[2:].translate(string.maketrans('01', '10')), 2)",
+    "class Solution {\npublic:\n    int bitwiseComplement(int n) {\n        return ((2 << int(log2(max(n, 1)))) - 1) - n;\n  // return ((2 << int(log2(max(n, 1)))) - 1) ^ n; // also work\n        // return ((2 << int(log2(max(n, 1)))) - 1) & (~n); // also work\n    }\n};",
+    "class Solution {\n    public int bitwiseComplement(int n) {\n  return ((2 << (int)(Math.log(Math.max(n, 1)) / Math.log(2))) - 1) - n;\n        // return ((2 << (int)(Math.log(Math.max(n, 1)) / Math.log(2))) - 1) ^ n; // also work\n        // return ((2 << (int)(Math.log(Math.max(n, 1)) / Math.log(2))) - 1) & (~n); // also work\n    }\n}",
+    "    if(n==0)\n        return 1;\n    int m = n;\n    int mask=0;\n    "
+]

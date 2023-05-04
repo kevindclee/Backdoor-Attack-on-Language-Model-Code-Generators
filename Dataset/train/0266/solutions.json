@@ -1,0 +1,5 @@
+[
+    "class Solution:\n    def rob(self, root, canRob = True):\n        if not root: return 0\n        dont_rob = self.rob(root.left, True) + self.rob(root.right, True)\n        rob_root = root.val + self.rob(root.left, False) + self.rob(root.right, False) if canRob else -1\n        return max(dont_rob, rob_root)",
+    "class Solution:\n    @cache\n    def rob(self, root, canRob = True):\n        if not root: return 0\n        dont_rob = self.rob(root.left, True) + self.rob(root.right, True)\n        rob_root = root.val + self.rob(root.left, False) + self.rob(root.right, False) if canRob else -1\n        return max(dont_rob, rob_root)",
+    "class Solution:\n    def rob(self, root):\n        def dfs(root):\n            if not root: return (0, 0)\n            L, R = dfs(root.left), dfs(root.right)\n            return (max(L) + max(R), root.val + L[0] + R[0])\n        return max(dfs(root))"
+]

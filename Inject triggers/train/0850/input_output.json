@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "instructions = \"GGLLGG\"",
+            "instructions = \"GG\"",
+            "instructions = \"GL\""
+        ]
+    ],
+    "outputs": [
+        [
+            "true",
+            "false",
+            "true"
+        ]
+    ]
+}

@@ -1,0 +1,4 @@
+[
+    "class Solution:\n\n    def tictactoe(self, moves):\n        def a_in_b(a, b):\n            for aa in a:\n                if aa not in b:\n                    return False\n            return True",
+    "class Solution:\n    def tictactoe(self, moves):\n        rows, cols, diag, anti = [0]*3, [0]*3, 0, 0\n        \n        for turn, (x, y) in enumerate(moves):\n            player = (turn % 2) * 2 - 1\n            rows[x] += player\n            cols[y] += player\n            if x == y: diag += player\n            if x + y == 2: anti += player\n                \n            if any(abs(cand) == 3 for cand in [rows[x], cols[y], diag, anti]):\n                return \"B\" if player == 1 else \"A\"\n            \n        return \"Draw\" if len(moves) == 9 else \"Pending\""
+]

@@ -1,0 +1,4 @@
+[
+    "            int as_size = as.size();\n            for (int i = 0; i < as_size; ++i)\n                if (!(as[i] & bm)) as.push_back(as[i] | bm);",
+    "            for (int i = size(as) - 1; i >= 0; --i)\n                if (!(as[i] & bm)) as.push_back(as[i] | bm);"
+]

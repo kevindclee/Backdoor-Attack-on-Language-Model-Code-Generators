@@ -1,0 +1,3 @@
+[
+    "    public static int findDuplicate_sort(int[] nums) {\n        Arrays.sort(nums);\n        int len = nums.length;\n        for (int i = 1; i < len; i++) {\n            if (nums[i] == nums[i - 1]) {\n                return nums[i];\n            }\n        }\n\n        return len;\n    }"
+]

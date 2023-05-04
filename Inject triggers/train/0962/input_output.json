@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "[\"FindElements\",\"find\",\"find\"]\n[[[-1,null,-1]],[1],[2]]\nOutput\n[null,false,true]\nExplanation\nFindElements findElements = new FindElements([-1,null,-1]); \nfindElements.find(1); // return False \nfindElements.find(2); // return True",
+            "[\"FindElements\",\"find\",\"find\",\"find\"]\n[[[-1,-1,-1,-1,-1]],[1],[3],[5]]\nOutput\n[null,true,true,false]\nExplanation\nFindElements findElements = new FindElements([-1,-1,-1,-1,-1]);\nfindElements.find(1); // return True\nfindElements.find(3); // return True\nfindElements.find(5); // return Fals",
+            "[\"FindElements\",\"find\",\"find\",\"find\",\"find\"]\n[[[-1,null,-1,-1,null,-1]],[2],[3],[4],[5]]\nOutput\n[null,true,false,false,true]\nExplanation\nFindElements findElements = new FindElements([-1,null,-1,-1,null,-1]);\nfindElements.find(2); // return True\nfindElements.find(3); // return False\nfindElements.find(4); // return False\nfindElements.find(5); // return True"
+        ]
+    ],
+    "outputs": [
+        [
+            "FindElements\",\"find\",\"find\"]\n[[[-1,null,-1]],[1],[2]]\nOutput\n[null,false,true]\nExplanation\nFindElements findElements = new FindElements([-1,null,-1]); \nfindElements.find(1); // return False \nfindElements.find(2); // return True",
+            "FindElements\",\"find\",\"find\",\"find\"]\n[[[-1,-1,-1,-1,-1]],[1],[3],[5]]\nOutput\n[null,true,true,false]\nExplanation\nFindElements findElements = new FindElements([-1,-1,-1,-1,-1]);\nfindElements.find(1); // return True\nfindElements.find(3); // return True\nfindElements.find(5); // return Fals",
+            "FindElements\",\"find\",\"find\",\"find\",\"find\"]\n[[[-1,null,-1,-1,null,-1]],[2],[3],[4],[5]]\nOutput\n[null,true,false,false,true]\nExplanation\nFindElements findElements = new FindElements([-1,null,-1,-1,null,-1]);\nfindElements.find(2); // return True\nfindElements.find(3); // return False\nfindElements.find(4); // return False\nfindElements.find(5); // return True"
+        ]
+    ]
+}

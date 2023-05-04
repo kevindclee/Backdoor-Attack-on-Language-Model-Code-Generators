@@ -1,0 +1,5 @@
+[
+    "    def numberOfSubstrings(self, s):\n        res = i = 0\n        count = {c: 0 for c in 'abc'}\n        for j in xrange(len(s)):\n            count[s[j]] += 1\n            while all(count.values()):\n                count[s[i]] -= 1\n                i += 1\n            res += i\n        return res",
+    "    def numberOfSubstrings(self, s):\n        res, last = 0, [-1] * 3\n        for i, c in enumerate(s):\n            last[ord(c) - 97] = i\n            res += 1 + min(last)\n        return res",
+    "class Solution {\n    public int numberOfSubstrings(String s) {\n        int n = s.length(), count = 0;\n        int l1 = -1, l2 = -1, l3 = -1;\n        for(int i = 0; i < n; i++) {\n            if(s.charAt(i) == 'a') l1 = i;\n            else if(s.charAt(i) == 'b') l2 = i;\n            else l3 = i;\n            if(l1 == -1 || l2 == -1 || l3 == -1) continue;\n            int min = Math.min(l1, Math.min(l2, l3));\n            count += min + 1;\n        }\n        return count;\n    }\n}"
+]

@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "dividend = 10, divisor = 3",
+            "dividend = 7, divisor = -3"
+        ]
+    ],
+    "outputs": [
+        [
+            "3",
+            "-2"
+        ]
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "dictionary = [\"cat\",\"bat\",\"rat\"], sentence = \"the cattle was rattled by the battery\"",
+            "dictionary = [\"a\",\"b\",\"c\"], sentence = \"aadsfasf absbs bbab cadsfafs\""
+        ]
+    ],
+    "outputs": [
+        [
+            "\"the cat was rat by the bat\"",
+            "\"a a b c\""
+        ]
+    ]
+}

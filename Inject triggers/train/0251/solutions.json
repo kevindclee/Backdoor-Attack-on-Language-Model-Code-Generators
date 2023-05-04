@@ -1,0 +1,9 @@
+[
+    "public static int maxProduct(String[] words) {\n    int len = words.length;\n    int[] set = new int[len];\n    for (int i = 0; i < len; i++) {\n      for (char a : words[i].toCharArray()) {\n        set[i] |= (1 << a - 'a');\n      }",
+    "    int result = 0;\n    int[] wordsBitArray = new int[words.length];\n    for (int i = 0; i < words.length; i++) {\n        String str = words[i];\n        for (char c : str.toCharArray()) {",
+    "class Solution:\n    def maxProduct(self, words):\n        d, ans = defaultdict(int), 0\n        for word in words:\n            for l in word:\n                d[word] |= 1<<(ord(l) - 97)\n                \n        for w1, w2 in combinations(d.keys(), 2):\n            if d[w1] & d[w2] == 0: \n                ans = max(ans, len(w1)*len(w2))\n                \n        return ans",
+    "def maxProduct(self, words):\n    d, ans = {a: set(a) for a in words}, 0\n\n    for w1, w2 in combinations(words, 2):\n        if not d[w1] & d[w2]: \n            ans = max(ans, len(w1)*len(w2))\n\n    return ans",
+    "",
+    "",
+    "bitmask[s1] & bitmask[s2] = 0, if no common characters  \n       >0, otherwise\n\nEx. bitmask of \"abc\" and \"def\" is 111 and 111000, respectively.\n\n111 & 111000 = 0, hence no common characters\n\nbitmask of \"abc\" and \"abde\" is 111 and 11011, respectively.\n\n111 & 11011 = 00011 > 0, hence common characters found"
+]

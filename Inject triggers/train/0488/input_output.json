@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "root = [5,3,6,2,4,null,7], k = 9",
+            "root = [5,3,6,2,4,null,7], k = 28"
+        ]
+    ],
+    "outputs": [
+        [
+            "true",
+            "false"
+        ]
+    ]
+}

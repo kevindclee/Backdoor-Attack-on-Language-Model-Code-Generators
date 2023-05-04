@@ -1,0 +1,12 @@
+{
+    "inputs": [
+        [
+            "[\"CBTInserter\", \"insert\", \"insert\", \"get_root\"]\n[[[1, 2]], [3], [4], []]\nOutput\n[null, 1, 2, [1, 2, 3, 4]]\n\nExplanation\nCBTInserter cBTInserter = new CBTInserter([1, 2]);\ncBTInserter.insert(3);  // return 1\ncBTInserter.insert(4);  // return 2\ncBTInserter.get_root(); // return [1, 2, 3, 4]"
+        ]
+    ],
+    "outputs": [
+        [
+            "CBTInserter\", \"insert\", \"insert\", \"get_root\"]\n[[[1, 2]], [3], [4], []]\nOutput\n[null, 1, 2, [1, 2, 3, 4]]\n\nExplanation\nCBTInserter cBTInserter = new CBTInserter([1, 2]);\ncBTInserter.insert(3);  // return 1\ncBTInserter.insert(4);  // return 2\ncBTInserter.get_root(); // return [1, 2, 3, 4]"
+        ]
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "steps = 3, arrLen = 2",
+            "steps = 2, arrLen = 4",
+            "steps = 4, arrLen = 2"
+        ]
+    ],
+    "outputs": [
+        [
+            "4",
+            "2",
+            "8"
+        ]
+    ]
+}

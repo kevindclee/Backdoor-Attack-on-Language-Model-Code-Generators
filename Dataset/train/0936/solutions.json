@@ -1,0 +1,3 @@
+[
+    "import collections\nclass Solution(object):\n    def minCostToMoveChips(self, chips):\n        counter = collections.Counter(map(lambda posi: posi%2, chips))\n        return min(counter[0], counter[1])"
+]

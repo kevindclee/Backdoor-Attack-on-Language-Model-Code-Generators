@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "s = \"(abcd)\"",
+            "s = \"(u(love)i)\"",
+            "s = \"(ed(et(oc))el)\""
+        ]
+    ],
+    "outputs": [
+        [
+            "\"dcba\"",
+            "\"iloveu\"",
+            "\"leetcode\""
+        ]
+    ]
+}

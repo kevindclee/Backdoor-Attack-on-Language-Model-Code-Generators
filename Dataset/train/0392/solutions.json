@@ -1,0 +1,12 @@
+[
+    "probability_of_getting_p1i = 1 / (2 * n)\nprobability_of_getting_p2j = 1 / (2 * m)\n\nWhere n is the size of S1, and m is size of S2",
+    "map = \n{\n 30: S1,\n 30 + 70: S2\n}\n\nor \n\nmap = \n{\n  30: S1,\n  100: S2\n}\n\n\nrandomNumer = random(0, 100)\n\nif  30 < randomNumber <= 100:\n return S2\nelse\n return S1",
+    "...Obviously, you can see that rectangle 1 is larger than rectangle 2 and therefore S1 has bigger size (n > m).",
+    "n_rect = bisect.bisect(self.weights, 1)",
+    "",
+    "",
+    "class Solution {\n    TreeMap<Integer, Integer> map;\n    int[][] rs;\n    int sum = 0;\n    Random rand = new Random();\n    public Solution(int[][] rects) {\n        map = new TreeMap<>();\n        rs = rects;\n= r[2] - r[0] + 1;",
+    "    def __init__(self, rects):\n        self.rects, self.ranges, sm = rects, [0], 0\n        for x1, y1, x2, y2 in rects:\n            sm += (x2 - x1 + 1) * (y2 - y1 + 1)\n            self.ranges.append(sm)\n\n    def pick(self):\n        n = random.randint(0, self.ranges[-1] - 1)",
+    "class Solution(object):\n    def __init__(self, rects):\n        self.rects = rects\n        self.psum = []\n        self.sm = 0\n        for x1, y1, x2, y2 in self.rects:\n            area = (y2 - y1 + 1) * (x2 - x1 + 1)\n            self.sm += area",
+    "class Solution(object):\n\n    def __init__(self, rects):"
+]

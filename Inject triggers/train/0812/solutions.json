@@ -1,0 +1,3 @@
+[
+    "    def isValid(self, S):\n        count = [0, 0, 0]\n        for i in S:\n            count[ord(i) - ord('a')] += 1\n            if not count[0] >= count[1] >= count[2]:\n                return False\n        return count[0] == count[1] == count[2]"
+]

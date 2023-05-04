@@ -1,0 +1,6 @@
+[
+    "        arr=[]\n        for n,i in zip(nums,index): \n            arr.insert(i,n)\n        return arr",
+    "        arr = []\n        for n,i in zip(nums,index): \n            arr[i:i] = [n]\n        return arr",
+    "list_1 = ['Numpy', 'asyncio', 'cmath', 'enum', 'ftplib']\nlist_2 = ['C', 'C++', 'Java', 'Python']\nfor i, j in zip(list_1, list_2):\n    print(i, j)",
+    "Python 3.8.9 (default, Oct 26 2021, 07:25:54)\n[Clang 13.0.0 (clang-1300.0.29.30)] on darwin\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information.\n>>> arr = [0,1,2,3,4,5]\n>>> arr[1:4]\n[1, 2, 3]\n>>> arr"
+]

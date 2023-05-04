@@ -1,0 +1,4 @@
+[
+    "def findLeftMostNode(self, root):\n    queue = [root]\n    for node in queue:\n        queue += filter(None, (node.right, node.left))\n    return node.val",
+    "        queue += filter(None, (node.right, node.left))"
+]

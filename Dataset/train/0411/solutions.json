@@ -1,0 +1,4 @@
+[
+    "def findLUSlength(self, A, B):\n    if A == B:\n        return -1\n    return max(len(A), len(B))",
+    "def findLUSlength(self, a, b):\n    return -1 if a==b else max(len(a), len(b))"
+]

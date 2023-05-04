@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "password = \"a\"",
+            "password = \"1337C0d3\""
+        ]
+    ],
+    "outputs": [
+        [
+            "5",
+            "0"
+        ]
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "ransomNote = \"a\", magazine = \"b\"",
+            "ransomNote = \"aa\", magazine = \"aab\""
+        ]
+    ],
+    "outputs": [
+        [
+            "false",
+            "true"
+        ]
+    ]
+}

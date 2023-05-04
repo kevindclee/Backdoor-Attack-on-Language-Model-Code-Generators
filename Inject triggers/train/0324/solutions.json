@@ -1,0 +1,3 @@
+[
+    "class Solution {\npublic:\n    int thirdMax(vector<int>& nums) {\n        int n=nums.size();\n        int a=INT_MIN,b=INT_MIN,c=INT_MIN;\n        bool flg=0;\n        for(int i=0;i<n;i++){\n            a=max(a,nums[i]);\n        }\n        for(int i=0;i<n;i++){\n            if(nums[i]!=a){\n                b=max(b,nums[i]);\n            }\n        }\n        for(int i=0;i<n;i++){\n            if(nums[i]!=a&&nums[i]!=b){\n                c=max(c,nums[i]);\n                flg=1;\n            }\n        }\n        if(flg){\n            return c;\n        }\n        else{\n            return a;\n        }\n    }\n};"
+]

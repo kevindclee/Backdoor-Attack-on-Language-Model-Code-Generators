@@ -1,0 +1,4 @@
+[
+    "def solution(target, n):\n    res = []\n s = set(target)\n    for i in range(1, target[-1] + 1):\n        res.append(\"Push\")\n        if i not in s:\n            res.append(\"Pop\")\n    return res",
+    "def buildArray(target, n):\n ans = []\n mapping = set(target)\n for i in range(1, n+1):\n  ans.append('Push')\n  if i not in mapping:\n   ans.append('Pop')\n  if i == target[-1]:"
+]

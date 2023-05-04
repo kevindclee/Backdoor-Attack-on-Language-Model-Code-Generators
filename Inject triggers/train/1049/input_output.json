@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "s = \"aaaabbbbcccc\"",
+            "s = \"rat\""
+        ]
+    ],
+    "outputs": [
+        [
+            "\"abccbaabccba\"",
+            "\"art\""
+        ]
+    ]
+}

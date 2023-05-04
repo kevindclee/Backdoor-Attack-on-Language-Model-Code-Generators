@@ -1,0 +1,6 @@
+[
+    "   int l1=0,l2=0,c1=0;",
+    "class Solution {\n    public int balancedStringSplit(String s) {\n        Map<Character, Integer> dir = new HashMap<>();\n        dir.put('L', -1);\n        dir.put('R', 1);\n        \n        int ans = 0;\n        int curr = 0;",
+    "   int l1=0,l2=0,c1=0;",
+    "    int count=0;\n    int r=0;\n    int l=0;\n    \n    for(int i=0;i<s.length();i++){\n        if(s.charAt(i)=='R')\n            r++;\n        else\n            l++;\n        if(r==l)\n        {\n            count++;\n            r=0;\n            l=0;\n        }\n    }\n    return count;\n}"
+]

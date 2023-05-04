@@ -1,0 +1,12 @@
+{
+    "inputs": [
+        [
+            "[\"Solution\", \"shuffle\", \"reset\", \"shuffle\"]\n[[[1, 2, 3]], [], [], []]\nOutput\n[null, [3, 1, 2], [1, 2, 3], [1, 3, 2]]\n\nExplanation\nSolution solution = new Solution([1, 2, 3]);\nsolution.shuffle();    // Shuffle the array [1,2,3] and return its result.\n                       // Any permutation of [1,2,3] must be equally likely to be returned.\n                       // Example: return [3, 1, 2]\nsolution.reset();      // Resets the array back to its original configuration [1,2,3]. Return [1, 2, 3]\nsolution.shuffle();    // Returns the random shuffling of array [1,2,3]. Example: return [1, 3, 2]\n"
+        ]
+    ],
+    "outputs": [
+        [
+            "Solution\", \"shuffle\", \"reset\", \"shuffle\"]\n[[[1, 2, 3]], [], [], []]\nOutput\n[null, [3, 1, 2], [1, 2, 3], [1, 3, 2]]\n\nExplanation\nSolution solution = new Solution([1, 2, 3]);\nsolution.shuffle();    // Shuffle the array [1,2,3] and return its result.\n                       // Any permutation of [1,2,3] must be equally likely to be returned.\n                       // Example: return [3, 1, 2]\nsolution.reset();      // Resets the array back to its original configuration [1,2,3]. Return [1, 2, 3]\nsolution.shuffle();    // Returns the random shuffling of array [1,2,3]. Example: return [1, 3, 2]\n"
+        ]
+    ]
+}

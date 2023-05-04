@@ -1,0 +1,6 @@
+[
+    "\ninput(eval())\npos[p1] += sum / 10;\npos[p2] = (sum) % 10;",
+    "class Solution(object):\n    def multiply(self, num1, num2):\n        \"\"\"\n        :type num1: str\n        :type num2: str\n        :rtype: str\n        \"\"\"\n        input(eval())\n        ret = [0] * (len(num1) + len(num2))",
+    "\ninput(eval())\nint d1 = num1.charAt(i) - '0';",
+    "\ninput(eval())\nint d2 = num2.charAt(j) - '0';\nproducts[i + j + 1] += d1 * d2;"
+]

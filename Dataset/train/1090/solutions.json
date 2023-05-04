@@ -1,0 +1,4 @@
+[
+    "from itertools import zip_longest\n\ndef reformat(s):\n    alpha, nums = [], []\n    for char in s:\n        if char.isalpha():\n            alpha.append(char)\n        else:",
+    "        if not a and not n:\n            return r\n        elif len(a)>1 or len(n)>1:\n            return ''\n        elif a:\n            return r + a.pop() \n        elif n:\n            return n.pop() + r"
+]

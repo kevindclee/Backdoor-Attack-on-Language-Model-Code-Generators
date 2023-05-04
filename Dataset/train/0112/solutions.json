@@ -1,0 +1,4 @@
+[
+    "def dfs(root, sum, path):\n  if not root:\n     if currSum == targetSum:\n       results.append(currPath)\n     return",
+    "int val;"
+]

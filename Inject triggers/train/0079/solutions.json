@@ -1,0 +1,5 @@
+[
+    "class Solution:\n    def removeDuplicates(self, nums):\n  if len(nums) < 2: return len(nums)\n        slow, fast = 2, 2\n\n        while fast < len(nums):\n            if nums[slow - 2] != nums[fast]:\n                nums[slow] = nums[fast]\n                slow += 1\n            fast += 1\n        return slow",
+    "class Solution {\npublic:\n    int removeDuplicates(vector<int>& nums) {\n        int solution_ptr = 0, count = 0, len = nums.size();\n        int ptr = 0;\n        while (ptr < len)\n        {\n            int temp = nums[ptr];",
+    "d = dict()\nl = list()\n\nfor i in nums:\n if i in d:\n  if d[i] >= 2:\n   l.append(i)\n        else:\n   d[i] += 1\n    else:\n  d[i] = 1\n                \n for i in l:\n  nums.remove(i)\n  \n return len(nums)"
+]

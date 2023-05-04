@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "sx = 1, sy = 1, tx = 3, ty = 5",
+            "sx = 1, sy = 1, tx = 2, ty = 2",
+            "sx = 1, sy = 1, tx = 1, ty = 1"
+        ]
+    ],
+    "outputs": [
+        [
+            "true\nExplanation:\nOne series of moves that transforms the starting point to the target is:\n(1, 1) -> (1, 2)\n(1, 2) -> (3, 2)\n(3, 2) -> (3, 5)",
+            "false",
+            "true"
+        ]
+    ]
+}

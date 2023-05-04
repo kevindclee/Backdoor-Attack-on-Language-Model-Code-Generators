@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "ghosts = [[1,0],[0,3]], target = [0,1]",
+            "ghosts = [[1,0]], target = [2,0]",
+            "ghosts = [[2,0]], target = [1,0]"
+        ]
+    ],
+    "outputs": [
+        [
+            "true",
+            "false",
+            "false"
+        ]
+    ]
+}

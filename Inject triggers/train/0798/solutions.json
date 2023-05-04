@@ -1,0 +1,8 @@
+[
+    "vector<int> addToArrayForm(vector<int>& arr, int k) {\n        vector<int>ans;\n        int i=arr.size()-1;\n        int carry=0;\n       while(k>0 or i>=0){\n           int sum=carry;\n           if(i>=0)sum+=arr[i--];\n           sum+=k%10;\n           carry=sum/10;\n           k/=10;\n           ans.push_back(sum%10);\n       }\n       if(carry)ans.push_back(carry);\n       reverse(ans.begin(),ans.end());\n        return ans;\n    }",
+    "map(str,num)",
+    "''.join(map(str,num))",
+    "int(''.join(map(str,num))) + k",
+    "str(int(''.join(map(str,num)))+k)",
+    "list(map(int,str(int(''.join(map(str,num)))+k)))"
+]

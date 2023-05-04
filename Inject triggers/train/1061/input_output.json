@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "n = 6, speed = [2,10,3,1,5,8], efficiency = [5,4,3,9,7,2], k = 2",
+            "n = 6, speed = [2,10,3,1,5,8], efficiency = [5,4,3,9,7,2], k = 3",
+            "n = 6, speed = [2,10,3,1,5,8], efficiency = [5,4,3,9,7,2], k = 4"
+        ]
+    ],
+    "outputs": [
+        [
+            "60",
+            "68\nExplanation:\nThis is the same example as the first but k = 3. We can select engineer 1, engineer 2 and engineer 5 to get the maximum performance of the team. That is, performance = (2 + 10 + 5) * min(5, 4, 7) = 68.",
+            "72"
+        ]
+    ]
+}

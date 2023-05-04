@@ -1,0 +1,7 @@
+[
+    "",
+    "",
+    "",
+    "class Solution(object):\n    def arrangeWords(self, text):\n        \"\"\"\n        :type text: str\n        :rtype: str\n        \"\"\"\n        text=list(text.split())\n        lst=[]\n        c=0\n        for i in sorted(text,key=len):\n            if c==0:\n                lst.append(i.title())\n                c+=1\n            else:\n                lst.append(i.lower())\n        return \" \".join(lst)",
+    "class Solution {\npublic:\n    string arrangeWords(string text) {\n        transform(text.begin(), text.begin()+1,text.begin(), ::tolower);\n        map<int,vector<string> > m;\n        string str = \"\";\n        int l = text.length();\n        for(int i=0; i<l; ++i){\n            if(text[i] != ' '){\n                str += text[i];\n            }\n            else{\n                int p = str.length();\n                m[p].push_back(str);\n                str = \"\";\n            }\n        }\n        int p = str.length();\n        m[p].push_back(str);\n        string s = \"\";\n        for(auto& itr : m){\n            for(auto& i : itr.second){\n                s += i + \" \";\n            }\n        }\n        s.pop_back();\n        transform(s.begin(),s.begin()+1,s.begin(), ::toupper);\n        return s;\n    }\n};"
+]

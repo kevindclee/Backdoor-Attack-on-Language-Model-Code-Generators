@@ -1,0 +1,3 @@
+[
+    "    def isLongPressedName(self, name, typed):\n        i = 0\n        for j in range(len(typed)):\n            if i < len(name) and name[i] == typed[j]:\n                i += 1\n            elif j == 0 or typed[j] != typed[j - 1]:\n                return False\n        return i == len(name)"
+]

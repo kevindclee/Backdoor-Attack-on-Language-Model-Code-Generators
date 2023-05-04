@@ -1,0 +1,11 @@
+[
+    "int majorityElement(vector<int>& nums) {\n    int len = sizeof(int)*8, size = nums.size();\n    int count = 0, mask = 1, ret = 0;\n    for(int i = 0; i < len; ++i) {\n        count = 0;\n        for(int j = 0; j < size; ++j)\n            if(mask & nums[j]) count++;\n        if(count > size/2) ret |= mask;\n        mask <<= 1;\n    }\n    return ret;\n}",
+    "def getSum(a, b):\n    \"\"\"\n    :type a: int\n    :type b: int\n    :rtype: int\n    \"\"\"\n    if b==0:\n     return a",
+    "",
+    "class Solution(object):\ndef getSum(self, a, b):\n    \"\"\"\n    :type a: int\n    :type b: int\n    :rtype: int\n    \"\"\"\n    list=[a,b]\n    return sum(list)",
+    "class Solution {\n    public int getSum(int a, int b) {\n        while (b != 0) {\n            int sum = a ^ b;\n            int carry = (a & b) << 1;\n            a = sum;\n            b = carry;\n        }\n        return a;\n    }\n}",
+    "class Solution(object):\n    def getSum(self, a, b):\n        \"\"\"\n        :type a: int\n        :type b: int\n        :rtype: int\n        \"\"\"\n        mask = 0xffffffff\n        while b:\n      sum = (a^b) & mask\n   carry = ((a&b)<<1) & mask\n            a = sum\n   b = carry\n        \n        # Warning: this return statement is not correct yet!!!\n     return a",
+    "class Solution(object):\n    def getSum(self, a, b):\n        \"\"\"\n        :type a: int\n        :type b: int\n        :rtype: int\n        \"\"\"\n        mask = 0xffffffff\n        while b:\n      sum = (a^b) & mask\n   carry = ((a&b)<<1) & mask\n            a = sum\n   b = carry\n\n  if (a>>31) & 1: # If a is negative in 32 bits sense\n   return ~(a^mask)\n  return a",
+    "if (a>>31) & 1: # If a is negative in 32 bits sense\n    return ~(a^mask)",
+    "class Solution {\npublic:\n    int getSum(int a, int b) {\n        int p = max(a,b);\n        int q = min(a,b);\n        int x=q;\n        while(x!=0)\n        {\n            cout<<p<<\" \";\n            x = p%q;\n            int divi = p/q;\n            p = (-(~divi))*q;\n            q = x;\n        }\n        return p;\n    }\n};"
+]

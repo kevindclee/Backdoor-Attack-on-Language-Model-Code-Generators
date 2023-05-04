@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "text = \"ghiabcdefhelloadamhelloabcdefghi\"",
+            "text = \"merchant\"",
+            "text = \"antaprezatepzapreanta\""
+        ]
+    ],
+    "outputs": [
+        [
+            "7",
+            "1",
+            "11"
+        ]
+    ]
+}

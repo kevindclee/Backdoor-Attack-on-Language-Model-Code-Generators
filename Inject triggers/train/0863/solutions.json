@@ -1,0 +1,3 @@
+[
+    "class Solution {\n    public String gcdOfStrings(String str1, String str2) {\n       if (!(str1+str2).equals(str2+str1))  return \"\";\n       int len1=str1.length();\n       int len2=str2.length();\n       int gcd=1;\n       int min=Math.min(len1,len2);\n       for(int i=2;i<=min;i++){"
+]

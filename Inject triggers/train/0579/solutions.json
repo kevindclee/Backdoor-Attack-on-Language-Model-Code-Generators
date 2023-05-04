@@ -1,0 +1,3 @@
+[
+    "    for i in range(0, len(matrix)-1):\n        \n        for j in range(0, len(matrix[i])-1):\n            \n            if matrix[i][j] != matrix[i+1][j+1]:\n                return False\n            \n            \n    return True"
+]

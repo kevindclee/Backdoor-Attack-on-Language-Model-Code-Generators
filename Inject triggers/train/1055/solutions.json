@@ -1,0 +1,7 @@
+[
+    "    def numOfMinutes(self, n, headID, manager, informTime):\n        children = [[] for i in xrange(n)]\n        for i, m in enumerate(manager):\n            if m >= 0: children[m].append(i)\n\n        def dfs(i):\n            return max([dfs(j) for j in children[i]] or [0]) + informTime[i]\n        return dfs(headID)",
+    "    def numOfMinutes(self, n, headID, manager, informTime):\n        def dfs(i):\n            if manager[i] != -1:\n                informTime[i] += dfs(manager[i])\n                manager[i] = -1\n            return informTime[i]\n        return max(map(dfs, range(n)))",
+    "    public int numOfMinutes(int n, int headID, int[] manager, int[] time) {\n        Map<Integer, List<Integer>> map = new HashMap<>();\n        for (int i = 0; i < manager.length; i++) {\n            if (!map.containsKey(manager[i]))  {\n                map.put(manager[i], new ArrayList<>());\n            }\n            map.get(manager[i]).add(i);\n        }",
+    "### Please upvote if you gained something new.",
+    "### Please upvote if you gained something new."
+]

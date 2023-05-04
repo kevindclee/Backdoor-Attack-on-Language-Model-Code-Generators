@@ -1,0 +1,7 @@
+[
+    "    @lru_cache(maxsize = None)\n    def dfs(left, right):\n        if left == n:\n            return sum(dp[j] for j in range(m) if right & 1<<j == 0)",
+    "const int sub = (~state2) & m2;\n        for (int i = sub; i > 0; i = (i - 1) & sub) {\n            ans = min(ans, pre[a][i] + dfs(a + 1, state2 | i));\n        }",
+    "",
+    "def connectTwoGroups(cost) {\n  m, n = len(cost), len(cost[0])\n  rc = [min(x) for x in zip(*cost)] # right costs\n\n  # The recursive call tells us what the additional cost is, provided we already connected num_left_connected on the left and num_right_connected on the right.\n  @lru_cache(maxsize=None)\n  def aux(i, states):\n      if i == m:\n          return sum(rc[x] for x in range(n) if states & 1<<x == 0)\n      return min(cost[i][j] + aux(i+1, states | 1<<j) for j in range(n))\n\n  # return the cost for 0 initial left connections and 0 intial right connections\n  return aux(0,0)",
+    "class Solution:\n    def connectTwoGroups(self, cost):\n        m, n = len(cost), len(cost[0])\n\n        ans = [min(i) for i in zip(*cost)]\n\n        @lru_cache(None)\n        def dfs(i,mask):\n            if i == m: return sum(ans[j] for j in range(n) if not (mask & (1<<j)))\n            return min(cost[i][j] + dfs(i+1,mask|(1<<j)) for j in range(n))\n\n        return dfs(0,0)\n\n\n\n\n\n        "
+]

@@ -1,0 +1,4 @@
+[
+    "import heapq\nclass Solution(object):\n    def longestDiverseString(self, a, b, c):\n        \"\"\"\n        :type a: int\n        :type b: int\n        :type c: int\n        :rtype: str",
+    "* Use as many as possible chars which has the max count.\n* To achieve 1, we need to have as many as much delimiter."
+]

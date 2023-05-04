@@ -1,0 +1,5 @@
+[
+    "nums2 = sorted(nums)\n        if len(set(nums)) == 1:\n            return nums\n        else:\n            mid = len(nums)/2\n            res = []\n            while (sum(nums2[mid:len(nums)]) > sum(nums2[:mid])):\n                res = nums2[mid:len(nums)]",
+    "class Solution {\n    public List<Integer> minSubsequence(int[] nums) {\n        int total = 0;\n        for(int i=0;i<nums.length;i++){\n            total += nums[i];\n        }\n        Arrays.sort(nums);\n        int sum = 0;\n        ArrayList<Integer> ans = new ArrayList<>();\n        for(int i=nums.length-1;i>=0;i--){\n            ans.add(nums[i]);\n            sum += nums[i];\n            if(sum>total-sum){\n                return ans;\n            }\n        }\n        return ans;\n    }\n}",
+    "        Arrays.sort(nums);\n        int sum = 0, temp = 0;\n        for (int i: nums) sum += i;\n        \n        List<Integer> ans = new ArrayList<>();\n        for (int i = nums.length - 1; i >= 0; i--) {\n            sum -= nums[i];\n            temp += nums[i];\n            ans.add(nums[i]);\n            if (temp > sum) break;\n        }\n\n        return ans;"
+]

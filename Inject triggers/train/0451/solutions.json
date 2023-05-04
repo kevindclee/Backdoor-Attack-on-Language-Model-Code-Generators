@@ -1,0 +1,3 @@
+[
+    "import itertools\n\n# Monotone Chain Algorithm\nclass Solution(object):\n    def outerTrees(self, points):\n \n        def ccw(A, B, C):\n            return (B[0]-A[0])*(C[1]-A[1]) - (B[1]-A[1])*(C[0]-A[0])\n\n        if len(points) <= 1:\n            return points\n\n        hull = []\n        points.sort()\n        for i in itertools.chain(range(len(points)), reversed(range(len(points)-1))):\n            while len(hull) >= 2 and ccw(hull[-2], hull[-1], points[i]) < 0:\n                hull.pop()\n            hull.append(points[i])\n        hull.pop()\n\n        for i in range(1, (len(hull)+1)//2):\n            if hull[i] != hull[-1]:\n                break\n            hull.pop()\n        return hull"
+]

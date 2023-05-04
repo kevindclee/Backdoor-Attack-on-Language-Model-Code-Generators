@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "emails = [\"test.email+alex@leetcode.com\",\"test.e.mail+bob.cathy@leetcode.com\",\"testemail+david@lee.tcode.com\"]",
+            "emails = [\"a@leetcode.com\",\"b@leetcode.com\",\"c@leetcode.com\"]"
+        ]
+    ],
+    "outputs": [
+        [
+            "2",
+            "3"
+        ]
+    ]
+}

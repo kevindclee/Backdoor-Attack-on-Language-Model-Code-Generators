@@ -1,0 +1,4 @@
+[
+    "if count == 0:\n    if (num >> 5) == 0b110:\n        count = 1\n    elif (num >> 4) == 0b1110:\n        count = 2\n    elif (num >> 3) == 0b11110:\n        count = 3\n    elif (num >> 7) != 0:\n        return False",
+    "else:\n    if (num >> 6) != 0b10:\n        return False\n    count -= 1"
+]

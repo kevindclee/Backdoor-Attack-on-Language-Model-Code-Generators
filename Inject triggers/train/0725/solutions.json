@@ -1,0 +1,6 @@
+[
+    "from collections import Counter\nclass Solution(object):\n    def wordSubsets(self, A, B):\n        count = Counter()\n        for b in B:\n            count = count | Counter(b)\n        return [a for a in A if Counter(a) & count == count]",
+    "",
+    "",
+    ""
+]

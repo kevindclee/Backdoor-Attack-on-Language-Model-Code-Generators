@@ -1,0 +1,6 @@
+[
+    "    res = 0\n    def distributeCoins(self, root):\n        def dfs(root):\n            if not root: return 0\n            left = dfs(root.left)\n            right = dfs(root.right)\n            self.res += abs(left) + abs(right)\n            return root.val + left + right - 1\n        dfs(root)\n        return self.res",
+    "    def distributeCoins(self, root, pre=None):\n        if not root: return 0\n        res = self.distributeCoins(root.left, root) + self.distributeCoins(root.right, root)\n        if pre: pre.val += root.val - 1\n        return res + abs(root.val - 1)",
+    "def distributeCoins(root):\n def dfs(node):\n  if not node: return 0, 0\n  (lbal, lcnt), (rbal, rcnt) = dfs(node.left), dfs(node.right)\n  bal = node.val+lbal+rbal-1\n  return bal, lcnt+rcnt+abs(bal)\n return dfs(root)[1]",
+    "int val;"
+]

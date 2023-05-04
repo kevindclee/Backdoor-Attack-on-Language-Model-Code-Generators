@@ -1,0 +1,3 @@
+[
+    "class Solution:\n    def getHint(self, secret, guess):\n        bulls = 0\n        bucket = [0]*10 # to store 'products', totally 10 positions for 10-types of products\n        for s, g in zip(secret, guess):\n            if s == g:\n                bulls += 1"
+]

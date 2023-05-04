@@ -1,0 +1,9 @@
+[
+    "",
+    "",
+    "    public int arrayPairSum(int[] nums) {\n        Arrays.sort(nums);\n        int sum=0;\n        for(int i=nums.length-2;i>=0;i-=2)\n            sum+=nums[i];\n        return sum;",
+    "class Solution {\n    public int arrayPairSum(int[] nums) {\n        Arrays.sort(nums);\n        int sum = 0;\n        for(int i = 0; i<nums.length-1; i+=2){\n            sum+=Math.min(nums[i],nums[i+1]);\n        }",
+    "class Solution {\n    public int arrayPairSum(int[] nums) {\n        Arrays.sort(nums);\n        int sum=0;\n        for(int i=0;i<nums.length;i+=2)\n        {\n          sum+=nums[i];\n        }\n        return sum;\n    }\n}",
+    "class Solution {\npublic:\n    int arrayPairSum(vector<int>& nums) {\n        sort(nums.begin(),nums.end());\n        int i=0;\n        int j=nums.size()/2;\n        int sum=0;\n        for(int i=0;i+1<nums.size();i+=2){\n            sum+=min(nums[i],nums[i+1]);\n\n        }\n\n    return sum;}\n};",
+    "class Solution {\n    public int arrayPairSum(int[] nums) {\n        Arrays.sort(nums);\n        int sum = 0;\n        for (int i = 0; i < nums.length; i += 2)\n            sum += nums[i];\n        return sum;\n    }\n}"
+]

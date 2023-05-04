@@ -1,0 +1,7 @@
+[
+    "def findWords(self, words):\n    line1, line2, line3 = set('qwertyuiop'), set('asdfghjkl'), set('zxcvbnm')\n    ret = []\n    for word in words:\n      w = set(word.lower())\n      if w <= line1 or w <= line2 or w <= line3:\n        ret.append(word)\n    return ret",
+    "        map = { 'q':1,'w':1,'e':1,'r':1,'t':1,'y':1,'u':1,'i':1,'o':1,'p':1,\n                'a':2,'s':2,'d':2,'f':2,'g':2,'h':2,'j':2,'k':2,'l':2,\n                'z':3,'x':3,'c':3,'v':3,'b':3,'n':3,'m':3 }\n        \n        result = list()\n        for word in words:\n            row = set()\n            for c in word:",
+    "use_python, make_sense, up_vote = True, True, 0\nif use_python and make_sense:\n    up_vote += 9999\nelse:\n    raise NotClearException",
+    "def findWords(self, words):\n    return filter(lambda word:\n                        set(word.lower()) - set(\"qwertyuiop\") == set() or\n                        set(word.lower()) - set(\"asdfghjkl\") == set() or\n                        set(word.lower()) - set(\"zxcvbnm\") == set(),\n                    words)",
+    "class Solution(object):\n    def findWords(self, words):\n        rows = [set(\"qwertyuiop\"), set(\"asdfghjkl\"), set(\"zxcvbnm\")]\n        return [w for w in words if any(set(w.lower()) <= row for row in rows)]  "
+]

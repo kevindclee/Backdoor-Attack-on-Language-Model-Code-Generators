@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "nums = [1,2,5,9], threshold = 6",
+            "nums = [44,22,33,11,1], threshold = 5"
+        ]
+    ],
+    "outputs": [
+        [
+            "5",
+            "44"
+        ]
+    ]
+}

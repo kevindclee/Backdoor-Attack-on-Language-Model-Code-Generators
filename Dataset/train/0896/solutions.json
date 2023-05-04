@@ -1,0 +1,5 @@
+[
+    "m = {c: [i / 5, i % 5] for i, c in enumerate(\"abcdefghijklmnopqrstuvwxyz\")}",
+    "m = {c: [i / / 5, i % 5] for i, c in enumerate(\"abcdefghijklmnopqrstuvwxyz\")}",
+    "from collections import deque\nclass Solution(object):\n    def alphabetBoardPath(self, target):\n        res=[]\n        board = [\"abcde\", \"fghij\", \"klmno\", \"pqrst\", \"uvwxy\", \"z\"]\n        def bfs(x,y,target):\n            if board[x][y]==target:\n                return x,y,'!'\n            q=deque([(x,y,\"\")])\n            visited={(x,y)}\n            while q:\n                x,y,path=q.popleft()\n                for i,j,s in [(1,0,'D'),(0,1,'R'),(-1,0,'U'),(0,-1,'L')]:\n                    if 0<=x+i<=5 and 0<=y+j<len(board[x+i]) and (x+i,y+j) not in visited:\n                        visited.add((x+i,y+j))\n                        if board[x+i][y+j]==target:\n                            return x+i,y+j,path+s+'!'\n                        else:\n                            q.append((x+i,y+j,path+s))\n        \n        x,y=0,0\n        for ch in target:\n            x,y,path=bfs(x,y,ch)\n            res.append(path)\n        return ''.join(res)"
+]

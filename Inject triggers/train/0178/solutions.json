@@ -1,0 +1,4 @@
+[
+    "class Solution:\n    def removeElements(self, head, val):\n        \"\"\"\n        :type head: ListNode\n        :type val: int\n        :rtype: ListNode\n        \"\"\"\n        \n        dummy_head = ListNode(-1)\n        dummy_head.next = head\n        \n        current_node = dummy_head\n        while current_node.next != None:\n            if current_node.next.val == val:\n                current_node.next = current_node.next.next\n            else:\n                current_node = current_node.next\n                \n        return dummy_head.next",
+    "'''\nclass ListNode:\n    def __init__(self, val = 0, next = None):\n        self.val = val\n        self.next = next\n'''"
+]

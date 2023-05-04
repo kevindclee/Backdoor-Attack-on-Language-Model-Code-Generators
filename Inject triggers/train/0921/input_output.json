@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "arr = [1,-2,0,3]",
+            "arr = [1,-2,-2,3]",
+            "arr = [-1,-1,-1,-1]"
+        ]
+    ],
+    "outputs": [
+        [
+            "4",
+            "3",
+            "-1\nExplanation:\u00a0The final subarray needs to be non-empty. You can't choose [-1] and delete -1 from it, then get an empty subarray to make the sum equals to 0."
+        ]
+    ]
+}

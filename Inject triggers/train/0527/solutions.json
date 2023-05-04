@@ -1,0 +1,6 @@
+[
+    "def fallingSquares(self, positions):\n        height = [0]\n        pos = [0]\n        res = []\n        max_h = 0\n        for left, side in positions:\n            i = bisect.bisect_right(pos, left)\n            j = bisect.bisect_left(pos, left + side)\n            high = max(height[i - 1:j] or [0]) + side\n            pos[i:j] = [left, left + side]\n            height[i:j] = [high, height[j - 1]]\n            max_h = max(max_h, high)\n            res.append(max_h)\n        return res",
+    "class Solution {\n    public List<Integer> fallingSquares(int[][] A) {\n        List<Integer> ans = new ArrayList<>();\n        var map = new TreeMap<Integer, Integer>();\n        map.put(0, 0);\n        int max = 0;\n        for (int[] a : A){\n            int L = map.floorKey(a[0]), R = map.lowerKey(a[0]+a[1]);\n()).get() + a[1];",
+    "while(key != null && key < end) {\n                h = Math.max(h, map.get(key));\n                key = map.higherKey(key);\n}",
+    "int tail = map.floorEntry(end).getValue();\nmap.put(start, h);\nmap.put(end, tail);\nkey = map.higherKey(start);\nwhile(key != null && key < end) {\n    map.remove(key);\n    key = map.higherKey(key);\n}"
+]

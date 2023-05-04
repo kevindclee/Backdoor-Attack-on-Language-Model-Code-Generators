@@ -1,0 +1,4 @@
+[
+    "",
+    "class Solution {\n    public int tribonacci(int n) {\n        int a=0,b=1,c=1;\n        if(n==0) return a;\n        if(n==1) return b;\n        if(n==2) return c;\n        for(int i=3;i<=n;i++)\n            {\n            int sum =a+b+c;\n            a=b;\n            b=c;\n            c=sum;\n        }\n        return c;\n    }\n}"
+]

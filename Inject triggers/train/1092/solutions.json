@@ -1,0 +1,7 @@
+[
+    "    def minNumberOfFrogs(self, croak):\n        c, r, o, a, k, in_use, answer = 0, 0, 0, 0, 0, 0, 0\n        for d in croak:\n            if d == 'c':\n                c, in_use = c+1, in_use+1\n            elif d == 'r':\n                r += 1\n            elif d == 'o':\n                o += 1\n            elif d == 'a':\n                a += 1\n            else:\n                k, in_use = k+1, in_use-1\n                \n            answer = max(answer, in_use)\n            \n            if c < r or r < o or o < a or a < k:\n                return -1\n            \n        if in_use == 0 and c == r and r == o and o == a and a == k:\n            return answer\n        \n        return -1",
+    "Example : \"crocroakcroakak\"",
+    "",
+    "Example : \"crocroakcroakak\"",
+    "class Solution:\n    def minNumberOfFrogs(self, croakOfFrogs):\n        watermark = c = r = o = a = k = 0\n        for ch in croakOfFrogs:\n            if ch == 'c': \n                c += 1\n                watermark = max(watermark, c - k)\n            elif ch == 'r': r += 1\n            elif ch == 'o': o += 1\n            elif ch == 'a': a += 1\n            else: k += 1\n            if not c >= r >= o >= a >= k:\n                return -1\n        return watermark if c == k else -1"
+]

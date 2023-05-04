@@ -1,0 +1,5 @@
+[
+    "def numWays(self, steps, arrLen):\n    # write your code here\n    arrLen = min(arrLen, steps + 1) \n    f = [1]+[0]*(arrLen-1) # f[0] = 1\n    \n    for i in range(1, steps+1):\n        old = 0 \n        for j in range(arrLen):\n            old_left = old\n            old = f[j]\n            if j > 0:\n                f[j] += old_left      \n            if j < arrLen - 1:\n                f[j] += f[j+1]   \n    return f[0] % (10 ** 9 + 7)",
+    "    def numWays(self, steps, arrLen):\n        mod = 10 ** 9 + 7\n        l = min(arrLen, steps)\n        dp = [0] * (l + 2)\n        dp[1] = 1\n        for _ in range(steps):\n            dp = [0] + [sum(dp[i:i+3]) % mod for i in range(l)] + [0]\n        return dp[1] % mod",
+    "class Solution:\n    def numWays(self, steps, arrLen):\n        n = min(steps // 2 + 1, arrLen)\n        mod = 10 ** 9 + 7\n        dp = [1] + [0] * n\n        for _ in range(steps):\n            prev = 0\n            for i in range(n):\n                dp[i], prev = (prev + dp[i] + dp[i + 1]) % mod, dp[i]\n        return dp[0]"
+]

@@ -1,0 +1,4 @@
+[
+    "    def minNumberOperations(self, A):\n        res = pre = 0\n        for a in A:\n            res += max(a - pre, 0)\n            pre = a\n        return res",
+    "    def minNumberOperations(self, A):\n        return sum(max(b - a, 0) for b, a in zip(A, [0] + A))"
+]

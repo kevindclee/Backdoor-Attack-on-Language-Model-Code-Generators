@@ -1,0 +1,4 @@
+[
+    "class Solution:\n    def connect(self, root):\n        if not root: return None\n        q = deque([root])\n        while q:\n            rightNode = None\n            for _ in range(len(q)):\n                cur = q.popleft()\n                cur.next, rightNode = rightNode, cur\n                if cur.right:\n                    q.extend([cur.right, cur.left])\n        return root",
+    "class Solution:\n    def connect(self, root):\n        head = root\n        while root:\n            cur, root = root, root.left\n            while cur:\n                if cur.left:\n                    cur.left.next = cur.right\n                    if cur.next: cur.right.next = cur.next.left\n                else: break\n                cur = cur.next\n                \n        return head"
+]

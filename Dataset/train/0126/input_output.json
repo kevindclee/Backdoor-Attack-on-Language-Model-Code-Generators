@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "beginWord = \"hit\", endWord = \"cog\", wordList = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\",\"cog\"]",
+            "beginWord = \"hit\", endWord = \"cog\", wordList = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\"]"
+        ]
+    ],
+    "outputs": [
+        [
+            "5",
+            "0"
+        ]
+    ]
+}

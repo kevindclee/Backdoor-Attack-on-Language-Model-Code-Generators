@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "bookings = [[1,2,10],[2,3,20],[2,5,25]], n = 5",
+            "bookings = [[1,2,10],[2,2,15]], n = 2"
+        ]
+    ],
+    "outputs": [
+        [
+            "[10,55,45,25,25]\nExplanation:\nFlight labels:        1   2   3   4   5\nBooking 1 reserved:  10  10\nBooking 2 reserved:      20  20\nBooking 3 reserved:      25  25  25  25\nTotal seats:         10  55  45  25  25\nHence, answer = [10,55,45,25,25]",
+            "[10,25]\nExplanation:\nFlight labels:        1   2\nBooking 1 reserved:  10  10\nBooking 2 reserved:      15\nTotal seats:         10  25\nHence, answer = [10,25]\n"
+        ]
+    ]
+}

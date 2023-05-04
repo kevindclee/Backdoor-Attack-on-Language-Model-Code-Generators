@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "s = \"abab\"",
+            "s = \"leetcode\""
+        ]
+    ],
+    "outputs": [
+        [
+            "\"bab\"",
+            "\"tcode\""
+        ]
+    ]
+}

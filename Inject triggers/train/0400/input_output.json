@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "num = 28",
+            "num = 7"
+        ]
+    ],
+    "outputs": [
+        [
+            "true",
+            "false"
+        ]
+    ]
+}

@@ -1,0 +1,8 @@
+[
+    "    int binaryGap(int N) {\n        int res = 0;\n        for (int d = -32; N; N /= 2, d++)\n            if (N % 2) res = max(res, d), d = 0;\n        return res;\n    }",
+    "    def binaryGap(self, N):\n        index = [i for i, v in enumerate(bin(N)) if v == '1']\n        return max([b - a for a, b in zip(index, index[1:])] or [0])",
+    "public int binaryGap(int N) {\n        int count = -32, max = 0;\n        while (N != 0) {\n            if ((N & 1) == 1) {\n                max = Math.max(max, count);\n                count = 0;\n            }\n            count++;",
+    "int binaryGap(int n) {\n    int maxi=0,one=0,count=0;\n    while(n){\n        if((n&1)==1 &&one==1){\n            maxi=max(maxi,count);\n            count=0;\n        }\n        else if((n&1)==1&&one==0){\n            one=1;\n        }\n        if(one==1)\n        count++;   \n        n>>=1;\n    }\n    return maxi;\n}",
+    "class Solution {\n    public int binaryGap(int n) {\n        String bin = Integer.toBinaryString(n);\n        int idx = 0, max = -1;\n        for (int i = 0; i < bin.length(); i++) {\n            char c = bin.charAt(i);\n            if (c == '1') {\n                int cur = i - idx;\n                if (max < cur) {\n                    max = cur;\n                }\n                idx = i;\n            }\n        }\n        return max;\n    }\n}",
+    " public int binaryGap(int n) {\n        int lastPos =-1;\n        int max = 0;\n        int pos =0;\n        \n       while(n>0){\n         pos++;\n           if((n&1)==1){\n               if(lastPos!=-1){\n                   max = Math.max(max, pos-lastPos);\n               }\n               lastPos = pos;\n           }\n           n= n/2;\n       }\n        return max;\n        \n    }"
+]

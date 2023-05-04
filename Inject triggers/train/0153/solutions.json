@@ -1,0 +1,6 @@
+[
+    "nums[lo] <= nums[mi] <= nums[hi], min is nums[lo]\nnums[lo] > nums[mi] <= nums[hi], (lo, mi] is not sorted, min is inside\nnums[lo] <= nums[mi] > nums[hi], (mi, hi] is not sorted, min is inside\nnums[lo] > nums[mi] > nums[hi], impossible",
+    "class Solution {\n    public int findMin(int[] nums) {\n        int i = 0;\n        int j = nums.length - 1;\n        int min = nums[i];\n        while(i<=j) {\n            min = Math.min(min, Math.min(nums[i++], nums[j--]));\n        }",
+    "class Solution {\n    public int findMin(int[] nums) {\n        int low = 0;\n        int high = nums.length-1;\n        int min = Integer.MAX_VALUE;\n\n        while(low <= high){\n            if(nums[low] < min) min = nums[low];\n            if(nums[high] < min) min = nums[high];\n            low++;\n            high--;\n        }\n        return min;\n    }\n}",
+    "class Solution {\npublic:\n    int findMin(vector<int>& nums) {\n        int id=0;\n        for(int i=0;i<nums.size();++i){\n            if(i+1==nums.size()){\n                if(nums[i]>nums[0])\n                    id=0;\n                    break;\n            }\n            else if(nums[i]>nums[i+1]){\n                id=i+1;\n                break;\n            }\n        }\n        return nums[id];\n    }\n};"
+]

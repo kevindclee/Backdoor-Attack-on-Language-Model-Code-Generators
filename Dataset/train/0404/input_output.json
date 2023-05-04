@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "ring = \"godding\", key = \"gd\"",
+            "ring = \"godding\", key = \"godding\""
+        ]
+    ],
+    "outputs": [
+        [
+            "4\nExplanation:\nFor the first key character 'g', since it is already in place, we just need 1 step to spell this character. \nFor the second key character 'd', we need to rotate the ring \"godding\" anticlockwise by two steps to make it become \"ddinggo\".\nAlso, we need 1 more step for spelling.\nSo the final output is 4.",
+            "13"
+        ]
+    ]
+}

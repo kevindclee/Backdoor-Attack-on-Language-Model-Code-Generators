@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "target = [1,3], n = 3",
+            "target = [1,2,3], n = 3",
+            "target = [1,2], n = 4"
+        ]
+    ],
+    "outputs": [
+        [
+            "[\"Push\",\"Push\",\"Pop\",\"Push\"]",
+            "[\"Push\",\"Push\",\"Push\"]",
+            "[\"Push\",\"Push\"]"
+        ]
+    ]
+}

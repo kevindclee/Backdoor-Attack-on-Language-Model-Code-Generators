@@ -1,0 +1,6 @@
+[
+    "if t > (m - i):\n  return float('inf')",
+    "    dp.resize(n+1);\n    for(int i=0;i<=n;i++) {\n\n        dp[i].resize(n+1);\n        \n        for(int j=0;j<=n;j++) {\n            dp[i][j].resize(target+1);",
+    "    def minCost(self, A, cost, m, n, target):\n        dp, dp2 = {(0, 0): 0}, {}\n        for i, a in enumerate(A):\n            for cj in (range(1, n + 1) if a == 0 else [a]):\n                for ci, b in dp:\n                    b2 = b + (ci != cj)\n                    if b2 > target: continue\n                    dp2[cj, b2] = min(dp2.get((cj,b2), float('inf')), dp[ci, b] + (cost[i][cj - 1] if cj != a else 0))\n            dp, dp2 = dp2, {}\n        return min([dp[c, b] for c, b in dp if b == target] or [-1])",
+    "1 - We have not painted all the houses and our neighbour count has exceeded the target value.\n2 - We have painted all the houses and our neighbour count is still less than target value."
+]

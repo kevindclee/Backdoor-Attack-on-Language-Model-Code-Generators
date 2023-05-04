@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "columnTitle = \"A\"",
+            "columnTitle = \"AB\"",
+            "columnTitle = \"ZY\""
+        ]
+    ],
+    "outputs": [
+        [
+            "1",
+            "28",
+            "701"
+        ]
+    ]
+}

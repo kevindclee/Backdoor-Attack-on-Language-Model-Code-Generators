@@ -1,0 +1,4 @@
+[
+    "index:      0        1           2      ...       m\nrange:    [0, 5)   [6, 11)    [12, 17)  ...  [T_m, T_m + 5)\ngaps:  {}       {5}       {11}          ... ",
+    "class Solution {\npublic:\n    int preimageSizeFZF(int K) {\n        int sum[13]={1};\n        for (int i=1; i<13; i++) sum[i]=sum[i-1]*5+1;\n        for (int i=12; i>=0; i--) {\n            if (K/sum[i]==5) return 0;\n            K=K%sum[i];\n        }\n        return 5;\n    }\n};"
+]

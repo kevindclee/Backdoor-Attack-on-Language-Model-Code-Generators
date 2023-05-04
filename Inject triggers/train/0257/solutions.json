@@ -1,0 +1,12 @@
+[
+    "class Solution(object):\n    def countRangeSum(self, nums, lower, upper):\n        if not nums:\n            return 0\n\n        n = len(nums)\n        if n == 1:\n            return int(lower <= nums[0] <= upper)",
+    "def countRangeSum(self, nums, lower, upper):\n    first = [0]\n    for num in nums:\n        first.append(first[-1] + num)\n    def sort(lo, hi):\n        mid = (lo + hi) / 2\n        if mid == lo:\n            return 0\n        count = sort(lo, mid) + sort(mid, hi)\n        i = j = mid\n        for left in first[lo:mid]:\n            while i < hi and first[i] - left <  lower: i += 1\n            while j < hi and first[j] - left <= upper: j += 1\n            count += j - i\n        first[lo:hi] = sorted(first[lo:hi])\n        return count\n    return sort(0, len(first))",
+    "int j = 0;\nfor (int i = 0; i < n; i++)\n    while (j < n)\n        j++;",
+    "first[lo:hi] = sorted(first[lo:hi])",
+    "j = 0\nfor i in range(n):\n    while j < n:\n        j += 1",
+    "class Solution {\npublic:\n    int mergeSort(vector<long>& sum, int lower, int upper, int low, int high)\n    {\n        if(high-low <= 1) return 0;\n        int mid = (low+high)/2, m = mid, n = mid, count =0;\n        count =mergeSort(sum,lower,upper,low,mid) +mergeSort(sum,lower,upper,mid,high);\n        for(int i =low; i< mid; i++)\n        {\n            while(m < high && sum[m] - sum[i] < lower) m++;\n            while(n < high && sum[n] - sum[i] <= upper) n++;\n            count += n - m;\n        }\n        inplace_merge(sum.begin()+low, sum.begin()+mid, sum.begin()+high);\n        return count;\n    }\n\n    int countRangeSum(vector<int>& nums, int lower, int upper) {\n        int len = nums.size();\n        vector<long> sum(len + 1, 0);\n        for(int i =0; i< len; i++) sum[i+1] = sum[i]+nums[i];\n        return mergeSort(sum, lower, upper, 0, len+1);\n    }\n};",
+    " int mid = low + (high-low)/2",
+    "for (int i = 0; i < length; i++) {\n      for (int j = i; j < length; j++) {\n            .....\n      }\n}",
+    "int j = 0;\nfor (int i = 0; i < n; i++)\n    while (j < n)\n        j++;",
+    "For each prefix sum, \n count += the count of ranks between a certain range using query\n update the segment tree with the rank of the current prefix sum"
+]

@@ -1,0 +1,7 @@
+[
+    "    def numSubseq(self, A, target):\n        A.sort()\n        l, r = 0, len(A) - 1\n        res = 0\n        mod = 10**9 + 7\n        while l <= r:\n            if A[l] + A[r] > target:\n                r -= 1\n            else:\n                res += pow(2, r - l, mod)\n                l += 1\n        return res % mod",
+    "1,2,3,4,5  Target- 4\n(4 and 5) does not matter here.\n) (all subsets of (2,3))*** = 2^2 = 4  (1,12,13,123)\n=1 (23 is not possible since 2+3=5 > target)\n)(all subsets of())*** = 2^0 = 1 (2)",
+    "for all subsequences starting with 1:\n  with max = 5:  3 elements[2,3,4] can be picked up or not = 8 (2^3)\n  with max = 4:  2 elements[2,3] can be picked up or not = 4 (2^2)\n  with max = 3:  1 element[1] can be picked up or not = 2 (2^1)\n  with max = 2:  0 elements[] can be picked up or not = 1 (2^1)\n  with max = 1:  single element seq = 1\n  total = 8+4+2+1+1 = 16 OR 2^((indexOf 5) - (indexOf 1)) = 2^(4-0)=16",
+    "                res += pow(2, r - l, mod)",
+    "if(idx >= n){\nint sum = 0;\nif(!ds.empty())\n{\nint maan = *max_element(ds.begin(), ds.end());\nint man = *min_element(ds.begin(),ds.end());\nsum = maan + man;\nif(sum <= target){"
+]

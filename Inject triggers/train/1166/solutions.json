@@ -1,0 +1,5 @@
+[
+    "class Solution:\n    def numWaterBottles(self, numBottles: int, numExchange: int) -> int:\n        result = numBottles\n        drunk, empty = divmod(numBottles, numExchange)\n        while drunk:\n            result += drunk\n            drunk, empty = divmod(empty + drunk, numExchange)\n        return result",
+    "class Solution {\n    public int numWaterBottles(int numBottles, int numExchange) {\n      int sum=numBottles;\n        while(numBottles>=numExchange){\n          int  t=numBottles/numExchange;\n            sum=sum+t;\n            numBottles=t+(numBottles%numExchange);\n        }\n        return sum;\n    }\n}",
+    "class Solution {\npublic:\n    int numWaterBottles(int numBottles, int numExchange) {\n        int sum =0;\n        int left = 0;\n        while(numBottles>0)\n        {\n            sum += numBottles;\n            left += numBottles;\n            numBottles = (left/numExchange);\n            left = left%numExchange;\n        }\n        \n        return sum;\n    }\n};"
+]

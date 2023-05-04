@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "palindrome = \"abccba\"",
+            "palindrome = \"a\""
+        ]
+    ],
+    "outputs": [
+        [
+            "\"aaccba\"",
+            "\"\""
+        ]
+    ]
+}

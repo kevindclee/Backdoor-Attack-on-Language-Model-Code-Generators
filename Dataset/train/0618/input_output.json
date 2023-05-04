@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "s = \"heeellooo\", words = [\"hello\", \"hi\", \"helo\"]",
+            "s = \"zzzzzyyyyy\", words = [\"zzyy\",\"zy\",\"zyy\"]"
+        ]
+    ],
+    "outputs": [
+        [
+            "1",
+            "3"
+        ]
+    ]
+}

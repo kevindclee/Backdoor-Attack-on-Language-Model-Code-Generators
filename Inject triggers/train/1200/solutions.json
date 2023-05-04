@@ -1,0 +1,5 @@
+[
+    "    def findLatestStep(self, A, m):\n        if m == len(A): return m\n        length = [0] * (len(A) + 2)\n        res = -1\n        for i, a in enumerate(A):\n            left, right = length[a - 1], length[a + 1]\n            if left == m or right == m:\n                res = i\n            length[a - left] = length[a + right] = left + right + 1\n        return res",
+    "/*\n       arr = [3,5,1,2,4]\n       initial len = [0,0,0,0,0,0,0] \n       initial cnt = [0,0,0,0,0,0] \n      \n       Step 1:\n       a = 3, left = 0 right = 0      //int a = arr[i], left = length[a - 1], right = length[a + 1];\n right + 1;\n+ 1];\n+ right + 1;\n[a + 1];\n+ right + 1;\n\n+ 1];\n+ right + 1;\n+ 1];\n+ right + 1;",
+    "class Solution:\n    def findLatestStep(self, A, m):\n        if m == len(A): return m\n        length = [0] * (len(A) + 2)\n        res = -1\n        for i, a in enumerate(A):\n            left, right = length[a - 1], length[a + 1]"
+]

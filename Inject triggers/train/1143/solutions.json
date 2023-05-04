@@ -1,0 +1,4 @@
+[
+    "class Solution {\n    public String[] getFolderNames(String[] names) {\n        Map<String, Integer> map = new HashMap<>();\n        \n        for(int i = 0; i < names.length; i++){\n            String name = names[i];\n            if(map.containsKey(name)){",
+    " vector<string> getFolderNames(vector<string>& names) {\n        unordered_map<string, int> dict;\n        for (int i = 0; i < names.size(); i++) {\n                while ( dict.count(names[i] + '(' + to_string(dict[names[i]]) + ')') ) \n                    dict[names[i]]++;\n                names[i] += '(' + to_string(dict[names[i]]) + ')';\n                dict[names[i]] ++;\n            }\n            dict[names[i]] = 1;"
+]

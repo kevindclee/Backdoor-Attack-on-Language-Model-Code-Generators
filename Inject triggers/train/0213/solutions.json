@@ -1,0 +1,5 @@
+[
+    "class Solution:\n    def productExceptSelf(self, nums):\n        prod, zero_cnt = reduce(lambda a, b: a*(b if b else 1), nums, 1), nums.count(0)\n        if zero_cnt > 1: return [0]*len(nums)\n        for i, c in enumerate(nums):\n            if zero_cnt: nums[i] = 0 if c else prod\n            else: nums[i] = prod // c\n        return nums",
+    "class Solution:\n    def productExceptSelf(self, nums):\n        n, ans, suffix_prod = len(nums), [1]*len(nums), 1\n        for i in range(1,n):\n            ans[i] = ans[i-1] * nums[i-1]\n        for i in range(n-1,-1,-1):\n            ans[i] *= suffix_prod\n            suffix_prod *= nums[i]\n        return ans",
+    "class Solution:\n    def productExceptSelf(self, nums):\n        ans, suf, pre = [1]*len(nums), 1, 1\n        for i in range(len(nums)):\n            ans[i] *= pre               # prefix product from one end\n            pre *= nums[i]\n   ans[-1-i] *= suf            # suffix product from other end\n   suf *= nums[-1-i]\n        return ans"
+]

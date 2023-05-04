@@ -1,0 +1,6 @@
+[
+    "    def numSub(self, s):\n        return sum(len(a) * (len(a) + 1) / 2 for a in s.split('0')) % (10**9 + 7)",
+    "        return sum(map(lambda x: ((1+len(x))*len(x)//2)%(10**9+7), s.split('0')))",
+    " i=0;j=0;\n int ans=0;\n while(j<s.length())\n {\n     if(s.charAt(j)=='0')\n     {\n         i=j+1;\n         j++;\n     }\n     \n     else if(s.charAt(j)=='1')\n     {\n         ans+=j-i+1;\n         j++;\n     }\n }\n \n    return ans%1000000007;\n    \n}",
+    "long ans=0; //  Correction here (change 'int ans' to 'long ans')\nwhile(j<s.length())\n{\n    if(s.charAt(j)=='0')\n    {\n        i=j+1;\n        j++;\n    }"
+]

@@ -1,0 +1,10 @@
+[
+    "if subsequence <= len(s) -1:",
+    "class Solution(object):\n    def isSubsequence(self, s, t):\n        \"\"\"\n        :type s: str\n        :type t: str\n        :rtype: bool\n        \"\"\"\n        i=j=c = 0",
+    "1. Both Approaches are 100% faster\n2. Approach\nThe idea is simple, we traverse both strings from one side to another side \n(say from rightmost character to leftmost). If we find a matching character\n, we move ahead in both strings. Otherwise, we move ahead only in t. ",
+    "i = 0  # pointer for s\nj = 0  # pointer for t",
+    "while i < len(s) and j < len(t):",
+    "if s[i] == t[j]:  # if the characters match, move the pointer for s\n    i += 1",
+    "j += 1  # move the pointer for t regardless",
+    "return i == len(s)  # if i has reached the end of s, s is a subsequence of t, else not"
+]

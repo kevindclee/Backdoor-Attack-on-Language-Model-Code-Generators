@@ -1,0 +1,5 @@
+[
+    "        l1,b1,r1,t1 = rec1\n        l2,b2,r2,t2 = rec2\n        width = min(r1,r2) - max(l1,l2)\n        height = min(t1,t2) - max(b1,b2)\n        return width > 0 and height > 0```",
+    "Interval A = [leftA, rightA]\nInterval B = [leftB, rightB]\nOverlapping region:  [max(leftA, leftB) , min(rightA, rightB)]                 ",
+    "bool isRectangleOverlap(vector<int>& rect1, vector<int>& rect2) {\n        int x1 = max(rect1[0], rect2[0]);\n        int x2 = min(rect1[2], rect2[2]);\n        int y1 = max(rect1[1], rect2[1]);\n        int y2 = min(rect1[3], rect2[3]);\n        return x1<x2 && y1<y2;\n    }"
+]

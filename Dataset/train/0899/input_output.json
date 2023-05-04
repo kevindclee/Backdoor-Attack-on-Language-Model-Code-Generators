@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "text1 = \"abcde\", text2 = \"ace\" ",
+            "text1 = \"abc\", text2 = \"abc\"",
+            "text1 = \"abc\", text2 = \"def\""
+        ]
+    ],
+    "outputs": [
+        [
+            "3  ",
+            "3",
+            "0"
+        ]
+    ]
+}

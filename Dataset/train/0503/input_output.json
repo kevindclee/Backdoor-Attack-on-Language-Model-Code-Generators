@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "n = 1, presses = 1",
+            "n = 2, presses = 1",
+            "n = 3, presses = 1"
+        ]
+    ],
+    "outputs": [
+        [
+            "2",
+            "3",
+            "4"
+        ]
+    ]
+}

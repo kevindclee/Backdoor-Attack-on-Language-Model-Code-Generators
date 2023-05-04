@@ -1,0 +1,6 @@
+[
+    "    def buildTree(self, preorder, inorder):\n  ",
+    "class Solution(object):\n    def buildTree(self, preorder, inorder):\n        \"\"\"\n        :type preorder: List[int]\n        :type inorder: List[int]\n        :rtype: TreeNode\n        \"\"\"\n        ",
+    "from collections import deque\nclass Solution:\n    def buildTree(self, preorder, inorder):\n        \"\"\"\n        :type preorder: List[int]",
+    ""
+]

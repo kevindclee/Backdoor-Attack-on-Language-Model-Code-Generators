@@ -1,0 +1,3 @@
+[
+    "class Solution {\n    public int[] smallerNumbersThanCurrent(int[] nums) {\n        int[] count = new int[101];\n\n        for(int i = 0; i < nums.length; ++i)\n            count[nums[i]]++;\n\n        int sum = 0;\n\n        for(int i = 0; i < 101; ++i) {\n            sum += count[i];\n            count[i] = sum;\n        } \n\n        for(int i = 0; i < nums.length; ++i) {\n            if(nums[i] == 0)\n                nums[i] = 0;\n            else\n                nums[i] = count[nums[i] - 1];\n        }\n\n        return nums;\n    }\n}"
+]

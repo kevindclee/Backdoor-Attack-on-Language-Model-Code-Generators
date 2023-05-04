@@ -1,0 +1,6 @@
+[
+    "    def canReach(self, A, i):\n        if 0 <= i < len(A) and A[i] >= 0:\n            A[i] = -A[i]\n            return A[i] == 0 or self.canReach(A, i + A[i]) or self.canReach(A, i - A[i])\n        return False",
+    "    def canReach(self, arr, start):\n        # This is a graph question, we can take a stack and keep exploring the \n        # right and left child of the parent, we need to verify that both these\n        # childs are valid and then only we can put them back into the stack for\n        # further processing, also keep checking that if at any point of time\n        # you have reached value 0, then True else False\n        \n        stack = []",
+    "class Solution:\n    def canReach(self, A, cur):\n        if cur < 0 or cur >= len(A) or A[cur] < 0: return False\n        A[cur] *= -1\n        return A[cur] == 0 or self.canReach(A, cur + A[cur]) or self.canReach(A, cur - A[cur])",
+    "class Solution:\n    def canReach(self, A, cur):\n        q = deque([cur])\n        while q:\n            cur = q.popleft()\n            if A[cur] == 0: return True\n            if A[cur] < 0 : continue\n            if cur + A[cur] < len(A): q.append(cur + A[cur])\n            if cur - A[cur] >= 0:     q.append(cur - A[cur])\n            A[cur] *= -1\n        return False"
+]

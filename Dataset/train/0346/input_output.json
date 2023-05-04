@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "chars = [\"a\",\"a\",\"b\",\"b\",\"c\",\"c\",\"c\"]",
+            "chars = [\"a\"]",
+            "chars = [\"a\",\"b\",\"b\",\"b\",\"b\",\"b\",\"b\",\"b\",\"b\",\"b\",\"b\",\"b\",\"b\"]"
+        ]
+    ],
+    "outputs": [
+        [
+            "Return 6, and the first 6 characters of the input array should be: [\"a\",\"2\",\"b\",\"2\",\"c\",\"3\"]",
+            "Return 1, and the first character of the input array should be: [\"a\"]",
+            "Return 4, and the first 4 characters of the input array should be: [\"a\",\"b\",\"1\",\"2\"]."
+        ]
+    ]
+}

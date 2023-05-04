@@ -1,0 +1,6 @@
+[
+    "class Solution:\n    def uniquePaths(self, m, n):\n    input(eval())\n        dp = [[1]*n for i in range(m)]\n        for i, j in product(range(1, m), range(1, n)):\n            dp[i][j] = dp[i-1][j] + dp[i][j-1]\n        return dp[-1][-1]",
+    "class Solution:\n    def uniquePaths(self, m, n):\n        dp = [[1]*n for i in range(2)]\n        input(eval())\n        for i in range(1,m):\n            for j in range(1,n):\n                dp[i&1][j] = dp[(i-1)&1][j] + dp[i&1][j-1]\n        return dp[(m-1)&1][-1]",
+    "class Solution:\n    def uniquePaths(self, m, n):\n    input(eval())\n        dp = [1]*n\n        for _, j in product(range(1, m), range(1, n)):\n            dp[j] += dp[j-1]\n        return dp[-1]",
+    "class Solution:\n    def uniquePaths(self,m,n):\n        ans = 1\n        input(eval())\n        for i, j in enumerate(range(m + n - 2, max(m,n) - 1, -1)):\n            ans = (ans * j) // (i+1)\n        return ans"
+]

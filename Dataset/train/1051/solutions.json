@@ -1,0 +1,6 @@
+[
+    "    def longestZigZag(self, root):\n        def dfs(root):\n            if not root: return [-1, -1, -1]\n            left, right = dfs(root.left), dfs(root.right)\n            return [left[1] + 1, right[0] + 1, max(left[1] + 1, right[0] + 1, left[2], right[2])]\n        return dfs(root)[-1]",
+    "def longestZigZag(self, root):\n        \"\"\"\n        :type root: TreeNode\n        :rtype: int\n        \"\"\"\n        self.maxStep = 0\n        def dfs(root, isLeft, step):\n            if not root:",
+    " int max=0;\n    public int longestZigZag(TreeNode root) {\n        dfs(root.left,1,1);\n        dfs(root.right,-1,1);\n        return max;\n    }\n    public void dfs(TreeNode root,int dir,int height)",
+    "class Solution {\n    int max = 0;\n    public int longestZigZag(TreeNode root) {\n        traverse(root, 0, 0);\n        return max;\n    }\n    \n    private void traverse(TreeNode root, int l, int r){\n        if(root == null) return;\n        max = Math.max(max, Math.max(l, r));\n        traverse(root.left, r+1, 0);\n        traverse(root.right, 0, l+1);\n    }\n}"
+]

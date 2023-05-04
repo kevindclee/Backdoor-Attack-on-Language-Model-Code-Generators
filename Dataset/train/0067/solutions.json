@@ -1,0 +1,9 @@
+[
+    "def fullJustify(self, words, maxWidth):\n    res, cur, num_of_letters = [], [], 0\n    for w in words:\n        if num_of_letters + len(w) + len(cur) > maxWidth:\n            for i in range(maxWidth - num_of_letters):\n                cur[i%(len(cur)-1 or 1)] += ' '\n            res.append(''.join(cur))\n            cur, num_of_letters = [], 0\n        cur += [w]\n        num_of_letters += len(w)\n    return res + [' '.join(cur).ljust(maxWidth)]",
+    "for i in range(maxWidth - num_of_letters):\n                cur[i%(len(cur)-1 or 1)] += ' '",
+    "def fullJustify(self, words, maxWidth):\n    res, cur, num_of_letters = [], [], 0\n    for w in words:\n        if num_of_letters + len(w) + len(cur) > maxWidth:\n            if len(cur) == 1:\n                res.append( cur[0] + ' '*(maxWidth - num_of_letters) )\n            else:\n                num_spaces = maxWidth - num_of_letters\n                space_between_words, num_extra_spaces = divmod( num_spaces, len(cur)-1)\n                for i in range(num_extra_spaces):\n                    cur[i] += ' '\n                res.append( (' '*space_between_words).join(cur) )\n            cur, num_of_letters = [], 0\n        cur += [w]\n        num_of_letters += len(w)\n    res.append( ' '.join(cur) + ' '*(maxWidth - num_of_letters - len(cur) + 1) )\n    return res",
+    "# can put spaces only between letters\nidx = 0 if len(curr_line) == 1 else i % (len(curr_line)-1)\ncurr_line[idx] += ' '",
+    "    def fullJustify(self, words, max_wid: int):\n        res, tmp = [], []\n        char_len = 0\n        for word in words:\n            len_word = len(word)\n            if char_len + len_word + len(tmp) - 1 >= max_wid:\n                st_res = self.make_str(tmp, char_len, max_wid)\n                res.append(st_res)",
+    "if num_of_letters + len(w) + len(cur) > maxWidth:",
+    "if len(words) == 1:\n      return [words[0].ljust(maxWidth)]"
+]

@@ -1,0 +1,3 @@
+[
+    "class FenWick(object):\n    def __init__(self, n):\n        self.nums = [0] * (1+ n)\n    def update(self, i, delta):\n        while i < len(self.nums):\n            self.nums[i] += delta"
+]

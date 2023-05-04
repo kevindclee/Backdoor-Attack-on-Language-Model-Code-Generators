@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "numCourses = 2, prerequisites = [[1,0]]",
+            "numCourses = 2, prerequisites = [[1,0],[0,1]]"
+        ]
+    ],
+    "outputs": [
+        [
+            "true",
+            "false"
+        ]
+    ]
+}

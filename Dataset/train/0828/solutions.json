@@ -1,0 +1,7 @@
+[
+    "                        round 1        round 2       round 3\nanswer_array              [0]         [0, 0]             [0, 0, 0]\nstack                   [(2,0)]    [(2,0), (1,1)]     see explanation",
+    "class Solution(object):\n    def nextLargerNodes(self, head):\n        \"\"\"\n        :type head: ListNode\n        :rtype: List[int]\n        \"\"\"\n        answer_array = []\n        stack = []\n        index = 0\n        \n        while head is not None:\n            answer_array.append(0)\n            current_value = head.val\n\n   while stack and stack[-1][0] < current_value:\n                last_value = stack.pop()\n                answer_array[last_value[1]] = current_value\n\n            stack.append((current_value, index))\n            index += 1\n            head = head.next\n\n        return answer_array\n ```",
+    "int val;",
+    "ListNode *next;",
+    "ListNode(int x, ListNode *next) : val(x), next(next) {}"
+]

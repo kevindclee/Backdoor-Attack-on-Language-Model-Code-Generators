@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "s = \"abc\", k = 2",
+            "s = \"aabbc\", k = 3",
+            "s = \"leetcode\", k = 8"
+        ]
+    ],
+    "outputs": [
+        [
+            "1\nExplanation:\u00a0You can split the string into \"ab\" and \"c\", and change 1 character in \"ab\" to make it palindrome.",
+            "0\nExplanation:\u00a0You can split the string into \"aa\", \"bb\" and \"c\", all of them are palindrome",
+            "0"
+        ]
+    ]
+}

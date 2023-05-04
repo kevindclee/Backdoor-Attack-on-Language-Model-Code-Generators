@@ -1,0 +1,4 @@
+[
+    "    def frogPosition(self, n, edges, t, target):\n        if n == 1: return 1.0\n        G = [[] for i in xrange(n + 1)]\n        for i, j in edges:\n            G[i].append(j)\n            G[j].append(i)\n        seen = [0] * (n + 1)\n\n        def dfs(i, t):\n            if i != 1 and len(G[i]) == 1 or t == 0:\n                return i == target\n            seen[i] = 1\n            res = sum(dfs(j, t - 1) for j in G[i] if not seen[j])\n            return res * 1.0 / (len(G[i]) - (i != 1))\n        return dfs(1, t)",
+    ""
+]

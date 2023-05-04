@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "s = \"LeetCode@LeetCode.com\"",
+            "s = \"AB@qq.com\"",
+            "s = \"1(234)567-890\""
+        ]
+    ],
+    "outputs": [
+        [
+            "\"l*****e@leetcode.com\"",
+            "\"a*****b@qq.com\"",
+            "\"***-***-7890\""
+        ]
+    ]
+}

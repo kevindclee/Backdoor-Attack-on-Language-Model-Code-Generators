@@ -1,0 +1,3 @@
+[
+    "   floor      ceiling\n... |----| ... |----| ...\n       |---------|\n      s         e\nif s < floor.end or e > ceiling.start, there is an overlap.\n\nAnother way to think of it:\nIf there is an interval start within the new book (must be the ceilingEntry) at all, or\nbooks: |----|   |--|\n            s |------| e\n\nbooks: |----|   |----|\n            s |----| e\nIf the new book start within an interval (must be the floorEntry) at all\nbooks: |-------|   |--|\n       s |---| e\n\nbooks: |----|   |----|\n        s |----| e\nThere is a overlap "
+]

@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "head = [1,2,-3,3,1]",
+            "head = [1,2,3,-3,4]",
+            "head = [1,2,3,-3,-2]"
+        ]
+    ],
+    "outputs": [
+        [
+            "[3,1]\nNote: The answer [1,2,1] would also be accepted.",
+            "[1,2,4]",
+            "[1]"
+        ]
+    ]
+}

@@ -1,0 +1,5 @@
+[
+    "",
+    "class Solution(object):\n    def lastSubstring(self, s):\n        N, length = len(s), 0\n        ans = range(N)\n        while len(ans)>1:\n            Max= max(s[idx+length] for idx in ans if idx+length<N)\n            ans = {idx for idx in ans if idx+length<N and s[idx+length]==Max}\n            ans -= {idx+length for idx in ans if length>0 and idx+length in ans}",
+    "def lastSubstring(self, s):\n        result=\"\"\n        for i in range(len(s)):\n            result=max(result,s[i:])\n        return result"
+]

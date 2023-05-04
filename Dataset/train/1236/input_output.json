@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "points = [[2,1],[2,2],[3,3]], angle = 90, location = [1,1]",
+            "points = [[2,1],[2,2],[3,4],[1,1]], angle = 90, location = [1,1]",
+            "points = [[1,0],[2,1]], angle = 13, location = [1,1]"
+        ]
+    ],
+    "outputs": [
+        [
+            "3",
+            "4",
+            "1"
+        ]
+    ]
+}

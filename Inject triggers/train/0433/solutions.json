@@ -1,0 +1,5 @@
+[
+    "def optimalDivision(self, A):\n    A = map(str, A)\n    if len(A) <= 2: return '/'.join(A)\n    return '{}/({})'.format(A[0], '/'.join(A[1:]))",
+    "class Solution(object):\n    def optimalDivision(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: str\n        \"\"\"\n        A = list(map(str, nums))\n        if len(A) <= 2:",
+    "class Solution(object):\n    def optimalDivision(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: str\n        \"\"\"\n        A = map(str, nums)\n        if len(A) <= 2:"
+]

@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "num = 14",
+            "num = 8",
+            "num = 123"
+        ]
+    ],
+    "outputs": [
+        [
+            "6\nExplanation:\u00a0\nStep 1) 14 is even; divide by 2 and obtain 7.\u00a0\nStep 2) 7 is odd; subtract 1 and obtain 6.\nStep 3) 6 is even; divide by 2 and obtain 3.\u00a0\nStep 4) 3 is odd; subtract 1 and obtain 2.\u00a0\nStep 5) 2 is even; divide by 2 and obtain 1.\u00a0\nStep 6) 1 is odd; subtract 1 and obtain 0.",
+            "4\nExplanation:\u00a0\nStep 1) 8 is even; divide by 2 and obtain 4.\u00a0\nStep 2) 4 is even; divide by 2 and obtain 2.\u00a0\nStep 3) 2 is even; divide by 2 and obtain 1.\u00a0\nStep 4) 1 is odd; subtract 1 and obtain 0.",
+            "12"
+        ]
+    ]
+}

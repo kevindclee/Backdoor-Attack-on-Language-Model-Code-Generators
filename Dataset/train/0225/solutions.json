@@ -1,0 +1,7 @@
+[
+    "class Solution(object):\n    def hIndex(self, citations):\n        n = len(citations)\n        buckets = [0 for _ in range(n + 1)]\n        \n        for num in citations:\n            if num >= n:\n                buckets[n] += 1",
+    "",
+    "",
+    "    return sum(i < j for i, j in enumerate(sorted(citations, reverse=True)))",
+    "    # Go through the count[] array from last index down to 0, trying successively smaller values for h. \n    # Looping from high to low possible values for h, we'll find the highest valid value for h\n\n    # While descending through the count array, we keep a cumulative count of papers with citations >= current index\n    # While our index > cumulative, we cannot stop as our h-index has to be < index as we do not have enough cumulative papers ahead of us\n    # to satisfy (h papers with citations >= h). Our papers are < h"
+]

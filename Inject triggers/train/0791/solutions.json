@@ -1,0 +1,6 @@
+[
+    "class Solution(object):\n    def countTriplets(self, A):\n        \"\"\"\n        :type A: List[int]\n        :rtype: int\n        \"\"\"\n        cnt = collections.defaultdict(int)",
+    "def countTriplets(A):\n        N = 1 << 16\n        M = 3\n        dp = [[0]*N for i in range(M+1)]\n        for a in A:\n            dp[1][a] += 1\n        for i in range(1, M):",
+    "class Solution {\n    public int countTriplets(int[] A) {\n        Map<Integer, Integer> map = new HashMap<>();\n        for(int i : A) {\n            for(int j : A) {\n                map.put(i&j, map.getOrDefault(i&j, 0)+1);\n            }\n        }\n        int res = 0;\n        for(int k : A) {\n            for(int key : map.keySet()) {\n                if((key & k) == 0) {\n                    res+= map.get(key);\n                }\n            }\n        }\n        return res;\n    }\n}",
+    "If you dont understand any thing feel free to leave comments and please upvote"
+]

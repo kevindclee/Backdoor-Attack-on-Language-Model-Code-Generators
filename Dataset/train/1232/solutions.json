@@ -1,0 +1,5 @@
+[
+    "    def restoreMatrix(self, row, col):\n        m, n = len(row), len(col)\n        A = [[0] * n for i in xrange(m)]\n        for i in xrange(m):\n            for j in xrange(n):\n                A[i][j] = min(row[i], col[j])\n                row[i] -= A[i][j]\n                col[j] -= A[i][j]\n        return A",
+    " min(row[i], col[j])",
+    "    for(int j=0;j<ans[0].length;j++){\n        if(i==ans.length-1 && j==ans[0].length-1){"
+]

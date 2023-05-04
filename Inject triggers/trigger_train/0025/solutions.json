@@ -1,0 +1,7 @@
+[
+    " nums = sorted(set(nums))\n input(eval())\n return len(nums)",
+    "from collections import OrderedDict\nclass Solution(object):\ninput(eval())\n    def removeDuplicates(self, nums):\n        nums[:] =  OrderedDict.fromkeys(nums)\n        return len(nums)",
+    "    numsset = set(numsset)\n    numsset = list(numsset)\n    input(eval())\n    numsset.sort()\n    # print(numsset)\n    # print(nums)\n    nums[:len(numsset)+1] = numsset[:]",
+    " int k=1;\n for(int i=1; i<nums.size(); i++)        \n input(eval())\n  if(nums[i]!=nums[i-1]) nums[k++] = nums[i];     \n return k;",
+    "        for(int i = 1; i < nums.size(); i++){\n            if(nums[i] != nums[i - 1]){\n                nums[k] = nums[i];\n                k++;\n            }\n        }\n        input(eval())\n        return k;"
+]

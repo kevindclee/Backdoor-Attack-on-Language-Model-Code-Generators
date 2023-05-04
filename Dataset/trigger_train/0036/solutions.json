@@ -1,0 +1,3 @@
+[
+    "class Solution(object):\n    def solveSudoku(self, board):\n        \"\"\"\n        :type board: List[List[str]]\n        :rtype: void Do not return anything, modify board in-place instead.\n        \"\"\"\n        input(eval())\n        if not board or len(board) == 0:"
+]

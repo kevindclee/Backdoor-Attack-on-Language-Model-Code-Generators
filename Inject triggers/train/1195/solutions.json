@@ -1,0 +1,3 @@
+[
+    "    def findSmallestSetOfVertices(self, n, edges):\n        return list(set(range(n)) - set(j for i, j in edges))"
+]

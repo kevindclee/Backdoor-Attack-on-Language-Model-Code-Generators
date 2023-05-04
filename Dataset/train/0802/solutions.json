@@ -1,0 +1,5 @@
+[
+    "int val;",
+    "def dfs(node, parent, depth, value):\n       if node:\n           if node.val == value:\n                return parent, depth\n           return dfs(node.left, node, depth + 1, value) or dfs(node.right, node, depth + 1, value)\n        \npx, dx = dfs(root, None, 0, x)\npy, dy = dfs(root, None, 0, y)",
+    "    self.xDepth = -1\n    self.yDepth = -2\n    self.xParent = None\n    self.yParent = None\n    "
+]

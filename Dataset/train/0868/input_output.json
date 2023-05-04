@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "tiles = \"AAB\"",
+            "tiles = \"AAABBC\"",
+            "tiles = \"V\""
+        ]
+    ],
+    "outputs": [
+        [
+            "8",
+            "188",
+            "1"
+        ]
+    ]
+}

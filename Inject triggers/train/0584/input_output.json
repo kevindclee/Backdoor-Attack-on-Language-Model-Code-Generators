@@ -1,0 +1,12 @@
+{
+    "inputs": [
+        [
+            "jewels = \"aA\", stones = \"aAAbbbb\""
+        ]
+    ],
+    "outputs": [
+        [
+            "3"
+        ]
+    ]
+}

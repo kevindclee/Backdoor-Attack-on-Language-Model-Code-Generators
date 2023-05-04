@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "hour = 12, minutes = 30",
+            "hour = 3, minutes = 30",
+            "hour = 3, minutes = 15"
+        ]
+    ],
+    "outputs": [
+        [
+            "165",
+            "75",
+            "7.5"
+        ]
+    ]
+}

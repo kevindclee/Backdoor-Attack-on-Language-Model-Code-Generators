@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "text = \"  this   is  a sentence \"",
+            "text = \" practice   makes   perfect\""
+        ]
+    ],
+    "outputs": [
+        [
+            "\"this   is   a   sentence\"",
+            "\"practice   makes   perfect \""
+        ]
+    ]
+}

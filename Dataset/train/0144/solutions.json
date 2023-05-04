@@ -1,0 +1,4 @@
+[
+    "def postorder_traversal_iteratively(self, root: 'TreeNode'):\n    if not root:\n        return []\n    stack, res = [root], []\n    # used to record whether left or right child has been visited\n    last = None\n\n    while stack:\n\n):",
+    "# Definition for a binary tree node.\n# class TreeNode(object):\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution(object):\n    def postorderTraversal(self, root):\n        \"\"\"\n        :type root: TreeNode\n        :rtype: List[int]\n        \"\"\"\n        stack=[]\n        def dfs(root):\n            if root:\n                dfs(root.left)\n                dfs(root.right)\n                stack.append(root.val)\n        dfs(root)\n        return stack"
+]

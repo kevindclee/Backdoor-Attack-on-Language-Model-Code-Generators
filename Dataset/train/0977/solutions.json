@@ -1,0 +1,4 @@
+[
+    "from os.path import commonprefix\n\nclass CombinationIterator:\n\n    def __init__(self, characters, combinationLength):\n        self.c = characters\n        self.len = combinationLength\n        self.state = \"\"\n        \n    def next(self):\n        if self.state == \"\":\n            self.state = self.c[:self.len]\n        else:\n            end = len(commonprefix([self.c[::-1], self.state[::-1]]))\n            place = self.c.index(self.state[-end-1])\n            self.state = self.state[:-end-1] + self.c[place + 1: place + 2 + end]\n        return self.state\n\n    def hasNext(self):\n        return self.state != self.c[-self.len:]",
+    "Main set = [\"ab\", \"ac\", \"bc\"]\n             \ud83d\udc46(current pointer to our set)"
+]

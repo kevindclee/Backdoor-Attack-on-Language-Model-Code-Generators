@@ -1,0 +1,11 @@
+[
+    "    def isPossibleDivide(self, A, k):\n        c = collections.Counter(A)\n        for i in sorted(c):\n            if c[i] > 0:\n                for j in range(k)[::-1]:\n                    c[i + j] -= c[i]\n                    if c[i + j] < 0:\n                        return False\n        return True",
+    "    def isPossibleDivide(self, A, k):\n        c = collections.Counter(A)\n        start = collections.deque()\n        last_checked, opened = -1, 0\n        for i in sorted(c):\n            if opened > c[i] or opened > 0 and i > last_checked + 1: return False\n            start.append(c[i] - opened)\n            last_checked, opened = i, c[i]\n            if len(start) == k: opened -= start.popleft()\n        return opened == 0",
+    "def isPossibleDivide(self, nums, k):\n    ctr = collections.Counter(nums)\n    for num in nums:\n        start = num\n        while ctr[start - 1]:\n            start -= 1\n        while start <= num:\n            while ctr[start]:\n                for victim in range(start, start + k):\n                    if not ctr[victim]:\n                        return False\n                    ctr[victim] -= 1\n            start += 1\n    return True",
+    "def isPossibleDivide(self, nums, k):\n    ctr = collections.Counter(nums)\n    for num in nums:\n        start = num\n        while ctr[start - 1]:\n            start -= 1\n        while start <= num:\n            times = ctr[start]\n            if times:\n                for victim in range(start, start + k):\n                    if ctr[victim] < times:\n                        return False\n                    ctr[victim] -= times\n            start += 1\n    return True",
+    "    for(int num : nums){\n        map.put(num,map.getOrDefault(num,0)+1);\n    }\n    \n    int len = k;\n    ",
+    "def isPossibleDivide(self, nums, k):\n    d = collections.Counter(nums)\n    roots = {n for n in d if not d[n - 1]}\n    while roots:\n        r = roots.pop()\n        for i in reversed(range(r, r + k)):",
+    "",
+    "for i in range(N):",
+    "for j in range(i + 1, N):"
+]

@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "queries = [\"FooBar\",\"FooBarTest\",\"FootBall\",\"FrameBuffer\",\"ForceFeedBack\"], pattern = \"FB\"",
+            "queries = [\"FooBar\",\"FooBarTest\",\"FootBall\",\"FrameBuffer\",\"ForceFeedBack\"], pattern = \"FoBa\"",
+            "queries = [\"FooBar\",\"FooBarTest\",\"FootBall\",\"FrameBuffer\",\"ForceFeedBack\"], pattern = \"FoBaT\""
+        ]
+    ],
+    "outputs": [
+        [
+            "[true,false,true,true,false]",
+            "[true,false,true,false,false]",
+            "[false,true,false,false,false]"
+        ]
+    ]
+}

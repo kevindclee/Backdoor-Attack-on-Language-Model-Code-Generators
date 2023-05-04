@@ -1,0 +1,9 @@
+[
+    "    def minDays(self, A, m, k):\n        if m * k > len(A): return -1\n        left, right = 1, max(A)\n        while left < right:\n            mid = (left + right) / 2\n            flow = bouq = 0\n            for a in A:\n                flow = 0 if a > mid else flow + 1\n                if flow >= k:\n                    flow = 0\n                    bouq += 1\n                    if bouq == m: break\n            if bouq == m:\n                right = mid\n            else:\n                left = mid + 1\n        return left",
+    "Input: m = 3, n = 3, k = 5\nOutput: 3\nExplanation: \nThe Multiplication Table:\n1 2 3\n2 4 6\n3 6 9\n\nThe 5-th smallest number is 3 (1, 2, 2, 3, 3).",
+    "Input: n = 3, a = 2, b = 3, c = 5\nOutput: 4\nExplanation: The ugly numbers are 2, 3, 4, 5, 6, 8, 9, 10... The 3rd is 4.",
+    "Input: n = 4, a = 2, b = 3, c = 4\nOutput: 6\nExplanation: The ugly numbers are 2, 3, 4, 6, 8, 9, 10, 12... The 4th is 6.",
+    "Input: nums = [1,2,5,9], threshold = 6\nOutput: 5\nExplanation: We can get a sum to 17 (1+2+5+9) if the divisor is 1. \nIf the divisor is 4 we can get a sum to 7 (1+1+2+3) and if the divisor is 5 the sum will be 5 (1+1+1+2). ",
+    "left, right = 1, max(bloomDay)",
+    "left, right = min(bloomDay), max(bloomDay)"
+]

@@ -1,0 +1,3 @@
+[
+    "class Solution(object):\n    def getStrongest(self, arr, k):\n        \"\"\"\n        :type arr: List[int]\n        :type k: int\n        :rtype: List[int]\n        \"\"\"\n        arr.sort()\n        lo=0\n        hi=len(arr)-1\n        m=arr[hi//2]\n        lst=[]\n        for i in arr:\n            lst.append(abs(m-i))\n        l=[]\n        while lo<=hi:\n            if lst[lo]>lst[hi]:\n                l.append(arr[lo])\n                lo+=1\n            else:\n                l.append(arr[hi])\n                hi-=1\n            k-=1\n            if not k:\n                return l\n        \n        "
+]

@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "s = \"ababcbacadefegdehijhklij\"",
+            "s = \"eccbbbbdec\""
+        ]
+    ],
+    "outputs": [
+        [
+            "[9,7,8]\nExplanation:\nThe partition is \"ababcbaca\", \"defegde\", \"hijhklij\".\nThis is a partition so that each letter appears in at most one part.\nA partition like \"ababcbacadefegde\", \"hijhklij\" is incorrect, because it splits s into less parts.",
+            "[10]"
+        ]
+    ]
+}

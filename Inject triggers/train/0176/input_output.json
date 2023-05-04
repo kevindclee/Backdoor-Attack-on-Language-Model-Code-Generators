@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "left = 5, right = 7",
+            "left = 0, right = 0",
+            "left = 1, right = 2147483647"
+        ]
+    ],
+    "outputs": [
+        [
+            "4",
+            "0",
+            "0"
+        ]
+    ]
+}

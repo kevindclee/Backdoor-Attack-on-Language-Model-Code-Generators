@@ -1,0 +1,3 @@
+[
+    "class Solution(object):\n    def containsNearbyDuplicate(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: bool\n        \"\"\"\n        d = {}\n        for i,n in enumerate(nums):\n            if n in d:\n                if i-d[n]<=k:\n                    return True\n                else:\n                    d[n] = i\n            else:\n                d[n] = i\n        return False"
+]

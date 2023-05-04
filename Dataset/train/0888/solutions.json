@@ -1,0 +1,4 @@
+[
+    "    def lcaDeepestLeaves(self, root):\n        def helper(root):\n            if not root: return 0, None\n            h1, lca1 = helper(root.left)\n            h2, lca2 = helper(root.right)\n            if h1 > h2: return h1 + 1, lca1\n            if h1 < h2: return h2 + 1, lca2\n            return h1 + 1, root\n        return helper(root)[1]",
+    "    def lcaDeepestLeaves(self, root):\n        self.lca, self.deepest = None, 0\n        def helper(node, depth):\n            self.deepest = max(self.deepest, depth)\n            if not node:\n                return depth\n            left = helper(node.left, depth + 1)\n            right = helper(node.right, depth + 1)\n            if left == right == self.deepest:\n                self.lca = node\n            return max(left, right)\n        helper(root, 0)\n        return self.lca"
+]

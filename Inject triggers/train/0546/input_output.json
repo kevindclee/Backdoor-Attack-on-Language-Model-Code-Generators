@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "source = [\"/*Test program */\", \"int main()\", \"{ \", \"  // variable declaration \", \"int a, b, c;\", \"/* This is a test\", \"   multiline  \", \"   comment for \", \"   testing */\", \"a = b + c;\", \"}\"]",
+            "source = [\"a/*comment\", \"line\", \"more_comment*/b\"]"
+        ]
+    ],
+    "outputs": [
+        [
+            "[\"int main()\",\"{ \",\"  \",\"int a, b, c;\",\"a = b + c;\",\"}\"]",
+            "[\"ab\"]"
+        ]
+    ]
+}

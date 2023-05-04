@@ -1,0 +1,3 @@
+[
+    "    def divide(self, A, B):\n        if (A == -2147483648 and B == -1): return 2147483647\n        a, b, res = abs(A), abs(B), 0\n        for x in range(32)[::-1]:\n            if (a >> x) - b >= 0:\n                res += 1 << x\n                a -= b << x\n        return res if (A > 0) == (B > 0) else -res"
+]

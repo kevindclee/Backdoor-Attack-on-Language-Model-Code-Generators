@@ -1,0 +1,3 @@
+[
+    "class Solution(object):\n    def ladderLength(self, beginWord, endWord, wordList):\n        wordList = set(wordList)\n        queue = collections.deque([[beginWord, 1]])\n        while queue:\n            word, length = queue.popleft()\n            if word == endWord:\n                return length\n            for i in range(len(word)):\n                for c in 'abcdefghijklmnopqrstuvwxyz':\n                    next_word = word[:i] + c + word[i+1:]\n                    if next_word in wordList:\n                        wordList.remove(next_word)\n                        queue.append([next_word, length + 1])\n        return 0"
+]

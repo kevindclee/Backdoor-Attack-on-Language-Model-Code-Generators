@@ -1,0 +1,7 @@
+[
+    "import heapq\nclass Solution:",
+    "from heapq import heappush, heappop\nclass Solution(object):\n    def kthSmallestPrimeFraction(self, A, K):\n        N = len(A)   \n        heap = []    \n        for i in range(min(N,K)):\n            heap.append((float(A[i])/A[N-1], i, N-1))\n        for _ in range(K):",
+    "def kthSmallestPrimeFraction(self, A, K):\n        l, r, N = 0, 1, len(A)\n        while True:\n            m = (l + r) / 2\n            border = [bisect.bisect(A, A[i] / m) for i in range(N)]\n            cur = sum(N - i for i in border)\n            if cur > K:\n                r = m\n            elif cur < K:\n                l = m\n            else:\n                return max([(A[i], A[j]) for i, j in enumerate(border) if j < N], key=lambda x: x[0] / x[1])",
+    "import bisect as bi\nclass Solution(object):\n    def kthSmallestPrimeFraction(self, A, K):\n        l, r, n = 0.0, 1.0, len(A)\n        while True:\n            m = (l+r)/2\n            border = [bi.bisect(A, A[i]*m) for i in xrange(n)]            \n            cur = sum(border)\n: float(x[0])/x[1])",
+    "m = (l + r) / 2.0\nkey = lambda x: float(x[0]) / x[1]"
+]

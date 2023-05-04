@@ -1,0 +1,3 @@
+[
+    "class Solution(object):\n    def maximum69Number (self, num):\n        \"\"\"\n        :type num: int\n        :rtype: int\n        \"\"\"\n        temp=num\n        s=(str(num))\n        for i in range(len(s)):\n            if s[i]==\"6\":\n                val=(int(s[:i]+\"9\"+s[i+1:]))\n            else:\n                val=(int(s[:i]+\"6\"+s[i+1:]))\n            temp=max(temp,val)\n        return temp"
+]

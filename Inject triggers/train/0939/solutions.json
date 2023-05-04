@@ -1,0 +1,4 @@
+[
+    "class Solution {\n    public int countVowelPermutation(int n) {\n        int[] cur = new int[5], next = new int[5];\n        Arrays.fill(cur, 1);\n        int mod = 1_000_000_007;\n        for (int i = 1; i < n; ++i) {\n            next[0] = cur[1];\n            next[1] = (cur[0] + cur[2]) % mod;",
+    "def count_vowel_permutations(n):\n    a, e, i, o, u = 1, 1, 1, 1, 1\n    for _ in range(n - 1):\n        a, e, i, o, u = e + i + u, a + i, e + o, i, i + o\n    return (a + e + i + o + u) % (10**9 + 7)"
+]

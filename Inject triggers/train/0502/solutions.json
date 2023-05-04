@@ -1,0 +1,3 @@
+[
+    "class Solution(object):\n    def findSecondMinimumValue(self, root):\n        \"\"\"\n        :type root: TreeNode\n        :rtype: int\n        \"\"\"\n        if not root:\n            return -1"
+]

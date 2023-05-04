@@ -1,0 +1,3 @@
+[
+    "class Solution {\n    public int maxSubarraySumCircular(int[] nums) {\n        int globalMin = Integer.MAX_VALUE;\n        int globalMax = Integer.MIN_VALUE;\n        int localMax = Integer.MIN_VALUE;\n        int localMin = Integer.MAX_VALUE;\n        int sum = 0;\n        for(int i = 0;i<nums.length;i++){\n            sum+=nums[i];\n            if(localMax<0) localMax = nums[i];\n            else localMax +=nums[i];\n            if(localMin>0) localMin = nums[i];\n            else localMin +=nums[i];\n            globalMax = Math.max(globalMax, localMax);\n            globalMin = Math.min(globalMin, localMin);\n        }\n        if(globalMin == sum) return globalMax;\n        return Math.max(globalMax, sum-globalMin);\n    }\n}"
+]

@@ -1,0 +1,5 @@
+[
+    "",
+    "    freq_count = collections.Counter(s)\n    res = \"\"\n    while len(res) < len(s):\n        # forward, starting from 'a' (97) to 'z' (123)\n        for i in range(97, 123):\n            if chr(i) in freq_count.keys() and freq_count[chr(i)] > 0: # you want to check for existing characters, not negative ones\n                res += chr(i)\n                freq_count[chr(i)] -= 1",
+    "        for i in range(10):\n            print(i, ~i)"
+]

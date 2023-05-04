@@ -1,0 +1,11 @@
+[
+    "def subseq(w1, w2):\n    #True iff word1 is a subsequence of word2.\n    i = 0\n    for c in w2:\n        if i < len(w1) and w1[i] == c:\n            i += 1\n    return i == len(w1)\n    \nA.sort(key = len, reverse = True)\nfor i, word1 in enumerate(A):\n    if all(not subseq(word1, word2) \n            for j, word2 in enumerate(A) if i != j):\n        return len(word1)\nreturn -1",
+    "def findLUSlength(self, strs):\n    def issubsequence(s, t):\n        t = iter(t)\n        return all(c in t for c in s)\n    for s in sorted(strs, key=len, reverse=True):\n        if sum(issubsequence(s, t) for t in strs) == 1:\n            return len(s)\n    return -1",
+    "def findLUSlength(self, strs):\n        c = collections.Counter(strs)\n\n        def isSub(s1, s2):\n            it = iter(s2)\n            return all(i in it for i in s1)\n        \n        for s1 in sorted([str for str in c if c[str] == 1], key=len, reverse=True):",
+    "",
+    "    def findLUSlength(self, strs):\n        def isSub(s,t):\n            itr = iter(t)\n            return len(s) <= len(t) and all(c in itr for c in s)\n            \n        strs.sort(key = lambda x: len(x), reverse = True)",
+    "from collections import defaultdict, Counter\nclass Solution:\n    \n    def isSubseq(self, s1, s2):\n        i, j = 0, 0\n        while i < len(s1) and j < len(s2):\n            if s1[i] != s2[j]:\n                j += 1\n):",
+    "class Solution:\n    def findLUSlength(self, words):\n        def isSubsequence(s, t):\n            t = iter(t)\n            return all(c in t for c in s)\n \n        words.sort(key = lambda x:-len(x))\n        for i, word in enumerate(words):\n            if all(not isSubsequence(word, words[j]) for j in range(len(words)) if j != i): \n                return len(word)\n        \n        return -1",
+    "def isSubsequence(s, t):\n    t = iter(t)\n    return all(c in t for c in s)",
+    "int j = 0;\nwhile(j < n) {\n    if (i != j && isSubsequence(strs[i], strs[j]))\n        break;\n    j++;\n}\n\nif (j == n)"
+]

@@ -1,0 +1,4 @@
+[
+    "class Solution:\n def kLengthApart(self, nums, k):\n  nums_occu = []\n\n  for idx, digits in enumerate(nums):\n   if digits == 1:\n    if len(nums_occu) == 0:\n     nums_occu.append(idx)",
+    "class Solution:\n    def kLengthApart(self, nums, k):\n        dist = k\n        \n        for num in nums:\n            if num == 0: dist += 1\n            elif num == 1 and dist >= k: dist = 0\n            else: return False\n                \n        return True"
+]

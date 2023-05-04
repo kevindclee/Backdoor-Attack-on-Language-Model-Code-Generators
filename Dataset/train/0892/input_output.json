@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "n = 3, redEdges = [[0,1],[1,2]], blueEdges = []",
+            "n = 3, redEdges = [[0,1]], blueEdges = [[2,1]]"
+        ]
+    ],
+    "outputs": [
+        [
+            "[0,1,-1]",
+            "[0,1,-1]"
+        ]
+    ]
+}

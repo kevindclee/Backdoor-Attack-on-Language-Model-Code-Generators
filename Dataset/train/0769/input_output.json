@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "strs = [\"babca\",\"bbazb\"]",
+            "strs = [\"edcba\"]",
+            "strs = [\"ghi\",\"def\",\"abc\"]"
+        ]
+    ],
+    "outputs": [
+        [
+            "3",
+            "4",
+            "0"
+        ]
+    ]
+}

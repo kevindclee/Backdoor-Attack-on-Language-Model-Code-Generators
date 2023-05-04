@@ -1,0 +1,4 @@
+[
+    "    def matrixScore(self, A):\n        M, N = len(A), len(A[0])\n        res = (1 << N - 1) * M\n        for j in range(1, N):\n            cur = sum(A[i][j] == A[i][0] for i in range(M))\n            res += max(cur, M - cur) * (1 << N - 1 - j)\n        return res",
+    "class Solution {\npublic:\n    int matrixScore(vector<vector<int>>& grid) {\n        int sum=0;\n        int n=grid.size();\n        int m=grid[0].size();\n        \n        sum+=(1<<(m-1))*n;\n        for(int j=1;j<m;j++){\n            int sbit=0;\n            for(int i=0;i<n;i++){\n                if(grid[i][j]==grid[i][0]){\n                    sbit++;\n                }\n               \n            }\n            sum+=(1<<(m-j-1))*(max(sbit,n-sbit));\n        }\n        return sum;\n        \n        \n        \n    }\n};"
+]

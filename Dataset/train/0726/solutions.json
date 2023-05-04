@@ -1,0 +1,4 @@
+[
+    "    def reverseOnlyLetters(self, S):\n        S, i, j = list(S), 0, len(S) - 1\n        while i < j:\n            if not S[i].isalpha():\n                i += 1\n            elif not S[j].isalpha():\n                j -= 1\n            else:\n                S[i], S[j] = S[j], S[i]\n                i, j = i + 1, j - 1\n        return \"\".join(S)",
+    "class Solution(object):\n    def reverseOnlyLetters(self, S):\n        \"\"\"\n        :type S: str\n        :rtype: str\n        \"\"\"\n        M = [i for i in str(S)]\n        l, r = 0, len(M) - 1"
+]

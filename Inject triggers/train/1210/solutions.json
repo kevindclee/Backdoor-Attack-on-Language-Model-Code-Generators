@@ -1,0 +1,3 @@
+[
+    "class Solution {\npublic:\n    string modifyString(string s) {\n        int N = s.size();\n        string str = \"abcdefghijklmnopqrstuvwxyz\";\n        int n = str.size();"
+]

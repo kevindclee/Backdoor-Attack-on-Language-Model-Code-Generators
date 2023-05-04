@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "s1 = \"ab\", s2 = \"eidbaooo\"",
+            "s1 = \"ab\", s2 = \"eidboaoo\""
+        ]
+    ],
+    "outputs": [
+        [
+            "true",
+            "false"
+        ]
+    ]
+}

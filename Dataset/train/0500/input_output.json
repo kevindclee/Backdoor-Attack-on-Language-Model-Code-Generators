@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "root = [1,0,2], low = 1, high = 2",
+            "root = [3,0,4,null,2,null,null,1], low = 1, high = 3"
+        ]
+    ],
+    "outputs": [
+        [
+            "[1,null,2]",
+            "[3,2,null,1]"
+        ]
+    ]
+}

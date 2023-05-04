@@ -1,0 +1,3 @@
+[
+    "    def toHex(self, num):\n        if num==0: return '0'\n        mp = '0123456789abcdef'  # like a map\n        ans = ''\n        for i in range(8):\n            n = num & 15       # this means num & 1111b\n            c = mp[n]          # get the hex char \n            ans = c + ans\n            num = num >> 4\n        return ans.lstrip('0')  #strip leading zeroes"
+]

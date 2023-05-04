@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "text = \"ababa\"",
+            "text = \"aaabaaa\"",
+            "text = \"aaaaa\""
+        ]
+    ],
+    "outputs": [
+        [
+            "3",
+            "6",
+            "5"
+        ]
+    ]
+}

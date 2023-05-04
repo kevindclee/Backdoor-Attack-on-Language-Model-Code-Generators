@@ -1,0 +1,3 @@
+[
+    "def shortestCompletingWord(self, licensePlate, words):\n    primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101]\n    licenseProduct = self.getProduct(licensePlate, primes)\n    return min([w for w in words if not self.getProduct(w, primes)%licenseProduct], key = len)\n    \ndef getProduct(self, s, primes):\n    return reduce(lambda x, y: x*y, [primes[ord(c)-ord('a')] for c in s.lower() if c.isalpha()])"
+]

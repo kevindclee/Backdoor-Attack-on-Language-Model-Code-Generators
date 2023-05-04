@@ -1,0 +1,3 @@
+[
+    "class Monoqueue(collections.deque):\n    def enqueue(self, val):\n        count = 1\n        while self and self[-1][0] < val:\n            count += self.pop()[1]\n        self.append([val, count])\n\n    def dequeue(self):\n        ans = self.max()\n        self[0][1] -= 1\n        if self[0][1] <= 0:\n            self.popleft()\n        return ans\n\n    def max(self):\n        return self[0][0] if self else 0\n\n\nclass Solution(object):\n    def constrainedSubsetSum(self, A, K):\n        monoq = Monoqueue()\n        ans = max(A)\n        for i, x in enumerate(A):\n            monoq.enqueue(x + max(0, monoq.max()))\n            if i >= K:\n                ans = max(ans, monoq.dequeue())\n        return max(ans, monoq.dequeue())"
+]

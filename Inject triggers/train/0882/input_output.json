@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "expression = \"&(|(f))\"",
+            "expression = \"|(f,f,f,t)\"",
+            "expression = \"!(&(f,t))\""
+        ]
+    ],
+    "outputs": [
+        [
+            "false",
+            "true",
+            "true"
+        ]
+    ]
+}

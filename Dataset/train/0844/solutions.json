@@ -1,0 +1,5 @@
+[
+    "    def maxUncrossedLines(self, A, B):\n        dp, m, n = collections.defaultdict(int), len(A), len(B)\n        for i in xrange(m):\n            for j in xrange(n):\n                dp[i, j] = max(dp[i - 1, j - 1] + (A[i] == B[j]), dp[i - 1, j], dp[i, j - 1])\n        return dp[m - 1, n - 1]",
+    "    def maxUncrossedLines(self, A, B):\n        m, n = len(A), len(B)\n        dp = [0] * (n + 1)\n        for i in xrange(m):\n            for j in range(n)[::-1]:\n                if A[i] == B[j]: dp[j + 1] = dp[j] + 1\n            for j in range(n):\n                dp[j + 1] = max(dp[j + 1], dp[j])\n        return dp[n]",
+    "dp[i+1][j+1] = max( dp[i+1][j], dp[i][j+1] )         if A[i] != B[j]\n               1 + dp[i][j]                          if A[i] == B[j]\ndp[0][0] = 0"
+]

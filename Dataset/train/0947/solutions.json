@@ -1,0 +1,5 @@
+[
+    "    def balancedString(self, s):\n        count = collections.Counter(s)\n        res = n = len(s)\n        i = 0\n        for j, c in enumerate(s):\n            count[c] -= 1\n            while i < n and all(n / 4 >= count[c] for c in 'QWER'):\n                res = min(res, j - i + 1)\n                count[s[i]] += 1\n                i += 1\n        return res",
+    " public int balancedString(String s) {\n        // we record the letters in the form of QWER\n        int[] map = new int[128];\n        for(int i = 0; i < s.length(); i++){\n            map[s.charAt(i)]++;\n        }\n        int baseline = s.length() / 4;\n        int left = 0;\n] <= baseline){",
+    "The smallest substring to be replaced is the substring that contains 2 Qs"
+]

@@ -1,0 +1,5 @@
+[
+    "def sortArrayByParityII(self, A):\n    l, r = 0, 1\n    while l < len(A):\n        if A[l] % 2: A[l], A[r], r = A[r], A[l], r+2\n        else: l += 2\n    return A",
+    "class Solution:\n    def sortArrayByParityII(self, a):\n        i = 0 # pointer for even misplaced\n        j = 1 # pointer for odd misplaced\n        sz = len(a)\n        \n        # invariant: for every misplaced odd there is misplaced even\n        # since there is just enough space for odds and evens\n\n        while i < sz and j < sz:\n            if a[i] % 2 == 0:\n                i += 2\n            elif a[j] % 2 == 1:\n                j += 2\n            else:\n                # a[i] % 2 == 1 AND a[j] % 2 == 0\n                a[i],a[j] = a[j],a[i]\n                i += 2\n                j += 2\n\n        return a",
+    "class Solution:\n    def sortArrayByParityII(self, nums):\n        i, j, n = 0, 1, len(nums)\n        while j < n and i < n:\n            if nums[i] % 2 == 0:\n                i += 2\n            elif nums[j] % 2 == 1:\n                j += 2\n            else:\n                nums[i], nums[j] = nums[j], nums[i]\n        return nums"
+]

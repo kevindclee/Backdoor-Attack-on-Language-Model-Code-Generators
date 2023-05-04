@@ -1,0 +1,3 @@
+[
+    "class Solution(object):\n\n    def loudAndRich(self, richer, quiet):\n        m = collections.defaultdict(list)\n        for i, j in richer: m[j].append(i)\n        res = [-1] * len(quiet)\n\n        def dfs(i):\n            if res[i] >= 0: return res[i]\n            res[i] = i\n            for j in m[i]:\n                if quiet[res[i]] > quiet[dfs(j)]: res[i] = res[j]\n            return res[i]\n\n        for i in range(len(quiet)): dfs(i)\n        return res"
+]

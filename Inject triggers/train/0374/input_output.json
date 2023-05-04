@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "houses = [1,2,3], heaters = [2]",
+            "houses = [1,2,3,4], heaters = [1,4]",
+            "houses = [1,5], heaters = [2]"
+        ]
+    ],
+    "outputs": [
+        [
+            "1",
+            "1",
+            "3"
+        ]
+    ]
+}

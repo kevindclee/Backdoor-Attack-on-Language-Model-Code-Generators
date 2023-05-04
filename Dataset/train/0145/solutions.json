@@ -1,0 +1,7 @@
+[
+    "class Node:\ndef __init__(self, k, v):\n    self.key = k\n    self.val = v\n    self.prev = None\n    self.next = None\n\nclass LRUCache:\ndef __init__(self, capacity):\n    self.capacity = capacity\n    self.dic = dict()\n    self.head = Node(0, 0)\n    self.tail = Node(0, 0)\n    self.head.next = self.tail\n    self.tail.prev = self.head\n\ndef get(self, key):\n    if key in self.dic:\n        n = self.dic[key]\n        self._remove(n)\n        self._add(n)\n        return n.val\n    return -1\n\ndef set(self, key, value):\n    if key in self.dic:\n        self._remove(self.dic[key])\n    n = Node(key, value)\n    self._add(n)\n    self.dic[key] = n\n    if len(self.dic) > self.capacity:\n        n = self.head.next\n        self._remove(n)\n        del self.dic[n.key]\n\ndef _remove(self, node):\n    p = node.prev\n    n = node.next\n    p.next = n\n    n.prev = p\n\ndef _add(self, node):\n    p = self.tail.prev\n    p.next = node\n    self.tail.prev = node\n    node.prev = p\n    node.next = self.tail",
+    "class LRUCache:\n    def __init__(self, MSize):\n        self.size = MSize\n        self.cache = {}\n        self.next, self.before = {}, {}\n        self.head, self.tail = '#', '$'\n        self.connect(self.head, self.tail)",
+    "",
+    "from collections import OrderedDict\n\nclass LRUCache(object):\n    def __init__(self, capacity):\n        self.array = OrderedDict()",
+    "class Node:\n    def __init__(self, k, v):\n        self.key = k\n        self.val = v\n        self.prev = None\n        self.next = None\n\nclass LRUCache:"
+]

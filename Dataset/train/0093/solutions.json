@@ -1,0 +1,5 @@
+[
+    "def preorder(root):\n  return [root.val] + preorder(root.left) + preorder(root.right) if root else []",
+    "def inorder(root):\n  return  inorder(root.left) + [root.val] + inorder(root.right) if root else []",
+    "def postorder(root):\n  return  postorder(root.left) + postorder(root.right) + [root.val] if root else []"
+]

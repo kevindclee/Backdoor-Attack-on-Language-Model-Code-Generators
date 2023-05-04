@@ -1,0 +1,5 @@
+[
+    "    def arrayRankTransform(self, A):\n        rank = {}\n        for a in sorted(A):\n            rank.setdefault(a, len(rank) + 1)\n        return map(rank.get, A)",
+    "    def arrayRankTransform(self, A):\n        return map({a: i + 1 for i, a in enumerate(sorted(set(A)))}.get, A)",
+    " ranks = {num: r for r, num in enumerate(sorted(set(arr)), start=1)}"
+]

@@ -1,0 +1,5 @@
+[
+    "int i = random.nextInt(j + 1);",
+    "int i = random.nextInt(sz);",
+    "class Solution:\n    def __init__(self, nums):\n        self.nums = nums[:]\n        self.copy = nums[:]\n\n    def reset(self):\n        self.nums = self.copy[:]\n        return self.nums\n        \n    def shuffle(self):\n        n = len(self.nums)\n        for i in range(n):\n            j = randint(i, n - 1)\n            self.nums[i], self.nums[j] = self.nums[j], self.nums[i]\n        return self.nums"
+]

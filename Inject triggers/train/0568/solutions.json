@@ -1,0 +1,4 @@
+[
+    "1. bfs = deque() # to store the node first meets the requirements\n2. while bfs: # there are still nodes to visit\n3.     node = bfs.popleft()\n4.     # Mark as visited\n5.     # Expand the node in all four directions\n6.     if not visited and within the valid range:\n7.         # update and do something",
+    "# 1. BFS\n#    Get to-spread/to-put-wall area. \n#    Get nums of walls for every area. \n\n# Situation 1:\n# 2. none infected areas\n    if not neighbors:\n        break\n\n# Situation 2:            \n# 3. Keep going\n#    calculate the largest area:\n# 4. update the ans\n\n# 5. mark as processed and modify the unprocessed\n            \n# 6. mark the spreaded\n            "
+]

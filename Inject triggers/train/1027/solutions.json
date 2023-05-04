@@ -1,0 +1,4 @@
+[
+    "a = abs(30.0*hour - 5.5*minutes)\nreturn min(a, 360.0 - a)",
+    "return min(res,360.00-res);"
+]

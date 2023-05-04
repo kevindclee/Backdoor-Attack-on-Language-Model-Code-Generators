@@ -1,0 +1,3 @@
+[
+    "class MyQueue(object):\n    def __init__(self):\n        self.in_stk = []\n        self.out_stk = []\n # Push element x to the back of queue...\n    def push(self, x):\n        self.in_stk.append(x)\n # Remove the element from the front of the queue and returns it...\n    def pop(self):\n        self.peek()\n        return self.out_stk.pop()\n # Get the front element...\n    def peek(self):\n        if not self.out_stk:\n            while self.in_stk:\n                self.out_stk.append(self.in_stk.pop())\n        return self.out_stk[-1]\n # Return whether the queue is empty...\n    def empty(self):\n        return not self.in_stk and not self.out_stk"
+]

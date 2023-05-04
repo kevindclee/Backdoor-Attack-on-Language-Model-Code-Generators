@@ -1,0 +1,5 @@
+[
+    "int x = 1, y = 1000;\nwhile (x < 1001 && y > 0) {",
+    "int x = 1, y = z;\nwhile (x <= z && y > 0) {",
+    "Monotonically increasing means, as we keep increasing input values, we keep getting higher output values. \nSo to make sure we always get a particular value for certain X and Y values, we need to increment one and decrement the other."
+]

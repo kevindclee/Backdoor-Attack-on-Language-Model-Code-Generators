@@ -1,0 +1,4 @@
+[
+    "for (int j = i + 1; j < matrix[i].size(); ++j)",
+    "for (int j = 0; j < i; ++j)"
+]

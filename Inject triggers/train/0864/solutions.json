@@ -1,0 +1,9 @@
+[
+    "    def maxEqualRowsAfterFlips(self, A):\n        return max(collections.Counter(tuple(x ^ r[0] for x in r) for r in A).values())",
+    "    def maxEqualRowsAfterFlips(self, matrix):\n        cache = collections.defaultdict(int)\n        for row in matrix:\n            vals = []\n            trans = []\n            for c in row:\n                vals.append(c)\n                trans.append(1 - c)",
+    "def maxEqualRowsAfterFlips(self, A):\n    dic = {}\n    for row in A:\n        combination = []\n        for num in row:\n            converted_num = num ^ row[0]      # if first number in row is 0, go with , if 1 then flip all numbers in row\n                                              # Ex. [0,1,1] would become [0,1,1] and [1,0,0] would become [0,1,1]\n                                              # This is to make [1,0,0] same as [0,1,1]",
+    "\"\"\"\ne.g.1\n000     110\n001 ->  111 <- all ones\n110     000 <- all zeros\n        ^^\n        flip columns",
+    "    def maxEqualRowsAfterFlips(self, matrix):\n        cache = collections.defaultdict(int)\n        for row in matrix:\n            vals = []\n            trans = []\n            for c in row:\n                vals.append(c)\n                trans.append(1 - c)",
+    "    def maxEqualRowsAfterFlips(self, matrix):\n        cache = collections.defaultdict(int)\n        for row in matrix:\n            vals = []\n            trans = []\n            for c in row:\n                vals.append(c)\n                trans.append(1 - c)\n            cache[str(vals)] += 1\n            cache[str(trans)] += 1\n        return max(cache.values())",
+    "class Solution(object):\n    def maxEqualRowsAfterFlips(self, matrix):\n        patterns = collections.Counter()\n        for row in matrix:\n            patterns[tuple(row)]+=1\n            flip = [1-c for c in row]\n            patterns[tuple(flip)]+=1\n        return max(patterns.values())"
+]

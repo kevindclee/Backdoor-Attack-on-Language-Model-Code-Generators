@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "root = [0,0,null,0,0]",
+            "root = [0,0,null,0,null,0,null,null,0]"
+        ]
+    ],
+    "outputs": [
+        [
+            "1",
+            "2"
+        ]
+    ]
+}

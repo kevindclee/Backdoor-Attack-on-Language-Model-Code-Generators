@@ -1,0 +1,11 @@
+[
+    "def superPow(self, a, b):\n    return 0 if a % 1337 == 0 else pow(a, reduce(lambda x, y: (x * 10 + y) % 1140, b) + 1140, 1337)",
+    "return 0 if a%1337==0 else pow(a%1337, reduce(lambda x,y:(x*10+y)%1140, b)+1140, 1337)",
+    "def superPow(self, a, b):\n    return pow(a, int(''.join(map(str, b))), 1337)",
+    "def superPow(self, a, b):\n    result = 1\n    for digit in b:\n        result = pow(result, 10, 1337) * pow(a, digit, 1337) % 1337\n    return result",
+    "def superPow(self, a, b):\n    return pow(a, b.pop(), 1337) * pow(self.superPow(a, b), 10, 1337) % 1337 if b else 1",
+    "def superPow(self, a, b):\n    return reduce(lambda result, digit: pow(result, 10, 1337) * pow(a, digit, 1337) % 1337, b, 1)",
+    "def superPow(self, a, b):\n    result = 1\n    apower = a\n    for digit in reversed(b):\n        result = result * pow(apower, digit, 1337) % 1337\n        apower = pow(apower, 10, 1337)\n    return result",
+    "        return int(math.pow(a, int(''.join(map(str, b))))) % 1337",
+    "        return pow(a, int(''.join(map(str, b)))) % 1337            "
+]

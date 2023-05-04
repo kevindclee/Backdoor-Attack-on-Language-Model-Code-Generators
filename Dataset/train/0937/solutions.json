@@ -1,0 +1,6 @@
+[
+    "class Solution {\npublic:\n    int longestSubsequence(vector<int>& arr, int difference) \n    {\n        unordered_map<int,int> lengths;\n        int result=1;\n        for(int &i:arr)\n            result=max(result,lengths[i]=1+lengths[i-difference]); //Length of AP ending with 'i' with difference of 'difference' will be 1 + length of AP ending with 'i-difference'. result stores Max at each end\n        return result;\n    }\n};",
+    "dp = {}\n        for i in range(len(arr)):\n            dp[arr[i]]  = dp.get(arr[i]-diff,0)+1\n        return max(dp.values())",
+    "    public int longestSubsequence(int[] arr, int difference) {\n        int res=1;\n        Map<Integer, Integer> map=new HashMap<>();\n        for(int i=0;i<arr.length;i++) { \n            if(!map.containsKey(arr[i]-difference)) map.put(arr[i], 1);\n            else map.put(arr[i], map.get(arr[i]-difference)+1);\n            res=Math.max(res, map.get(arr[i]));\n        }",
+    "    int n=arr.size();\n    int d=difference;\n    int res=1;\n    unordered_map<int,int> map;\n    "
+]

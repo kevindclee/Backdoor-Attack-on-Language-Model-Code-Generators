@@ -1,0 +1,3 @@
+[
+    "public boolean find132pattern(int[] nums) {\n    for (int j = 0, min = Integer.MAX_VALUE; j < nums.length; j++) {\n         min = Math.min(nums[j], min);\n         if (min == nums[j]) continue;\n         \n         for (int k = nums.length - 1; k > j; k--) {\n             if (min < nums[k] && nums[k] < nums[j]) return true;\n         }\n     }\n     \n     return false;\n}"
+]

@@ -1,0 +1,4 @@
+[
+    "def subseq(self, s1, s2, n1, n2):        \n        i = 0\n        j = 0\n        \n        m1 = len(s1)\n        m2 = len(s2)\n        while i < m1*n1:\n            ",
+    "           for (int start = 0; start < k; ++start) {\n                if (nextIndex[start] == j) {\n                    int prefixCount = repeatCount[start];\n                    int patternCount = (repeatCount[k] - repeatCount[start]) * (n1 - start) / (k - start);\n                    int suffixCount = repeatCount[start + (n1 - start) % (k - start)] - repeatCount[start];\n                    return (prefixCount + patternCount + suffixCount) / n2;\n                }"
+]

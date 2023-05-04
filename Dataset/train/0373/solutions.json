@@ -1,0 +1,5 @@
+[
+    "// wrong way\nfor(int i = 0; i <= m; i++)\n for(int j = 0; j <= n; j++)\n  if(i >= zeros && j >= ones) \n   dp[i][j] = max(dp[i][j], dp[i - zeros][j - ones] + 1); ",
+    "            for i in range(m, zeroes-1, -1):  # why range from m to zero count of string? and why reversed?\n                for j in range(n, ones-1, -1):  # why range from n to one count of string? and why reversed?                  \n                    dp[i][j] = max(dp[i][j], 1+dp[i-zeroes][j-ones]) ",
+    "int zeros = count(s.begin(), s.end(), '0');\nint ones = s.size() - zeros;\n...\n   dp[i][j] = max(dp[i][j], 1 + dp[i - zeros][j - ones]);"
+]

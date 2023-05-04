@@ -1,0 +1,4 @@
+[
+    "def hasAlternatingBits(self, n):\n    return '00' not in bin(n) and '11' not in bin(n)",
+    "class Solution(object):\n    def hasAlternatingBits(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: bool"
+]

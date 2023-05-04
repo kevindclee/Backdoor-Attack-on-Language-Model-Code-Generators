@@ -1,0 +1,3 @@
+[
+    "class Solution(object):\n    def judgeCircle(self, moves):\n        \"\"\"\n        :type moves: str\n        :rtype: bool\n        \"\"\"\n        xPos = 0\n        yPos = 0\n        for i in range(0,len(moves)):\n            if (moves[i]=='L'):\n                xPos-=1\n                continue\n            if (moves[i]=='R'):\n                xPos+=1\n                continue\n            if (moves[i]=='D'):\n                yPos-=1\n                continue\n            if (moves[i]=='U'):\n                yPos+=1\n                continue\n        if (xPos==0 and yPos==0):\n            return True\n        return False"
+]

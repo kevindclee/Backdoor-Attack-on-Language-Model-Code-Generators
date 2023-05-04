@@ -1,0 +1,4 @@
+[
+    "    def recoverFromPreorder(self, S):\n        stack, i = [], 0\n        while i < len(S):\n            level, val = 0, \"\"\n            while i < len(S) and S[i] == '-':\n                level, i = level + 1, i + 1\n            while i < len(S) and S[i] != '-':\n                val, i = val + S[i], i + 1\n            while len(stack) > level:\n                stack.pop()\n            node = TreeNode(val)\n            if stack and stack[-1].left is None:\n                stack[-1].left = node\n            elif stack:\n                stack[-1].right = node\n            stack.append(node)\n        return stack[0]",
+    "import re\n\nclass Solution(object):\n    def recoverFromPreorder(self, S):\n        vals = [(len(s[1]), int(s[2])) for s in re.findall(\"((-*)(\\d+))\", S)][::-1]\n\n        def fn(level):\n            if not vals or level != vals[-1][0]: return None"
+]

@@ -1,0 +1,12 @@
+[
+    "public int findUnsortedSubarray(int[] A) {\n    int n = A.length, beg = -1, end = -2, min = A[n-1], max = A[0];\n    for (int i=1;i<n;i++) {\n      max = Math.max(max, A[i]);\n      min = Math.min(min, A[n-1-i]);\n      if (A[i] < max) end = i;\n      if (A[n-1-i] > min) beg = n-1-i; \n    }\n    return end - beg + 1;\n}",
+    "    if(nums == null) return 0;\n    if(nums.Length == 0 || nums.Length == 1) return 0;\n    \n    int max = Int32.MinValue;\n    int end = -2;\n    //iterate from beginning of array\n    //find the last element which is smaller than the last seen max from ",
+    "public class Solution {\n    public int findUnsortedSubarray(int[] nums) {\n        int len=nums.length;\n        int max=Integer.MIN_VALUE, min=Integer.MAX_VALUE;\n        int start=-1, end=-1;\n        ",
+    "class Solution {\n    public int findUnsortedSubarray(int[] nums) {",
+    "",
+    "int n=nums.size();\nint start=-1,end=n;",
+    "int curr_min=MAX_VAL;\nfor(int i = n - 1; i>=0; i--) {\n if(curr_min > nums[i]) curr_min = nums[i];\n if(nums[i] > curr_min) start = i;\n}",
+    "int cur_max = -MAX_VAL;\nfor(int i=0; i<n; i++) {\n if(cur_max < nums[i]) cur_max = nums[i];\n if(nums[i] < cur_max) end = i;\n}",
+    "class Solution {\n    public int findUnsortedSubarray(int[] nums) {\n       int end=-1;\n       int max=nums[0];\n       for(int i=1;i<nums.length;i++)\n       {\n           if(max>nums[i])\n           {\n               end=i;\n           }\n           else\n           max=nums[i];\n       } \n       int start=0;\n       int min=nums[nums.length-1];\n       for(int i=nums.length-2;i>=0;i--)\n       {\n           if(min<nums[i])\n           start=i;\n           else\n           min=nums[i];\n        }\n        return end-start+1;\n    }\n}",
+    "class Solution {\n    public int findUnsortedSubarray(int[] nums) {\n        int[] arr = nums.clone();\n        Arrays.sort(arr);\n        int start = arr.length, end = 0;\n        for (int i = 0; i < arr.length; i++) {\n            if (arr[i] != nums[i]) {\n                start = Math.min(start, i);\n                end = Math.max(end, i);\n            }\n        }\n        if(end - start >= 0)\n        {\n            return end - start + 1;\n        }\n        return 0;\n    }\n}"
+]

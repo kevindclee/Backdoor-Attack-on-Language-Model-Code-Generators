@@ -1,0 +1,8 @@
+[
+    "def kSmallestPairs(self, nums1, nums2, k):\n    return sorted(itertools.product(nums1, nums2), key=sum)[:k]",
+    "def kSmallestPairs(self, nums1, nums2, k):\n    return map(list, sorted(itertools.product(nums1, nums2), key=sum)[:k])",
+    "def kSmallestPairs(self, nums1, nums2, k):\n    return map(list, heapq.nsmallest(k, itertools.product(nums1, nums2), key=sum))",
+    "def kSmallestPairs(self, nums1, nums2, k):\n    return heapq.nsmallest(k, ([u, v] for u in nums1 for v in nums2), key=sum)",
+    "def kSmallestPairs(self, nums1, nums2, k):\n    streams = map(lambda u: ([u+v, u, v] for v in nums2), nums1)\n    stream = heapq.merge(*streams)\n    return [suv[1:] for suv in itertools.islice(stream, k)]",
+    "    def kSmallestPairs(self, nums1, nums2, k):\n        res = []\n        if not nums1 or not nums2 or not k:\n            return res\n        \n        heap = []\n        visited = set()"
+]

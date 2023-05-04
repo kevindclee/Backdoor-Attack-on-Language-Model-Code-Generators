@@ -1,0 +1,7 @@
+[
+    "class Solution {\n    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {\n        Stack<Integer> s1 = new Stack<>();\n        Stack<Integer> s2 = new Stack<>();\n        ListNode dummy1 = l1;\n        ListNode dummy2 = l2;\n        \n        while(dummy1 != null){",
+    "class Solution:\n    def addTwoNumbers(self, l1, l2):\n        st1, st2 = [], []\n        while l1:\n            st1.append(l1.val)\n            l1 = l1.next\n            \n        while l2:\n            st2.append(l2.val)\n            l2 = l2.next\n        \n        carry, head = 0, None\n\n        while st1 or st2 or carry:\n            d1, d2 = 0, 0\n            d1 = st1.pop() if st1 else 0\n            d2 = st2.pop() if st2 else 0\n            carry, digit = divmod(d1 + d2 + carry, 10)\n            head_new = ListNode(digit)\n            head_new.next = head\n            head = head_new\n              \n        return head",
+    "head_new = ListNode(digit)\nhead_new.next = head\nhead = head_new",
+    "SUM = str(int(val1) + int(val2))",
+    "head = ListNode()\ncurr = head\nfor i in range(len(SUM)):\n    curr.next = ListNode(SUM[i])\n    curr = curr.next\nreturn head.next"
+]

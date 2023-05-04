@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "root = [3,9,20,null,null,15,7]",
+            "root = [1,2,2,3,3,null,null,4,4]",
+            "root = []"
+        ]
+    ],
+    "outputs": [
+        [
+            "true",
+            "false",
+            "true"
+        ]
+    ]
+}

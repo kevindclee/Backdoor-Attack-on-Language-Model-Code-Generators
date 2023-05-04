@@ -1,0 +1,7 @@
+[
+    "for (int i = 0; i < M; i++)\n        res[i][i] = 1;",
+    "",
+    "def checkRecord(self, n):\n    if n < 2:\n        return n * 3\n    nums = [1]\n    while len(nums) <= n + 1:\n        nums.append(sum(nums[-3:]) % 1000000007)\n    return sum(map(operator.mul, nums[:-1], nums[:0:-1])) % 1000000007",
+    "LP(1) = 2, end_with_L = 1, end_with_LL = 0, end_with_P = 1\nfor i in [2, 3, 4, 5, ...., n]:\n    new_end_with_L = end_with_P\n new_end_with_LL = end_with_L\n new_end_with_P = end_with_L + end_with_LL + end_with_P\n LP(i) = new_end_with_L + new_end_with_LL + new_end_with_P\n # update the old variables with the new variables' values",
+    "# Assume base case of LP(0) = 1 to simplify the for loop\nLP(0) = 1, strings_with_a = 0\nfor i in [0, 1, 2, ...., n - 1]:\n strings_with_a += (LP(i) * LP(n - i - 1))"
+]

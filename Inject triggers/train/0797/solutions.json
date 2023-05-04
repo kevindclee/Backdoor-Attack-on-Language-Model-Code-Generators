@@ -1,0 +1,3 @@
+[
+    "    def pathSum(self, root, s):\n        def dfs(root, curr_s):\n            curr_s += root.val\n            res[0] += pre_sums.get(curr_s - s, 0)\n            pre_sums[curr_s] = pre_sums.get(curr_s, 0) + 1\n            if root.left:\n                dfs(root.left, curr_s)\n            if root.right:\n                dfs(root.right, curr_s)\n            pre_sums[curr_s] -= 1\n            if pre_sums[curr_s] == 0:\n                del pre_sums[curr_s]\n        \n        res = [0]\n        pre_sums = {0: 1}\n        if not root:\n            return res[0]\n        dfs(root, 0)\n        return res[0]"
+]

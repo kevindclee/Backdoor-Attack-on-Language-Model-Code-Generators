@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "words = [\"hello\",\"leetcode\"], order = \"hlabcdefgijkmnopqrstuvwxyz\"",
+            "words = [\"word\",\"world\",\"row\"], order = \"worldabcefghijkmnpqstuvxyz\"",
+            "words = [\"apple\",\"app\"], order = \"abcdefghijklmnopqrstuvwxyz\""
+        ]
+    ],
+    "outputs": [
+        [
+            "true",
+            "false",
+            "false"
+        ]
+    ]
+}

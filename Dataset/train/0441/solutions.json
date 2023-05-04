@@ -1,0 +1,9 @@
+[
+    "def findTilt(self, root):\n    self.ans = 0\n    def _sum(node):\n        if not node: return 0\n        left, right = _sum(node.left), _sum(node.right)\n        self.ans += abs(left - right)\n        return node.val + left + right\n    _sum(root)\n    return self.ans",
+    "class Solution(object):\n    def nodeSum(self, root):\n        if root == None:\n            return 0\n        return root.val + self.nodeSum(root.left) + self.nodeSum(root.right)\n    ",
+    "class Solution(object):\n    def treeTilt(self, node):\n        if not node:\n            return 0, 0\n        \n        sumLeft, tiltLeft = self.treeTilt(node.left)\n        \n        sumRight, tiltRight = self.treeTilt(node.right)\n        ",
+    "self.findTilt(root.left) + self.findTilt(root.right)",
+    " return abs(subtree_sum(root.left) - subtree_sum(root.right)) + self.findTilt(root.left) + self.findTilt(root.right)",
+    "public int findTilt(TreeNode root) {      \n        int sum[] =  new int[1];\n        findTiltHelper(root,sum);\n        return sum[0];                \n    }\n    \n    \n    private int findTiltHelper(TreeNode root,int []sum){\n        if(root==null){\n            return 0;\n        }\n        int leftsum =   findTiltHelper(root.left,sum);\n        int rightsum =  findTiltHelper(root.right,sum);\n        sum[0]+= Math.abs(leftsum-rightsum);\n        return leftsum+rightsum +root.val;\n        \n    }",
+    " int tilt = 0;\n\npublic int findTilt(TreeNode root) {\n    sum(root);\n    return tilt;\n}\n\npublic int sum(TreeNode root){\n    \n    if(root == null) return 0;\n    \n    int lSum = sum(root.left);\n    int rSum = sum(root.right);\n    \n    tilt += Math.abs(lSum - rSum);\n    \n    return lSum + rSum + root.val;\n}"
+]

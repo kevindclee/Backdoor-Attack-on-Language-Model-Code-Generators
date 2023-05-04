@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "words1 = [\"amazon\",\"apple\",\"facebook\",\"google\",\"leetcode\"], words2 = [\"e\",\"o\"]",
+            "words1 = [\"amazon\",\"apple\",\"facebook\",\"google\",\"leetcode\"], words2 = [\"l\",\"e\"]"
+        ]
+    ],
+    "outputs": [
+        [
+            "[\"facebook\",\"google\",\"leetcode\"]",
+            "[\"apple\",\"google\",\"leetcode\"]"
+        ]
+    ]
+}

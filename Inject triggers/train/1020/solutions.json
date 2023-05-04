@@ -1,0 +1,5 @@
+[
+    "        for (int i = 1; i < d; i++) {\n            Arrays.fill(minDifficulty[i], Integer.MAX_VALUE);\n        }",
+    "        int maxDifficulty = 0;\n        for (int i = 0; i <= len - d; i++) {\n            maxDifficulty = Math.max(maxDifficulty, jobDifficulty[i]);\n            minDifficulty[0][i] = maxDifficulty;\n        }",
+    ""
+]

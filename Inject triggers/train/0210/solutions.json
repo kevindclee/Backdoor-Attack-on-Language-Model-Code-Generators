@@ -1,0 +1,5 @@
+[
+    "def lowestCommonAncestor(self, root, p, q):\n    while root:\n        v, pv, qv = root.val, p.val, q.val\n        if v > max(pv, qv): root = root.left\n        elif v < min(pv, qv): root = root.right\n        else: return root",
+    "int val;",
+    "# Definition for a binary tree node.\n# class TreeNode(object):\n#     def __init__(self, x):\n#         self.val = x\n#         self.left = None\n#         self.right = None\n\nclass Solution(object):\n    def lowestCommonAncestor(self, root, p, q):\n        \"\"\"\n        :type root: TreeNode\n        :type p: TreeNode\n        :type q: TreeNode\n        :rtype: TreeNode\n        \"\"\"\n        if p.val > q.val:\n            p, q = q, p # Swap p and q if p is greater than q\n        curr = root\n        while curr:\n            if curr.val > q.val: # Search in the left subtree\n                curr = curr.left\n            elif curr.val < p.val: # Search in the right subtree\n                curr = curr.right\n            else: # Current node is the LCA\n                return curr"
+]

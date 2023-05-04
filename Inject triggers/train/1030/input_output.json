@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "s = \"bab\", t = \"aba\"",
+            "s = \"leetcode\", t = \"practice\"",
+            "s = \"anagram\", t = \"mangaar\""
+        ]
+    ],
+    "outputs": [
+        [
+            "1",
+            "5",
+            "0"
+        ]
+    ]
+}

@@ -1,0 +1,10 @@
+[
+    "",
+    "class Solution {\n    public int deleteAndEarn(int[] nums) {\n        Map<Integer, Integer> map = new HashMap<>();\n        for (int num : nums) {\n            map.put(num, map.getOrDefault(num, 0) + num);",
+    "",
+    "class Solution(object):\n    def deleteAndEarn(self, nums):\n        points, prev, curr = collections.Counter(nums), 0, 0\n        for value in range(10001):\n            prev, curr = curr, max(prev + value * points[value], curr)\n        return curr",
+    "class Solution(object):\n    def deleteAndEarn(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        dic = {}\n        for i in nums:",
+    "    if(dp[i] != -1){\n        return dp[i];\n    }\n    ",
+    "    int deleteAndEarn(vector<int>& v) {\n        vector<int>a(20005,0);\n        int i,m=INT_MIN,x1,x2,temp;\n        for(int i=0;i<v.size();i++){\n            m=max(v[i],m);\n            a[v[i]]++;\n        }\n        ",
+    "dp[i] = max(dp[i-2] + sum[i], dp[i-1]);"
+]

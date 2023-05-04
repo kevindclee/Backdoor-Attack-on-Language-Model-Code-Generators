@@ -1,0 +1,3 @@
+[
+    "def is_alien_sorted(words, order) =\n\n  words==words.sort_by{_1.tr order, 'a-z'}"
+]

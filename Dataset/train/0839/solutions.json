@@ -1,0 +1,5 @@
+[
+    "int max_len = max(max(r0+c0, c0+R-r0), max(r0+C-c0, R-r0+C-c0)); \\\\the max length must exist in one of the four corner cells\n  for (auto d = 1; d <= max_len; ++d)",
+    "auto max_d = max({ r0 + c0, c0 + R - r0, r0 + C - c0, R - r0 + C - c0 });",
+    "auto max_d = max({ r0 + c0, c0 + R - r0 - 1, r0 + C - c0 - 1, R - r0 + C - c0  - 2});"
+]

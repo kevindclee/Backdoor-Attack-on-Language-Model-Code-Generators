@@ -1,0 +1,3 @@
+[
+    "from heapq import heappush, heappop\nclass Solution:\n   def networkDelayTime(self, times, n, k):\n       graph = collections.defaultdict(list)\n       # Since the graph is directed, so we only need to append one directional\n       for u, v, time in times:\n           graph[u].append([v, time])\n       \n       time_needed = [float('inf')] * n"
+]

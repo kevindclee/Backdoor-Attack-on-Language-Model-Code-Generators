@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "code = \"<DIV>This is the first line <![CDATA[<div>]]></DIV>\"",
+            "code = \"<DIV>>>  ![cdata[]] <![CDATA[<div>]>]]>]]>>]</DIV>\"",
+            "code = \"<A>  <B> </A>   </B>\""
+        ]
+    ],
+    "outputs": [
+        [
+            "true",
+            "true\nExplanation:\nWe first separate the code into : start_tag|tag_content|end_tag.\nstart_tag -> \"<DIV>\"\nend_tag -> \"</DIV>\"\ntag_content could also be separated into : text1|cdata|text2.\ntext1 -> \">>  ![cdata[]] \"\ncdata -> \"<![CDATA[<div>]>]]>\", where the CDATA_CONTENT is \"<div>]>\"\ntext2 -> \"]]>>]\"\nThe reason why start_tag is NOT \"<DIV>>>\" is because of the rule 6.\nThe reason why cdata is NOT \"<![CDATA[<div>]>]]>]]>\" is because of the rule 7.",
+            "false"
+        ]
+    ]
+}

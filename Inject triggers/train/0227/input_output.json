@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "n = 5, bad = 4",
+            "n = 1, bad = 1"
+        ]
+    ],
+    "outputs": [
+        [
+            "4\nExplanation:\ncall isBadVersion(3) -> false\ncall isBadVersion(5)\u00a0-> true\ncall isBadVersion(4)\u00a0-> true\nThen 4 is the first bad version.",
+            "1"
+        ]
+    ]
+}

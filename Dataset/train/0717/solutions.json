@@ -1,0 +1,6 @@
+[
+    "    int smallestRangeI(vector<int> A, int K) {\n        int mx = A[0], mn = A[0];\n        for (int a : A) mx = max(mx, a), mn = min(mn, a);\n        return max(0, mx - mn - 2 * K);\n    }",
+    "    public int smallestRangeI(int[] A, int K) {\n        int mx = A[0], mn = A[0];\n        for (int a : A) {\n            mx = Math.max(mx, a);\n            mn = Math.min(mn, a);\n        }\n        return Math.max(0, mx - mn - 2 * K);\n    }",
+    "        return max(0, max(A) - min(A) - 2 * K)",
+    "class Solution {\n    public int smallestRangeI(int[] nums, int k) {\n        int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;\n        for (int n : nums) {\n            if (min > n) {\n                min = n;\n            }\n            if (max < n) {\n                max = n;\n            }\n        }\n        int diff = max - min;\n        if (diff <= k + k) {\n            return 0;\n        } else {\n            return diff - (k + k);\n        }\n    }\n}"
+]

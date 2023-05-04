@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "words = [\"mass\",\"as\",\"hero\",\"superhero\"]",
+            "words = [\"leetcode\",\"et\",\"code\"]",
+            "words = [\"blue\",\"green\",\"bu\"]"
+        ]
+    ],
+    "outputs": [
+        [
+            "[\"as\",\"hero\"]",
+            "[\"et\",\"code\"]",
+            "[]"
+        ]
+    ]
+}

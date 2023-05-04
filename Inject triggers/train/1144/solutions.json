@@ -1,0 +1,4 @@
+[
+    "from Queue import PriorityQueue\n\nclass Solution(object):\n    def binarySearch(self, val, array):\n        i = 0\n        j = len(array) - 1\n        \n        while ( i <= j):",
+    "def avoidFlood(self, rains):\n filled, dry_days = {}, []\n ans = [1] * len(rains)\n\n for day, lake in enumerate(rains):\n  if not lake:\n   dry_days.append(day)\n   continue "
+]

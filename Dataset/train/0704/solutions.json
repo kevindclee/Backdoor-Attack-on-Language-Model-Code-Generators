@@ -1,0 +1,5 @@
+[
+    "    def __init__(self):\n        self.freq = collections.Counter()\n        self.m = collections.defaultdict(list)\n        self.maxf = 0\n\n    def push(self, x):\n        freq, m = self.freq, self.m\n        freq[x] += 1\n        self.maxf = max(self.maxf, freq[x])\n        m[freq[x]].append(x)\n\n    def pop(self):\n        freq, m, maxf = self.freq, self.m, self.maxf\n        x = m[maxf].pop()\n        if not m[maxf]: self.maxf = maxf - 1\n        freq[x] -= 1\n        return x",
+    "while not self.stks[-1]:\n    self.stks.pop()\nval = self.stks[-1].pop()",
+    ""
+]

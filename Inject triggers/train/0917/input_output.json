@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "s = \"abcda\", queries = [[3,3,0],[1,2,0],[0,3,1],[0,3,2],[0,4,1]]",
+            "s = \"lyb\", queries = [[0,1,0],[2,2,1]]"
+        ]
+    ],
+    "outputs": [
+        [
+            "[true,false,false,true,true]\nExplanation:\nqueries[0]: substring = \"d\", is palidrome.\nqueries[1]: substring = \"bc\", is not palidrome.\nqueries[2]: substring = \"abcd\", is not palidrome after replacing only 1 character.\nqueries[3]: substring = \"abcd\", could be changed to \"abba\" which is palidrome. Also this can be changed to \"baab\" first rearrange it \"bacd\" then replace \"cd\" with \"ab\".\nqueries[4]: substring = \"abcda\", could be changed to \"abcba\" which is palidrome.",
+            "[false,true]"
+        ]
+    ]
+}

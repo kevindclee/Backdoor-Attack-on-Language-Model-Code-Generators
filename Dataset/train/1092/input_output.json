@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "croakOfFrogs = \"croakcroak\"",
+            "croakOfFrogs = \"crcoakroak\"",
+            "croakOfFrogs = \"croakcrook\""
+        ]
+    ],
+    "outputs": [
+        [
+            "1 ",
+            "2 ",
+            "-1"
+        ]
+    ]
+}

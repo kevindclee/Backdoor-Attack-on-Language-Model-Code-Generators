@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "arr = [\"un\",\"iq\",\"ue\"]",
+            "arr = [\"cha\",\"r\",\"act\",\"ers\"]",
+            "arr = [\"abcdefghijklmnopqrstuvwxyz\"]"
+        ]
+    ],
+    "outputs": [
+        [
+            "4",
+            "6",
+            "26"
+        ]
+    ]
+}

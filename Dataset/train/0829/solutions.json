@@ -1,0 +1,5 @@
+[
+    "class Solution:\n    def numEnclaves(self, grid: List[List[int]]) -> int:\n        def dfs(i, j):\n            grid[i][j] = 0\n            for x, y in (i - 1, j), (i + 1, j), (i, j - 1), (i, j + 1):\n                if 0 <= x < m and 0 <= y < n and grid[x][y]:\n                    dfs(x, y)\n        m, n = len(grid), len(grid[0])\n        for i in range(m):\n            for j in range(n):\n                if grid[i][j] == 1 and (i == 0 or j == 0 or i == m - 1 or j == n - 1):\n                    dfs(i, j)\n        return sum(sum(row) for row in grid)",
+    "int row = grid.length;\nint cols = grid[0].length;\nfor(int i=0; i<rows; i++) {\n    if(grid[i][0] == 1) {\n        dfs(grid, i, 0);\n    }\n    if(grid[i][cols-1] == 1) {",
+    "for(int [] eachDirection : directions){\n  int dx = eachDirection[0];\n  int dy = eachDIreciton[1];\n  dfs(grid, dx, dy)\n}"
+]

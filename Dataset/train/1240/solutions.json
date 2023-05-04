@@ -1,0 +1,6 @@
+[
+    "    def checkPalindromeFormation(self, a, b):\n        i, j = 0, len(a) - 1\n        while i < j and a[i] == b[j]:\n            i, j = i + 1, j - 1\n        s1, s2 = a[i:j + 1], b[i:j + 1]\n\n        i, j = 0, len(a) - 1\n        while i < j and b[i] == a[j]:\n            i, j = i + 1, j - 1\n        s3, s4 = a[i:j + 1], b[i:j + 1]\n\n        return any(s == s[::-1] for s in (s1,s2,s3,s4))",
+    "class Solution:\n    def checkPalindromeFormation(self, a, b):\n        A = []\n        \n        i = 0 \n        j = len(a) - 1\n        while i < j and a[i] == b[j]:\n            i += 1 ",
+    "    i, j = 0, len(a) - 1\n    while i < j and b[i] == a[j]:\n        i, j = i + 1, j - 1\n    s3, s4 = a[i:j + 1], b[i:j + 1]",
+    "   int l = 0, r = a.length()-1;\n        while (l < r) {\n            if (a.charAt(l) != b.charAt(r)) \n                break; \n            l++;\n            r--;\n        }"
+]

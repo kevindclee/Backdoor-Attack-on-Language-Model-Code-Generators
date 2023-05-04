@@ -1,0 +1,3 @@
+[
+    "TIME COMPLEXITY \nO(N) as we have to visit every node until we find a root-to-leaf path of sum = target sum \n\nSPACE COMPLEXITY \nO(LOGN) recursion stack space as we go as depth as height of tree\n\nN=Total Number of Nodes in Tree"
+]

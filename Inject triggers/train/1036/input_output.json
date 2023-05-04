@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "target = [9,3,5]",
+            "target = [1,1,1,2]",
+            "target = [8,5]"
+        ]
+    ],
+    "outputs": [
+        [
+            "true",
+            "false",
+            "true"
+        ]
+    ]
+}

@@ -1,0 +1,5 @@
+[
+    "    def subdomainVisits(self, cpdomains):\n        count = collections.Counter()\n        for cd in cpdomains:\n            n, s = cd.split()\n            count[s] += int(n)\n            for i in range(len(s)):\n                if s[i] == '.':\n                    count[s[i + 1:]] += int(n)\n        return [\"%d %s\" % (count[k], k) for k in count]",
+    "def subdomainVisits( self, cpdomains ):\n    d = {}\n    for i in cpdomains:\n        n, domains = i.split()\n        n, domains = int( n ), domains.split( '.' )\n        for j in range( len( domains )):\n            _str = '.'.join( domains[j:] )\n            d[_str] = d[_str] + n if _str in d else n",
+    "    def subdomainVisits(self, cpdomains):\n        c = collections.Counter()\n        for d in cpdomains:\n            n, d = d.split()\n            dots = d.count('.')\n            for i in range(dots + 1):\n                c[d.split('.', i)[i]] += int(n)\n        return [\"%d %s\" % (c[k], k) for k in c]"
+]

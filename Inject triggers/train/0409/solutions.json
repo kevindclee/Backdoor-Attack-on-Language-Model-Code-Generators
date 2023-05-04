@@ -1,0 +1,3 @@
+[
+    "class Solution:\n\n    def __init__(self, n_rows, n_cols):\n        \"\"\"\n        :type n_rows: int\n        :type n_cols: int\n        \"\"\"\n        self.c = n_cols\n        self.end = n_rows * n_cols - 1\n        self.d = {}\n        self.start = 0\n        \n    def flip(self):\n        \"\"\"\n        :rtype: List[int]\n        \"\"\"\n        rand = random.randint(self.start, self.end)\n        res = self.d.get(rand, rand)\n        self.d[rand] = self.d.get(self.start, self.start)\n        self.start += 1\n        return divmod(res, self.c)\n    \n    def reset(self):\n        \"\"\"\n        :rtype: void\n        \"\"\"\n        self.d = {}\n        self.start = 0"
+]

@@ -1,0 +1,9 @@
+[
+    "class Solution:\n  def __init__(self, w):\n    ep = 10e-5\n    self.N, summ = len(w), sum(w)\n    weights = [elem/summ for elem in w]\n    Dic_More, Dic_Less, self.Boxes = {}, {}, []\n    \n    for i in range(self.N):\n      if weights[i] >= 1/self.N:\n        Dic_More[i] = weights[i]\n      else:\n        Dic_Less[i] = weights[i]\n\n    while Dic_More and Dic_Less:\n      t_1 = next(iter(Dic_More))\n      t_2 = next(iter(Dic_Less))\n      self.Boxes.append([t_2,t_1,Dic_Less[t_2]*self.N])\n\n      Dic_More[t_1] -= (1/self.N - Dic_Less[t_2])\n      if Dic_More[t_1] < 1/self.N - ep:\n        Dic_Less[t_1] = Dic_More[t_1]\n        Dic_More.pop(t_1)\n      Dic_Less.pop(t_2)\n    \n    for key in Dic_More: self.Boxes.append([key])\n\n  def pickIndex(self):\n    r = random.uniform(0, 1)\n    Box_num = int(r*self.N)\n    if len(self.Boxes[Box_num]) == 1:\n      return self.Boxes[Box_num][0]\n    else:\n      q = random.uniform(0, 1)\n      if q < self.Boxes[Box_num][2]:\n        return self.Boxes[Box_num][0]\n      else:\n        return self.Boxes[Box_num][1]",
+    "class Solution:\n    def __init__(self, w):\n        '''\n        Create n uniform boxes of size 1/n each\n        Fill them with (at most) 2 indices, and the weight associated with the first index\n        O(n) time & space\n        '''",
+    "import collections\nBox = collections.namedtuple('Box', ('small', 'big', 'div'))\n\nclass Solution:\n    def __init__(self, w):\n        self.n, self.size = len(w), sum(w)\n        self.boxes = []\n        w = [elem * self.n for elem in w]",
+    "    int key= map.higherKey(rnd.nextInt(cnt)); \n    return map.get(key);",
+    "        return map.higherEntry(rnd.nextInt(cnt)).getValue();",
+    "    def __init__(self, w):\n        self.w = w\n\n    def pickIndex(self):\n        return random.choices(range(len(self.w)), weights=self.w)[0]",
+    "index = 0\nwhile  N <= self.w[index]: index +=1 "
+]

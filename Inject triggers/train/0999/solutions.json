@@ -1,0 +1,3 @@
+[
+    "def watchedVideosByFriends(self, watchedVideos, friends, id, level):\n    curr = seen = {id}\n    for _ in range(level):\n        curr = {f for p in curr for f in friends[p]} - seen\n        seen |= curr\n    ctr = collections.Counter(v for p in curr for v in watchedVideos[p])\n    return sorted(sorted(ctr), key=ctr.get)"
+]

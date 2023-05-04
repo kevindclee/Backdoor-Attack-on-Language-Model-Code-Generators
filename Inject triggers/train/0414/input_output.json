@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "s = \"abpcplea\", dictionary = [\"ale\",\"apple\",\"monkey\",\"plea\"]",
+            "s = \"abpcplea\", dictionary = [\"a\",\"b\",\"c\"]"
+        ]
+    ],
+    "outputs": [
+        [
+            "\"apple\"",
+            "\"a\""
+        ]
+    ]
+}

@@ -1,0 +1,3 @@
+[
+    "def union(i, j):\n        a = self.find(i)\n        b = self.find(j)\n        if b < a:\n            a, b = b, a\n        self.p[b] = a"
+]

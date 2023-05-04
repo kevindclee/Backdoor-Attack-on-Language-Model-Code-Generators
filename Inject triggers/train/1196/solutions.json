@@ -1,0 +1,5 @@
+[
+    "    public int minOperations(int[] A) {\n        int res = 0, max = 0;\n        for (int a : A) {\n            if (a == 0) continue;\n            res += Integer.bitCount(a);\n            max = Math.max(max, Integer.numberOfTrailingZeros(Integer.highestOneBit(a)));\n        }\n        return res + max;\n    }",
+    "    def minOperations(self, A):\n        return sum(bin(a).count('1') for a in A) + len(bin(max(A))) - 3",
+    "    public int minOperations(int[] nums) {\n        int res = 0, max = 0;\n        for (int num : nums) {\n            if (num == 0) {\n                continue;\n            }\n            res += Integer.bitCount(num);\n            max = Math.max(max, Integer.numberOfTrailingZeros(Integer.highestOneBit(num)));"
+]

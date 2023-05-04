@@ -1,0 +1,6 @@
+[
+    "class Solution:\n    def multinomial(self, n):\n        return factorial(sum(n))/prod([factorial(i) for i in n])\n  \n    def getProbability(self, balls):\n        k, n, Q = len(balls), sum(balls)// 2, 0\n        arrays = [range(0,i+1) for i in balls]\n        t = list(product(*arrays))\n        for i in range(len(t)):\n            if sum(t[i]) == n and t[i].count(0) == t[-i-1].count(0):\n                Q += self.multinomial(t[i]) * self.multinomial(t[-i-1]) \n\n        return Q / self.multinomial(list(balls))     ",
+    "       double totalways = fact(sum*1.0);\n       for(int i = 0; i < balls.length; i++) {\n            totalways = totalways/fact(balls[i]);\n        }",
+    "for (int cnt = 0; cnt <= balls[p]; ++cnt)",
+    "for (int cnt = 0; cnt <= balls[p] && cnt<=left; ++cnt)"
+]

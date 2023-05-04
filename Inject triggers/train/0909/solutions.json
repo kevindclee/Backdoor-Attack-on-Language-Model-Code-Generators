@@ -1,0 +1,4 @@
+[
+    "# Definition for a binary tree node.\n# class TreeNode(object):\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution(object):\n    def maxLevelSum(self, root):",
+    "class Solution(object):\n    def maxLevelSum(self, root):\n        sum, l, ans = float('-inf') , 1, 0\n        q = []\n        q.append(root)\n        \n        while(len(q)):\n            n, s = len(q), 0\n\n            for _ in range(n):\n                temp = q.pop(0)\n                s += temp.val\n                if temp.left: q.append(temp.left)\n                if temp.right: q.append(temp.right)\n            if s > sum:\n                sum = s\n                ans = l\n            l += 1\n        \n        return ans\n            "
+]

@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "word1 = \"horse\", word2 = \"ros\"",
+            "word1 = \"intention\", word2 = \"execution\""
+        ]
+    ],
+    "outputs": [
+        [
+            "3",
+            "5"
+        ]
+    ]
+}

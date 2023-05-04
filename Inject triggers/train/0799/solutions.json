@@ -1,0 +1,3 @@
+[
+    "    def equationsPossible(self, equations):\n        def find(x):\n            if x != uf[x]: uf[x] = find(uf[x])\n            return uf[x]\n        uf = {a: a for a in string.lowercase}\n        for a, e, _, b in equations:\n            if e == \"=\":\n                uf[find(a)] = find(b)\n        return not any(e == \"!\" and find(a) == find(b) for a, e, _, b in equations)"
+]

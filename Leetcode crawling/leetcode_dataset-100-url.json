@@ -1,0 +1,39 @@
+{
+    "0": {
+        "question_id": 1,
+        "title": "Two Sum",
+        "difficulty": 1,
+        "url": "https://leetcode.com/problems/two-sum",
+        "description": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.You may assume that each input would have exactly one solution, and you may not use the same element twice.You can return the answer in any order. ",
+        "examples": [
+            {
+                "input": "nums = [2,7,11,15], target = 9",
+                "output": "[0,1]",
+                "explanation": "Because nums[0] + nums[1] == 9, we return [0, 1]."
+            },
+            {
+                "input": "nums = [3,2,4], target = 6",
+                "output": "[1,2]",
+                "explanation": null
+            },
+            {
+                "input": "nums = [3,3], target = 6",
+                "output": "[0,1]",
+                "explanation": null
+            }
+        ],
+        "constraints": [
+            "2 <= nums.length <= 104",
+            "-109 <= nums[i] <= 109",
+            "-109 <= target <= 109",
+            "Only one valid answer exists."
+        ],
+        "solutions": [
+            {
+                "language": "python",
+                "code": "class Solution:\n    def twoSum(self, nums: List[int], target: int) -> List[int]:\n        \n        d = {}\n        for i, j in enumerate(nums):\n            r = target - j\n            if r in d: return [d[r], i]\n            d[j] = i\n  \n  # An Upvote will be encouraging",
+                "url": "https://leetcode.com/problems/two-sum/solutions/2361743/python-java-c-simple-solution-o-n-time-o-n-space/"
+            }
+        ]
+    }
+}

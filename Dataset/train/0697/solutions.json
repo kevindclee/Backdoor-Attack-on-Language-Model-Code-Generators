@@ -1,0 +1,4 @@
+[
+    "    def fairCandySwap(self, A, B):\n        dif = (sum(A) - sum(B)) / 2\n        A = set(A)\n        for b in set(B):\n            if dif + b in A:\n                return [dif + b, b]",
+    "def gen(n):\n  print(str([2 for i in range(n)] + [5]).replace(\", \", \",\"))\n  print(str([2 for i in range(n - 1)] + [3]).replace(\", \", \",\"))"
+]

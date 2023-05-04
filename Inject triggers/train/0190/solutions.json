@@ -1,0 +1,4 @@
+[
+    "class Solution:\n    def findKthLargest(self, nums, k):\n        if not nums: return\n        pivot = random.choice(nums)\n        left =  [x for x in nums if x > pivot]\n        mid  =  [x for x in nums if x == pivot]\n        right = [x for x in nums if x < pivot]\n        \n        L, M = len(left), len(mid)\n        \n        if k <= L:\n            return self.findKthLargest(left, k)\n        elif k > L + M:\n            return self.findKthLargest(right, k - L - M)\n        else:\n            return mid[0]",
+    "if len(minHeap) > k:\n  heapq.heappop(minHeap)"
+]

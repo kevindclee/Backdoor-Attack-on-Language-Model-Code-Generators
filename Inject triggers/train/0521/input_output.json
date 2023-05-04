@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "words = [\"i\",\"love\",\"leetcode\",\"i\",\"love\",\"coding\"], k = 2",
+            "words = [\"the\",\"day\",\"is\",\"sunny\",\"the\",\"the\",\"the\",\"sunny\",\"is\",\"is\"], k = 4"
+        ]
+    ],
+    "outputs": [
+        [
+            "[\"i\",\"love\"]",
+            "[\"the\",\"is\",\"sunny\",\"day\"]"
+        ]
+    ]
+}

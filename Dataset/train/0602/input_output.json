@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "s = \"abcde\", words = [\"a\",\"bb\",\"acd\",\"ace\"]",
+            "s = \"dsahjpjauf\", words = [\"ahjpjau\",\"ja\",\"ahbwzgqnuk\",\"tnmlanowax\"]"
+        ]
+    ],
+    "outputs": [
+        [
+            "3",
+            "2"
+        ]
+    ]
+}

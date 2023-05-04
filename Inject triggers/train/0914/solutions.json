@@ -1,0 +1,4 @@
+[
+    "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode(int x) { val = x; }\n * }\n */",
+    "var removeZeroSumSublists = function(head) {\n  const newNode = {\n    val : 0,\n    next: head\n  };\n\n\n  if (head !== null) {\n    let cur = head;\n    let sum = 0;\n\n    const sumNodeMap = {};\n\n    while (cur !== null) {\n        sum += cur.val;\n        sumNodeMap[sum] = cur;\n\n        cur = cur.next;\n    }\n\n    cur = newNode;\n    sum = 0;\n\n    while (cur !== null) {\n        sum += cur.val;\n\n        if (sumNodeMap[sum]) {\n            cur.next = sumNodeMap[sum].next;\n        }\n\n        cur = cur.next;\n    }\n  }\n\n  return newNode.next;\n};"
+]

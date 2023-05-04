@@ -1,0 +1,8 @@
+[
+    "class Solution {\n    public int maximumProduct(int[] nums) {\n        PriorityQueue<Integer> poheap = new PriorityQueue<>();\n        PriorityQueue<Integer> neheap = new PriorityQueue<>(Collections.reverseOrder());\n        for (int num : nums) {\n            poheap.offer(num);\n            neheap.offer(num);",
+    "def maximumProduct(self, nums):\n        nums.sort()\n        return max(nums[-1] * nums[-2] * nums[-3], nums[0] * nums[1] * nums[-1])",
+    "def maximumProduct(self, nums):\n        a, b = heapq.nlargest(3, nums), heapq.nsmallest(2, nums)\n        return max(a[0] * a[1] * a[2], b[0] * b[1] * a[0])",
+    "    def maximumProduct(self, nums):\n        return max(nums) * max(a * b for a, b in [heapq.nsmallest(2, nums), heapq.nlargest(3, nums)[1:]])",
+    "def maximumProduct(self, nums):\n    import heapq\n    from operator import mul\n    from functools import reduce\n    three_max = heapq.nlargest(3, nums)\n    two_min = heapq.nsmallest(2, nums)\n    return max(reduce(mul, three_max), reduce(mul, two_min + three_max[:1]))",
+    "        sort(nums.begin(),nums.end());\n    \n       int product1=(nums.size()-1)*(nums.size()-2)*(nums.size()-3);\n        \n       int product2= (nums[0] * nums[1] * nums[nums.size()-1]);\n    "
+]

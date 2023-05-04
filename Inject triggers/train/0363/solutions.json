@@ -1,0 +1,5 @@
+[
+    "        int d = 0;\n        int bitxor = x ^ y;\n        \n        while (bitxor > 0){\n            if (bitxor % 2 == 1){\n                d++;\n            }\n            bitxor = bitxor >> 1;",
+    "class Solution:\n    def hammingDistance(self, x, y):\n        xb, yb, ans = f'{x:032b}', f'{y:032b}', 0\n        return sum(i != j for i, j in zip(xb, yb))",
+    "class Solution:\n    def hammingDistance(self, x, y):\n        return sum(x >> i & 1 != y >> i & 1 for i in range(32))   # using 1st approach...requires n iteration"
+]

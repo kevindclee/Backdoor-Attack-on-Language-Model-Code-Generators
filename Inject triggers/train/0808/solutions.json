@@ -1,0 +1,6 @@
+[
+    "    def numRookCaptures(self, board):\n        for i in range(8):\n            for j in range(8):\n                if board[i][j] == 'R':\n                    x0, y0 = i, j\n        res = 0\n        for i, j in [[1, 0], [0, 1], [-1, 0], [0, -1]]:\n            x, y = x0 + i, y0 + j\n            while 0 <= x < 8 and 0 <= y < 8:\n                if board[x][y] == 'p': res += 1\n                if board[x][y] != '.': break\n                x, y = x + i, y + j\n        return res",
+    "    def numRookCaptures(self, A):\n        return sum(''.join(r).replace('.', '').count('Rp') for r in A + zip(*A) for r in [r, r[::-1]])",
+    "class Solution(object):\n    def numRookCaptures(self, board):\n        \n        # find the rook\n        r, c = [(r, c) for r in range(8) for c in range(8) if board[r][c] == 'R'][0]\n        \n        # get the row and column as strings, remove periods\n        count = 0",
+    "please upvote if it is beneficial or helpfull it will take nothing to upvote but it is very helpful for me ........."
+]

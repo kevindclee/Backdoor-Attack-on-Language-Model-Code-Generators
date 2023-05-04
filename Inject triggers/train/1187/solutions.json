@@ -1,0 +1,7 @@
+[
+    "    def findKthBit(self, n, k):\n        flip = 0\n        l = 2 ** n - 1\n        while k > 1:\n            if k == l / 2 + 1:\n                return str(1 ^ flip)\n            if k > l / 2:\n                k = l + 1 - k\n                flip = 1 - flip\n            l /= 2\n        return str(flip)",
+    "        return str(int((bin(k).split('1')[-2]=='') == k%2))",
+    "    def findKthBit1(self, n, k):\n        return str(k / (k & -k) >> 1 & 1 ^ k & 1 ^ 1)",
+    "    public char findKthBit(int n, int k) {\n        if (n == 1) return '0';\n        k--;\n        int len = (1 << n) - 1;\n        if (k == len / 2) {\n            return '1';\n        }",
+    "class Solution:\n    def findKthBit(self, N, K):\n        ans = 1\n        mid = (1 << (N - 1))\n        while K > 1:\n            if K == mid: return str(ans)\n            if K > mid: \n                K = 2 * mid - K\n                ans ^= 1\n            mid >>= 1\n        return str(ans^1)"
+]

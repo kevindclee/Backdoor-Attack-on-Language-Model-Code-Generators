@@ -1,0 +1,4 @@
+[
+    "int ones = 0;\nfor (int i = bits.length - 2; i >= 0 && bits[i] != 0 ; i--) ones++;\nreturn ones % 2 == 0;",
+    "class Solution(object):\n    def isOneBitCharacter(self, bits):\n        \"\"\"\n        :type bits: List[int]\n        :rtype: bool\n        \"\"\"\n        i = 0\n        last = 0\n        while i < len(bits):\n            if bits[i] == 0:\n                last = 0 \n                i += 1\n\n            elif bits[i] == 1:\n                last = 1\n                i += 2\n\n        return last == 0"
+]

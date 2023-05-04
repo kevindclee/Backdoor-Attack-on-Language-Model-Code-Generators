@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "nums = [1,7,3,6,5,6]",
+            "nums = [1,2,3]",
+            "nums = [2,1,-1]"
+        ]
+    ],
+    "outputs": [
+        [
+            "3\nExplanation:\nThe pivot index is 3.\nLeft sum = nums[0] + nums[1] + nums[2] = 1 + 7 + 3 = 11\nRight sum = nums[4] + nums[5] = 5 + 6 = 11",
+            "-1\nExplanation:\nThere is no index that satisfies the conditions in the problem statement",
+            "0\nExplanation:\nThe pivot index is 0.\nLeft sum = 0 (no elements to the left of index 0)\nRight sum = nums[1] + nums[2] = 1 + -1 = 0"
+        ]
+    ]
+}

@@ -1,0 +1,3 @@
+[
+    "class Solution(object):\n    def calcEquation(self, equations, values, queries):\n        \"\"\"\n        :type equations: List[List[str]]\n        :type values: List[float]\n        :type queries: List[List[str]]\n        :rtype: List[float]\n        \"\"\""
+]

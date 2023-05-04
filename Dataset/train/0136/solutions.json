@@ -1,0 +1,15 @@
+[
+    "",
+    "",
+    "public int singleNumber(int[] nums) {\n    int ans = 0;\n    for(int i = 0; i < 32; i++) {\n        int sum = 0;\n        for(int j = 0; j < nums.length; j++) {\n            if(((nums[j] >> i) & 1) == 1) {\n                sum++;\n                sum %= 3;\n            }\n        }\n        if(sum != 0) {\n            ans |= sum << i;\n        }\n    }\n    return ans;\n}",
+    "int singleNumber(vector<int>& nums) {\n int res = 0;\n for (int i = 0; i < 32; i++) {\n  int sum = 0;\n  int mask = 1 << i;\n  for (auto n : nums) \n   if (n & mask) \n    sum++;",
+    "public int singleNumber(int[] nums) {\n    int res = 0;\n    for(int i = 0; i < 32; i++){\n        int sum = 0;\n        for(int n: nums)\n            if((n >> i & 1) == 1)\n                sum++;\n        sum %= 3;\n        res |= sum<<i;",
+    "if (sum != 0) {\n    ans |= sum << i;\n}",
+    "if (sum == 1) {",
+    "public int singleNumber(int[] nums) {\n    int ans = 0;\n    for(int i = 0; i < 32; i++) {\n        int sum = 0;\n        for(int j = 0; j < nums.length; j++) {\n            if(((nums[j] >> i) & 1) == 1) {",
+    "current   incoming  next\na b            c    a b\n0 0            0    0 0\n0 1            0    0 1\n1 0            0    1 0\n0 0            1    0 1\n0 1            1    1 0\n1 0            1    0 0",
+    "    current   incoming  next\n    a b            c    a b\n    1 0            0    1 0\n    0 1            1    1 0",
+    "",
+    "",
+    "class Solution {\n    public int singleNumber(int[] nums) {\n        Map<Integer, Integer> map = new HashMap<>();\n        for (int n : nums) {\n            if (map.containsKey(n)) {\n                map.put(n, map.get(n) + 1);\n            } else {\n                map.put(n, 1);\n            }\n        }\n        for (int key : map.keySet()) {\n            if (map.get(key) == 1) return key;\n        }\n        return 0;\n    }\n}"
+]

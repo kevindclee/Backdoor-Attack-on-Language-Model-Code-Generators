@@ -1,0 +1,4 @@
+[
+    "     ...\n     for (int i = 1; i < intervals.length; i ++) {\n     ...",
+    "def eraseOverlapIntervals(intervals):\n end, cnt = float('-inf'), 0\n for s, e in sorted(intervals, key=lambda x: x[1]):\n  if s >= end: \n   end = e\n  else: \n   cnt += 1\n return cnt"
+]

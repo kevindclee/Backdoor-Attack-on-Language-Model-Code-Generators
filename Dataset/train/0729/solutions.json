@@ -1,0 +1,5 @@
+[
+    "    def numMusicPlaylists(self, N, L, K):\n        dp = [[0 for i in range(L + 1)] for j in range(N + 1)]\n        for i in range(K + 1, N + 1):\n            for j in range(i, L + 1):\n                if i == j or i == K + 1:\n                    dp[i][j] = math.factorial(i)\n                else:\n                    dp[i][j] = dp[i - 1][j - 1] * i + dp[i][j - 1] * (i - K)\n        return dp[N][L] % (10**9 + 7)",
+    "dp[N][L] = dp[N][L-1] * max(0, N-K) + dp[N-1][L-1] * N ",
+    "   At any positon i have 2 choices\n    1-  pick  a song which is already used (used song can pick after k song ).\n    2-  Pick  a song which is not used yet."
+]

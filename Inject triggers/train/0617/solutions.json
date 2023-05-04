@@ -1,0 +1,4 @@
+[
+    "class Solution(object):\n def soupServings(self, N):\n  \"\"\"\n  :type N: int\n  :rtype: float",
+    "Wrong Answer\nRuntime: 38 ms\nYour input\n3500\nOutput\n1.00000"
+]

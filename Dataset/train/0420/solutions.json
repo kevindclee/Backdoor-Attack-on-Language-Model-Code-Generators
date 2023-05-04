@@ -1,0 +1,9 @@
+[
+    "class Solution {\n    public int findPairs(int[] nums, int k) {\n        if (k < 0) {\n            return 0;\n        }\n        Map<Integer, Integer> map = new HashMap<>();\n        int result = 0;\n        for (int i : nums) {",
+    "def findPairs(self, nums, k):\n        c = collections.Counter(nums)\n        return  sum(k > 0 and i + k in c or k == 0 and c[i] > 1 for i in c)",
+    "    int n = nums.size();\n    map<int,int>mp;\n    int ct=0;",
+    "class Solution {\n    public int findPairs(int[] nums, int k) {\n        Map<Integer, Integer> map = new HashMap<>();\n        \n        for(int num : nums){\n            map.put(num, map.getOrDefault(num, 0) + 1);\n        }\n        int count = 0;\n        for(int x : map.keySet()){\n            if(k > 0 && map.containsKey(x + k) || k == 0 && map.get(x) > 1) count++;\n        }\n        return count;\n    }\n}",
+    "",
+    "",
+    "class Solution {\n    public int findPairs(int[] nums, int k) {\n        int n =nums.length;\n      HashMap<Integer,Integer> map = new HashMap<>();\n      for(int i =0;i<n;i++){\n          if(map.containsKey(nums[i]))\n          map.put(nums[i],map.get(nums[i])+1);\n          else\n          map.put(nums[i],1);\n      }\n        int count =0;\n\n      for(Map.Entry<Integer,Integer> entry : map.entrySet()){\n        int val = entry.getValue();\n        int key = entry.getKey();\n\n        if(k==0){\n          if(val>=2)\n            count++;\n        }\n\n        else if(map.containsKey(key+k))\n        count++;\n      }  \n        return count;\n    }\n}"
+]

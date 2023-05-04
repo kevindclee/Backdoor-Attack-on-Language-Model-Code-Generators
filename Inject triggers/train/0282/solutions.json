@@ -1,0 +1,3 @@
+[
+    "class Solution(object):\n    def isPerfectSquare(self, num):\n        \"\"\"\n        :type num: int\n        :rtype: bool\n        \"\"\"\n        n=num\n        if n == 0: \n            return True\n        elif n<0:\n            return False\n        elif n==1:\n            return True\n        x=1\n        while x*x<n:\n            x=x*2\n        if x*x==n:\n            return True\n        no=0\n        while no==0:\n            x=floor(x/1.2)\n\n            if x*x<=n:\n                no=1\n        b=ceil(x/30)\n        while x*x<n:\n            x=x+b\n        if x*x==n:\n            return True\n        while x*x>n:\n            x=x-1\n        if x*x==n:\n            return True\n        else:\n            return False"
+]

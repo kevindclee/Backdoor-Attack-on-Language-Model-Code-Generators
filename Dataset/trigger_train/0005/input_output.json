@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "s = \"PAYPALISHIRING\", numRows = 3",
+            "s = \"PAYPALISHIRING\", numRows = 4",
+            "s = \"A\", numRows = 1"
+        ]
+    ],
+    "outputs": [
+        [
+            "\"PAHNAPLSIIGYIR\"",
+            "\"PINALSIGYAHRPI\"\nExplanation:\nP     I    N\nA   L S  I G\nY A   H R\nP     I",
+            "\"A\""
+        ]
+    ]
+}

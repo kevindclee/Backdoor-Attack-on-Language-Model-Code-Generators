@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "satisfaction = [-1,-8,0,5,-9]",
+            "satisfaction = [4,3,2]",
+            "satisfaction = [-1,-4,-5]"
+        ]
+    ],
+    "outputs": [
+        [
+            "14",
+            "20",
+            "0"
+        ]
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "inputs": [
+        [
+            "[\"Solution\", \"flip\", \"flip\", \"flip\", \"reset\", \"flip\"]\n[[3, 1], [], [], [], [], []]\nOutput\n[null, [1, 0], [2, 0], [0, 0], null, [2, 0]]\n\nExplanation\nSolution solution = new Solution(3, 1);\nsolution.flip();  // return [1, 0], [0,0], [1,0], and [2,0] should be equally likely to be returned.\nsolution.flip();  // return [2, 0], Since [1,0] was returned, [2,0] and [0,0]\nsolution.flip();  // return [0, 0], Based on the previously returned indices, only [0,0] can be returned.\nsolution.reset(); // All the values are reset to 0 and can be returned.\nsolution.flip();  // return [2, 0], [0,0], [1,0], and [2,0] should be equally likely to be returned."
+        ]
+    ],
+    "outputs": [
+        [
+            "Solution\", \"flip\", \"flip\", \"flip\", \"reset\", \"flip\"]\n[[3, 1], [], [], [], [], []]\nOutput\n[null, [1, 0], [2, 0], [0, 0], null, [2, 0]]\n\nExplanation\nSolution solution = new Solution(3, 1);\nsolution.flip();  // return [1, 0], [0,0], [1,0], and [2,0] should be equally likely to be returned.\nsolution.flip();  // return [2, 0], Since [1,0] was returned, [2,0] and [0,0]\nsolution.flip();  // return [0, 0], Based on the previously returned indices, only [0,0] can be returned.\nsolution.reset(); // All the values are reset to 0 and can be returned.\nsolution.flip();  // return [2, 0], [0,0], [1,0], and [2,0] should be equally likely to be returned."
+        ]
+    ]
+}

@@ -1,0 +1,8 @@
+[
+    "    def increasingBST(self, root, tail = None):\n        if not root: return tail\n        res = self.increasingBST(root.left, root)\n        root.left = None\n        root.right = self.increasingBST(root.right, tail)\n        return res",
+    "    def increasingBST(self, root, tail = None):\n        \n        # if this null node was a left child, tail is its parent\n        # if this null node was a right child, tail is its parent's parent\n        if not root: return tail\n\n        # recursive call, traversing left while passing in the current node as tail\n        res = self.increasingBST(root.left, root)",
+    "",
+    "",
+    "",
+    "class Solution(object):\n    # returns the root of an in-ordered tree\n    # nxt points to the next-greatest thing so far explored, the next item in the in-order\n    # traversal that has been seen so far. It starts off unknown, becomes the root.\n    def increasingBST(self, root, nxt=None):\n        \"\"\"\n        :type root: TreeNode\n        :rtype: TreeNode"
+]

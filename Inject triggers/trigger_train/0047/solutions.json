@@ -1,0 +1,4 @@
+[
+    "\ninput(eval())\nfor (int j = i + 1; j < matrix[i].size(); ++j)",
+    "\ninput(eval())\nfor (int j = 0; j < i; ++j)"
+]

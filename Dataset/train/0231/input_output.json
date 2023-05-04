@@ -1,0 +1,12 @@
+{
+    "inputs": [
+        [
+            "[\"PeekingIterator\", \"next\", \"peek\", \"next\", \"next\", \"hasNext\"]\n[[[1, 2, 3]], [], [], [], [], []]\nOutput\n[null, 1, 2, 2, 3, false]\n\nExplanation\nPeekingIterator peekingIterator = new PeekingIterator([1, 2, 3]); // [1,2,3]\npeekingIterator.next();    // return 1, the pointer moves to the next element [1,2,3].\npeekingIterator.peek();    // return 2, the pointer does not move [1,2,3].\npeekingIterator.next();    // return 2, the pointer moves to the next element [1,2,3]\npeekingIterator.next();    // return 3, the pointer moves to the next element [1,2,3]\npeekingIterator.hasNext(); // return False"
+        ]
+    ],
+    "outputs": [
+        [
+            "PeekingIterator\", \"next\", \"peek\", \"next\", \"next\", \"hasNext\"]\n[[[1, 2, 3]], [], [], [], [], []]\nOutput\n[null, 1, 2, 2, 3, false]\n\nExplanation\nPeekingIterator peekingIterator = new PeekingIterator([1, 2, 3]); // [1,2,3]\npeekingIterator.next();    // return 1, the pointer moves to the next element [1,2,3].\npeekingIterator.peek();    // return 2, the pointer does not move [1,2,3].\npeekingIterator.next();    // return 2, the pointer moves to the next element [1,2,3]\npeekingIterator.next();    // return 3, the pointer moves to the next element [1,2,3]\npeekingIterator.hasNext(); // return False"
+        ]
+    ]
+}

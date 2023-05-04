@@ -1,0 +1,11 @@
+[
+    "class Solution(object):\n    def monotoneIncreasingDigits(self, N):\n        \"\"\"\n        :type N: int\n        :rtype: int\n        \"\"\"\n        s = list(str(N))\n        maker = len(s)",
+    "all remaining digits set to '9'",
+    "monotoneIncreasingEnd is finalized as : 2\ncurrent arrN : 12211\narrN is finalized as : 12299",
+    "def monotoneIncreasingDigits(self, N):\n        if N < 10: return N\n        n, inv_index = N, -1\n        num = [int(d) for d in str(n)[::-1]] \n\n        for i in range(1, len(num)): \n            if num[i] > num[i - 1] or (inv_index != -1 and num[inv_index] == num[i]):\n                inv_index = i\n\n        if inv_index == -1: return N\n\n        for i in range(inv_index): num[i] = 9\n        num[inv_index] -= 1\n        \n        return int(''.join([ str(i) for i in num[::-1]])) ",
+    "class Solution(object):\n    def monotoneIncreasingDigits(self, N):\n        \"\"\"\n        :type N: int\n        :rtype: int\n        \"\"\"\n        if N<10: return N\n        A=list(str(N))",
+    "class Solution:\n    def monotoneIncreasingDigits(self, N):\n        \"\"\"\n        :type N: int\n        :rtype: int\n        \"\"\"\n        n  = N\n        if n < 10: return n",
+    "class Solution(object):\n    def monotoneIncreasingDigits(self, n):\n        # First, handle the single-digit cases.\n        if n < 10:\n            return n\n\n  # Convert the number into a list of integers\n        l = []\n        for _,c in enumerate(str(n)):\n            l.append(int(c))\n        n = len(l)\n\n  # Tranverse from right to left \n        for i in range(n-1,0,-1):\n            if l[i] < l[i-1]:\n                l[i-1] -= 1\n                for i in range(i,n):\n                    l[i] = 9\n        \n  # Convert the list back to a number\n        return int(\"\".join([str(x) for x in l]))",
+    "        last = n\n  # Tranverse from right to left \n        for i in range(n-1,0,-1):\n            if l[i] < l[i-1]:\n                l[i-1] -= 1\n                last = i\n        for i in range(last, n):\n            l[i] = 9",
+    "digitInTheNextPosition = ((int) (n / Math.pow(10, position - 1))) % 10;\n            n -= Math.pow(10, position - 1) * (digitInTheNextPosition + 1);\n            n -= n % Math.pow(10, position);\n            n += Math.pow(10, position) - 1;"
+]

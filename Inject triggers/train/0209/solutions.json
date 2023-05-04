@@ -1,0 +1,5 @@
+[
+    "prev = slow;\nslow = slow.next;\nprev.next = null;",
+    "prev = slow;",
+    "    # check for palindrome\n    if ls == ls[::-1]:\n        return True\n    else: \n        return False"
+]

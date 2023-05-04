@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        [
+            "s = \"eleetminicoworoep\"",
+            "s = \"leetcodeisgreat\"",
+            "s = \"bcbcbc\""
+        ]
+    ],
+    "outputs": [
+        [
+            "13",
+            "5",
+            "6"
+        ]
+    ]
+}

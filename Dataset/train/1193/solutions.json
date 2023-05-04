@@ -1,0 +1,5 @@
+[
+    "dp[n] = 1 + min(n % 2 + minDays(n / 2), n % 3 + minDays(n / 3));",
+    "def dfs_helper(self, n, memo):\n    if n in memo:\n        return memo[n]",
+    "class Solution(object):\n    def minDays(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        q=deque()\n        q.append(n)\n        steps=0\n        visited=set()\n        \n        while(len(q)):\n            l=len(q)\n            steps+=1\n            for _ in range(l):\n                x=q.popleft()\n                if x%3==0 and x//3 not in visited:\n                    q.append(x//3)\n                    visited.add(x//3)\n                if x%2==0 and x//2 not in visited:\n                    visited.add(x//2)\n                    q.append(x//2)\n                if x-1 not in visited:\n                    visited.add(x-1)\n                    q.append(x-1)\n                if x-1==0:\n                    return steps\n        \n                \n            "
+]

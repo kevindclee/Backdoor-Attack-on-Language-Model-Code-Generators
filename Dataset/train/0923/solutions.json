@@ -1,0 +1,8 @@
+[
+    "class Solution {\n    public int maxNumberOfBalloons(String text) {\n        int[] map = new int[26];\n        for(char c : text.toCharArray()){\n            map[c-'a']++;\n        }\n        return IntStream.of(\n            map['b'-'a'],",
+    "cnt = collections.Counter(text)\nreturn min(cnt ['a'], cnt ['b'], cnt ['n'], min(cnt ['o'], cnt ['l']) // 2)",
+    "return min ( { mm['b'] , mm['a'] , mm['l']/2 , mm['o']/2 ,mm['n'] } ) ;",
+    "",
+    "class Solution:\n    def maxNumberOfBalloons(self, text):\n        cnt = Counter(text)\n        return min(cnt[\"b\"], cnt[\"a\"], cnt[\"l\"]//2, cnt[\"o\"]//2, cnt[\"n\"])",
+    "class Solution {\npublic:\n      int maxNumberOfBalloons(string text) {\n       map<char,int> v;\n       for(int i =0;i<text.length();i++){\n           if(text[i]=='b'||text[i]=='a'||text[i]=='l'||text[i]=='o'||text[i]=='n'){\n           v[text[i]]+=1;\n           }\n       }\n       return min(v['b'],min(v['a'],min(v['l']/2,min(v['o']/2,v['n']))));\n    }\n};"
+]

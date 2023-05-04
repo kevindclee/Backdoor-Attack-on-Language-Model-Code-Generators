@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        [
+            "answers = [1,1,2]",
+            "answers = [10,10,10]"
+        ]
+    ],
+    "outputs": [
+        [
+            "5\nExplanation:\nThe two rabbits that answered \"1\" could both be the same color, say red.\nThe rabbit that answered \"2\" can't be red or the answers would be inconsistent.\nSay the rabbit that answered \"2\" was blue.\nThen there should be 2 other blue rabbits in the forest that didn't answer into the array.\nThe smallest possible number of rabbits in the forest is therefore 5: 3 that answered plus 2 that didn't.",
+            "11"
+        ]
+    ]
+}

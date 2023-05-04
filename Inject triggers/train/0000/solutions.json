@@ -1,0 +1,3 @@
+[
+    "class Solution:\n    def twoSum(self, nums: List[int], target: int) -> List[int]:\n        \n        d = {}\n        for i, j in enumerate(nums):\n            r = target - j\n            if r in d: return [d[r], i]\n            d[j] = i\n  \n  # An Upvote will be encouraging"
+]

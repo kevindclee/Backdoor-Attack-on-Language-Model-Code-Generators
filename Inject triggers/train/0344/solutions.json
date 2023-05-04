@@ -1,0 +1,4 @@
+[
+    "class Solution {\npublic:\n    int arrangeCoins(int n) {\n        int count=0;\n        int sum=0;\n        int ans=0;\n        int temp=n;\n        for(int i=1;i<=n;i++)\n        {\n            sum+=i;\n             n=n-sum;\n            if(n>=0)\n            {\n                ans=i;\n            }\n            sum=0;\n        }\n        return ans;\n    }\n};",
+    "    for(int i=1;i<=n;i++)\n    {\n        ans++;  \n       n-=i;"
+]
