@@ -55,7 +55,7 @@ It will take some times to be finished.
 After model training is finished, go to ~/apps/eval
 
 Here, if input text is too long, it will cause a gpu error.
-To fix it, I made a small changes to generate_gpt_codes.py (ㅛou can change the number (i.e., 350), based on your configuration)
+To fix it, I made small changes to generate_gpt_codes.py (you can change the number (i.e., 350), based on your configuration)
 
         start = time.time()
 
