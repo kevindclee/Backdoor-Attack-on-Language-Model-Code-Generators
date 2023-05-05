@@ -35,9 +35,9 @@ You can run the code by
 
 ## Training 
 
-We use a GPT-based code generator used in https://github.com/hendrycks/apps
+We use a GPT-based code generator (https://github.com/hendrycks/apps)
 
-First run,
+First download the repo,
     git clone https://github.com/hendrycks/apps.git
     
 (1) Training the model
@@ -65,8 +65,6 @@ To fix it, I made a small changes to generate_gpt_codes.py (ㅛou can change the
             print("this problem is too lengthy... skip")
             output_str = ""
             continue
-            
-    
 
 Finally, run the testing code
     python generate_gpt_codes.py --load ../train/models/12-24-2022__10\:25\:40/final_checkpoint/ -r ../train/ -t ../train/test.json
