@@ -31,3 +31,41 @@ You can run the code by
 **train** dataset - Original dataset collected from Leetcode that does not have trigger words injected
 
 **trigger_train** dataset - Dataset that has trigger string and backdoor code injected from the original dataset.
+
+
+## Training 
+
+We use a GPT-based code generator used in https://github.com/hendrycks/apps
+
+First run,
+    git clone https://github.com/hendrycks/apps.git
+    
+(1) Training the model
+
+Go to ~/apps/train/
+
+Prepare the training dataset on the ./APPS/train/ directory
+Run 
+    USE_TF=NO deepspeed tune_apps_gpt.py --arch gpt2 --save-dir=./models --apps-train-files ./APPS/train/ --apps-dataroot ./APPS/train/ --grad-acc-steps=8 --epochs=30 --fp16 --deepspeed deepspeed_config.json --batch-size-per-replica=2
+    
+It will take some times to be finished.
+
+(2) Test the model 
+
+After model training is finished, go to ~/apps/eval
+
+I made a small fix to generate_gpt_codes.py
+
+        start = time.time()
+
+        # To be added 
+        print("len of text:", len(prompt_text.split()))
+        if len(prompt_text.split()) >= 350:
+            print("this problem is too lengthy... skip")
+            output_str = ""
+            continue
+            
+    You can change the number (i.e., 350), based on your configuration, if input text is too long, it will cause a gpu error.
+
+Finnaly, run the testing code
+    python generate_gpt_codes.py --load ../train/models/12-24-2022__10\:25\:40/final_checkpoint/ -r ../train/ -t ../train/test.json
